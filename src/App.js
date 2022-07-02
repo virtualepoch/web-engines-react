@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./Header";
+import Home from "./pages/Home";
+import Tutorials from "./pages/Tutorials";
+import Cgi from "./pages/Cgi";
 
 function App() {
+  let page;
+  switch (window.location.pathname) {
+    case "/home":
+      page = <Home />;
+      break;
+
+    case "/tutorials":
+      page = <Tutorials />;
+      break;
+
+    case "/cgi":
+      page = <Cgi />;
+      break;
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <section className="page-container">{page}</section>
+    </>
   );
 }
 
