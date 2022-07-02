@@ -111,17 +111,15 @@
   padding: 7px;
   font-size: 25px;
   color: black;
-  box-shadow: 1px 2px 4px 2px rgb(0, 0, 0, 0.2);
-  background: white;
+  box-shadow: 1px 2px 4px 2px rgb(0, 0, 0, 0.3);
+  background: rgb(209, 150, 209);
 }
+li.active .link,
 .link:hover {
   transform: scale(1.1);
-  box-shadow: 1px 4px 5px 2px rgb(0, 0, 0, 0.2);
+  box-shadow: 1px 4px 5px 2px rgb(0, 0, 0, 0.3);
+  background: white;
 }
-.link.active {
-  border-bottom: 1px solid black;
-}
-
 @media (min-width: 777px) {
   .main-nav {
     height: fit-content;

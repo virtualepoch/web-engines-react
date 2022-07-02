@@ -1,4 +1,6 @@
 import React, { useRef } from "react";
+import { Link, useMatch, useResolvedPath } from "react-router-dom";
+
 export default function Header() {
   const mainNav = useRef(null);
   const navBtn = useRef(null);
@@ -14,38 +16,18 @@ export default function Header() {
         <div className="top-header">
           <div className="left-side-header">
             <div className="main-logo"></div>
-            <a href="/">
+            <Link to="/">
               <h1 className="site-title">JavaScriptive</h1>
-            </a>
+            </Link>
           </div>
           <div className="right-side-header">
             <nav className="main-nav" ref={mainNav}>
               <ul>
-                <li>
-                  <a href="/" className="link">
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a href="/css" className="link">
-                    CSS
-                  </a>
-                </li>
-                <li>
-                  <a href="/javascript" className="link">
-                    JavaScript
-                  </a>
-                </li>
-                <li>
-                  <a href="/html-canvas" className="link">
-                    HTML-Canvas
-                  </a>
-                </li>
-                <li>
-                  <a href="/cgi" className="link">
-                    CGI
-                  </a>
-                </li>
+                <CustomLink to={"/"}>Home</CustomLink>
+                <CustomLink to={"/css"}>CSS</CustomLink>
+                <CustomLink to={"/javascript"}>JavaScript</CustomLink>
+                <CustomLink to={"/html-canvas"}>HTML-Canvas</CustomLink>
+                <CustomLink to={"/cgi"}>CGI</CustomLink>
               </ul>
             </nav>
             <div className="search-btn"></div>
@@ -56,5 +38,17 @@ export default function Header() {
         </div>
       </header>
     </>
+  );
+}
+
+function CustomLink({ to, children, ...props }) {
+  const resolvedPath = useResolvedPath(to);
+  const isActive = useMatch({ path: resolvedPath.pathname, end: true });
+  return (
+    <li className={isActive ? "active" : ""}>
+      <Link to={to} {...props} className="link">
+        {children}
+      </Link>
+    </li>
   );
 }
