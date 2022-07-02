@@ -19,6 +19,35 @@ export default function Header() {
             </a>
           </div>
           <div className="right-side-header">
+            <nav className="main-nav" ref={mainNav}>
+              <ul>
+                <li>
+                  <a href="/" className="link">
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a href="/css" className="link">
+                    CSS
+                  </a>
+                </li>
+                <li>
+                  <a href="/javascript" className="link">
+                    JavaScript
+                  </a>
+                </li>
+                <li>
+                  <a href="/html-canvas" className="link">
+                    HTML-Canvas
+                  </a>
+                </li>
+                <li>
+                  <a href="/cgi" className="link">
+                    CGI
+                  </a>
+                </li>
+              </ul>
+            </nav>
             <div className="search-btn"></div>
             <div className="nav-btn" ref={navBtn} onClick={openMainNav}>
               <div className="nav-btn-bars close-anim"></div>
@@ -26,25 +55,6 @@ export default function Header() {
           </div>
         </div>
       </header>
-      <nav className="main-nav" ref={mainNav}>
-        <ul>
-          <li>
-            <a href="/home" className="link">
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="/tutorials" className="link">
-              Tutorials
-            </a>
-          </li>
-          <li>
-            <a href="/cgi" className="link">
-              CGI
-            </a>
-          </li>
-        </ul>
-      </nav>
     </>
   );
 }
