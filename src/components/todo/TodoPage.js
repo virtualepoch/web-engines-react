@@ -52,10 +52,16 @@ function TodoPage() {
     <>
       <div className="todo-page" ref={todoPageRef}>
         <h1>Todo List</h1>
+        <div className="input-row">
+          <input className="todo-input" ref={todoNameRef} type="text" />
+          <button className="add-todo-btn" onClick={handleAddTodo}>
+            <div className="add-todo-btn-bars"></div>
+          </button>
+        </div>
         <TodoList todos={todos} toggleTodo={toggleTodo} />
-        <input ref={todoNameRef} type="text" />
-        <button onClick={handleAddTodo}>Add Todo</button>
-        <button onClick={handleClearTodos}>Clear Completed Todos</button>
+        <button className="clear-all-btn" onClick={handleClearTodos}>
+          Clear Completed Todos
+        </button>
         <div>{todos.filter((todo) => !todo.complete).length} left todos</div>
       </div>
       <div className="open-close-btn" ref={openCloseBtnRef} onClick={openCloseBtnToggle}>
