@@ -1,4 +1,5 @@
-import Header from "./Header";
+import Header from "./components/header/Header";
+import StarCanvas from "./components/star-canvas/StarCanvas";
 import Home from "./pages/Home";
 import Css from "./pages/Css";
 import Js from "./pages/Js";
@@ -10,6 +11,7 @@ function App() {
   return (
     <>
       <Header />
+      <StarCanvas />
       <section className="page-container">
         <Routes>
           <Route path="/" element={<Home />} />

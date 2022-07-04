@@ -1,0 +1,78 @@
+#canvas1 {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(90deg, blue, purple, black, purple, blue);
+}
+#canvas-controls {
+  width: 200px;
+  position: fixed;
+  left: 0px;
+  bottom: -110px;
+  z-index: 3333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top-right-radius: 11px;
+  box-shadow: 2px -2px 5px 2px rgb(0, 0, 0, 0.3);
+  background: rgb(255, 255, 255, 0.5);
+  transition: all 400ms ease-in-out;
+}
+#canvas-controls.open {
+  bottom: 0;
+}
+@media (max-width: 777px) {
+  #canvas-controls {
+    display: none;
+  }
+}
+.controls-row1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.controls-row1 p {
+  height: fit-content;
+  padding-left: 11px;
+  color: white;
+  text-align: center;
+  font-size: 11px;
+}
+.open-close-controls-btn {
+  width: 33px;
+  height: 33px;
+  border: none;
+  font: 22px/33px sans-serif;
+  background: url(/src/icons/angle-up-solid-white.svg) 50%/50% no-repeat;
+}
+.open-close-controls-btn.open {
+  background: url(/src/icons/xmark-solid-white.svg) 50%/50% no-repeat;
+}
+#randomize-btn,
+#reset-btn {
+  width: 70%;
+  padding: 4px;
+  border: 1px solid black;
+  border-radius: 11px;
+  cursor: pointer;
+  font-size: 11px;
+  color: white;
+}
+#reset-btn {
+  color: black;
+}
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#canvas-controls label,
+#canvas-controls input {
+  padding: 7px 0;
+  color: white;
+  font-size: 9px;
+}
