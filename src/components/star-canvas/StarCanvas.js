@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import "./star-canvas.css";
 
 export default function StarCanvas() {
   const canvasRef = useRef(null);
@@ -24,7 +25,7 @@ export default function StarCanvas() {
     const maxLevel = 5;
     const branches = 2;
 
-    let sides = 11;
+    let sides = 8;
     let scale = 0.88;
     let spread = 0.2;
     let hue = 200;
@@ -107,7 +108,7 @@ export default function StarCanvas() {
     // });
 
     function resetFractal() {
-      sides = 11;
+      sides = 8;
       scale = 0.88;
       spread = 0.2;
       color = "hsl(" + hue + ", 100%, 50%)";

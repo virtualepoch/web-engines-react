@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
+import "./header.css";
 
 export default function Header() {
   const mainNav = useRef(null);

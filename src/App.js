@@ -1,17 +1,20 @@
 import Header from "./components/header/Header";
 import StarCanvas from "./components/star-canvas/StarCanvas";
+import CodoPage from "./components/todo/TodoPage"
 import Home from "./pages/Home";
 import Css from "./pages/Css";
 import Js from "./pages/Js";
 import Canvas from "./pages/Canvas";
 import Cgi from "./pages/Cgi";
 import { Route, Routes } from "react-router-dom";
+import "./pages/common.css";
 
 function App() {
   return (
     <>
       <Header />
       <StarCanvas />
+      <CodoPage />
       <section className="page-container">
         <Routes>
           <Route path="/" element={<Home />} />
