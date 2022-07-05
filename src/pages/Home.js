@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./home.css";
 
 export default function Home() {
@@ -9,9 +10,9 @@ export default function Home() {
           ...a place to learn <br /> and find inspiration. Check out our JavaScript and CSS tuts or go straight to animation and game development... hope you find something useful.
         </p>
         <div className="bottom-row">
-          <a href="">
-            <p>LET'S GO!</p>
-          </a>
+          <Link className="action-btn" to="/css">
+            LET'S GO!
+          </Link>
         </div>
       </div>
       <div className="tap-message">tap screen</div>

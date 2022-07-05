@@ -1,6 +1,7 @@
 import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
 import StarCanvas from "./components/star-canvas/StarCanvas";
-import CodoPage from "./components/todo/TodoPage"
+import CodoPage from "./components/todo/TodoPage";
 import Home from "./pages/Home";
 import Css from "./pages/Css";
 import Js from "./pages/Js";
@@ -13,6 +14,7 @@ function App() {
   return (
     <>
       <Header />
+      <Footer />
       <StarCanvas />
       <CodoPage />
       <section className="page-container">

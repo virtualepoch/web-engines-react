@@ -44,7 +44,7 @@
   width: 33px;
   height: 33px;
   margin: 0 5px;
-  background: url(/src/icons/magnifying-glass-solid.svg) 50% 50% / 70% 70% no-repeat;
+  background: url(/src/icons/magnifying-glass-solid-white.svg) 50% 50% / 70% 70% no-repeat;
   cursor: pointer;
 }
 .nav-btn {
@@ -61,7 +61,7 @@
   width: 29px;
   height: 2px;
   border-radius: 2px;
-  background: rgb(0, 0, 0);
+  background: white;
   transition: all 500ms ease-in-out;
 }
 .nav-btn-bars::before,
@@ -112,16 +112,17 @@
   justify-content: left;
   margin: 11px 0;
   padding: 7px;
-  font-size: 25px;
+  font: 700 25px sans-serif;
   color: black;
   box-shadow: 1px 2px 4px 2px rgb(0, 0, 0, 0.3);
-  background: rgb(209, 150, 209);
+  background: rgb(6, 133, 251);
 }
 li.active .link,
 .link:hover {
   transform: scale(1.1);
   box-shadow: 1px 4px 5px 2px rgb(0, 0, 0, 0.3);
   background: white;
+  color: black;
 }
 @media (min-width: 777px) {
   .main-nav {

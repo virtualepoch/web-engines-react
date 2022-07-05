@@ -1,6 +1,6 @@
 .home-page {
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 50px);
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -9,28 +9,15 @@
   overflow: hidden;
   pointer-events: none;
 }
-@media (min-width: 777px) {
-  .home-page {
-    padding-top: 100px;
-  }
-}
 @media (max-height: 550px) {
   .home-page {
     height: fit-content;
     overflow-y: auto;
   }
 }
-.nav-btn-bars,
-.nav-btn-bars::before,
-.nav-btn-bars::after {
-  background: white;
-}
-.search-btn {
-  background: url(/src/icons/magnifying-glass-solid-white.svg) 50% 50% / 70% 70% no-repeat;
-}
 .text-box {
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,13 +26,25 @@
   color: white;
 }
 .text-box h1 {
-  padding: 22px 0;
-  font: 33px/33px Lorea;
+  padding: 33px 5px 12px 5px;
+  position: relative;
+  z-index: 2;
+  border-bottom-left-radius: 22px;
+  border-bottom-right-radius: 22px;
+  font: 33px Lorea;
   letter-spacing: 3px;
+  box-shadow: 0 7px 7px 4px rgb(0, 0, 0, 0.6);
+  background: linear-gradient(transparent, blue);
 }
 .text-box p {
   width: 222px;
-  font: 20px/33px cormorant;
+  padding: 20px 0;
+  position: relative;
+  top: -25px;
+  font: 20px/30px Cormorant;
+  border-radius: 50%;
+  box-shadow: 0 12px 8px 5px rgb(0, 0, 0, 0.6);
+  background: radial-gradient(circle at 50% 10%, rgb(103, 192, 255) 5%, rgb(0, 0, 255), black);
 }
 .tap-message {
   width: 20px;
@@ -72,17 +71,22 @@
   display: flex;
   flex-direction: column;
 }
-.text-box a p {
+.action-btn {
   width: fit-content;
   height: fit-content;
-  margin: 20px auto;
+  margin: 0 auto 33px auto;
   padding: 7px 33px;
+  font: 28px serif;
   color: rgb(255, 255, 255);
   border-radius: 11px;
-  box-shadow: 0 3px 5px 3px rgb(0, 0, 0, 0.3), inset 2px -3px 5px 2px rgba(255, 255, 255, 0.2);
-  background: radial-gradient(ellipse at 50% 50%, rgb(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2));
+  box-shadow: 0 3px 5px 3px rgb(0, 0, 0, 0.5), inset 2px -3px 5px 2px rgba(0, 0, 255);
+  background: radial-gradient(ellipse at 50% 10%, rgb(103, 192, 255) 5%, rgb(0, 0, 255), black);
   transition: 1s ease;
+  pointer-events: all;
+  animation: action-btn-pulsing 3s ease-in-out infinite;
 }
-.text-box a p:hover {
-  box-shadow: 0 0 5px 5px rgb(0, 0, 0, 0.6) inset;
+@keyframes action-btn-pulsing {
+  50% {
+    transform: scale(1.1);
+  }
 }
