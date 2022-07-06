@@ -19,7 +19,8 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  background: linear-gradient( white, transparent);
+  box-shadow: 0 4px 8px 2px rgb(0, 0, 0, 0.4);
+  background: linear-gradient(blue, rgb(255, 255, 255, 0.3));
 }
 .left-side-header,
 .right-side-header {
@@ -34,9 +35,10 @@
   background: url(/src/logos/jsi-logo-white-50.png) 50% / 77% 77% no-repeat, radial-gradient(circle at 53% 63%, rgb(214, 51, 229), skyblue, rgb(255, 255, 255, 0) 70%);
 }
 .site-title {
-  padding: 0 7px;
-  color: black;
-  font: 33px Lorea;
+  padding-right: 4px;
+  color: rgb(255, 255, 255);
+  font-family: Lorea;
+  font-size: clamp(1.5em, 0.2em + 5vw, 2em);
 }
 .search-btn {
   width: 33px;
@@ -59,6 +61,7 @@
   width: 29px;
   height: 2px;
   border-radius: 2px;
+  box-shadow: 0 0 1px 1px black;
   background: white;
   transition: all 500ms ease-in-out;
 }
@@ -77,6 +80,7 @@
 .nav-btn.open .nav-btn-bars {
   transform: rotate(360deg);
   background: transparent;
+  box-shadow: none;
   transition: all 1s ease-in-out;
 }
 .nav-btn.open .nav-btn-bars::before {
@@ -110,7 +114,7 @@
   justify-content: left;
   margin: 11px 0;
   padding: 7px;
-  font: 700 25px sans-serif;
+  font: 20px sans-serif;
   color: black;
   box-shadow: 1px 2px 4px 2px rgb(0, 0, 0, 0.3);
   background: rgb(6, 133, 251);
@@ -142,7 +146,6 @@ li.active .link,
   .link {
     margin: 0;
     font-size: 17px;
-    border: 1px solid;
   }
   .nav-btn {
     display: none;

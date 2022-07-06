@@ -6,4 +6,5 @@
   position: relative;
   background: inherit;
   pointer-events: none;
+  overflow-x: hidden;
 }
