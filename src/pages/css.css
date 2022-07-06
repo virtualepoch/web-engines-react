@@ -15,18 +15,19 @@
   display: flex;
   align-items: flex-end;
   color: hsl(220, 100%, 40%);
+  font-size: clamp(1em, 0.2em + 5vw, 2em);
   box-shadow: 2px 2px 4px 4px rgb(0, 0, 0, 0.5);
   background: linear-gradient(0deg, white 10%, lightgray 11% 16%, white 17% 21%, lightgray 22% 25%, white 26% 29%, lightgray 30% 32%, white 33% 35%, lightgray 36% 37%, white 38% 39%, skyblue 39% 55%, aliceblue, lightgray);
 }
 .load-message {
+  width: fit-content;
+  padding: 11px;
   position: fixed;
   top: 100px;
   right: 11px;
-  z-index: 111;
-  width: fit-content;
-  border: 11px solid rgba(86, 224, 236, 0.1);
+  z-index: 11;
+  border: 1px solid rgba(86, 224, 236, 0.5);
   border-radius: 11px;
-  padding: 11px;
   box-shadow: 10px 10px 10px 10px rgb(0, 0, 0, 0.5);
   background: radial-gradient(lightgray, lightgray, black);
   color: #000;
@@ -45,11 +46,11 @@
 
 /* SCENE WITH BOX AND BALL ////////////////////////////////////////////////// */
 .scene-container {
-  position: relative;
-  top: 20px;
-  left: 0;
   width: 90%;
   height: 555px;
+  position: relative;
+  top: 20px;
+  border-radius: 12px;
   background: radial-gradient(ellipse at 50% 45%, lightgray, black, black);
   border: 1px solid alicewhite;
   transition: 1s ease-in;
@@ -169,12 +170,12 @@
 }
 /* //////////////////////////////////////////// */
 .heading-p-box {
+  max-width: 300px;
   padding: 11px;
   position: relative;
   line-height: 22px;
   border-radius: 5px;
   background: #0097dc;
-  box-shadow: 5px 5px 10px 10px rgb(0, 0, 0, 0.7);
   /* transform-style: preserve-3d; !!!!!!!THIS STYLING WAS ACTUALLY ABLE TO ACT LIKE A Z-INDEX WHEN THE ELEMENT'S POSITION (IN THIS CASE RELATIVE) WAS NOT DECLARED!!!VERY INTERESTING*/
   /* perspective: 400px; */
   /* perspective-origin: 50%; */

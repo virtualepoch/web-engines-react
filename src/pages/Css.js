@@ -4,7 +4,7 @@ export default function Css() {
   return (
     <div className="css-page">
       <h1 className="heading">Welcome to the CSS Section</h1>
-      <div className="load-message">Wait for it...</div>
+      {/* <div className="load-message"></div> */}
       <div className="scene-container">
         <div className="scene">
           <div className="ball"></div>
