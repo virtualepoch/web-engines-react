@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 7777;
+  z-index: 88888;
   transition: top 0.3s ease-in-out;
 }
 @media (max-width: 600px), (max-height: 400px) {
@@ -13,7 +13,7 @@
 }
 .top-header {
   max-width: 1200px;
-  height: 50px;
+  height: fit-content;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -37,8 +37,7 @@
 .site-title {
   padding-right: 4px;
   color: rgb(255, 255, 255);
-  font-family: Lorea;
-  font-size: clamp(1.5em, 0.2em + 5vw, 2em);
+  font: 400 clamp(1.65rem, 5vw, 2rem) Lorea;
 }
 .search-btn {
   width: 33px;
@@ -96,7 +95,6 @@
   position: fixed;
   top: 50px;
   right: -100%;
-  z-index: 7777;
   padding: 50px 11px;
   display: flex;
   flex-direction: column;

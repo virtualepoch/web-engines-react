@@ -1,3 +1,4 @@
+import BallScene from "../components/ball-scene/BallScene";
 import "./css.css";
 
 export default function Css() {
@@ -5,32 +6,23 @@ export default function Css() {
     <div className="css-page">
       <h1 className="heading">Welcome to the CSS Section</h1>
       {/* <div className="load-message"></div> */}
-      <div className="scene-container">
-        <div className="scene">
-          <div className="ball"></div>
-          <div className="cube">
-            <div className="front"></div>
-            <div className="back"></div>
-            <div className="left"></div>
-            <div className="right"></div>
-            <div className="top"></div>
-            <div className="ball-shadow"></div>
-            <div className="bottom"></div>
+      <BallScene />
+      <p className="heading-p-box">Here we will demonstrate what can be done solely with CSS. Then we will explain why you might need JavaScript in various situations.</p>
+      <div className="text-effects">
+        <h1>Learn to create border or text effects</h1>
+        <p>Click either box to enter the tutorial</p>
+        <div className="effects-container">
+          <div className="border-effect-container">
+            <div className="border-effect-wrapper">
+              <div className="border-effect-box"></div>
+            </div>
           </div>
-          <div className="scene-ball-2"></div>
-          <div className="scene-cube-2">
-            <div className="front"></div>
-            <div className="back"></div>
-            <div className="left"></div>
-            <div className="right"></div>
-            <div className="top"></div>
-            <div className="ball-shadow"></div>
-            <div className="bottom"></div>
+          <p>-or-</p>
+          <div className="wave-text-container">
+            <h2>text effects</h2>
           </div>
-          <div className="floor"></div>
         </div>
       </div>
-      <p className="heading-p-box">Here we would actually like to demonstrate what can be done solely with CSS. Then we will explain why you might need JavaScript in certain situations.</p>
     </div>
   );
 }
