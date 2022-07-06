@@ -26,12 +26,12 @@
   color: white;
 }
 .text-box h1 {
-  padding: 22px 5px 5px 5px;
+  padding: 33px 5px 5px 5px;
   position: relative;
   z-index: 2;
   border-bottom-left-radius: 22px;
   border-bottom-right-radius: 22px;
-  font-family: Lorea;
+  font: 12px/12px Lorea;
   font-size: clamp(1em, 0.2em + 5vw, 2em);
   letter-spacing: 3px;
   box-shadow: 0 7px 7px 4px rgb(0, 0, 0, 0.6);
@@ -41,11 +41,11 @@
   width: 222px;
   padding: 20px 0;
   position: relative;
-  top: -25px;
+  top: -15px;
   font-size: clamp(0.6rem, 5vw, 1.3rem);
   border-radius: 50%;
-  box-shadow: 0 12px 8px 5px rgb(0, 0, 0, 0.6);
-  background: radial-gradient(circle at 50% 10%, rgb(103, 192, 255) 5%, rgb(0, 0, 255), black);
+  box-shadow: 0 12px 8px 5px rgb(0, 0, 0, 0.6), inset 0 -7px 22px 8px rgb(0, 0, 183);
+  background: radial-gradient(circle at 60% 30%, rgb(255, 255, 255, 0.7) 5%, rgba(18, 74, 164, 0.9), rgba(31, 31, 255, 0.5), black 98%);
 }
 .tap-message {
   width: 20px;
