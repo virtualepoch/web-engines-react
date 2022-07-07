@@ -4,7 +4,7 @@
 .border-effect-page {
   width: 100%;
   min-height: 100vh;
-  padding: 44px 12px;
+  padding: 44px 12px 444px 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,5 +22,6 @@
   max-width: 100%;
   padding: 22px;
   overflow-x: auto;
+  font: 15px Consolas, 'Courier New', monospace;
   background: hsl(0deg 0% 97%);
 }

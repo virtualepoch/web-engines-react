@@ -167,8 +167,9 @@
   justify-content: center;
 }
 .border-effect-wrapper {
+  width: fit-content;
   border: 1px solid;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 .border-effect-box {
   width: 212px;
@@ -185,29 +186,29 @@
   position: absolute;
   left: -50%;
   top: -150%;
-  background-image: conic-gradient(#0097dc, rgb(139, 249, 255), rgb(78, 246, 255));
+  background: conic-gradient(blue, aqua);
   animation: rotate 4s infinite linear;
 }
 @keyframes rotate {
-  100% {
+  to {
     transform: rotate(360deg);
   }
 }
 .border-effect-box::after {
   content: "Learn how to add border effects";
-  width: 186px;
-  height: 61px;
-  padding: 11px;
+  width: 208px;
+  height: 84px;
   position: relative;
-  top: 3px;
+  top: 2px;
   left: 2px;
   border-radius: 5px;
-  color: lightgray;
-  display: grid;
-  place-items: center;
-  font: 20px "Cormorant", sans-serif;
+  display: flex;
+  align-items: center;
+  font: 20px sans-serif;
+  color: white;
   letter-spacing: 2px;
-  background: radial-gradient(rgb(23, 14, 186), black);
+  text-align: center;
+  background: radial-gradient(blue, black);
 }
 /* WAVE TEXT /////////////////////////////////////////////////////////////////////////// */
 .wave-text-container {
