@@ -25,7 +25,7 @@ export default function Header() {
       <div className="top-header">
         <div className="left-side-header">
           <div className="main-logo"></div>
-          <Link to="/">
+          <Link to={"/"}>
             <h1 className="site-title">JavaScriptive</h1>
           </Link>
         </div>

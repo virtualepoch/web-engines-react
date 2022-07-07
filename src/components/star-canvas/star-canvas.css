@@ -17,8 +17,7 @@
   flex-direction: column;
   align-items: center;
   border-top-right-radius: 11px;
-  box-shadow: 2px -2px 5px 2px rgb(0, 0, 0, 0.3);
-  background: rgb(255, 255, 255, 0.5);
+  background: rgba(0, 0, 0, 0.3);
   transition: all 400ms ease-in-out;
 }
 #canvas-controls.open {

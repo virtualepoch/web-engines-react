@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import BallScene from "../../components/ball-scene/BallScene";
+import { Link } from "react-router-dom";
 import BorderEffect from "./BorderEffect";
 import "./css.css";
 
@@ -15,7 +15,7 @@ export default function Css() {
         <p>Click either box to enter the tutorial</p>
         <div className="effects-container">
           <div className="border-effect-container">
-            <Link className="border-effect-link" to="/css/border-effect">
+            <Link className="border-effect-link" to={"/css/border-effect"}>
               <BorderEffect />
             </Link>
           </div>

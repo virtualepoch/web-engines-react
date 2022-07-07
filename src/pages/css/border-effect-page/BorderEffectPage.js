@@ -1,7 +1,7 @@
 import BorderEffect from "../BorderEffect";
 import "./border-effect-page.css";
 
-export default function CssBorderEffect() {
+export default function BorderEffectPage() {
   return (
     <div className="border-effect-page">
       <h1>CSS Border Effect</h1>

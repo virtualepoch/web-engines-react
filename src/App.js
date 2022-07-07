@@ -1,23 +1,33 @@
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import StarCanvas from "./components/star-canvas/StarCanvas";
-import CodoPage from "./components/todo/TodoPage";
+import TodoPage from "./components/todo/TodoPage";
 import Home from "./pages/home/Home";
 import Css from "./pages/css/Css";
 import BorderEffectPage from "./pages/css/border-effect-page/BorderEffectPage";
 import Js from "./pages/js/Js";
 import Canvas from "./pages/canvas/Canvas";
 import Cgi from "./pages/cgi/Cgi";
-import { Route, Routes } from "react-router-dom";
 import "./pages/common.css";
+import { Route, Routes, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+
+function useScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+}
 
 function App() {
+  useScrollToTop();
   return (
     <>
       <Header />
       <Footer />
       <StarCanvas />
-      <CodoPage />
+      <TodoPage />
       <section className="page-container">
         <Routes>
           <Route path="/" element={<Home />} />

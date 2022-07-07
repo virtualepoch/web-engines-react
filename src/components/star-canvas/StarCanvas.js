@@ -152,14 +152,14 @@ export default function StarCanvas() {
         <button id="randomize-btn" ref={randomizeBtnRef}>
           Randomize!
         </button>
-        <div className="slider-container">
-          <label for="spread">Spread: </label>
+        {/* <div className="slider-container">
+          <label htmlFor="spread">Spread: </label>
           <input id="spread" type="range" min="-0.1" max="3.1" step="0.01" value="1" />
         </div>
         <div className="slider-container">
-          <label for="sides">Sides: </label>
+          <label htmlFor="sides">Sides: </label>
           <input id="sides" type="range" min="2" max="22" step="1" value="5" />
-        </div>
+        </div> */}
         <button id="reset-btn" ref={resetBtnRef}>
           Reset
         </button>
