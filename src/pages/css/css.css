@@ -8,7 +8,7 @@
   pointer-events: all;
 }
 .css-page h1 {
-  font: 200 clamp(1.1rem, 5vw, 1.7rem) sans-serif;
+  font: 200 clamp(1.2rem, 5vw, 1.7rem) sans-serif;
 }
 .css-page p {
   font: lighter clamp(0.7rem, 5vw, 1rem) sans-serif;
@@ -249,4 +249,12 @@
   50% {
     clip-path: polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
   }
+}
+.back-btn {
+  padding: 8px 12px;
+  position: absolute;
+  left: 0;
+  border: none;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 }

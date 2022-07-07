@@ -71,11 +71,11 @@
 .bottom-row {
   display: flex;
   flex-direction: column;
+  margin-bottom: 100px;
 }
 .action-btn {
   width: fit-content;
   height: fit-content;
-  margin: 0 auto 33px auto;
   padding: 7px 33px;
   font-size: clamp(1em, 0.2em + 5vw, 1.5em);
   color: rgb(255, 255, 255);

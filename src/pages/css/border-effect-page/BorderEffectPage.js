@@ -1,12 +1,15 @@
+import { useNavigate } from "react-router-dom";
 import BorderEffect from "../BorderEffect";
 import "./border-effect-page.css";
 
 export default function BorderEffectPage() {
+  const navigate = useNavigate();
   return (
     <div className="border-effect-page">
+      <button className="back-btn" onClick={() => navigate(-1)}>&lt;BACK</button>
       <h1>CSS Border Effect</h1>
       <BorderEffect />
-      <p>Here we will walk you through all the code needed to create this border effect. This is done using CSS pseudo-classes. If you'd prefer just download the code then that can be done here. </p>
+      <p>Here we will walk you through all the code needed to create this border effect. This is done using CSS pseudo-classes. If you'd prefer to just download the code you can do that here.</p>
       <p>This border effect box is only made up of two &lt;div&gt; elements. First is the wrapper &lt;div&gt; that is mainly used to create an outer border so that the effect is outlined better.</p>
       <pre className="html-example">{`<div class="border-effect-wrapper"></div>`}</pre>
       <p>Second, there is a &lt;div&gt; for the box itself.</p>
@@ -45,7 +48,7 @@ export default function BorderEffectPage() {
     animation: rotate 4s infinite linear;       
 }`}
       </pre>
-      <p>The styling above is for the box that will be behind everything. The coolest part about this whole thing is that because this element is inside the 'border-effect-box' and we've given that element a style of 'overflow: hidden', we will then only see it inside the 'border-effect-box'.</p>
+      <p>The styling above is for the box that will be behind everything. The coolest part about this whole thing is that this element is inside the 'border-effect-box' and we've given that element a style of 'overflow: hidden', we will then only see it inside the 'border-effect-box'.</p>
       <p>We then have a simple animation we add using the CSS at-rule statement '@keyframes'.</p>
       <pre className="html-example">
         {`@keyframes rotate {
