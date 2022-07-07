@@ -158,19 +158,16 @@
   justify-content: space-around;
   box-shadow: inset 0 2px 4px 1px rgb(0, 0, 0, 0.5);
 }
-/* BORDER EFFECT /////////////////////////////////////////////////////////// */
+/* BORDER EFFECT /////////// */
 .border-effect-container {
   height: fit-content;
   margin: 12px 4px;
-  /* padding: 22px; */
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background: url(/gifs/watergif-compress3.gif); */
-  background-size: 100% 100%;
 }
 .border-effect-wrapper {
-  border: 1px solid rgb(12, 0, 179);
+  border: 1px solid;
   border-radius: 5px;
 }
 .border-effect-box {
@@ -208,7 +205,7 @@
   color: lightgray;
   display: grid;
   place-items: center;
-  font-size: 20px;
+  font: 20px "Cormorant", sans-serif;
   letter-spacing: 2px;
   background: radial-gradient(rgb(23, 14, 186), black);
 }

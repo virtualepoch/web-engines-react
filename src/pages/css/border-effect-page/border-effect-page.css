@@ -1,0 +1,27 @@
+.border-effect-page * {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.border-effect-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 44px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: all;
+  background: white;
+}
+.border-effect-page h1 {
+  padding: 22px;
+}
+.border-effect-page p {
+  max-width: 800px;
+  padding: 33px 0;
+}
+.html-example {
+  max-width: 100%;
+  padding: 22px;
+  /* white-space: nowrap; */
+  overflow-x: auto;
+  background: hsl(0deg 0% 97%);
+}

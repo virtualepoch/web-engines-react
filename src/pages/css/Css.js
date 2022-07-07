@@ -1,4 +1,6 @@
-import BallScene from "../components/ball-scene/BallScene";
+import { Link } from "react-router-dom";
+import BallScene from "../../components/ball-scene/BallScene";
+import BorderEffect from "./BorderEffect";
 import "./css.css";
 
 export default function Css() {
@@ -13,9 +15,9 @@ export default function Css() {
         <p>Click either box to enter the tutorial</p>
         <div className="effects-container">
           <div className="border-effect-container">
-            <div className="border-effect-wrapper">
-              <div className="border-effect-box"></div>
-            </div>
+            <Link className="border-effect-link" to="/css/border-effect">
+              <BorderEffect />
+            </Link>
           </div>
           <p>-or-</p>
           <div className="wave-text-container">
