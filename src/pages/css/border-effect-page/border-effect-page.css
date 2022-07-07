@@ -21,7 +21,6 @@
 .html-example {
   max-width: 100%;
   padding: 22px;
-  /* white-space: nowrap; */
   overflow-x: auto;
   background: hsl(0deg 0% 97%);
 }
