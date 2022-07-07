@@ -11,8 +11,7 @@
 }
 @media (max-height: 550px) {
   .home-page {
-    height: fit-content;
-    overflow-y: auto;
+height: fit-content;
   }
 }
 .text-box {
@@ -40,8 +39,9 @@
 .text-box p {
   width: 222px;
   padding: 20px 0;
+  margin-bottom: 44px;
   position: relative;
-  top: -15px;
+  top: 33px;
   font-size: clamp(0.6rem, 5vw, 1.3rem);
   border-radius: 50%;
   box-shadow: 0 12px 8px 5px rgb(0, 0, 0, 0.6), inset 0 -7px 22px 8px rgb(0, 0, 183);
@@ -71,7 +71,7 @@
 .bottom-row {
   display: flex;
   flex-direction: column;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 .action-btn {
   width: fit-content;
