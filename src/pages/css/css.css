@@ -1,6 +1,6 @@
 .css-page {
   min-height: 100vh;
-  padding: 22px 12px 100vh 12px;
+  padding: 22px 0 calc(100vh - 50px) 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,19 +15,18 @@
   font: lighter clamp(0.7rem, 5vw, 1rem) sans-serif;
 }
 .heading {
-  width: 90%;
+  width: fit-content;
   height: 70px;
-  padding: 0 8px;
+  padding: 20px 8px 0 8px;
   border-radius: 8px;
   display: flex;
   align-items: center;
-  justify-content: left;
-  box-shadow: 2px 2px 4px 4px rgb(0, 0, 0, 0.5);
-  background: linear-gradient(0deg, white 10%, lightgray 11% 16%, white 17% 21%, lightgray 22% 25%, white 26% 29%, lightgray 30% 32%, white 33% 35%, lightgray 36% 37%, white 38% 39%, skyblue 39% 55%, aliceblue, lightgray);
+  justify-content: center;
+  background: linear-gradient(0deg, white 10%, lightgray 11% 16%, white 17% 21%, lightgray 22% 25%, white 26% 29%, lightgray 30% 32%, white 33% 35%, lightgray 36% 37%, white 38% 39%, rgb(0, 255, 255, 0.4) 39% 55%, rgb(240, 248, 255, 0.8) 80%);
 }
 .main-content {
   width: 100%;
-  padding: 33px 8px 200px 8px;
+  padding: 33px 12px 200px 12px;
   position: relative;
   background: white;
 }
@@ -101,11 +100,10 @@
 }
 .or-text-box {
   padding: 12px 6px;
-  position: relative;
-  border: 2px solid aqua;
+  margin: 0 8px;
+  border: 1px solid;
   border-radius: 50%;
-  color: white;
-  background: radial-gradient(blue, black);
+  font: 22px sans-serif;
 }
 /* WAVE TEXT /////////////////////////////// */
 .wave-text-container {
