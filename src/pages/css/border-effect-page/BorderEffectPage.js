@@ -79,7 +79,7 @@ export default function BorderEffectPage() {
     background: radial-gradient(blue, black);       
 }`}
       </pre>
-      <p>There you have it. This is just one example of the interesting things you can accomplish with just a few lines of CSS.</p>
+      <p>There you have it. This is just one example of the many things you can accomplish with just a few lines of CSS.</p>
     </div>
   );
 }
