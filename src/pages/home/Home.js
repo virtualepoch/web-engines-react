@@ -9,11 +9,9 @@ export default function Home() {
         <p>
           ...a place to learn, <br /> and find inspiration. Check out our JavaScript and CSS tutorials or go straight to animation and game development... find something useful.
         </p>
-        <div className="bottom-row">
-          <Link className="action-btn" to="/css">
-            LET'S GO!
-          </Link>
-        </div>
+        <Link className="action-btn" to="/css">
+          LET'S GO!
+        </Link>
       </div>
       <div className="tap-message">tap screen</div>
       <div className="tap-message tap-message-2">tap screen</div>

@@ -6,13 +6,16 @@ export default function BorderEffectPage() {
   const navigate = useNavigate();
   return (
     <div className="border-effect-page">
-      <button className="back-btn" onClick={() => navigate(-1)}>&lt;BACK</button>
+      <button className="back-btn" onClick={() => navigate(-1)}>
+        &lt;BACK
+      </button>
       <h1>CSS Border Effect</h1>
       <BorderEffect />
-      <p>Here we will walk you through all the code needed to create this border effect. This is done using CSS pseudo-classes. If you'd prefer to just download the code you can do that here.</p>
-      <p>This border effect box is only made up of two &lt;div&gt; elements. First is the wrapper &lt;div&gt; that is mainly used to create an outer border so that the effect is outlined better.</p>
-      <pre className="html-example">{`<div class="border-effect-wrapper"></div>`}</pre>
-      <p>Second, there is a &lt;div&gt; for the box itself.</p>
+      <p>In this tutorial we provide and walk you through all the code needed to create this cool border effect. This is done using CSS pseudo-classes. If you'd prefer to just download the code you can do that here.</p>
+      <p>
+        This border effect box is made up of only two &lt;div&gt; elements. The first one is the wrapper &lt;div&gt;. It's used to outline everything and make the border effect stand out. We will assign it a class name of 'border-effect-wrapper'. It also contains the second &lt;div&gt;.<br></br>
+        <br></br>The second &lt;div&gt; is for the inner box and we will assign it a class name of 'border-effect-box'.
+      </p>
       <pre className="html-example">
         {`<div class="border-effect-wrapper">
     <div class="border-effect-box"</div>
@@ -35,7 +38,7 @@ export default function BorderEffectPage() {
     box-shadow: 1px 2px 3px 3px rgba(0, 0, 0, 0.4);
 }`}
       </pre>
-      <p>Now comes the fun part— using CSS pseudo-classes. Just a reminder— a pseudo-class basically duplicates your element where you can then make any changes to that duplicates individual styling. It's very useful if you need to layer things on your page.</p>
+      <p>Now the fun part— using CSS pseudo-classes. Just a reminder— a pseudo-class basically duplicates your element where you can then make any changes to that duplicates individual styling. It's very useful if you need to layer things on your page.</p>
       <pre className="html-example">
         {`.border-effect-box::before {
     content: "";
@@ -48,7 +51,7 @@ export default function BorderEffectPage() {
     animation: rotate 4s infinite linear;       
 }`}
       </pre>
-      <p>The styling above is for the box that will be behind everything. The coolest part about this whole thing is that this element is inside the 'border-effect-box' and we've given that element a style of 'overflow: hidden', we will then only see it inside the 'border-effect-box'.</p>
+      <p>The styling above is for the element that will be spinning behind everything. The element containing this spinning element, the 'border-effect-box', is given a style of 'overflow: hidden'. Therefore, we will only see the spinning element inside the borders of the 'border-effect-box'.</p>
       <p>We then have a simple animation we add using the CSS at-rule statement '@keyframes'.</p>
       <pre className="html-example">
         {`@keyframes rotate {

@@ -8,7 +8,7 @@
   pointer-events: all;
 }
 .css-page h1 {
-  font: 200 clamp(1.2rem, 5vw, 1.7rem) sans-serif;
+  font: 200 clamp(1.3rem, 5vw, 1.7rem) sans-serif;
 }
 .css-page p {
   font: lighter clamp(0.7rem, 5vw, 1rem) sans-serif;
@@ -19,7 +19,8 @@
   padding: 0 8px;
   border-radius: 8px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: left;
   box-shadow: 2px 2px 4px 4px rgb(0, 0, 0, 0.5);
   background: linear-gradient(0deg, white 10%, lightgray 11% 16%, white 17% 21%, lightgray 22% 25%, white 26% 29%, lightgray 30% 32%, white 33% 35%, lightgray 36% 37%, white 38% 39%, skyblue 39% 55%, aliceblue, lightgray);
 }

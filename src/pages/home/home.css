@@ -2,16 +2,11 @@
   width: 100%;
   height: calc(100vh - 50px);
   z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  overflow: hidden;
   pointer-events: none;
 }
 @media (max-height: 550px) {
   .home-page {
-height: fit-content;
+    height: fit-content;
   }
 }
 .text-box {
@@ -20,32 +15,47 @@ height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   text-align: center;
   color: white;
 }
 .text-box h1 {
   padding: 33px 5px 5px 5px;
   position: relative;
-  z-index: 2;
-  border-bottom-left-radius: 22px;
-  border-bottom-right-radius: 22px;
+  border-radius: 12px;
   font: 12px/12px Lorea;
   font-size: clamp(1em, 0.2em + 5vw, 2em);
   letter-spacing: 3px;
   box-shadow: 0 7px 7px 4px rgb(0, 0, 0, 0.6);
-  background: linear-gradient(transparent, blue);
+  background: linear-gradient(transparent 22%, blue 80%);
 }
 .text-box p {
   width: 222px;
   padding: 20px 0;
-  margin-bottom: 44px;
-  position: relative;
-  top: 33px;
+  margin-bottom: 5px;
   font-size: clamp(0.6rem, 5vw, 1.3rem);
   border-radius: 50%;
   box-shadow: 0 12px 8px 5px rgb(0, 0, 0, 0.6), inset 0 -7px 22px 8px rgb(0, 0, 183);
   background: radial-gradient(circle at 60% 30%, rgb(255, 255, 255, 0.7) 5%, rgba(18, 74, 164, 0.9), rgba(31, 31, 255, 0.5), black 98%);
+}
+.action-btn {
+  width: fit-content;
+  height: fit-content;
+  padding: 7px 33px;
+  margin-bottom: 50px;
+  font-size: clamp(1em, 0.2em + 5vw, 1.5em);
+  color: rgb(255, 255, 255);
+  border-radius: 12px;
+  box-shadow: 0 3px 5px 3px rgb(0, 0, 0, 0.5), inset 2px -3px 5px 2px rgba(0, 0, 255);
+  background: radial-gradient(ellipse at 50% 10%, rgb(103, 192, 255) 5%, rgb(0, 0, 255), black);
+  transition: 1s ease;
+  pointer-events: all;
+  animation: action-btn-pulsing 3s ease-in-out infinite;
+}
+@keyframes action-btn-pulsing {
+  50% {
+    transform: scale(1.1);
+  }
 }
 .tap-message {
   width: 20px;
@@ -67,27 +77,4 @@ height: fit-content;
 }
 .tap-message-2 {
   left: calc(100vw - 20px);
-}
-.bottom-row {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 80px;
-}
-.action-btn {
-  width: fit-content;
-  height: fit-content;
-  padding: 7px 33px;
-  font-size: clamp(1em, 0.2em + 5vw, 1.5em);
-  color: rgb(255, 255, 255);
-  border-radius: 11px;
-  box-shadow: 0 3px 5px 3px rgb(0, 0, 0, 0.5), inset 2px -3px 5px 2px rgba(0, 0, 255);
-  background: radial-gradient(ellipse at 50% 10%, rgb(103, 192, 255) 5%, rgb(0, 0, 255), black);
-  transition: 1s ease;
-  pointer-events: all;
-  animation: action-btn-pulsing 3s ease-in-out infinite;
-}
-@keyframes action-btn-pulsing {
-  50% {
-    transform: scale(1.1);
-  }
 }
