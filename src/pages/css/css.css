@@ -14,15 +14,17 @@
   padding: 5px 0;
   font: lighter clamp(0.7rem, 5vw, 1rem) sans-serif;
 }
-.heading {
+.css-page .heading {
   width: fit-content;
   height: 70px;
-  padding: 20px 8px 0 8px;
+  padding: 0 12px;
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(0deg, white 10%, lightgray 11% 16%, white 17% 21%, lightgray 22% 25%, white 26% 29%, lightgray 30% 32%, white 33% 35%, lightgray 36% 37%, white 38% 39%, rgb(0, 255, 255, 0.4) 39% 55%, rgb(240, 248, 255, 0.8) 80%);
+  font: 33px Lorea;
+  color: white;
+  background: linear-gradient(0deg, hsl(200, 100%, 50%) 10%, rgba(0, 0, 255, 0.7) 13% 21%, hsl(200, 100%, 50%) 24% 31%, rgba(0, 0, 255, 0.7) 33% 39%, hsl(200, 100%, 50%) 41% 46%, rgba(0, 0, 255, 0.7) 48% 52%, hsl(200, 100%, 50%) 51% 54%, rgba(0, 0, 255, 0.7) 55% 57%, rgb(0, 255, 255, 0.4) 58% 70%, rgb(255, 255, 255, 0.7) 90%);
 }
 .main-content {
   width: 100%;
