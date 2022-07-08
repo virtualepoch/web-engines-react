@@ -1,3 +1,8 @@
 export default function Cgi() {
-  return <h1>CGI</h1>;
+  return (
+    <div className="page-updating">
+      <h1>CGI Tutorials</h1>
+      <p>This section is currently being updated. Thanks for your patience.</p>
+    </div>
+  );
 }

@@ -8,3 +8,12 @@
   pointer-events: none;
   overflow-x: hidden;
 }
+.page-updating {
+  height: 90vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}

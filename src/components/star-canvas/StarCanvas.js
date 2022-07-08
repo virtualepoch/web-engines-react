@@ -133,6 +133,7 @@ export default function StarCanvas() {
       drawFractal();
     });
   }, []);
+
   const canvasControls = useRef(null);
   const openCloseBtn = useRef(null);
 

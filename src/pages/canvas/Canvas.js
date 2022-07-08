@@ -1,3 +1,8 @@
 export default function Canvas() {
-  return <h1>HTML-Canvas</h1>;
+  return (
+    <div className="page-updating">
+      <h1>HTML-Canvas Tutorials</h1>
+      <p>This section is currently being updated. Thanks for your patience.</p>
+    </div>
+  );
 }

@@ -32,7 +32,7 @@
   height: 50px;
   margin: 0 7px;
   border-radius: 50%;
-  background: url(/src/logos/jsi-logo-white-50.png) 50% / 77% 77% no-repeat, radial-gradient(circle at 53% 63%, rgb(214, 51, 229), skyblue, rgb(255, 255, 255, 0) 70%);
+  background: url(/src/logos/jsi-logo-white-50.png) 50% / 77% 77% no-repeat;
 }
 .site-title {
   padding-right: 4px;
