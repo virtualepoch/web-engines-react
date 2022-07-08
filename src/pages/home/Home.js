@@ -7,7 +7,7 @@ export default function Home() {
       <div className="text-box">
         <h1>Welcome to JavaScriptive</h1>
         <p>
-          ...a place to learn, <br /> and find inspiration. Check out our JavaScript and CSS tutorials or go straight to animation and game development... hope you find something useful.
+          ...a place to learn, <br /> and find inspiration. Check out our JavaScript and CSS tutorials or go straight to animation and game development. We hope you find something useful.
         </p>
         <Link className="action-btn" to="/css">
           LET'S GO!

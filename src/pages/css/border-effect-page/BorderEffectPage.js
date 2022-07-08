@@ -11,7 +11,7 @@ export default function BorderEffectPage() {
       </button>
       <h1>CSS Border Effect</h1>
       <BorderEffect />
-      <p>In this tutorial we provide and walk you through all the code needed to create this cool border effect. This is done using CSS pseudo-classes. If you'd prefer to just download the code you can do that here.</p>
+      <p>In this tutorial we provide, and walk you through, all the code needed to create this cool border effect. This is done using CSS pseudo-classes. If you'd prefer to just download the code you can do that here.</p>
       <p>
         This border effect box is made up of only two &lt;div&gt; elements. The first one is the wrapper &lt;div&gt;. It's used to outline everything and make the border effect stand out. We will assign it a class name of 'border-effect-wrapper'. It also contains the second &lt;div&gt;.<br></br>
         <br></br>The second &lt;div&gt; is for the inner box and we will assign it a class name of 'border-effect-box'.
@@ -38,7 +38,7 @@ export default function BorderEffectPage() {
     box-shadow: 1px 2px 3px 3px rgba(0, 0, 0, 0.4);
 }`}
       </pre>
-      <p>Now the fun part— using CSS pseudo-classes. Just a reminder— a pseudo-class basically duplicates your element where you can then make any changes to that duplicates individual styling. It's very useful if you need to layer things on your page.</p>
+      <p>Now the fun part —using CSS pseudo-classes. Just a reminder —a pseudo-class duplicates your element. This allows you to make changes to that duplicates' individual styling. It's very useful if you need to layer elements on your page.</p>
       <pre className="html-example">
         {`.border-effect-box::before {
     content: "";

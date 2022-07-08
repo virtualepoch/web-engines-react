@@ -24,7 +24,7 @@
   justify-content: center;
   font: 33px Lorea;
   color: white;
-  background: linear-gradient(0deg, hsl(200, 100%, 50%) 10%, rgba(0, 0, 255, 0.7) 13% 21%, hsl(200, 100%, 50%) 24% 31%, rgba(0, 0, 255, 0.7) 33% 39%, hsl(200, 100%, 50%) 41% 46%, rgba(0, 0, 255, 0.7) 48% 52%, hsl(200, 100%, 50%) 51% 54%, rgba(0, 0, 255, 0.7) 55% 57%, rgb(0, 255, 255, 0.4) 58% 70%, rgb(255, 255, 255, 0.7) 90%);
+  background: linear-gradient(0deg, hsl(200, 100%, 50%) 10%, rgba(0, 0, 255, 0.7) 13% 21%, hsl(200, 100%, 50%) 24% 31%, rgba(0, 0, 255, 0.7) 33% 39%, hsl(200, 100%, 50%) 41% 46%, rgba(0, 0, 255, 0.7) 48% 52%, hsl(200, 100%, 50%) 51% 54%, rgba(0, 0, 255, 0.7) 55% 57%, transparent);
 }
 .main-content {
   width: 100%;
@@ -85,7 +85,7 @@
   }
 }
 .border-effect-box::after {
-  content: "Learn how to add border effects";
+  content: "Learn to create border effects";
   width: 208px;
   height: 84px;
   position: relative;
@@ -100,11 +100,10 @@
   text-align: center;
   background: radial-gradient(blue, black);
 }
+/* ///////// */
 .or-text-box {
   padding: 12px 6px;
   margin: 0 8px;
-  border: 1px solid;
-  border-radius: 50%;
   font: 22px sans-serif;
 }
 /* WAVE TEXT /////////////////////////////// */
@@ -117,6 +116,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border: 4px solid rgb(0, 0, 255, 0.3);
   border-radius: 8px;
   box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.4);
   overflow: hidden;
