@@ -18,6 +18,10 @@
   max-width: 800px;
   padding: 33px 0;
 }
+.html-example-container {
+  max-width: 100%;
+  position: relative;
+}
 .html-example {
   max-width: 100%;
   padding: 22px;
@@ -25,8 +29,34 @@
   font: 15px Consolas, "Courier New", monospace;
   background: hsl(0deg 0% 97%);
 }
-.copy-code-btn{
-  float: right;
+.copy-code-btn {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: none;
+  border-top-left-radius: 9px;
+  box-shadow: inset 0 0 4px 1px rgb(0, 0, 0, 0.05);
+  background: url(/src/icons/copy-solid-color.svg) 70% 70% / 50% no-repeat hsl(0deg 0% 97%);
+}
+.copy-code-btn::after {
+  content: "code copied";
+  width: 80px;
+  height: fit-content;
+  position: absolute;
+  right: 40px;
+  bottom: 7px;
+  border-bottom: 1px solid gray;
+  color: gray;
+  display: none;
+}
+.copy-btn-1.clicked.copy-code-btn::after,
+.copy-btn-2.clicked.copy-code-btn::after,
+.copy-btn-3.clicked.copy-code-btn::after,
+.copy-btn-4.clicked.copy-code-btn::after,
+.copy-btn-5.clicked.copy-code-btn::after {
+  display: block;
 }
 .border-ex-1,
 .border-ex-2,
