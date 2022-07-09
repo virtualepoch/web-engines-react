@@ -18,11 +18,29 @@
   max-width: 800px;
   padding: 33px 0;
 }
-.html-example-container {
+.open-all-code {
+  display: inline;
+  text-decoration-line: underline;
+  color: blue;
+  cursor: pointer;
+}
+.code-example-container {
   max-width: 100%;
   position: relative;
 }
-.html-example {
+.all-code-container {
+  display: none;
+}
+.all-code-container.open {
+  display: flex;
+}
+.close-all-code {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 0;
+}
+.code-example {
   max-width: 100%;
   padding: 22px;
   overflow-x: auto;
@@ -51,11 +69,7 @@
   color: gray;
   display: none;
 }
-.copy-btn-1.clicked.copy-code-btn::after,
-.copy-btn-2.clicked.copy-code-btn::after,
-.copy-btn-3.clicked.copy-code-btn::after,
-.copy-btn-4.clicked.copy-code-btn::after,
-.copy-btn-5.clicked.copy-code-btn::after {
+.copy-code-btn.clicked.copy-code-btn::after {
   display: block;
 }
 .border-ex-1,

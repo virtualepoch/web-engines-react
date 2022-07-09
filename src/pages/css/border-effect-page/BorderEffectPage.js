@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import React, { useRef } from "react";
+import AllCodeContainer from "./AllCodeContainer";
 import BorderEffect from "../BorderEffect";
 import "./border-effect-page.css";
 
@@ -54,6 +55,12 @@ export default function BorderEffectPage() {
   background: radial-gradient(blue, black);       
 }`;
 
+  var allCodeContainerRef = useRef(null);
+  function openCloseAllCode() {
+    var allCodeContainer = allCodeContainerRef.current;
+    allCodeContainer.classList.toggle("open");
+  }
+
   const copyBtn1Ref = useRef(null);
   function copyCodeEx1() {
     const copyBtn1 = copyBtn1Ref.current;
@@ -92,28 +99,40 @@ export default function BorderEffectPage() {
       </button>
       <h1>CSS Border Effect</h1>
       <BorderEffect />
-      <p>In this tutorial we provide, and walk you through, all the code needed to create this cool border effect. This is done using CSS pseudo-classes. If you'd prefer to just download the code you can do that here.</p>
+      <p>
+        In this tutorial we provide, and walk you through, all the code needed to create this cool border effect. This is done using CSS pseudo-classes. If you'd prefer to just copy all the code you can do that{" "}
+        <div className="open-all-code" onClick={openCloseAllCode}>
+          here
+        </div>
+        .
+      </p>
+      <div className="code-example-container all-code-container" ref={allCodeContainerRef}>
+        <button className="close-all-code" onClick={openCloseAllCode}>
+          X
+        </button>
+        <AllCodeContainer />
+      </div>
       <p>
         This border effect box is made up of only two &lt;div&gt; elements. The first one is the wrapper &lt;div&gt;. It's used to outline everything and make the border effect stand out. We will assign it a class name of 'border-effect-wrapper'. It also contains the second &lt;div&gt;.<br></br>
         <br></br>The second &lt;div&gt; is for the inner box and we will assign it a class name of 'border-effect-box'.
       </p>
-      <div className="html-example-container">
-        <pre className="html-example">{codeEx1}</pre>
-        <button className="copy-code-btn copy-btn-1" ref={copyBtn1Ref} onClick={copyCodeEx1}></button>
+      <div className="code-example-container">
+        <pre className="code-example">{codeEx1}</pre>
+        <button className="copy-code-btn" ref={copyBtn1Ref} onClick={copyCodeEx1}></button>
       </div>
       <p>Everything else is done with CSS. So, we'll start by styling the wrapper and box.</p>
-      <div className="html-example-container">
-        <pre className="html-example">{codeEx2}</pre>
-        <button className="copy-code-btn copy-btn-2" ref={copyBtn2Ref} onClick={copyCodeEx2}></button>
+      <div className="code-example-container">
+        <pre className="code-example">{codeEx2}</pre>
+        <button className="copy-code-btn" ref={copyBtn2Ref} onClick={copyCodeEx2}></button>
       </div>
       <div className="border-ex-1">
         <p>Output:</p>
         <BorderEffect />
       </div>
       <p>Now the fun part —using CSS pseudo-classes. Just a reminder —a pseudo-class duplicates your element. This allows you to make changes to that duplicates' individual styling. It's very useful if you need to layer elements on your page.</p>
-      <div className="html-example-container">
-        <pre className="html-example">{codeEx3}</pre>
-        <button className="copy-code-btn copy-btn-3" ref={copyBtn3Ref} onClick={copyCodeEx3}></button>
+      <div className="code-example-container">
+        <pre className="code-example">{codeEx3}</pre>
+        <button className="copy-code-btn" ref={copyBtn3Ref} onClick={copyCodeEx3}></button>
       </div>
       <p>The styling above is for the element that will be spinning behind everything. The element containing this spinning element, the 'border-effect-box', is given a style of 'overflow: hidden'. Therefore, we will only see the spinning element inside the borders of the 'border-effect-box'.</p>
       <div className="border-ex-2">
@@ -121,18 +140,18 @@ export default function BorderEffectPage() {
         <BorderEffect />
       </div>
       <p>We then have a simple animation we add using the CSS at-rule statement '@keyframes'.</p>
-      <div className="html-example-container">
-        <pre className="html-example">{codeEx4}</pre>
-        <button className="copy-code-btn copy-btn-4" ref={copyBtn4Ref} onClick={copyCodeEx4}></button>
+      <div className="code-example-container">
+        <pre className="code-example">{codeEx4}</pre>
+        <button className="copy-code-btn" ref={copyBtn4Ref} onClick={copyCodeEx4}></button>
       </div>
       <div className="border-ex-3">
         <p>Output:</p>
         <BorderEffect />
       </div>
       <p>All that's left is to add the other pseudo-class for the box that will be on top of everything.</p>
-      <div className="html-example-container">
-        <pre className="html-example">{codeEx5}</pre>
-        <button className="copy-code-btn copy-btn-5" ref={copyBtn5Ref} onClick={copyCodeEx5}></button>
+      <div className="code-example-container">
+        <pre className="code-example">{codeEx5}</pre>
+        <button className="copy-code-btn" ref={copyBtn5Ref} onClick={copyCodeEx5}></button>
       </div>
       <div className="border-ex-complete">
         <p>Output:</p>
