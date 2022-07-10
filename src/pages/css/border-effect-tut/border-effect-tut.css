@@ -1,0 +1,23 @@
+.border-ex-1,
+.border-ex-2,
+.border-ex-3,
+.border-ex-complete {
+  margin: 33px auto;
+}
+.border-ex-1 p,
+.border-ex-2 p,
+.border-ex-3 p,
+.border-ex-complete p {
+  padding: 8px;
+}
+.border-ex-1 .border-effect-box::after,
+.border-ex-1 .border-effect-box::before {
+  display: none;
+}
+.border-ex-2 .border-effect-box::after,
+.border-ex-3 .border-effect-box::after {
+  display: none;
+}
+.border-ex-2 .border-effect-box::before {
+  animation: none;
+}

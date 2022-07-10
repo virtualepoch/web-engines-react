@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 
 export default function AllCodeContainer() {
   const allCode = `<head>
-  <style>
+<style>
   .border-effect-wrapper {
     width: fit-content;
     border: 1px solid;
@@ -47,7 +47,7 @@ export default function AllCodeContainer() {
     letter-spacing: 2px;
     background: radial-gradient(rgb(23, 14, 186), black);
   }
-  </style>  
+</style>  
 </head> 
     
 <div class="border-effect-wrapper">

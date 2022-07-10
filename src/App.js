@@ -4,7 +4,8 @@ import StarCanvas from "./components/star-canvas/StarCanvas";
 import TodoPage from "./components/todo/TodoPage";
 import Home from "./pages/home/Home";
 import Css from "./pages/css/Css";
-import BorderEffectPage from "./pages/css/border-effect-page/BorderEffectPage";
+import BorderEffectTut from "./pages/css/border-effect-tut/BorderEffectTut";
+import TextWaveEffectTut from "./pages/css/text-wave-effect-tut/TextWaveEffectTut";
 import Js from "./pages/js/Js";
 import Canvas from "./pages/canvas/Canvas";
 import Cgi from "./pages/cgi/Cgi";
@@ -32,7 +33,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/css" element={<Css />} />
-          <Route path="/css/border-effect" element={<BorderEffectPage />} />
+          <Route path="/css/border-effect-tut" element={<BorderEffectTut />} />
+          <Route path="/css/text-wave-effect-tut" element={<TextWaveEffectTut />} />
           <Route path="/javascript" element={<Js />} />
           <Route path="/html-canvas" element={<Canvas />} />
           <Route path="/cgi" element={<Cgi />} />

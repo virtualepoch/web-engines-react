@@ -15,14 +15,14 @@ export default function Css() {
           <p>Click either box to enter the tutorial</p>
           <div className="effects-container">
             <div className="border-effect-container">
-              <Link className="border-effect-link" to={"/css/border-effect"}>
+              <Link className="border-effect-link" to={"/css/border-effect-tut"}>
                 <BorderEffect />
               </Link>
             </div>
             <div className="or-text-box">-or-</div>
-            <div className="wave-text-container">
+            <Link className="text-wave-effect-container" to={"/css/text-wave-effect-tut"}>
               <h2>text effects</h2>
-            </div>
+            </Link>
           </div>
         </div>
       </div>

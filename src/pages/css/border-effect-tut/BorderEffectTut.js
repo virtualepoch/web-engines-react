@@ -2,9 +2,10 @@ import { useNavigate } from "react-router-dom";
 import React, { useRef } from "react";
 import AllCodeContainer from "./AllCodeContainer";
 import BorderEffect from "../BorderEffect";
-import "./border-effect-page.css";
+import "../tuts-common.css"
+import "./border-effect-tut.css";
 
-export default function BorderEffectPage() {
+export default function BorderEffectTut() {
   const navigate = useNavigate();
   const codeEx1 = `<div class="border-effect-wrapper">
     <div class="border-effect-box"></div>
@@ -93,7 +94,7 @@ export default function BorderEffectPage() {
   }
 
   return (
-    <div className="border-effect-page">
+    <div className="tut-page-container">
       <button className="back-btn" onClick={() => navigate(-1)}>
         &lt;BACK
       </button>
