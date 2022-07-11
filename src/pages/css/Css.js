@@ -1,8 +1,10 @@
 import BallScene from "../../components/ball-scene/BallScene";
 import { Link } from "react-router-dom";
 import BorderEffect from "./components/BorderEffect";
-import Cube from "./components/Cube";
+import ColorCube from "./components/ColorCube";
+import SpinningTop from "./components/SpinningTop";
 import "./css.css";
+
 
 export default function Css() {
   return (
@@ -29,7 +31,16 @@ export default function Css() {
         <section className="effects-section">
           <h1>Learn to Create 3-D animations</h1>
           <p>Tap or click on the cubes below to change their animation.</p>
-          <Cube />
+          <div className="cube-effects-container">
+            <div className="column column-1">
+              <ColorCube />
+              <p>ENTER THE CUBE TUTORIAL</p>
+            </div>
+            <div className="column">
+              <SpinningTop />
+              <p>ENTER THE CUBE TUTORIAL</p>
+            </div>
+          </div>
         </section>
       </div>
     </div>
