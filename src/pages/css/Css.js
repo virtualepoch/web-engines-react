@@ -28,7 +28,7 @@ export default function Css() {
         </section>
         <section className="effects-section">
           <h1>Learn to Create 3-D animations</h1>
-          <p>Tap or click on the cubes below to start their animation.</p>
+          <p>Tap or click on the cubes below to change their animation.</p>
           <Cube />
         </section>
       </div>
