@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import React, { useRef } from "react";
 import AllCodeContainer from "./AllCodeContainer";
-import BorderEffect from "../BorderEffect";
+import BorderEffect from "../components/BorderEffect";
 import "../tuts-common.css"
 import "./border-effect-tut.css";
 

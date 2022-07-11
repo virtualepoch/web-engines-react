@@ -1,0 +1,260 @@
+.cube-container {
+  height: 500px;
+  margin-bottom: 100px;
+}
+.cube-2-wrapper,
+.cube-3-wrapper {
+  height: 100%;
+  width: 100%;
+  border-top: 4px solid gray;
+  border-left: 4px solid rgb(192, 192, 192);
+  border-bottom: 4px solid rgb(222, 222, 222);
+  border-right: 4px solid rgb(154, 154, 154);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 600px;
+  perspective-origin: 50%;
+  overflow: hidden;
+  background: linear-gradient(gray, black, gray);
+}
+.cube-2,
+.cube-3 {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  z-index: 11111;
+  transform-style: preserve-3d;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+.cube-2,
+.cube-3 {
+  animation: cube-2-rotateY 10s infinite linear;
+}
+@keyframes cube-2-rotateY {
+  to {
+    transform: rotateY(360deg);
+  }
+}
+.cube-2 div,
+.cube-3 div {
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  border: 1px solid white;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 10px rgb(255, 255, 255, 0.7) inset;
+  /* backface-visibility: none; */
+}
+.cube-2 img,
+.cube-3 img {
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+}
+.cube-2-front,
+.cube-3-front {
+  transform: translateZ(150px);
+}
+.cube-2-right,
+.cube-3-right {
+  transform: rotateY(-270deg) translateX(150px);
+  transform-origin: 100% 0;
+}
+.cube-2-back,
+.cube-3-back {
+  transform: translateZ(-150px) rotateY(180deg);
+}
+.cube-2-left,
+.cube-3-left {
+  transform: rotateY(270deg) translateX(-150px);
+  transform-origin: 0 50%;
+}
+.cube-2-top,
+.cube-3-top {
+  transform: rotateX(90deg) translateZ(150px);
+}
+.cube-2-bottom,
+.cube-3-bottom {
+  transform: rotateX(90deg) translateZ(-150px);
+}
+.cube-2 .cube-2-shadow,
+.cube-3 .cube-3-shadow {
+  background: rgb(0, 0, 0, 0.4);
+  transform: rotateX(90deg) translateZ(-200px);
+  z-index: 111;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 0 20px 10px rgb(0, 0, 0, 0.5);
+}
+/* SMALL CUBE # 1 SECTION - ROTATING COLOR CUBE /////////////////////////////////////// */
+.cube-2 .small-cube {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  top: 100px;
+  left: 100px;
+  transform-style: preserve-3d;
+}
+.cube-2 .small-cube.open {
+  animation: cube-2-small-rotateY 13s ease-in-out infinite;
+}
+@keyframes cube-2-small-rotateY {
+  50% {
+    transform: rotateX(36000deg) rotateY(180deg);
+  }
+}
+.cube-2 .small-cube div {
+  height: 100%;
+  width: 100%;
+  border: 1px solid white;
+  box-shadow: 0 0 10px 10px rgba(179, 179, 179, 0.7) inset;
+}
+.cube-2 .small-cube {
+  border: none;
+  box-shadow: none;
+}
+/* .cube-2 .small-cube img {
+    border: 1px solid black;
+  } */
+.small-cube .small-front {
+  background-color: rgb(0, 0, 255, 0.5);
+  transform: translateZ(50px);
+}
+.small-cube .small-right {
+  background-color: rgb(255, 255, 0, 0.5);
+  transform: rotateY(-270deg) translateX(50px);
+  transform-origin: 100% 0;
+}
+.small-cube .small-back {
+  background-color: rgb(0, 0, 255, 0.5);
+  transform: translateZ(-50px) rotateY(180deg);
+}
+.small-cube .small-left {
+  background-color: rgb(255, 255, 0, 0.5);
+  transform: rotateY(270deg) translateX(-50px);
+  transform-origin: 0 50%;
+}
+.small-cube .small-top {
+  background-color: rgb(255, 0, 0, 0.5);
+  transform: rotateX(90deg) translateZ(47px);
+}
+.small-cube .small-bottom {
+  background-color: rgb(255, 0, 0, 0.5);
+  transform: rotateX(90deg) translateZ(-47px);
+}
+.cube-2-floor {
+  position: absolute;
+  top: 100px;
+  z-index: 1;
+  background-image: radial-gradient(rgba(112, 112, 112, 0), rgb(98, 98, 98) 77%), repeating-conic-gradient(from 45deg, rgb(0, 92, 191) 0deg 90deg, rgb(220, 220, 220) 90deg 180deg);
+  background-size: 100%, 1em 1em;
+  height: 800px;
+  width: 100%;
+  transform: rotateX(90deg);
+  animation: floorRotate 5s infinite linear;
+}
+@keyframes sceneRotate {
+  to {
+    transform: rotateY(360deg);
+  }
+}
+/* SMALL CUBE #2 SECTION - SPINNING, FLYING TOP /////////////////////////////////////// */
+.cube-3 .spinning-top {
+  height: 100px;
+  width: 50px;
+  position: relative;
+  top: 200px;
+  left: 125px;
+  transform-style: preserve-3d;
+}
+.spinning-top.open {
+  animation: spinning-top-rotateY 10s ease-in-out infinite;
+}
+@keyframes spinning-top-rotateY {
+  to {
+    transform: rotateX(-25deg) rotateY(50000deg);
+  }
+  20% {
+    top: 150px;
+    left: 125px;
+  }
+  30% {
+    top: 0;
+    left: 125px;
+  }
+  40% {
+    top: 70px;
+    left: 125px;
+  }
+  50% {
+    left: 0px;
+  }
+  60% {
+    left: 275px;
+  }
+  61% {
+    left: 200px;
+  }
+}
+/* @keyframes spinning-top-transate-x {
+  35% {
+    left: 0px;
+  }
+} */
+.cube-3 .spinning-top div {
+  height: 100%;
+  width: 100%;
+  border: 1px solid white;
+  box-shadow: 0 0 10px 10px rgba(179, 179, 179, 0.7) inset;
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+}
+.cube-3 .spinning-top {
+  border: none;
+  box-shadow: none;
+}
+/* .cube-2 .small-cube img {
+    border: 1px solid black;
+  } */
+.spinning-top .front {
+  background-color: red;
+  transform: translateZ(13px) rotateX(-15deg);
+}
+.spinning-top .right {
+  background-color: blue;
+  transform: rotateY(-270deg) translateX(25px) rotateX(-15deg) translateY(3px);
+  transform-origin: 100% 0;
+}
+.spinning-top .back {
+  background-color: green;
+  transform: translateZ(-13px) rotateY(180deg) rotateX(-15deg);
+}
+.spinning-top .left {
+  background-color: purple;
+  transform: rotateY(90deg) translateX(-25px) rotateX(15deg) translateZ(12px) translateY(3px);
+  transform-origin: 0 50%;
+}
+.spinning-top div.top {
+  background-color: yellow;
+  height: 50px;
+  clip-path: none;
+  transform: rotateX(90deg) translateZ(23px);
+}
+.cube-3-floor {
+  position: absolute;
+  top: 100px;
+  z-index: 1;
+  background-image: radial-gradient(rgba(112, 112, 112, 0), rgb(98, 98, 98) 77%), repeating-conic-gradient(from 45deg, rgb(0, 92, 191) 0deg 90deg, rgb(220, 220, 220) 90deg 180deg);
+  background-size: 100%, 1em 1em;
+  height: 800px;
+  width: 100%;
+  transform: rotateX(90deg);
+  animation: floorRotate 5s infinite linear;
+}
+@keyframes sceneRotate {
+  to {
+    transform: rotateY(360deg);
+  }
+}

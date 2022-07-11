@@ -35,7 +35,7 @@
 
 /* transform-style: preserve-3d; !!!!!!!THIS STYLING WAS ACTUALLY ABLE TO ACT LIKE A Z-INDEX WHEN THE ELEMENT'S POSITION (IN THIS CASE RELATIVE) WAS NOT DECLARED!!!VERY INTERESTING*/
 
-.text-effects {
+.effects-section {
   width: 100%;
   margin-top: 88px;
   font: 25px sans-serif;
