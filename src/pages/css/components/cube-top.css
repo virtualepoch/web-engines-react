@@ -32,7 +32,7 @@
     transform: rotateY(360deg);
   }
 }
-.color-cube.anim-2 {
+.color-cube.anim {
   animation: color-cube-anim-2 13s linear infinite;
 }
 @keyframes color-cube-anim-2 {
@@ -88,70 +88,77 @@
 .spinning-top {
   height: 100px;
   width: 50px;
-  position: absolute;
-  top: 150px;
-  left: 125px;
+  position: relative;
+  top: 50px;
   transform-style: preserve-3d;
-  border: none;
-  box-shadow: none;
 }
-.spinning-top {
-  animation: spinning-top-rotateY 10s ease-in-out infinite;
+.spinning-top.anim {
+  animation: spinning-top-rotateY 8s ease-in-out infinite;
 }
 @keyframes spinning-top-rotateY {
   to {
-    transform: rotateY(50000deg);
+    transform: rotateY(30000deg) rotateX(180deg);
   }
   20% {
-    top: 130px;
-    left: 130px;
-  }
-  30% {
-    top: 0;
-    left: 125px;
+    top: 50px;
+    right: 0;
   }
   40% {
-    top: 70px;
+    top: -100px;
+    right: 0;
   }
   50% {
-    left: 0;
+    top: -80px;
   }
   60% {
-    left: 255px;
+    top: -70px;
+    right: 125px;
+  }
+  70% {
+    top: -70px;
+    right: -125px;
   }
   80% {
-    top: 150px;
-    left: 125px;
+    right: 50px;
+  }
+  85% {
+    right: -25px;
+  }
+  90% {
+    top: 50px;
+    right: 0;
   }
 }
-.spinning-top div {
+.spinning-top .side {
   height: 100%;
   width: 100%;
   position: absolute;
-  border: 1px solid white;
-  box-shadow: 0 0 10px 10px rgba(179, 179, 179, 0.7) inset;
   clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
 }
+
+.spinning-top .front,
+.spinning-top .back {
+  background: linear-gradient(purple, pink, aqua);
+}
+.spinning-top .left,
+.spinning-top .right {
+  background: linear-gradient(turquoise, pink, purple);
+}
 .spinning-top .front {
-  background-color: red;
   transform: translateZ(13px) rotateX(-15deg);
 }
 .spinning-top .right {
-  background-color: blue;
   transform: rotateY(-270deg) translateX(25px) rotateX(-15deg) translateY(3px);
   transform-origin: 100% 0;
 }
 .spinning-top .back {
-  background-color: green;
   transform: translateZ(-13px) rotateY(180deg) rotateX(-15deg);
 }
 .spinning-top .left {
-  background-color: purple;
   transform: rotateY(90deg) translateX(-25px) rotateX(15deg) translateZ(12px) translateY(3px);
   transform-origin: 0 50%;
 }
 .spinning-top div.top {
-  background-color: yellow;
   height: 50px;
   clip-path: none;
   transform: rotateX(90deg) translateZ(23px);

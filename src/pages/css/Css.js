@@ -30,7 +30,7 @@ export default function Css() {
         </section>
         <section className="effects-section">
           <h1>Learn to Create 3-D animations</h1>
-          <p>Tap or click on the cubes below to change their animation.</p>
+          <p>Tap or click on the cubes below to start or change their animation.</p>
           <div className="cube-effects-container">
             <div className="column column-1">
               <ColorCube />
@@ -38,7 +38,7 @@ export default function Css() {
             </div>
             <div className="column">
               <SpinningTop />
-              <p>ENTER THE CUBE TUTORIAL</p>
+              <p>ENTER THE SPINNING TOP TUTORIAL</p>
             </div>
           </div>
         </section>
