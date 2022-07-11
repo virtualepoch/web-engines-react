@@ -25,9 +25,9 @@
   width: 100px;
   position: relative;
   transform-style: preserve-3d;
-  animation: color-cube-spin 8s linear infinite;
+  animation: color-cube-rotateY 8s linear infinite;
 }
-@keyframes color-cube-spin {
+@keyframes color-cube-rotateY {
   to {
     transform: rotateY(360deg);
   }
@@ -35,12 +35,15 @@
 .color-cube.anim {
   animation: color-cube-anim-2 13s linear infinite;
 }
+.color-cube.anim .color-cube-shadow {
+  display: none;
+}
 @keyframes color-cube-anim-2 {
   50% {
     transform: rotateX(36000deg) rotateY(180deg);
   }
 }
-.color-cube div {
+.color-cube .side {
   height: 100%;
   width: 100%;
   position: absolute;
@@ -77,12 +80,14 @@
   background-color: rgb(255, 0, 0, 0.5);
   transform: rotateX(90deg) translateZ(-47px);
 }
-.color-cube .bottom.shadow {
-  border: none;
-  box-shadow: none;
+.color-cube-shadow {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 130px;
   box-shadow: 0 0 5px 5px rgb(0, 0, 0, 0.05);
   background: radial-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.05));
-  transform: rotateX(90deg) translateZ(-147px);
+  transform: rotateX(90deg);
 }
 /* SPINNING, FLYING TOP //////////////////////// */
 .spinning-top {
@@ -91,11 +96,17 @@
   position: relative;
   top: 50px;
   transform-style: preserve-3d;
-}
-.spinning-top.anim {
-  animation: spinning-top-rotateY 8s ease-in-out infinite;
+  animation: spinning-top-rotateY 8s linear infinite;
 }
 @keyframes spinning-top-rotateY {
+  to {
+    transform: rotateY(360deg);
+  }
+}
+.spinning-top.anim {
+  animation: spinning-top-anim-2 8s ease-in-out infinite;
+}
+@keyframes spinning-top-anim-2 {
   to {
     transform: rotateY(30000deg) rotateX(180deg);
   }
@@ -161,5 +172,16 @@
 .spinning-top div.top {
   height: 50px;
   clip-path: none;
-  transform: rotateX(90deg) translateZ(23px);
+  top: -35px;
+  transform: rotateX(90deg);
+  background: radial-gradient(blue, cyan);
+}
+.spinning-top .shadow {
+  width: 100px;
+  height: 100px;
+  clip-path: none;
+  border-radius: 50%;
+  top: 80px;
+  transform: rotateX(90deg) translate(-25px);
+  background: radial-gradient(rgb(0, 0, 255, 0.5), rgb(255, 0, 255, 0.5));
 }

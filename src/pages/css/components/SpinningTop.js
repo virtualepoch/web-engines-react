@@ -11,12 +11,12 @@ export default function SpinningTop() {
     <div className="spinning-top-container">
       <div className="spinning-top-wrapper">
         <div className="spinning-top" ref={spinningTopRef} onClick={startAnim}>
-          <div className="front side"></div>
-          <div className="right side"></div>
-          <div className="back side"></div>
-          <div className="left side"></div>
-          <div className="top side"></div>
-          <div className="shadow"></div>
+          <div className="side front"></div>
+          <div className="side right"></div>
+          <div className="side back"></div>
+          <div className="side left"></div>
+          <div className="side top"></div>
+          <div className="side shadow"></div>
         </div>
       </div>
     </div>
