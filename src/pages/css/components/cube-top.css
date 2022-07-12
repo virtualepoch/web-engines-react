@@ -25,7 +25,7 @@
   width: 100px;
   position: relative;
   transform-style: preserve-3d;
-  animation: color-cube-rotateY 8s linear infinite;
+  animation: color-cube-rotateY 12s linear infinite;
 }
 @keyframes color-cube-rotateY {
   to {
@@ -47,8 +47,7 @@
   height: 100%;
   width: 100%;
   position: absolute;
-  border: 1px solid white;
-  box-shadow: 0 0 10px 10px rgba(179, 179, 179, 0.7) inset;
+  box-shadow: 0 0 10px 5px rgba(0, 100, 255, 0.7) inset;
 }
 .color-cube {
   border: none;
@@ -76,11 +75,11 @@
   transform-origin: 0 50%;
 }
 .color-cube .top {
-  background-color: rgb(255, 0, 0, 0.5);
+  background-color: rgb(255, 0, 255, 0.5);
   transform: rotateX(90deg) translateZ(47px);
 }
 .color-cube .bottom {
-  background-color: rgb(255, 0, 0, 0.5);
+  background-color: rgb(255, 0, 255, 0.5);
   transform: rotateX(90deg) translateZ(-47px);
 }
 .color-cube-shadow {
@@ -165,11 +164,11 @@
 
 .spinning-top .front,
 .spinning-top .back {
-  background: linear-gradient(purple, pink, aqua);
+  background: linear-gradient(purple, rgb(0, 155, 255));
 }
 .spinning-top .left,
 .spinning-top .right {
-  background: linear-gradient(turquoise, pink, purple);
+  background: linear-gradient(rgb(0, 155, 255), purple);
 }
 .spinning-top .front {
   transform: translateZ(13px) rotateX(-15deg);
