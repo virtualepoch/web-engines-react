@@ -16,8 +16,8 @@ export default function SpinningTop() {
           <div className="side back"></div>
           <div className="side left"></div>
           <div className="side top"></div>
-          <div className="side shadow"></div>
         </div>
+        <div className="side shadow"></div>
       </div>
     </div>
   );

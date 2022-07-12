@@ -30,7 +30,7 @@ export default function Css() {
         </section>
         <section className="effects-section">
           <h1>Learn to Create 3-D animations</h1>
-          <p>Tap or click on the cubes below to start or change their animation.</p>
+          <p>Tap or click on the cubes below to toggle their animation.</p>
           <div className="cube-effects-container">
             <div className="column column-1">
               <ColorCube />

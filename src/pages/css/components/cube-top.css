@@ -33,14 +33,14 @@
   }
 }
 .color-cube.anim {
-  animation: color-cube-anim-2 13s linear infinite;
+  animation: color-cube-anim-2 13s ease-in-out infinite;
 }
 .color-cube.anim .color-cube-shadow {
   display: none;
 }
 @keyframes color-cube-anim-2 {
   50% {
-    transform: rotateX(36000deg) rotateY(180deg);
+    transform: rotateX(18000deg) rotateY(180deg);
   }
 }
 .color-cube .side {
@@ -54,12 +54,15 @@
   border: none;
   box-shadow: none;
 }
+.color-cube .front,
+.color-cube .back {
+  background: url(../../../logos/jsive-logo-at-100.png) 50%/80% no-repeat, rgb(0, 0, 255, 0.5);
+}
 .color-cube .front {
-  background-color: rgb(0, 0, 255, 0.5);
   transform: translateZ(50px);
 }
 .color-cube .right {
-  background-color: rgb(255, 255, 0, 0.5);
+  background-color: rgb(0, 0, 255, 0.5);
   transform: rotateY(-270deg) translateX(50px);
   transform-origin: 100% 0;
 }
@@ -68,7 +71,7 @@
   transform: translateZ(-50px) rotateY(180deg);
 }
 .color-cube .left {
-  background-color: rgb(255, 255, 0, 0.5);
+  background-color: rgb(0, 0, 255, 0.5);
   transform: rotateY(270deg) translateX(-50px);
   transform-origin: 0 50%;
 }
@@ -104,12 +107,12 @@
   }
 }
 .spinning-top.anim {
-  animation: spinning-top-anim-2 8s ease-in-out infinite;
+  animation: spinning-top-anim-2 8s ease-in infinite;
 }
 @keyframes spinning-top-anim-2 {
-  to {
-    transform: rotateY(30000deg) rotateX(180deg);
-  }
+  /* to {
+    transform: rotateY(30000deg) rotateX(0);
+  } */
   20% {
     top: 50px;
     right: 0;
@@ -130,14 +133,27 @@
     right: -125px;
   }
   80% {
-    right: 50px;
+    right: 125px;
   }
   85% {
-    right: -25px;
+    right: -125px;
   }
   90% {
     top: 50px;
-    right: 0;
+    right: 125px;
+  }
+  93% {
+    right: -125px;
+    transform: rotateY(30000deg) rotateX(0);
+  }
+  96% {
+    right: -90px;
+    transform: rotateY(31820deg) rotateX(75deg);
+  }
+  100% {
+    right: -90px;
+    transform: rotateY(31820deg) rotateX(75deg);
+    animation-timing-function: ease-out;
   }
 }
 .spinning-top .side {
@@ -169,12 +185,12 @@
   transform: rotateY(90deg) translateX(-25px) rotateX(15deg) translateZ(12px) translateY(3px);
   transform-origin: 0 50%;
 }
-.spinning-top div.top {
+.spinning-top .top {
   height: 50px;
   clip-path: none;
-  top: -35px;
-  transform: rotateX(90deg);
-  background: radial-gradient(blue, cyan);
+  top: -25px;
+  transform: rotateX(90deg) rotateZ(180deg);
+  background: url(../../../logos/jsive-logo-at-100.png) 50% / 90% no-repeat, radial-gradient(magenta, pink);
 }
 .spinning-top .shadow {
   width: 100px;
