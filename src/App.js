@@ -1,3 +1,5 @@
+import { Route, Routes, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import StarCanvas from "./components/star-canvas/StarCanvas";
@@ -10,8 +12,6 @@ import Js from "./pages/js/Js";
 import Canvas from "./pages/canvas/Canvas";
 import Cgi from "./pages/cgi/Cgi";
 import "./pages/common.css";
-import { Route, Routes, useLocation } from "react-router-dom";
-import { useEffect } from "react";
 
 function useScrollToTop() {
   const { pathname } = useLocation();
