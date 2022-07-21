@@ -42,3 +42,24 @@
   z-index: 88;
   color: white;
 }
+.to-top-btn {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  left: 12px;
+  bottom: -80px;
+  z-index: 8888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  box-shadow: -2px 2px 5px 2px rgb(0, 0, 0, 0.3);
+  background: url(../icons/angle-up-solid-white.svg) center / 60% no-repeat, rgb(0, 0, 255, 0.5);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.to-top-btn.open {
+  bottom: 12px;
+}

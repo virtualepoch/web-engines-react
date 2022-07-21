@@ -1,6 +1,7 @@
 import { Route, Routes, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Header from "./components/header/Header";
+import ToTopBtn from "./components/ToTopBtn";
 import StarCanvas from "./components/star-canvas/StarCanvas";
 import TodoPage from "./components/todo/TodoPage";
 import Home from "./pages/home/Home";
@@ -26,6 +27,7 @@ function App() {
   return (
     <>
       <Header />
+      <ToTopBtn />
       <StarCanvas />
       <TodoPage />
       <section className="page-container">
