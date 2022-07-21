@@ -7,6 +7,7 @@ export default function ColorCube() {
   function startAnim() {
     colorCube.current.classList.toggle("anim");
   }
+
   return (
     <div className="cube-container">
       <div className="color-cube" ref={colorCube} onClick={startAnim}>

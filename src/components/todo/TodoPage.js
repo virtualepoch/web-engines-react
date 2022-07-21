@@ -1,11 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
+import { v4 as uuidv4 } from "uuid";
 import TodoList from "./TodoList";
 import "./todopage.css";
-import { v4 as uuidv4 } from "uuid";
 
 const LOCAL_STORAGE_KEY = "todoApp.todos";
 
-function TodoPage() {
+export default function TodoPage() {
   const [todos, setTodos] = useState([]);
   const todoNameRef = useRef();
 
@@ -39,18 +39,16 @@ function TodoPage() {
     setTodos(newTodos);
   }
 
-  const openCloseBtnRef = useRef(null);
-  const openCloseBtn = openCloseBtnRef.current;
-  const todoPageRef = useRef(null);
-  const todoPage = todoPageRef.current;
+  const openCloseBtn = useRef(null);
+  const todoPage = useRef(null);
   function openCloseBtnToggle() {
-    openCloseBtn.classList.toggle("open");
-    todoPage.classList.toggle("open");
+    openCloseBtn.current.classList.toggle("open");
+    todoPage.current.classList.toggle("open");
   }
 
   return (
     <>
-      <div className="todo-page" ref={todoPageRef}>
+      <div className="todo-page" ref={todoPage}>
         <h1>Todo List</h1>
         <div className="input-row">
           <input className="todo-input" ref={todoNameRef} type="text" />
@@ -64,12 +62,7 @@ function TodoPage() {
         </button>
         <div>{todos.filter((todo) => !todo.complete).length} left todos</div>
       </div>
-      <div className="open-close-btn" ref={openCloseBtnRef} onClick={openCloseBtnToggle}>
-        <p>todo</p>
-        <div className="open-close-btn-bars"></div>
-      </div>
+      <div className="open-close-btn" ref={openCloseBtn} onClick={openCloseBtnToggle}></div>
     </>
   );
 }
-
-export default TodoPage;

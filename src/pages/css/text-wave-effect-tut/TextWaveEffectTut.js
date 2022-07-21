@@ -1,10 +1,9 @@
-import { useNavigate } from "react-router-dom";
 import React, { useRef } from "react";
+import BackBtn from "../components/BackBtn";
 import AllCodeContainer from "./AllCodeContainer";
 import "./text-wave-effect-tut.css";
 
 export default function TextWaveEffectTut() {
-  const navigate = useNavigate();
   const codeEx1 = `<div class="text-wave-effect-container">
   <h1>text effects</h1>
 </div>`;
@@ -82,9 +81,7 @@ export default function TextWaveEffectTut() {
 
   return (
     <div className="tut-page-container">
-      <button className="back-btn" onClick={() => navigate(-1)}>
-        &lt;BACK
-      </button>
+      <BackBtn />
       <h1>Text Wave Effect</h1>
       <div className="text-wave-effect-container">
         <h2>text effects</h2>
@@ -144,6 +141,7 @@ export default function TextWaveEffectTut() {
         </div>
       </div>
       <p>There you have it. Another example of what can be done with just a few lines of CSS.</p>
+      <BackBtn />
       <footer className="footer">www.JavaScriptive.com</footer>
     </div>
   );

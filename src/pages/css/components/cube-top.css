@@ -28,7 +28,7 @@
   }
 }
 .color-cube.anim {
-  animation: color-cube-anim-2 13s ease-in-out infinite;
+  animation: color-cube-anim-2 13s ease-in-out;
 }
 @keyframes color-cube-anim-2 {
   50% {

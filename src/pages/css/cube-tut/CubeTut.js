@@ -1,11 +1,10 @@
-import { useNavigate } from "react-router-dom";
 import React, { useRef } from "react";
+import BackBtn from "../components/BackBtn";
 import ColorCube from "../components/ColorCube";
 import AllCodeContainer from "./AllCodeContainer";
 import "./cube-tut.css";
 
 export default function TextWaveEffectTut() {
-  const navigate = useNavigate();
   const codeEx1 = `<div class="cube-container">
   <div class="color-cube">
     <div class="side front"></div>
@@ -122,9 +121,7 @@ export default function TextWaveEffectTut() {
 
   return (
     <div className="tut-page-container">
-      <button className="back-btn" onClick={() => navigate(-1)}>
-        &lt;BACK
-      </button>
+      <BackBtn />
       <h1>Rotating Cube Effect</h1>
       <ColorCube />
       <p>
@@ -192,6 +189,7 @@ export default function TextWaveEffectTut() {
         <ColorCube />
       </div>
       <p>There you have it. Another example of what can be done with the power of CSS.</p>
+      <BackBtn />
       <footer className="footer">www.JavaScriptive.com</footer>
     </div>
   );

@@ -1,14 +1,13 @@
-import { useNavigate } from "react-router-dom";
 import React, { useRef } from "react";
-import AllCodeContainer from "./AllCodeContainer";
+import BackBtn from "../components/BackBtn";
 import BorderEffect from "../components/BorderEffect";
-import "../tuts-common.css"
+import AllCodeContainer from "./AllCodeContainer";
+import "../tuts-common.css";
 import "./border-effect-tut.css";
 
 export default function BorderEffectTut() {
-  const navigate = useNavigate();
   const codeEx1 = `<div class="border-effect-wrapper">
-    <div class="border-effect-box"></div>
+  <div class="border-effect-box"></div>
 </div>`;
   const codeEx2 = `.border-effect-wrapper {
   width: fit-content;
@@ -95,9 +94,7 @@ export default function BorderEffectTut() {
 
   return (
     <div className="tut-page-container">
-      <button className="back-btn" onClick={() => navigate(-1)}>
-        &lt;BACK
-      </button>
+      <BackBtn />
       <h1>CSS Border Effect</h1>
       <BorderEffect />
       <p>
@@ -159,6 +156,7 @@ export default function BorderEffectTut() {
         <BorderEffect />
       </div>
       <p>There you have it. This is just one example of the many things you can accomplish with just a few lines of CSS.</p>
+      <BackBtn />
       <footer className="footer">www.JavaScriptive.com</footer>
     </div>
   );
