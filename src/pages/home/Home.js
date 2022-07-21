@@ -15,6 +15,7 @@ export default function Home() {
       </div>
       <div className="tap-message">tap screen</div>
       <div className="tap-message tap-message-2">tap screen</div>
+      <footer className="footer home-footer">www.JavaScriptive.com</footer>
     </div>
   );
 }

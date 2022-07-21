@@ -5,7 +5,6 @@ import ColorCube from "./components/ColorCube";
 import SpinningTop from "./components/SpinningTop";
 import "./css.css";
 
-
 export default function Css() {
   return (
     <div className="css-page">
@@ -34,7 +33,9 @@ export default function Css() {
           <div className="cube-effects-container">
             <div className="column column-1">
               <ColorCube />
-              <Link to={"/css/cube-tut"}>ENTER THE CUBE TUTORIAL</Link>
+              <Link to={"/css/cube-tut"}>
+                <p>ENTER THE CUBE TUTORIAL</p>
+              </Link>
             </div>
             <div className="column">
               <SpinningTop />
@@ -43,6 +44,7 @@ export default function Css() {
           </div>
         </section>
       </div>
+      <footer className="footer">www.JavaScriptive.com</footer>;
     </div>
   );
 }

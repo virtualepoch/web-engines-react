@@ -192,6 +192,7 @@ export default function TextWaveEffectTut() {
         <ColorCube />
       </div>
       <p>There you have it. Another example of what can be done with the power of CSS.</p>
+      <footer className="footer">www.JavaScriptive.com</footer>
     </div>
   );
 }

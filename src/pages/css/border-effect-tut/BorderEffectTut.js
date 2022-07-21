@@ -159,6 +159,7 @@ export default function BorderEffectTut() {
         <BorderEffect />
       </div>
       <p>There you have it. This is just one example of the many things you can accomplish with just a few lines of CSS.</p>
+      <footer className="footer">www.JavaScriptive.com</footer>
     </div>
   );
 }

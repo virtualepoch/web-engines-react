@@ -1,14 +1,13 @@
 import { Route, Routes, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Header from "./components/header/Header";
-import Footer from "./components/footer/Footer";
 import StarCanvas from "./components/star-canvas/StarCanvas";
 import TodoPage from "./components/todo/TodoPage";
 import Home from "./pages/home/Home";
 import Css from "./pages/css/Css";
 import BorderEffectTut from "./pages/css/border-effect-tut/BorderEffectTut";
 import TextWaveEffectTut from "./pages/css/text-wave-effect-tut/TextWaveEffectTut";
-import CubeTut from "./pages/css/cube-tut/CubeTut"
+import CubeTut from "./pages/css/cube-tut/CubeTut";
 import Js from "./pages/js/Js";
 import Canvas from "./pages/canvas/Canvas";
 import Cgi from "./pages/cgi/Cgi";
@@ -27,7 +26,6 @@ function App() {
   return (
     <>
       <Header />
-      <Footer />
       <StarCanvas />
       <TodoPage />
       <section className="page-container">
