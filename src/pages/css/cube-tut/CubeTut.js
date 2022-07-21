@@ -40,6 +40,7 @@ export default function TextWaveEffectTut() {
   position: relative;
   transform-style: preserve-3d;
   animation: color-cube-rotateY 12s linear infinite;
+  border: solid black;
 }`;
   const codeEx4 = `.color-cube .side {
   height: 100%;
