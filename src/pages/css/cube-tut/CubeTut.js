@@ -14,7 +14,7 @@ export default function TextWaveEffectTut() {
     <div class="side left"></div>
     <div class="side top"></div>
     <div class="side bottom"></div>
-    <div class="color-cube-shadow"></div>
+    <div class="side shadow"></div>
   </div>
 </div>`;
 
@@ -50,35 +50,32 @@ export default function TextWaveEffectTut() {
   box-shadow: 0 0 10px 5px rgba(0, 100, 255, 0.7) inset;
 }
 .color-cube .left {
-  transform: rotateY(270deg) translateX(-50px);
-  transform-origin: 0 50%;
+  transform: translateX(-50px) rotateY(90deg);
+  background: red;
 }
 .color-cube .right {
-  transform: rotateY(-270deg) translateX(50px);
-  transform-origin: 100% 0;
+  transform: translateX(50px) rotateY(90deg);
+  background: blue;
 }
 .color-cube .back {
   transform: translateZ(-50px) rotateY(180deg);
+  background: limegreen;
 }
 .color-cube .top {
-  background-color: rgb(255, 0, 255, 0.5);
-  transform: rotateX(90deg) translateZ(47px);
+  transform: translateY(-50px) rotateX(90deg) ;
+  background: yellow;
 }
 .color-cube .bottom {
-  background-color: rgb(255, 0, 255, 0.5);
-  transform: rotateX(90deg) translateZ(-47px);
+  transform: translateY(50px) rotateX(90deg);
+  background: aqua;
 }`;
   const codeEx5 = `.color-cube .front {
   transform: translateZ(50px);
 }
-.color-cube-shadow {
-  height: 100px;
-  width: 100px;
-  position: absolute;
-  top: 130px;
+.color-cube .shadow {
   box-shadow: 0 0 5px 5px rgb(0, 0, 0, 0.05);
   background: radial-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.05));
-  transform: rotateX(90deg);
+  transform: translateY(120px) rotateX(90deg);
 }
 
 @keyframes color-cube-rotateY {
@@ -131,7 +128,7 @@ export default function TextWaveEffectTut() {
       <h1>Rotating Cube Effect</h1>
       <ColorCube />
       <p>
-        In this tutorial we provide, and walk you through, all the code needed to create this rotating cube. To give the cube depth we use the 'transform: preserve-3d' CSS style method. It gives perspective to any child elements that have been rotated along an axis. We then use an '@keyframes' animation to make it rotate. If you wish to copy all the code for this project, you can do that{" "}
+        In this tutorial we provide, and walk you through, all the code needed to create this rotating cube. To give the cube depth we use the 'transform-style: preserve-3d' CSS style property. It gives perspective to any child elements that have been rotated along the X, Y, or Z axes. We then use an '@keyframes' animation to make the cube rotate. If you wish to copy all the code for this project, you can do that{" "}
         <div className="open-all-code" onClick={openCloseAllCode}>
           here
         </div>
@@ -148,7 +145,7 @@ export default function TextWaveEffectTut() {
         <pre className="code-example">{codeEx1}</pre>
         <button className="copy-code-btn" ref={copyBtn1Ref} onClick={copyCodeEx1}></button>
       </div>
-      <p>Everything else is done with CSS. So, we'll start by styling the 'cube-container'.</p>
+      <p>Everything else is done with CSS. So, we'll start by styling the 'cube-container'. Notice we have the 'perspective' and 'perspective-origin' style properties. These are used to change the perspective depth and viewing position of the 3d effect.</p>
       <div className="code-example-container">
         <pre className="code-example">{codeEx2}</pre>
         <button className="copy-code-btn" ref={copyBtn2Ref} onClick={copyCodeEx2}></button>
@@ -157,7 +154,7 @@ export default function TextWaveEffectTut() {
         <p>Output:</p>
         <div className="cube-container"></div>
       </div>
-      <p>Then we have to style the 'color-cube'. Here is where the most important style is, the 'transform-style: preserve-3d'. This will give depth to the sides of our cube. We've also added the 'animation' reference to our cube but will not create the animation itself until the end. Lastly, we added a border so we can see the element</p>
+      <p>Next, we have to style the 'color-cube'. Here is where the most important style is, the 'transform-style: preserve-3d'. This will give depth to the sides of our cube. We'll also add the 'animation' reference but will not create the animation itself until the end. Lastly, we'll add a border so we can see the element.</p>
       <div className="code-example-container">
         <pre className="code-example">{codeEx3}</pre>
         <button className="copy-code-btn" ref={copyBtn3Ref} onClick={copyCodeEx3}></button>
@@ -165,10 +162,10 @@ export default function TextWaveEffectTut() {
       <div className="border-ex-1">
         <p>Output:</p>
         <div className="cube-container">
-          <div className="color-cube-ex"></div>
+          <div className="color-cube-ex border"></div>
         </div>
       </div>
-      <p>Now that we have the parent element we will start styling the children, or 'sides'. We will give all 'sides' a universal styling and then here we'll also style the left, right, back, top, and bottom sides. We won't style the front so we can see what's going on with the other sides.</p>
+      <p>Now that we have the parent element styled we will start styling the children, or 'sides'. We can give all sides a universal styling using the class name 'side'. Here we will also style the left, right, back, top, and bottom sides, each with a different color. We won't style the front yet so that we can see what's going on with the other sides. We'll also remove the border of our 'color-cube'.</p>
       <div className="code-example-container">
         <pre className="code-example">{codeEx4}</pre>
         <button className="copy-code-btn" ref={copyBtn4Ref} onClick={copyCodeEx4}></button>
@@ -185,7 +182,7 @@ export default function TextWaveEffectTut() {
           </div>
         </div>
       </div>
-      <p>Finally, all we have to do is add the front side, shadow, and the animation. We'll also remove the border of our 'color-cube'</p>
+      <p>Finally, all we have to do is add the front side, shadow, and the animation. We'll also remove the individual side background colors so they revert back to the transparent color we applied at the beginning (we threw our logo in there too).</p>
       <div className="code-example-container">
         <pre className="code-example">{codeEx5}</pre>
         <button className="copy-code-btn" ref={copyBtn5} onClick={copyCodeEx5}></button>

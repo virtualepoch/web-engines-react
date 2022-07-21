@@ -31,17 +31,6 @@ export default function AllCodeContainer() {
     transform: rotateY(360deg);
   }
 }
-.color-cube.anim {
-  animation: color-cube-anim-2 13s ease-in-out infinite;
-}
-.color-cube.anim .color-cube-shadow {
-  display: none;
-}
-@keyframes color-cube-anim-2 {
-  50% {
-    transform: rotateX(18000deg) rotateY(180deg);
-  }
-}
 .color-cube .side {
   height: 100%;
   width: 100%;
@@ -49,39 +38,39 @@ export default function AllCodeContainer() {
   background: rgb(0, 0, 255, 0.5);
   box-shadow: 0 0 10px 5px rgba(0, 100, 255, 0.7) inset;
 }
+.color-cube .front,
+.color-cube .back {
+  background: url('link to your logo') 50%/80% no-repeat, rgb(0, 0, 255, 0.5);
+}
 .color-cube .left {
-  transform: rotateY(270deg) translateX(-50px);
-  transform-origin: 0 50%;
+  transform: translateX(-50px) rotateY(90deg);
 }
 .color-cube .right {
-  transform: rotateY(-270deg) translateX(50px);
-  transform-origin: 100% 0;
+  transform: translateX(50px) rotateY(90deg);
 }
 .color-cube .back {
   transform: translateZ(-50px) rotateY(180deg);
 }
 .color-cube .top {
-  background-color: rgb(255, 0, 255, 0.5);
-  transform: rotateX(90deg) translateZ(47px);
+  transform: translateY(-50px) rotateX(90deg);
+  background: rgb(255, 0, 255, 0.5);
 }
 .color-cube .bottom {
-  background-color: rgb(255, 0, 255, 0.5);
-  transform: rotateX(90deg) translateZ(-47px);
+  transform: translateY(50px) rotateX(90deg);
+  background: rgb(255, 0, 255, 0.5);
 }
 .color-cube .front {
   transform: translateZ(50px);
 }
-.color-cube-shadow {
-  height: 100px;
-  width: 100px;
-  position: absolute;
-  top: 130px;
+.color-cube .shadow {
   box-shadow: 0 0 5px 5px rgb(0, 0, 0, 0.05);
   background: radial-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.05));
-  transform: rotateX(90deg);
+  transform: translateY(120px) rotateX(90deg);
 }
 </style>
 </head>
+
+<body>
 <div class="cube-container">
   <div class="color-cube">
     <div class="side front"></div>
@@ -90,9 +79,10 @@ export default function AllCodeContainer() {
     <div class="side left"></div>
     <div class="side top"></div>
     <div class="side bottom"></div>
-    <div class="color-cube-shadow"></div>
+    <div class="side shadow"></div>
   </div>
 </div>
+</body>
 `;
 
   const copyAllBtnRef = useRef(null);
