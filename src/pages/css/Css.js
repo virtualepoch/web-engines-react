@@ -34,7 +34,7 @@ export default function Css() {
           <div className="cube-effects-container">
             <div className="column column-1">
               <ColorCube />
-              <p>ENTER THE CUBE TUTORIAL</p>
+              <Link to={"/css/cube-tut"}>ENTER THE CUBE TUTORIAL</Link>
             </div>
             <div className="column">
               <SpinningTop />

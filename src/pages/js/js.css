@@ -1,0 +1,13 @@
+.typed-text-box{
+    width: 500px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid cyan;
+}
+.typed-text-box h2{
+    padding: 20px;
+    border: solid aqua;
+}

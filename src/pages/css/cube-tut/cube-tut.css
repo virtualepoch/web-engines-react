@@ -1,0 +1,45 @@
+.color-cube-ex {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  transform-style: preserve-3d;
+  border: solid black;
+}
+.color-cube-ex .side {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: rgb(0, 0, 255, 0.5);
+  box-shadow: 0 0 10px 5px rgba(0, 100, 255, 0.7) inset;
+}
+.color-cube-ex .left {
+  transform: rotateY(270deg) translateX(-50px);
+  transform-origin: 0 50%;
+}
+.color-cube-ex .right {
+  transform: rotateY(-270deg) translateX(50px);
+  transform-origin: 100% 0;
+}
+.color-cube-ex .back {
+  transform: translateZ(-50px) rotateY(180deg);
+}
+.color-cube-ex .top {
+  background-color: rgb(255, 0, 255, 0.5);
+  transform: rotateX(90deg) translateZ(47px);
+}
+.color-cube-ex .bottom {
+  background-color: rgb(255, 0, 255, 0.5);
+  transform: rotateX(90deg) translateZ(-47px);
+}
+.color-cube .front {
+  transform: translateZ(50px);
+}
+.color-cube-shadow {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 130px;
+  box-shadow: 0 0 5px 5px rgb(0, 0, 0, 0.05);
+  background: radial-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.05));
+  transform: rotateX(90deg);
+}

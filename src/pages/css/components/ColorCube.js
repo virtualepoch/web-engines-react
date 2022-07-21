@@ -9,16 +9,14 @@ export default function ColorCube() {
   }
   return (
     <div className="cube-container">
-      <div className="color-cube-wrapper">
-        <div className="color-cube" ref={colorCubeRef} onClick={startAnim}>
-          <div className="side front"></div>
-          <div className="side right"></div>
-          <div className="side back"></div>
-          <div className="side left"></div>
-          <div className="side top"></div>
-          <div className="side bottom"></div>
-          <div className="color-cube-shadow"></div>
-        </div>
+      <div className="color-cube" ref={colorCubeRef} onClick={startAnim}>
+        <div className="side front"></div>
+        <div className="side right"></div>
+        <div className="side back"></div>
+        <div className="side left"></div>
+        <div className="side top"></div>
+        <div className="side bottom"></div>
+        <div className="color-cube-shadow"></div>
       </div>
     </div>
   );
