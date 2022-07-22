@@ -28,7 +28,7 @@
   bottom: 0;
   z-index: 88;
   color: white;
-  font-size: clamp(0.8rem, 5vw, 1.2rem);
+  font: clamp(0.8rem, 5vw, 1.2rem) Lorea;
   background: linear-gradient(transparent, rgb(0, 0, 255, 0.5));
 }
 .footer {
@@ -39,7 +39,7 @@
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: clamp(0.8rem, 5vw, 1.2rem);
+  font: clamp(0.8rem, 5vw, 1.2rem) Lorea;
   border-radius: 50%;
   box-shadow: 0 12px 8px 5px rgb(0, 0, 0, 0.6), inset 0 -7px 22px 8px rgb(0, 0, 183);
   background: radial-gradient(circle at 60% 30%, rgb(255, 255, 255, 0.7) 5%, rgba(18, 74, 164, 0.9), rgba(31, 31, 255, 0.5), black 98%);
