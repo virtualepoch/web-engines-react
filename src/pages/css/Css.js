@@ -44,7 +44,7 @@ export default function Css() {
           </div>
         </section>
       </div>
-      <footer className="footer">www.JavaScriptive.com</footer>
+      <footer className="css-footer">www.JavaScriptive.com</footer>
     </div>
   );
 }
