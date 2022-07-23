@@ -4,6 +4,7 @@ import layer1 from "./canvas_game_assets/layer1.png";
 import layer2 from "./canvas_game_assets/layer2.png";
 import layer3 from "./canvas_game_assets/layer3.png";
 import layer4 from "./canvas_game_assets/layer4.png";
+import player from "./canvas_game_assets/player.png";
 import "./canvas-page.css";
 
 export default function CanvasGame() {
@@ -14,14 +15,16 @@ export default function CanvasGame() {
     const canvas = canvasGame.current;
     const ctx = canvas.getContext("2d");
     canvas.width = 1500;
-    canvas.height = 600;
+    canvas.height = 500;
 
     class InputHandler {
       constructor(game) {
         this.game = game;
+        // BUTTONS FOR MOBILE //////////////////////////////
         this.fireBtn = document.getElementById("fire-btn");
         this.upBtn = document.getElementById("up-btn");
         this.downBtn = document.getElementById("down-btn");
+        ////////////////////////////////////////////////////
         window.addEventListener("keydown", (e) => {
           if ((e.key === "ArrowUp" || e.key === "ArrowDown") && this.game.keys.indexOf(e.key) === -1) {
             this.game.keys.push(e.key);
@@ -34,9 +37,11 @@ export default function CanvasGame() {
             this.game.keys.push(e.key);
           }
         });
+        // EVENT LISTENER FOR MOBILE BUTTONS //////////////
         this.fireBtn.addEventListener("click", () => {
           this.game.player.shootTop();
         });
+        ///////////////////////////////////////////////////
         window.addEventListener("keyup", (e) => {
           if (this.game.keys.indexOf(e.key) > -1) {
             this.game.keys.splice(this.game.keys.indexOf(e.key), 1);
@@ -72,9 +77,13 @@ export default function CanvasGame() {
         this.height = 190;
         this.x = 40;
         this.y = 200;
+        this.frameX = 0;
+        this.frameY = 0;
+        this.maxFrame = 37;
         this.speedY = 0;
         this.maxSpeed = 5;
         this.projectiles = [];
+        this.image = document.getElementById("player");
       }
       update() {
         if (this.game.keys.includes("ArrowUp")) this.speedY = -this.maxSpeed;
@@ -86,10 +95,15 @@ export default function CanvasGame() {
           projectile.update();
         });
         this.projectiles = this.projectiles.filter((projectile) => !projectile.markedForDeletion);
+        // sprite animation
+        if (this.frameX < this.maxFrame) {
+          this.frameX++;
+        } else {
+          this.frameX = 0;
+        }
       }
       draw(context) {
-        context.fillStyle = "blue";
-        context.fillRect(this.x, this.y, this.width, this.height);
+        context.drawImage(this.image, this.frameX * this.width, this.frameY * this.height, this.width, this.height, this.x, this.y, this.width, this.height);
         this.projectiles.forEach((projectile) => {
           projectile.draw(context);
         });
@@ -139,7 +153,7 @@ export default function CanvasGame() {
         this.image = image;
         this.speedModifier = speedModifier;
         this.width = 1768;
-        this.height = 500;
+        this.height = 600;
         this.x = 0;
         this.y = 0;
       }
@@ -257,7 +271,7 @@ export default function CanvasGame() {
         this.score = 0;
         this.winningScore = 10;
         this.gameTime = 0;
-        this.timeLimit = 20000;
+        this.timeLimit = 60000;
         this.speed = 1;
       }
       update(deltaTime) {
@@ -332,7 +346,7 @@ export default function CanvasGame() {
       <canvas id="canvas-game" ref={canvasGame}></canvas>
 
       {/* characters */}
-
+      <img id="player" src={player} />
       {/* props */}
 
       {/* environment */}
