@@ -8,8 +8,8 @@ import player from "./canvas_game_assets/player.png";
 import angler1 from "./canvas_game_assets/angler1.png";
 import angler2 from "./canvas_game_assets/angler2.png";
 import lucky from "./canvas_game_assets/lucky.png";
+import projectile from "./canvas_game_assets/projectile.png";
 import "./canvas-page.css";
-import { toHaveDisplayValue } from "@testing-library/jest-dom/dist/matchers";
 
 export default function CanvasGame() {
   const navigate = useNavigate();
@@ -18,7 +18,7 @@ export default function CanvasGame() {
   useEffect(() => {
     const canvas = canvasGame.current;
     const ctx = canvas.getContext("2d");
-    canvas.width = 1500;
+    canvas.width = 1000;
     canvas.height = 500;
 
     class InputHandler {
@@ -61,18 +61,18 @@ export default function CanvasGame() {
         this.game = game;
         this.x = x;
         this.y = y;
-        this.width = 30;
-        this.height = 5;
+        this.width = 10;
+        this.height = 3;
         this.speed = 30;
         this.markedForDeletion = false;
+        this.image = document.getElementById('projectile');
       }
       update() {
         this.x += this.speed;
         if (this.x > this.game.width * 0.8) this.markedForDeletion = true;
       }
       draw(context) {
-        context.fillStyle = "aqua";
-        context.fillRect(this.x, this.y, this.width, this.height);
+      context.drawImage(this.image, this.x, this.y)
       }
     }
 
@@ -90,8 +90,11 @@ export default function CanvasGame() {
         this.maxSpeed = 5;
         this.projectiles = [];
         this.image = document.getElementById("player");
+        this.powerUp = false;
+        this.powerUpTimer = 0;
+        this.powerUpLimit = 10000;
       }
-      update() {
+      update(deltaTime) {
         if (this.game.keys.includes("ArrowUp")) this.speedY = -this.maxSpeed;
         else if (this.game.keys.includes("ArrowDown")) this.speedY = this.maxSpeed;
         else this.speedY = 0;
@@ -107,19 +110,42 @@ export default function CanvasGame() {
         } else {
           this.frameX = 0;
         }
+        // power up
+        if (this.powerUp) {
+          if (this.powerUpTimer > this.powerUpLimit) {
+            this.powerUpTimer = 0;
+            this.powerUp = false;
+            this.frameY = 0;
+          } else {
+            this.powerUpTimer += deltaTime;
+            this.frameY = 1;
+            this.game.ammo += 0.1;
+          }
+        }
       }
       draw(context) {
         if (this.game.debug) context.strokeRect(this.x, this.y, this.width, this.height);
-        context.drawImage(this.image, this.frameX * this.width, this.frameY * this.height, this.width, this.height, this.x, this.y, this.width, this.height);
         this.projectiles.forEach((projectile) => {
           projectile.draw(context);
         });
+        context.drawImage(this.image, this.frameX * this.width, this.frameY * this.height, this.width, this.height, this.x, this.y, this.width, this.height);
       }
       shootTop() {
         if (this.game.ammo > 0) {
-          this.projectiles.push(new Projectile(this.game, this.x + 80, this.y + 30));
+          this.projectiles.push(new Projectile(this.game, this.x + 60, this.y + 30));
           this.game.ammo--;
         }
+        if (this.powerUp) this.shootBottom();
+      }
+      shootBottom() {
+        if (this.game.ammo > 0) {
+          this.projectiles.push(new Projectile(this.game, this.x + 80, this.y + 175));
+        }
+      }
+      enterPowerUp() {
+        this.powerUpTimer = 0;
+        this.powerUp = true;
+        this.game.ammo = this.game.maxAmmo;
       }
     }
 
@@ -129,15 +155,17 @@ export default function CanvasGame() {
         this.x = this.game.width;
         this.speedX = Math.random() * -1.5 - 0.5;
         this.markedForDeletion = false;
-        this.lives = 5;
-        this.score = this.lives;
         this.frameX = 0;
         this.frameY = 0;
         this.maxFrame = 37;
       }
       update() {
-        this.x += this.speedX;
+        this.x += this.speedX - this.game.speed;
         if (this.x + this.width < 0) this.markedForDeletion = true;
+        // sprite animation
+        if (this.frameX < this.maxFrame) {
+          this.frameX++;
+        } else this.frameX = 0;
       }
       draw(context) {
         if (this.game.debug) context.strokeRect(this.x, this.y, this.width, this.height);
@@ -155,6 +183,35 @@ export default function CanvasGame() {
         this.y = Math.random() * (this.game.height * 0.9 - this.height);
         this.image = document.getElementById("angler1");
         this.frameY = Math.floor(Math.random() * 3);
+        this.lives = 2;
+        this.score = this.lives;
+      }
+    }
+
+    class Angler2 extends Enemy {
+      constructor(game) {
+        super(game);
+        this.width = 213;
+        this.height = 165;
+        this.y = Math.random() * (this.game.height * 0.9 - this.height);
+        this.image = document.getElementById("angler2");
+        this.frameY = Math.floor(Math.random() * 2);
+        this.lives = 3;
+        this.score = this.lives;
+      }
+    }
+
+    class LuckyFish extends Enemy {
+      constructor(game) {
+        super(game);
+        this.width = 99;
+        this.height = 95;
+        this.y = Math.random() * (this.game.height * 0.9 - this.height);
+        this.image = document.getElementById("lucky");
+        this.frameY = Math.floor(Math.random() * 2);
+        this.lives = 3;
+        this.score = 15;
+        this.type = lucky;
       }
     }
 
@@ -228,11 +285,6 @@ export default function CanvasGame() {
         context.font = this.fontSize + "px " + this.fontFamily;
         // score
         context.fillText("Score: " + this.game.score, 10, 30);
-        // ammo
-        context.fillText("AMMO: ", 330, 30);
-        for (let i = 0; i < this.game.ammo; i++) {
-          context.fillRect(430 + 5 * i, 12, 3, 20);
-        }
         //timer
         context.save();
         const formattedTime = (this.game.gameTime * 0.001).toFixed(2);
@@ -257,7 +309,12 @@ export default function CanvasGame() {
           context.font = "25px " + this.fontFamily;
           context.fillText(message2, this.game.width * 0.5, this.game.height * 0.5 + 40);
         }
-
+        // ammo
+        if (this.game.player.powerUp) context.fillStyle = "aqua";
+        context.fillText("AMMO: ", 330, 30);
+        for (let i = 0; i < this.game.ammo; i++) {
+          context.fillRect(430 + 5 * i, 12, 3, 20);
+        }
         context.restore();
       }
     }
@@ -291,7 +348,7 @@ export default function CanvasGame() {
         if (this.gameTime > this.timeLimit) this.gameOver = true;
         this.background.update();
         this.background.layer4.update();
-        this.player.update();
+        this.player.update(deltaTime);
         if (this.ammoTimer > this.ammoInterval) {
           if (this.ammo < this.maxAmmo) this.ammo++;
           this.ammoTimer = 0;
@@ -302,6 +359,8 @@ export default function CanvasGame() {
           enemy.update();
           if (this.checkCollision(this.player, enemy)) {
             enemy.markedForDeletion = true;
+            if ((enemy.type = "lucky")) this.player.enterPowerUp();
+            else this.score--;
           }
           this.player.projectiles.forEach((projectile) => {
             if (this.checkCollision(projectile, enemy)) {
@@ -333,7 +392,10 @@ export default function CanvasGame() {
         this.ui.draw(context);
       }
       addEnemy() {
-        this.enemies.push(new Angler1(this));
+        const randomize = Math.random();
+        if (randomize < 0.3) this.enemies.push(new Angler1(this));
+        else if (randomize < 0.6) this.enemies.push(new Angler2(this));
+        else this.enemies.push(new LuckyFish(this));
       }
       checkCollision(rect1, rect2) {
         return rect1.x < rect2.x + rect2.width && rect1.x + rect1.width > rect2.x && rect1.y < rect2.y + rect2.height && rect1.height + rect1.y > rect2.y;
@@ -362,7 +424,9 @@ export default function CanvasGame() {
       <img id="angler1" src={angler1} />
       <img id="angler2" src={angler2} />
       <img id="lucky" src={lucky} />
+
       {/* props */}
+      <img id="projectile" src={projectile} />
 
       {/* environment */}
       <img id="layer1" src={layer1} />
