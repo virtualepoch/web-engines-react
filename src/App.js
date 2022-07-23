@@ -11,6 +11,7 @@ import TextWaveEffectTut from "./pages/css/text-wave-effect-tut/TextWaveEffectTu
 import CubeTut from "./pages/css/cube-tut/CubeTut";
 import Js from "./pages/js/Js";
 import Canvas from "./pages/canvas/Canvas";
+import CanvasGame from "./pages/canvas/CanvasGame";
 import Cgi from "./pages/cgi/Cgi";
 import "./pages/common.css";
 
@@ -39,6 +40,7 @@ function App() {
           <Route path="/css/cube-tut" element={<CubeTut />} />
           <Route path="/javascript" element={<Js />} />
           <Route path="/html-canvas" element={<Canvas />} />
+          <Route path="/html-canvas/canvas-game" element={<CanvasGame />} />
           <Route path="/cgi" element={<Cgi />} />
         </Routes>
       </section>

@@ -1,0 +1,81 @@
+.canvas-page {
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  pointer-events: all;
+}
+.canvas-game-link {
+  width: 200px;
+  height: 100px;
+  margin: 30px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  border-radius: 8px;
+}
+.canvas-game-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 88888;
+  background: white;
+  pointer-events: all;
+}
+.canvas-game-back-btn {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  background: url(../../icons/angle-left-solid-white.svg) 50% / 50% no-repeat, blue;
+}
+#canvas-game {
+  max-width: 100%;
+  max-height: 100%;
+  border: 5px solid black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: black;
+}
+#layer1,
+#layer2,
+#layer3,
+#layer4 {
+  display: none;
+}
+#up-btn {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  top: 50vh;
+  border: solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  background: url(../../icons/angle-up-trans-white.svg) 50% / 60% no-repeat;
+}
+#down-btn {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  top: calc(50vh + 100px);
+  border: solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  background: url(../../icons/angle-down-trans-white.svg) 50% / 60% no-repeat;
+}
+#fire-btn {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  top: calc(50vh + 100px);
+  right: 0;
+  border: solid rgba(255, 0, 0, 0.5);
+  border-radius: 50%;
+  background: url(../../icons/xmark-trans-red.svg) 50% / 60% no-repeat;
+}
