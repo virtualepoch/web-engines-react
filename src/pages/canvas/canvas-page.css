@@ -24,16 +24,19 @@
   top: 0;
   left: 0;
   z-index: 88888;
-  background: white;
+  background: black;
   pointer-events: all;
 }
 .canvas-game-back-btn {
-  width: 40px;
+  width: 80px;
   height: 40px;
   position: fixed;
   top: 12px;
-  left: 12px;
-  background: url(../../icons/angle-left-solid-white.svg) 50% / 50% no-repeat, blue;
+  right: 12px;
+  border: 1px solid white;
+  border-radius: 10px;
+  color: white;
+  background: rgb(0, 100, 255);
 }
 #canvas-game {
   max-width: 100%;
@@ -43,7 +46,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: black;
 }
 #layer1,
 #layer2,

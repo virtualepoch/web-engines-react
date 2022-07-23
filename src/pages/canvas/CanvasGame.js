@@ -70,8 +70,8 @@ export default function CanvasGame() {
         this.game = game;
         this.width = 120;
         this.height = 190;
-        this.x = 20;
-        this.y = 100;
+        this.x = 40;
+        this.y = 200;
         this.speedY = 0;
         this.maxSpeed = 5;
         this.projectiles = [];
@@ -164,7 +164,7 @@ export default function CanvasGame() {
         this.layer2 = new Layer(this.game, this.image2, 2);
         this.layer3 = new Layer(this.game, this.image3, 5);
         this.layer4 = new Layer(this.game, this.image4, 10);
-        this.layers = [this.layer1, this.layer2, this.layer3, this.layer4];
+        this.layers = [this.layer1, this.layer2, this.layer3];
       }
       update() {
         this.layers.forEach((layer) => layer.update());
@@ -185,8 +185,17 @@ export default function CanvasGame() {
         context.save();
         context.fillStyle = this.color;
         context.save();
-        context.fillStyle = "black";
-        context.fillRect(0, 0, 120, 50);
+        context.fillStyle = "rgba(0, 0, 0, 0.4)";
+        context.fillRect(0, 0, 700, 50);
+        context.strokeStyle = "white";
+        context.beginPath();
+        context.moveTo(130, 0);
+        context.lineTo(130, 50);
+        context.stroke();
+        context.beginPath();
+        context.moveTo(320, 0);
+        context.lineTo(320, 50);
+        context.stroke();
         context.restore();
         context.shadowOffsetX = 2;
         context.shadowOffsetY = 2;
@@ -195,16 +204,14 @@ export default function CanvasGame() {
         // score
         context.fillText("Score: " + this.game.score, 10, 30);
         // ammo
+        context.fillText("AMMO: ", 330, 30);
         for (let i = 0; i < this.game.ammo; i++) {
-          context.fillRect(20 + 5 * i, 460, 3, 20);
+          context.fillRect(430 + 5 * i, 12, 3, 20);
         }
         //timer
         context.save();
-        context.fillStyle = "black";
-        context.shadowOffsetX = 0;
-        context.shadowOffsetY = 0;
         const formattedTime = (this.game.gameTime * 0.001).toFixed(2);
-        context.fillText("Timer: " + formattedTime, 150, 30);
+        context.fillText("Timer: " + formattedTime, 140, 30);
         context.restore();
 
         // game over messages
@@ -257,6 +264,7 @@ export default function CanvasGame() {
         if (!this.gameOver) this.gameTime += deltaTime;
         if (this.gameTime > this.timeLimit) this.gameOver = true;
         this.background.update();
+        this.background.layer4.update();
         this.player.update();
         if (this.ammoTimer > this.ammoInterval) {
           if (this.ammo < this.maxAmmo) this.ammo++;
@@ -292,10 +300,11 @@ export default function CanvasGame() {
       draw(context) {
         this.background.draw(context);
         this.player.draw(context);
-        this.ui.draw(context);
         this.enemies.forEach((enemy) => {
           enemy.draw(context);
         });
+        this.background.layer4.draw(context);
+        this.ui.draw(context);
       }
       addEnemy() {
         this.enemies.push(new Angler1(this));
@@ -337,7 +346,9 @@ export default function CanvasGame() {
       <button id="down-btn"></button>
       <button id="fire-btn"></button>
 
-      <button className="canvas-game-back-btn" onClick={() => navigate(-1)}></button>
+      <button className="canvas-game-back-btn" onClick={() => navigate(-1)}>
+        EXIT GAME
+      </button>
     </div>
   );
 }
