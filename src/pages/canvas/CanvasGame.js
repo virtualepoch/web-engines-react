@@ -19,13 +19,23 @@ export default function CanvasGame() {
     class InputHandler {
       constructor(game) {
         this.game = game;
+        this.fireBtn = document.getElementById("fire-btn");
+        this.upBtn = document.getElementById("up-btn");
+        this.downBtn = document.getElementById("down-btn");
         window.addEventListener("keydown", (e) => {
           if ((e.key === "ArrowUp" || e.key === "ArrowDown") && this.game.keys.indexOf(e.key) === -1) {
             this.game.keys.push(e.key);
           } else if (e.key === " ") {
             this.game.player.shootTop();
           }
-          console.log(this.game.keys);
+        });
+        window.addEventListener("click", (e) => {
+          if ((e.key === this.upBtn || e.key === this.downBtn) && this.game.keys.indexOf(e.key) === -1) {
+            this.game.keys.push(e.key);
+          }
+        });
+        this.fireBtn.addEventListener("click", () => {
+          this.game.player.shootTop();
         });
         window.addEventListener("keyup", (e) => {
           if (this.game.keys.indexOf(e.key) > -1) {
@@ -40,9 +50,9 @@ export default function CanvasGame() {
         this.game = game;
         this.x = x;
         this.y = y;
-        this.width = 10;
-        this.height = 1;
-        this.speed = 5;
+        this.width = 30;
+        this.height = 5;
+        this.speed = 30;
         this.markedForDeletion = false;
       }
       update() {
@@ -240,7 +250,7 @@ export default function CanvasGame() {
         this.score = 0;
         this.winningScore = 10;
         this.gameTime = 0;
-        this.timeLimit = 5000;
+        this.timeLimit = 20000;
         this.speed = 1;
       }
       update(deltaTime) {
