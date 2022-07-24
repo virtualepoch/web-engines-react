@@ -9,6 +9,7 @@ import angler1 from "./canvas_game_assets/angler1.png";
 import angler2 from "./canvas_game_assets/angler2.png";
 import lucky from "./canvas_game_assets/lucky.png";
 import projectile from "./canvas_game_assets/projectile.png";
+import gears from "./canvas_game_assets/gears.png";
 import "./canvas-page.css";
 
 export default function CanvasGame() {
@@ -76,6 +77,47 @@ export default function CanvasGame() {
       }
     }
 
+    class Particle {
+      constructor(game, x, y) {
+        this.game = game;
+        this.x = x;
+        this.y = y;
+        this.image = document.getElementById("gears");
+        this.frameX = Math.floor(Math.random() * 3);
+        this.frameY = Math.floor(Math.random() * 3);
+        this.spriteSize = 50;
+        this.sizeModifier = (Math.random() * 0.5 + 0.5).toFixed(1);
+        this.size = this.spriteSize * this.sizeModifier;
+        this.speedX = Math.random() * 6 - 3;
+        this.speedY = Math.random() * -15;
+        this.gravity = 0.5;
+        this.markedForDeletion = false;
+        this.angle = 0;
+        // velocity angle
+        this.va = Math.random() * 0.2 - 0.1;
+        this.bounced = 0;
+        this.bottomBounceBoundary = Math.random() * 100 + 60;
+      }
+      update() {
+        this.angle += this.va;
+        this.speedY += this.gravity;
+        this.x -= this.speedX + this.game.speed;
+        this.y += this.speedY;
+        if (this.y > this.game.height + this.size || this.x < 0 - this.size) this.markedForDeletion = true;
+        if (this.y > this.game.height - this.bottomBounceBoundary && this.bounced < 2) {
+          this.bounced++;
+          this.speedY *= -0.7;
+        }
+      }
+      draw(context) {
+        context.save();
+        context.translate(this.x, this.y)
+        context.rotate(this.angle);
+        context.drawImage(this.image, this.frameX * this.spriteSize, this.frameY * this.spriteSize, this.spriteSize, this.spriteSize, this.size * -0.5, this.size * - 0.5, this.size, this.size);
+        context.restore();
+      }
+    }
+
     class Player {
       constructor(game) {
         this.game = game;
@@ -99,6 +141,9 @@ export default function CanvasGame() {
         else if (this.game.keys.includes("ArrowDown")) this.speedY = this.maxSpeed;
         else this.speedY = 0;
         this.y += this.speedY;
+        // vertical boundaries
+        if (this.y > this.game.height - this.height * 0.5) this.y = this.game.height - this.height * 0.5;
+        else if (this.y < -this.height * 0.5) this.y = -this.height * 0.5;
         // handle projectiles
         this.projectiles.forEach((projectile) => {
           projectile.update();
@@ -170,8 +215,10 @@ export default function CanvasGame() {
       draw(context) {
         if (this.game.debug) context.strokeRect(this.x, this.y, this.width, this.height);
         context.drawImage(this.image, this.frameX * this.width, this.frameY * this.height, this.width, this.height, this.x, this.y, this.width, this.height);
-        context.font = "20px Helvetica";
-        context.fillText(this.lives, this.x + 20, this.y + 20);
+        if (this.game.debug) {
+          context.font = "20px Helvetica";
+          context.fillText(this.lives, this.x + 20, this.y + 20);
+        }
       }
     }
 
@@ -329,6 +376,7 @@ export default function CanvasGame() {
         this.ui = new UI(this);
         this.keys = [];
         this.enemies = [];
+        this.particles = [];
         this.enemyTimer = 0;
         this.enemyInterval = 1000;
         this.ammo = 20;
@@ -355,10 +403,15 @@ export default function CanvasGame() {
         } else {
           this.ammoTimer += deltaTime;
         }
+        this.particles.forEach((particle) => particle.update());
+        this.particles = this.particles.filter((particle) => !particle.markedForDeletion);
         this.enemies.forEach((enemy) => {
           enemy.update();
           if (this.checkCollision(this.player, enemy)) {
             enemy.markedForDeletion = true;
+            for (let i = 0; i < 10; i++) {
+              this.particles.push(new Particle(this, enemy.x + enemy.width * 0.5, enemy.y + enemy.height * 0.5));
+            }
             if ((enemy.type = "lucky")) this.player.enterPowerUp();
             else this.score--;
           }
@@ -366,7 +419,11 @@ export default function CanvasGame() {
             if (this.checkCollision(projectile, enemy)) {
               enemy.lives--;
               projectile.markedForDeletion = true;
+              this.particles.push(new Particle(this, enemy.x + enemy.width * 0.5, enemy.y + enemy.height * 0.5));
               if (enemy.lives <= 0) {
+                for (let i = 0; i < 10; i++) {
+                  this.particles.push(new Particle(this, enemy.x + enemy.width * 0.5, enemy.y + enemy.height * 0.5));
+                }
                 enemy.markedForDeletion = true;
                 if (!this.gameOver) this.score += enemy.score;
                 if (this.score > this.winningScore) this.gameOver = true;
@@ -385,6 +442,7 @@ export default function CanvasGame() {
       draw(context) {
         this.background.draw(context);
         this.player.draw(context);
+        this.particles.forEach((particle) => particle.draw(context));
         this.enemies.forEach((enemy) => {
           enemy.draw(context);
         });
@@ -427,6 +485,7 @@ export default function CanvasGame() {
 
       {/* props */}
       <img id="projectile" src={projectile} />
+      <img id="gears" src={gears} />
 
       {/* environment */}
       <img id="layer1" src={layer1} />
