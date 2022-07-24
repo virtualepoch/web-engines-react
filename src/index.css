@@ -2,6 +2,26 @@
   font-family: Lorea;
   src: url(./fonts/Lorea.ttf);
 }
+@font-face {
+  font-family: Everleigh;
+  src: url(./fonts/Everleigh.otf);
+}
+@font-face {
+  font-family: Anime;
+  src: url(./fonts/Anime.otf);
+}
+@font-face {
+  font-family: LightningScript;
+  src: url(./fonts/LightningScript.otf);
+}
+@font-face {
+  font-family: Blackpast;
+  src: url(./fonts/Blackpast.otf);
+}
+@font-face {
+  font-family: Sega;
+  src: url(./fonts/SEGA.TTF);
+}
 @import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@400&display=swap");
 * {
   margin: 0;

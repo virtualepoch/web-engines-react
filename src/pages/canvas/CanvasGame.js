@@ -65,14 +65,14 @@ export default function CanvasGame() {
         this.height = 3;
         this.speed = 30;
         this.markedForDeletion = false;
-        this.image = document.getElementById('projectile');
+        this.image = document.getElementById("projectile");
       }
       update() {
         this.x += this.speed;
         if (this.x > this.game.width * 0.8) this.markedForDeletion = true;
       }
       draw(context) {
-      context.drawImage(this.image, this.x, this.y)
+        context.drawImage(this.image, this.x, this.y);
       }
     }
 
@@ -259,8 +259,8 @@ export default function CanvasGame() {
     class UI {
       constructor(game) {
         this.game = game;
-        this.fontSize = 25;
-        this.fontFamily = "Helvetica";
+        this.fontSize = 20;
+        this.fontFamily = "Sega";
         this.color = "white";
       }
       draw(context) {
