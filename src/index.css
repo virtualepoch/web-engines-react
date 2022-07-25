@@ -22,6 +22,14 @@
   font-family: Sega;
   src: url(./fonts/SEGA.TTF);
 }
+@font-face {
+  font-family: Wonderland;
+  src: url(./fonts/Wonderland.ttf);
+}
+@font-face {
+  font-family: CallingFont;
+  src: url(./fonts/CallingFont.ttf);
+}
 @import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@400&display=swap");
 * {
   margin: 0;

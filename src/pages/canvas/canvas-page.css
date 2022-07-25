@@ -1,5 +1,6 @@
 .canvas-page {
   height: calc(100vh - 50px);
+  padding: 50px 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,15 +8,34 @@
   background: white;
   pointer-events: all;
 }
+.canvas-page p,
+.canvas-page h1,
 .canvas-game-link {
-  width: 200px;
-  height: 100px;
+  max-width: 500px;
+  padding: 10px 0;
+  font: 30px Blackpast;
+}
+.canvas-page p {
+  font: 20px sans-serif;
+}
+.canvas-page .mobile-landscape-alert {
+  color: red;
+  text-align: center;
+  font: 30px Blackpast;
+}
+.canvas-game-link {
+  width: fit-content;
+  height: fit-content;
+  padding: 10px 20px;
   margin: 30px auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid;
+  color: white;
+  border: 10px solid rgb(255, 0, 255, 0.5);
   border-radius: 8px;
+  box-shadow: 1px 5px 5px 4px rgb(0, 0, 0, 0.3);
+  background: linear-gradient(30deg, blue, purple);
 }
 .canvas-game-container {
   width: 100vw;
@@ -41,8 +61,7 @@
 #canvas-game {
   max-width: 100%;
   max-height: 100%;
-  /* box-sizing: border-box; */
-  border: 5px solid black;
+  border: 5px solid rgb(249, 12, 241, 0.3);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -66,32 +85,25 @@
 #fireExplosion {
   display: none;
 }
-#up-btn {
-  width: 100px;
-  height: 100px;
+#up-btn,
+#down-btn,
+#fire-btn {
+  width: 80px;
+  height: 80px;
   position: fixed;
-  bottom: 100px;
   border: solid rgba(0, 0, 255, 0.5);
   border-radius: 50%;
-  background: url(../../icons/angle-up-trans-blue.svg) 50% / 60% no-repeat;
+  bottom: 0;
+}
+#up-btn {
+  bottom: 100px;
+  background: url(../../icons/angle-up-trans-blue.svg) 50% / 60% no-repeat, radial-gradient(circle at 60% 40%, white, blue 60%);
 }
 #down-btn {
-  width: 100px;
-  height: 100px;
-  position: fixed;
-  bottom: 0;
-  border: solid rgba(0, 0, 255, 0.5);
-  border-radius: 50%;
-  background: url(../../icons/angle-down-trans-blue.svg) 50% / 60% no-repeat;
+  background: url(../../icons/angle-down-trans-blue.svg) 50% / 60% no-repeat, radial-gradient(circle at 60% 40%, white, blue 60%);
 }
 #fire-btn {
-  width: 100px;
-  height: 100px;
-  position: fixed;
-  bottom: 0;
   right: 0;
   border: solid rgba(255, 0, 0, 0.5);
-  border-radius: 50%;
-  pointer-events: all;
-  background: url(../../icons/xmark-trans-red.svg) 50% / 60% no-repeat;
+  background: url(../../icons/xmark-trans-red.svg) 50% / 60% no-repeat, radial-gradient(circle at 40% 40%, white, red 60%);
 }

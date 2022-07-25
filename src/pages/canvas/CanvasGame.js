@@ -127,7 +127,7 @@ export default function CanvasGame() {
         this.game = game;
         this.width = 120;
         this.height = 190;
-        this.x = 40;
+        this.x = 100;
         this.y = 200;
         this.frameX = 0;
         this.frameY = 0;
