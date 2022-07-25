@@ -234,7 +234,7 @@ export default function CanvasGame() {
         this.y = Math.random() * (this.game.height * 0.95 - this.height);
         this.image = document.getElementById("angler1");
         this.frameY = Math.floor(Math.random() * 3);
-        this.lives = 2;
+        this.lives = 5;
         this.score = this.lives;
       }
     }
@@ -247,7 +247,7 @@ export default function CanvasGame() {
         this.y = Math.random() * (this.game.height * 0.95 - this.height);
         this.image = document.getElementById("angler2");
         this.frameY = Math.floor(Math.random() * 2);
-        this.lives = 3;
+        this.lives = 6;
         this.score = this.lives;
       }
     }
@@ -260,7 +260,7 @@ export default function CanvasGame() {
         this.y = Math.random() * (this.game.height * 0.95 - this.height);
         this.image = document.getElementById("lucky");
         this.frameY = Math.floor(Math.random() * 2);
-        this.lives = 3;
+        this.lives = 5;
         this.score = 15;
         this.type = "lucky";
       }
@@ -274,7 +274,7 @@ export default function CanvasGame() {
         this.y = Math.random() * (this.game.height * 0.95 - this.height);
         this.image = document.getElementById("hivewhale");
         this.frameY = 0;
-        this.lives = 15;
+        this.lives = 20;
         this.score = this.lives;
         this.type = "hive";
         this.speedX = Math.random() * -1.2 - 0.2;
@@ -343,6 +343,11 @@ export default function CanvasGame() {
         this.game = game;
         this.frameX = 0;
         this.spriteHeight = 200;
+        this.spriteWidth = 200;
+        this.width = this.spriteWidth;
+        this.height = this.spriteHeight;
+        this.x = x - this.width * 0.5;
+        this.y = y - this.height * 0.5;
         this.fps = 15;
         this.timer = 0;
         this.interval = 1000 / 15;
@@ -368,14 +373,14 @@ export default function CanvasGame() {
       constructor(game, x, y) {
         super(game, x, y);
         this.image = document.getElementById("smokeExplosion");
-        this.spriteWidth = 200;
-        this.width = this.spriteWidth;
-        this.height = this.spriteHeight;
-        this.x = x - this.width * 0.5;
-        this.y = y - this.height * 0.5;
       }
     }
-    class FireExplosion extends Explosion {}
+    class FireExplosion extends Explosion {
+      constructor(game, x, y) {
+        super(game, x, y);
+        this.image = document.getElementById("fireExplosion");
+      }
+    }
 
     class UI {
       constructor(game) {
@@ -458,7 +463,7 @@ export default function CanvasGame() {
         this.ammoInterval = 500;
         this.gameOver = false;
         this.score = 0;
-        this.winningScore = 20;
+        this.winningScore = 80;
         this.gameTime = 0;
         this.timeLimit = 20000;
         this.speed = 1;
@@ -489,8 +494,8 @@ export default function CanvasGame() {
               this.particles.push(new Particle(this, enemy.x + enemy.width * 0.5, enemy.y + enemy.height * 0.5));
             }
             // ERROR HERE-- collision with all enemy types triggers 'enterPowerUp()' ////////////
-            if ((enemy.type = "lucky")) this.player.enterPowerUp();
-            else this.score--;
+            if (enemy.type === "lucky") this.player.enterPowerUp();
+            else if (!this.gameOver) this.score--;
           }
           this.player.projectiles.forEach((projectile) => {
             if (this.checkCollision(projectile, enemy)) {
@@ -509,7 +514,7 @@ export default function CanvasGame() {
                   }
                 }
                 if (!this.gameOver) this.score += enemy.score;
-                if (this.score > this.winningScore) this.gameOver = true;
+                // if (this.score > this.winningScore) this.gameOver = true;
               }
             }
           });
@@ -539,12 +544,16 @@ export default function CanvasGame() {
         const randomize = Math.random();
         if (randomize < 0.3) this.enemies.push(new Angler1(this));
         else if (randomize < 0.6) this.enemies.push(new Angler2(this));
-        else if (randomize < 0.8) this.enemies.push(new HiveWhale(this));
+        else if (randomize < 0.7) this.enemies.push(new HiveWhale(this));
         else this.enemies.push(new LuckyFish(this));
       }
       addExplosion(enemy) {
         const randomize = Math.random();
-        if (randomize < 1) this.explosions.push(new SmokeExplosion(this, enemy.x + enemy.width * 0.5, enemy.y + enemy.height * 0.5));
+        if (randomize < 0.5) {
+          this.explosions.push(new SmokeExplosion(this, enemy.x + enemy.width * 0.5, enemy.y + enemy.height * 0.5));
+        } else {
+          this.explosions.push(new FireExplosion(this, enemy.x + enemy.width * 0.5, enemy.y + enemy.height * 0.5));
+        }
       }
       checkCollision(rect1, rect2) {
         return rect1.x < rect2.x + rect2.width && rect1.x + rect1.width > rect2.x && rect1.y < rect2.y + rect2.height && rect1.height + rect1.y > rect2.y;
