@@ -29,11 +29,6 @@ export default function CanvasGame() {
     class InputHandler {
       constructor(game) {
         this.game = game;
-        // BUTTONS FOR MOBILE //////////////////////////////
-        this.fireBtn = document.getElementById("fire-btn");
-        this.upBtn = document.getElementById("up-btn");
-        this.downBtn = document.getElementById("down-btn");
-        ////////////////////////////////////////////////////
         window.addEventListener("keydown", (e) => {
           if ((e.key === "ArrowUp" || e.key === "ArrowDown") && this.game.keys.indexOf(e.key) === -1) {
             this.game.keys.push(e.key);
@@ -43,15 +38,19 @@ export default function CanvasGame() {
             this.game.debug = !this.game.debug;
           }
         });
-        window.addEventListener("click", (e) => {
-          if ((e.key === this.upBtn || e.key === this.downBtn) && this.game.keys.indexOf(e.key) === -1) {
-            this.game.keys.push(e.key);
-          }
-        });
-        // EVENT LISTENER FOR MOBILE BUTTONS //////////////
+        // EVENT LISTENER FOR MOBILE FIRE BUTTON //////////////
+        this.fireBtn = document.getElementById("fire-btn");
         this.fireBtn.addEventListener("click", () => {
           this.game.player.shootTop();
         });
+        // EVENT LISTENER FOR MOBILE UP BUTTON ////////////
+        // this.upBtn = document.getElementById("up-btn");
+        // this.upBtn.addEventListener("click", () => {
+        //   if(this.game.player.speedY = 0){
+        //   this.game.player.speedY = -this.maxSpeed;
+        //   }
+        //   console.log(this.upBtn.click)
+        // });
         ///////////////////////////////////////////////////
         window.addEventListener("keyup", (e) => {
           if (this.game.keys.indexOf(e.key) > -1) {
