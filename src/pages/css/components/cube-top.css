@@ -39,8 +39,8 @@
   height: 100%;
   width: 100%;
   position: absolute;
+  border: 2px solid rgb(0, 0, 255, 0.6);
   background: rgb(0, 0, 255, 0.5);
-  box-shadow: 0 0 10px 5px rgba(0, 100, 255, 0.7) inset;
 }
 .color-cube .front,
 .color-cube .back {
@@ -67,12 +67,12 @@
   transform: translateZ(50px);
 }
 .color-cube .shadow {
-  box-shadow: 0 0 5px 5px rgb(0, 0, 0, 0.05);
+  border: none;
+  border-radius: 5px;
   background: radial-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.05));
   transform: translateY(120px) rotateX(90deg);
 }
 .color-cube.anim .shadow {
-  box-shadow: none;
   background: none;
 }
 /* SPINNING, FLYING TOP //////////////////////// */
@@ -179,7 +179,6 @@
   bottom: -10px;
   transform: rotateX(90deg);
   border-radius: 8px;
-  box-shadow: 0 0 5px 5px rgb(0, 0, 0, 0.05);
   background: radial-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.05));
   animation: shadow-rotate 8s linear infinite;
 }
