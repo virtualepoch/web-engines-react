@@ -5,6 +5,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
   background: white;
   pointer-events: all;
 }
@@ -19,12 +20,14 @@
   font: 20px sans-serif;
 }
 .canvas-page .bold-text {
-  font: 30px Blackpast;
+  font: 700 25px sans-serif;
+
 }
 .canvas-page .mobile-landscape-alert {
+  padding: 50px 0;
   color: red;
-  text-align: center;
-  font: 30px Blackpast;
+  font: 800 30px sans-serif;
+text-transform: uppercase;
 }
 .canvas-game-link {
   width: fit-content;
@@ -37,7 +40,7 @@
   color: white;
   border: 10px solid rgb(255, 0, 255, 0.5);
   border-radius: 8px;
-  box-shadow: 1px 5px 5px 4px rgb(0, 0, 0, 0.3);
+  box-shadow: 1px 2px 2px 2px rgb(0, 0, 0, 0.2);
   background: linear-gradient(30deg, blue, purple);
 }
 .canvas-game-container {

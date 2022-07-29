@@ -30,16 +30,17 @@ export default function CanvasGame() {
       constructor(game) {
         this.game = game;
         window.addEventListener("keydown", (e) => {
-          if ((e.key === "ArrowUp" || e.key === "ArrowDown" || e.key === "ArrowLeft" || e.key === "ArrowRight") && this.game.keys.indexOf(e.key) === -1) {
+          if ((e.key === "ArrowUp" || e.key === "w" || e.key === "ArrowDown" || e.key === "s" || e.key === "ArrowLeft" || e.key === "a" || e.key === "ArrowRight" || e.key === "d") && this.game.keys.indexOf(e.key) === -1) {
             this.game.keys.push(e.key);
           } else if (e.key === " ") {
             this.game.player.shootTop();
-          } else if (e.key === "d") {
+          } else if (e.key === "o") {
             this.game.debug = !this.game.debug;
           } else if (e.key === "Enter") {
             this.game.player.restart();
             this.game.restart();
           }
+          console.log(this.game.keys[0]);
         });
         window.addEventListener("keyup", (e) => {
           if (this.game.keys.indexOf(e.key) > -1) {
@@ -162,11 +163,15 @@ export default function CanvasGame() {
         //   console.log(this.upBtn.click)
         // });
         if (this.game.keys.includes("ArrowUp")) this.speedY = -this.maxSpeed;
+        else if (this.game.keys.includes("w")) this.speedY = -this.maxSpeed;
         else if (this.game.keys.includes("ArrowDown")) this.speedY = this.maxSpeed;
+        else if (this.game.keys.includes("s")) this.speedY = this.maxSpeed;
         else this.speedY = 0;
         this.y += this.speedY;
         if (this.game.keys.includes("ArrowLeft")) this.speedX = -this.maxSpeed;
+        else if (this.game.keys.includes("a")) this.speedX = -this.maxSpeed;
         else if (this.game.keys.includes("ArrowRight")) this.speedX = this.maxSpeed;
+        else if (this.game.keys.includes("d")) this.speedX = this.maxSpeed;
         else this.speedX = 0;
         this.x += this.speedX;
         // mobile xpad
@@ -250,10 +255,9 @@ export default function CanvasGame() {
       draw(context) {
         if (this.game.debug) context.strokeRect(this.x, this.y, this.width, this.height);
         context.drawImage(this.image, this.frameX * this.width, this.frameY * this.height, this.width, this.height, this.x, this.y, this.width, this.height);
-        if (this.game.debug) {
-          context.font = "20px Helvetica";
-          context.fillText(this.lives, this.x + 20, this.y + 20);
-        }
+        context.font = "20px Helvetica";
+        context.fillStyle = "white";
+        context.fillText(this.lives, this.x + 20, this.y + 20);
       }
     }
 
@@ -436,9 +440,6 @@ export default function CanvasGame() {
         context.lineTo(320, 50);
         context.stroke();
         context.restore();
-        context.shadowOffsetX = 2;
-        context.shadowOffsetY = 2;
-        context.shadowColor = "black";
         context.font = this.fontSize + "px " + this.fontFamily;
         // score
         context.fillText("Score: " + this.game.score, 10, 30);
