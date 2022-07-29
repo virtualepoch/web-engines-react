@@ -58,13 +58,13 @@ export default function CanvasGame() {
           this.game.restart();
         });
         // EVENT LISTENER FOR MOBILE UP BUTTON ////////////
-        this.upBtn = document.getElementById("up-btn");
-        this.upBtn.addEventListener("touchstart", function () {
-          this.game.xPadUpArray[this.upBtn] = true;
-        });
-        this.upBtn.addEventListener("touchend", function () {
-          delete this.game.xPadUpArray[this.upBtn];
-        });
+        // this.upBtn = document.getElementById("up-btn");
+        // this.upBtn.addEventListener("touchstart", function () {
+        //   this.game.xPadUpArray[this.upBtn] = true;
+        // });
+        // this.upBtn.addEventListener("touchend", function () {
+        //   delete this.game.xPadUpArray[this.upBtn];
+        // });
         ///////////////////////////////////////////////////
       }
     }
@@ -640,8 +640,12 @@ export default function CanvasGame() {
       <img id="layer4" src={layer4} />
 
       {/* buttons */}
-      <button id="up-btn"></button>
-      <button id="down-btn"></button>
+      <div id="x-pad">
+        <div id="x-pad-up"></div>
+        <div id="x-pad-down"></div>
+        <div id="x-pad-left"></div>
+        <div id="x-pad-right"></div>
+      </div>
       <button id="fire-btn"></button>
       <button id="start-btn">START</button>
 
