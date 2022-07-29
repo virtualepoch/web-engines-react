@@ -21,13 +21,12 @@
 }
 .canvas-page .bold-text {
   font: 700 25px sans-serif;
-
 }
 .canvas-page .mobile-landscape-alert {
   padding: 50px 0;
   color: red;
   font: 800 30px sans-serif;
-text-transform: uppercase;
+  text-transform: uppercase;
 }
 .canvas-game-link {
   width: fit-content;
@@ -57,12 +56,12 @@ text-transform: uppercase;
   width: 80px;
   height: 40px;
   position: fixed;
-  top: 12px;
-  right: 12px;
-  border: 1px solid white;
+  top: 10px;
+  right: 10px;
+  border: 1px solid aqua;
   border-radius: 10px;
-  color: white;
-  background: rgb(0, 100, 255);
+  color: rgb(255, 255, 255, 0.5);
+  background: rgb(0, 100, 255, 0.3);
 }
 #canvas-game {
   max-width: 100%;
@@ -95,7 +94,9 @@ text-transform: uppercase;
   width: 140px;
   height: 140px;
   position: fixed;
-  bottom: 0;
+  left: 10px;
+  bottom: 10px;
+  border: 1px solid aqua;
   border-radius: 50%;
   cursor: pointer;
   overflow: hidden;
@@ -108,14 +109,14 @@ text-transform: uppercase;
   height: 70px;
   clip-path: polygon(50% 0, 100% 100%, 0 100%);
   transform: rotate(180deg);
-  background: url(../../icons/angle-down-trans-white.svg) 50% / 15% no-repeat, rgb(255, 0, 255, 0.3);
+  background: url(../../icons/angle-down-trans-white.svg) 50% / 15% no-repeat, rgb(0, 255, 255, 0.3);
 }
 #x-pad-down {
   width: 140px;
   height: 70px;
   top: 50%;
   clip-path: polygon(50% 0, 100% 100%, 0 100%);
-  background: url(../../icons/angle-down-trans-white.svg) 50% / 15% no-repeat, rgb(0, 0, 255, 0.3);
+  background: url(../../icons/angle-down-trans-white.svg) 50% / 15% no-repeat, rgb(0, 255, 255, 0.3);
 }
 #x-pad-left {
   width: 140px;
@@ -124,7 +125,7 @@ text-transform: uppercase;
   left: -25%;
   clip-path: polygon(50% 0, 100% 100%, 0 100%);
   transform: rotate(90deg);
-  background: url(../../icons/angle-down-trans-white.svg) 50% / 15% no-repeat, rgb(173, 255, 47, 0.3);
+  background: url(../../icons/angle-down-trans-white.svg) 50% / 15% no-repeat, rgb(0, 100, 255, 0.3);
 }
 #x-pad-right {
   width: 140px;
@@ -133,17 +134,17 @@ text-transform: uppercase;
   left: 25%;
   clip-path: polygon(50% 0, 100% 100%, 0 100%);
   transform: rotate(270deg);
-  background: url(../../icons/angle-down-trans-white.svg) 50% / 15% no-repeat, rgb(0, 255, 255, 0.3);
+  background: url(../../icons/angle-down-trans-white.svg) 50% / 15% no-repeat, rgb(0, 100, 255, 0.3);
 }
 #fire-btn {
   width: 80px;
   height: 80px;
   position: fixed;
-  right: 20px;
-  bottom: 20px;
-  border: 1px solid rgba(0, 255, 255, 0.5);
+  right: 40px;
+  bottom: 40px;
+  border: 1px solid aqua;
   border-radius: 50%;
-  background: url(../../icons/xmark-trans-white.svg) 50% / 30% no-repeat, radial-gradient(circle at 40% 40%, rgb(255, 255, 255, 0.3), rgb(255, 0, 255, 0.3) 60%);
+  background: url(../../icons/xmark-trans-white.svg) 50% / 30% no-repeat, radial-gradient(circle at 40% 40%, rgb(0, 255, 255, 0.3), rgba(0, 100, 255, 0.3) 60%);
 }
 #start-btn {
   width: 100px;
@@ -151,8 +152,11 @@ text-transform: uppercase;
   position: fixed;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 10px;
   margin: 0 auto;
+  border: 1px solid aqua;
   border-radius: 20px;
-  font: 800 20px sans-serif;
+  color: rgb(255, 255, 255, 0.5);
+  font: 600 20px sans-serif;
+  background: radial-gradient(rgb(0, 255, 255, 0.3), rgb(0, 100, 255, 0.3));
 }
