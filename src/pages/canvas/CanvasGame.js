@@ -154,6 +154,13 @@ export default function CanvasGame() {
         this.y = 200;
       }
       update(deltaTime) {
+        // this.upBtn = document.getElementById("up-btn");
+        // this.upBtn.addEventListener("touchstart", () => {
+        //   if(this.game.player.speedY = 0){
+        //   this.game.player.speedY = -this.maxSpeed;
+        //   }
+        //   console.log(this.upBtn.click)
+        // });
         if (this.game.keys.includes("ArrowUp")) this.speedY = -this.maxSpeed;
         else if (this.game.keys.includes("ArrowDown")) this.speedY = this.maxSpeed;
         else this.speedY = 0;
