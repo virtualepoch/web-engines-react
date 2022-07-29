@@ -30,12 +30,20 @@ export default function CanvasGame() {
       constructor(game) {
         this.game = game;
         window.addEventListener("keydown", (e) => {
-          if ((e.key === "ArrowUp" || e.key === "ArrowDown") && this.game.keys.indexOf(e.key) === -1) {
+          if ((e.key === "ArrowUp" || e.key === "ArrowDown" || e.key === "ArrowLeft" || e.key === "ArrowRight") && this.game.keys.indexOf(e.key) === -1) {
             this.game.keys.push(e.key);
           } else if (e.key === " ") {
             this.game.player.shootTop();
           } else if (e.key === "d") {
             this.game.debug = !this.game.debug;
+          } else if (e.key === "Enter") {
+            this.game.player.restart();
+            this.game.restart();
+          }
+        });
+        window.addEventListener("keyup", (e) => {
+          if (this.game.keys.indexOf(e.key) > -1) {
+            this.game.keys.splice(this.game.keys.indexOf(e.key), 1);
           }
         });
         // EVENT LISTENER FOR MOBILE FIRE BUTTON //////////////
@@ -43,20 +51,21 @@ export default function CanvasGame() {
         this.fireBtn.addEventListener("click", () => {
           this.game.player.shootTop();
         });
-        // EVENT LISTENER FOR MOBILE UP BUTTON ////////////
-        // this.upBtn = document.getElementById("up-btn");
-        // this.upBtn.addEventListener("click", () => {
-        //   if(this.game.player.speedY = 0){
-        //   this.game.player.speedY = -this.maxSpeed;
-        //   }
-        //   console.log(this.upBtn.click)
-        // });
-        ///////////////////////////////////////////////////
-        window.addEventListener("keyup", (e) => {
-          if (this.game.keys.indexOf(e.key) > -1) {
-            this.game.keys.splice(this.game.keys.indexOf(e.key), 1);
-          }
+        // EVENT LISTENER FOR MOBILE START BUTTON //////////////
+        this.startBtn = document.getElementById("start-btn");
+        this.startBtn.addEventListener("click", () => {
+          this.game.player.restart();
+          this.game.restart();
         });
+        // EVENT LISTENER FOR MOBILE UP BUTTON ////////////
+        this.upBtn = document.getElementById("up-btn");
+        this.upBtn.addEventListener("touchstart", function () {
+          this.game.xPadUpArray[this.upBtn] = true;
+        });
+        this.upBtn.addEventListener("touchend", function () {
+          delete this.game.xPadUpArray[this.upBtn];
+        });
+        ///////////////////////////////////////////////////
       }
     }
 
@@ -132,6 +141,7 @@ export default function CanvasGame() {
         this.frameY = 0;
         this.maxFrame = 37;
         this.speedY = 0;
+        this.speedX = 0;
         this.maxSpeed = 5;
         this.projectiles = [];
         this.image = document.getElementById("player");
@@ -139,14 +149,29 @@ export default function CanvasGame() {
         this.powerUpTimer = 0;
         this.powerUpLimit = 5000;
       }
+      restart() {
+        this.x = 100;
+        this.y = 200;
+      }
       update(deltaTime) {
         if (this.game.keys.includes("ArrowUp")) this.speedY = -this.maxSpeed;
         else if (this.game.keys.includes("ArrowDown")) this.speedY = this.maxSpeed;
         else this.speedY = 0;
         this.y += this.speedY;
+        if (this.game.keys.includes("ArrowLeft")) this.speedX = -this.maxSpeed;
+        else if (this.game.keys.includes("ArrowRight")) this.speedX = this.maxSpeed;
+        else this.speedX = 0;
+        this.x += this.speedX;
+        // mobile xpad
+        if (this.game.xPadUpArray[this.upBtn]) this.speedY = -this.maxSpeed;
+        else this.speedY = 0;
+        this.y += this.speedY;
         // vertical boundaries
         if (this.y > this.game.height - this.height * 0.5) this.y = this.game.height - this.height * 0.5;
         else if (this.y < -this.height * 0.5) this.y = -this.height * 0.5;
+        // horizontal boundaries
+        if (this.x > this.game.width - this.width) this.x = this.game.width - this.width;
+        else if (this.x < 0) this.x = 0;
         // handle projectiles
         this.projectiles.forEach((projectile) => {
           projectile.update();
@@ -451,6 +476,7 @@ export default function CanvasGame() {
         this.input = new InputHandler(this);
         this.ui = new UI(this);
         this.keys = [];
+        this.xPadUpArray = [];
         this.enemies = [];
         this.particles = [];
         this.explosions = [];
@@ -467,6 +493,13 @@ export default function CanvasGame() {
         this.timeLimit = 20000;
         this.speed = 1;
         this.debug = false;
+      }
+
+      restart() {
+        this.enemies = [];
+        this.gameOver = false;
+        this.score = 0;
+        this.gameTime = 0;
       }
       update(deltaTime) {
         if (!this.gameOver) this.gameTime += deltaTime;
@@ -558,6 +591,7 @@ export default function CanvasGame() {
         return rect1.x < rect2.x + rect2.width && rect1.x + rect1.width > rect2.x && rect1.y < rect2.y + rect2.height && rect1.height + rect1.y > rect2.y;
       }
     }
+
     const game = new Game(canvas.width, canvas.height);
     let lastTime = 0;
     // animation loop
@@ -567,6 +601,8 @@ export default function CanvasGame() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       game.draw(ctx);
       game.update(deltaTime);
+      // here you can add an if statement to stop animating (i.e. if(!gameOver))
+      // however, having issue where game stops animating before win/lose message.
       requestAnimationFrame(animate);
     }
     animate(0);
@@ -600,6 +636,7 @@ export default function CanvasGame() {
       <button id="up-btn"></button>
       <button id="down-btn"></button>
       <button id="fire-btn"></button>
+      <button id="start-btn">START</button>
 
       <button className="canvas-game-back-btn" onClick={() => navigate(-1)}>
         EXIT GAME

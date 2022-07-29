@@ -57,7 +57,6 @@
   color: white;
   border: 1px solid white;
   border-radius: 5px;
-  box-shadow: -2px 2px 5px 2px rgb(0, 0, 0, 0.3);
   background: url(../icons/angle-up-solid-white.svg) center / 60% no-repeat, rgb(0, 180, 255, 0.5);
   transition: 0.5s ease-in-out;
   cursor: pointer;

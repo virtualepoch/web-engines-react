@@ -72,8 +72,7 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  background: rgba(3, 118, 163, 0.5);
-  box-shadow: 0 0 0.5em rgb(255, 255, 255) inset;
+  background: radial-gradient(rgb(216, 216, 216, 0.5), rgb(215, 215, 215, 0.5), rgb(0, 255, 255, 0.5));
 }
 .cube .front {
   transform: translateZ(0.5em);
@@ -91,7 +90,6 @@
   width: 1em;
   height: 1em;
   transform: translateY(-50%) rotateX(90deg);
-  background: radial-gradient(white, lightgray, aqua);
 }
 .cube .bottom {
   transform: translateY(50%) rotateX(90deg);

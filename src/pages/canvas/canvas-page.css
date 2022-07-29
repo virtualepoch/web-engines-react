@@ -18,6 +18,9 @@
 .canvas-page p {
   font: 20px sans-serif;
 }
+.canvas-page .bold-text {
+  font: 30px Blackpast;
+}
 .canvas-page .mobile-landscape-alert {
   color: red;
   text-align: center;
@@ -106,4 +109,15 @@
   right: 0;
   border: solid rgba(255, 0, 0, 0.5);
   background: url(../../icons/xmark-trans-red.svg) 50% / 60% no-repeat, radial-gradient(circle at 40% 40%, white, red 60%);
+}
+#start-btn {
+  width: 100px;
+  height: 40px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  border-radius: 20px;
+  font: 800 20px sans-serif;
 }
