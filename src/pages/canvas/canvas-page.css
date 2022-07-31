@@ -136,6 +136,12 @@
   transform: rotate(270deg);
   background: url(../../icons/angle-down-trans-white.svg) 50% / 15% no-repeat, rgb(0, 100, 255, 0.3);
 }
+#x-pad-up.pressing-btn,
+#x-pad-down.pressing-btn,
+#x-pad-left.pressing-btn,
+#x-pad-right.pressing-btn {
+  background: rgb(255, 0, 255, 0.3);
+}
 #fire-btn {
   width: 80px;
   height: 80px;

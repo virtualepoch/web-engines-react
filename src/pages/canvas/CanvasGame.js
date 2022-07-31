@@ -40,7 +40,6 @@ export default function CanvasGame() {
             this.game.player.restart();
             this.game.restart();
           }
-          console.log(this.game.keys[0]);
         });
         window.addEventListener("keyup", (e) => {
           if (this.game.keys.indexOf(e.key) > -1) {
@@ -58,14 +57,55 @@ export default function CanvasGame() {
           this.game.player.restart();
           this.game.restart();
         });
-        // EVENT LISTENER FOR MOBILE UP BUTTON ////////////
-        // this.upBtn = document.getElementById("up-btn");
-        // this.upBtn.addEventListener("touchstart", function () {
-        //   this.game.xPadUpArray[this.upBtn] = true;
-        // });
-        // this.upBtn.addEventListener("touchend", function () {
-        //   delete this.game.xPadUpArray[this.upBtn];
-        // });
+        // EVENT LISTENER FOR MOBILE X-PAD BUTTONS ////////////
+        this.xPadUp = document.getElementById("x-pad-up");
+        this.xPadUp.addEventListener("touchstart", () => {
+          this.game.keys.push("xPadUp");
+          this.xPadUp.classList.add("pressing-btn");
+        });
+        this.xPadUp.addEventListener("touchend", () => {
+          if (this.game.keys.indexOf("xPadUp") > -1) {
+            this.game.keys.splice(this.game.keys.indexOf("xPadUp"), 1);
+          }
+          this.xPadUp.classList.remove("pressing-btn");
+        });
+
+        this.xPadDown = document.getElementById("x-pad-down");
+        this.xPadDown.addEventListener("touchstart", () => {
+          this.game.keys.push("xPadDown");
+          this.xPadDown.classList.add("pressing-btn");
+        });
+        this.xPadDown.addEventListener("touchend", () => {
+          if (this.game.keys.indexOf("xPadDown") > -1) {
+            this.game.keys.splice(this.game.keys.indexOf("xPadDown"), 1);
+          }
+          this.xPadDown.classList.remove("pressing-btn");
+        });
+
+        this.xPadLeft = document.getElementById("x-pad-left");
+        this.xPadLeft.addEventListener("touchstart", () => {
+          this.game.keys.push("xPadLeft");
+          this.xPadLeft.classList.add("pressing-btn");
+        });
+        this.xPadLeft.addEventListener("touchend", () => {
+          if (this.game.keys.indexOf("xPadLeft") > -1) {
+            this.game.keys.splice(this.game.keys.indexOf("xPadLeft"), 1);
+          }
+          this.xPadLeft.classList.remove("pressing-btn");
+        });
+
+        this.xPadRight = document.getElementById("x-pad-right");
+        this.xPadRight.addEventListener("touchstart", () => {
+          this.game.keys.push("xPadRight");
+          this.xPadRight.classList.add("pressing-btn");
+        });
+        this.xPadRight.addEventListener("touchend", () => {
+          if (this.game.keys.indexOf("xPadRight") > -1) {
+            this.game.keys.splice(this.game.keys.indexOf("xPadRight"), 1);
+          }
+          this.xPadRight.classList.remove("pressing-btn");
+        });
+
         ///////////////////////////////////////////////////
       }
     }
@@ -155,23 +195,12 @@ export default function CanvasGame() {
         this.y = 200;
       }
       update(deltaTime) {
-        // this.upBtn = document.getElementById("up-btn");
-        // this.upBtn.addEventListener("touchstart", () => {
-        //   if(this.game.player.speedY = 0){
-        //   this.game.player.speedY = -this.maxSpeed;
-        //   }
-        //   console.log(this.upBtn.click)
-        // });
-        if (this.game.keys.includes("ArrowUp")) this.speedY = -this.maxSpeed;
-        else if (this.game.keys.includes("w")) this.speedY = -this.maxSpeed;
-        else if (this.game.keys.includes("ArrowDown")) this.speedY = this.maxSpeed;
-        else if (this.game.keys.includes("s")) this.speedY = this.maxSpeed;
+        if (this.game.keys.includes("ArrowUp") || this.game.keys.includes("w") || this.game.keys.includes("xPadUp")) this.speedY = -this.maxSpeed;
+        else if (this.game.keys.includes("ArrowDown") || this.game.keys.includes("s") || this.game.keys.includes("xPadDown")) this.speedY = this.maxSpeed;
         else this.speedY = 0;
         this.y += this.speedY;
-        if (this.game.keys.includes("ArrowLeft")) this.speedX = -this.maxSpeed;
-        else if (this.game.keys.includes("a")) this.speedX = -this.maxSpeed;
-        else if (this.game.keys.includes("ArrowRight")) this.speedX = this.maxSpeed;
-        else if (this.game.keys.includes("d")) this.speedX = this.maxSpeed;
+        if (this.game.keys.includes("ArrowLeft") || this.game.keys.includes("a") || this.game.keys.includes("xPadLeft")) this.speedX = -this.maxSpeed;
+        else if (this.game.keys.includes("ArrowRight") || this.game.keys.includes("d") || this.game.keys.includes("xPadRight")) this.speedX = this.maxSpeed;
         else this.speedX = 0;
         this.x += this.speedX;
         // mobile xpad
