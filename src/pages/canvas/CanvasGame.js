@@ -23,7 +23,7 @@ export default function CanvasGame() {
   useEffect(() => {
     const canvas = canvasGame.current;
     const ctx = canvas.getContext("2d");
-    canvas.width = 1000;
+    canvas.width = 1500;
     canvas.height = 500;
 
     class InputHandler {
@@ -48,9 +48,14 @@ export default function CanvasGame() {
         });
         // EVENT LISTENER FOR MOBILE FIRE BUTTON //////////////
         this.fireBtn = document.getElementById("fire-btn");
-        this.fireBtn.addEventListener("click", () => {
+        this.fireBtn.addEventListener("touchstart", () => {
           this.game.player.shootTop();
+          this.fireBtn.classList.add("pressing");
         });
+        this.fireBtn.addEventListener("touchend", () => {
+          this.fireBtn.classList.remove("pressing");
+        });
+
         // EVENT LISTENER FOR MOBILE START BUTTON //////////////
         this.startBtn = document.getElementById("start-btn");
         this.startBtn.addEventListener("click", () => {
@@ -61,49 +66,49 @@ export default function CanvasGame() {
         this.xPadUp = document.getElementById("x-pad-up");
         this.xPadUp.addEventListener("touchstart", () => {
           this.game.keys.push("xPadUp");
-          this.xPadUp.classList.add("pressing-btn");
+          this.xPadUp.classList.add("pressing");
         });
         this.xPadUp.addEventListener("touchend", () => {
           if (this.game.keys.indexOf("xPadUp") > -1) {
             this.game.keys.splice(this.game.keys.indexOf("xPadUp"), 1);
           }
-          this.xPadUp.classList.remove("pressing-btn");
+          this.xPadUp.classList.remove("pressing");
         });
 
         this.xPadDown = document.getElementById("x-pad-down");
         this.xPadDown.addEventListener("touchstart", () => {
           this.game.keys.push("xPadDown");
-          this.xPadDown.classList.add("pressing-btn");
+          this.xPadDown.classList.add("pressing");
         });
         this.xPadDown.addEventListener("touchend", () => {
           if (this.game.keys.indexOf("xPadDown") > -1) {
             this.game.keys.splice(this.game.keys.indexOf("xPadDown"), 1);
           }
-          this.xPadDown.classList.remove("pressing-btn");
+          this.xPadDown.classList.remove("pressing");
         });
 
         this.xPadLeft = document.getElementById("x-pad-left");
         this.xPadLeft.addEventListener("touchstart", () => {
           this.game.keys.push("xPadLeft");
-          this.xPadLeft.classList.add("pressing-btn");
+          this.xPadLeft.classList.add("pressing");
         });
         this.xPadLeft.addEventListener("touchend", () => {
           if (this.game.keys.indexOf("xPadLeft") > -1) {
             this.game.keys.splice(this.game.keys.indexOf("xPadLeft"), 1);
           }
-          this.xPadLeft.classList.remove("pressing-btn");
+          this.xPadLeft.classList.remove("pressing");
         });
 
         this.xPadRight = document.getElementById("x-pad-right");
         this.xPadRight.addEventListener("touchstart", () => {
           this.game.keys.push("xPadRight");
-          this.xPadRight.classList.add("pressing-btn");
+          this.xPadRight.classList.add("pressing");
         });
         this.xPadRight.addEventListener("touchend", () => {
           if (this.game.keys.indexOf("xPadRight") > -1) {
             this.game.keys.splice(this.game.keys.indexOf("xPadRight"), 1);
           }
-          this.xPadRight.classList.remove("pressing-btn");
+          this.xPadRight.classList.remove("pressing");
         });
 
         ///////////////////////////////////////////////////

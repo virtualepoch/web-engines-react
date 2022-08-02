@@ -45,8 +45,8 @@ export default function TextWaveEffectTut() {
   height: 100%;
   width: 100%;
   position: absolute;
+  border: 2px solid rgba(255, 0, 255, 0.5);
   background: rgb(0, 0, 255, 0.5);
-  box-shadow: 0 0 10px 5px rgba(0, 100, 255, 0.7) inset;
 }
 .color-cube .left {
   transform: translateX(-50px) rotateY(90deg);
@@ -72,7 +72,8 @@ export default function TextWaveEffectTut() {
   transform: translateZ(50px);
 }
 .color-cube .shadow {
-  box-shadow: 0 0 5px 5px rgb(0, 0, 0, 0.05);
+  border: none;
+  border-radius: 5px;
   background: radial-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.05));
   transform: translateY(120px) rotateX(90deg);
 }
