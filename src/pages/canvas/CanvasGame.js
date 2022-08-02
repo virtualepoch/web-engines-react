@@ -23,8 +23,8 @@ export default function CanvasGame() {
   useEffect(() => {
     const canvas = canvasGame.current;
     const ctx = canvas.getContext("2d");
-    canvas.width = 1500;
-    canvas.height = 500;
+    canvas.width = 1000;
+    canvas.height = 400;
 
     class InputHandler {
       constructor(game) {
