@@ -24,7 +24,7 @@ export default function CanvasGame() {
     const canvas = canvasGame.current;
     const ctx = canvas.getContext("2d");
     canvas.width = 1000;
-    canvas.height = 400;
+    canvas.height = 500;
 
     class InputHandler {
       constructor(game) {

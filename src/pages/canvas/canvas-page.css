@@ -66,7 +66,8 @@
 #canvas-game {
   max-width: 100%;
   max-height: 100%;
-  border: 5px solid rgb(249, 12, 241, 0.3);
+  border: 2px solid gray;
+  border-bottom: 5px solid white;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -96,7 +97,7 @@
   position: fixed;
   left: 10px;
   bottom: 10px;
-  border: 1px solid lightblue;
+  border: 1px solid rgb(84, 84, 84);
   border-radius: 50%;
   cursor: pointer;
   overflow: hidden;
@@ -152,7 +153,7 @@
   border-radius: 50%;
   background: url(../../icons/xmark-trans-white.svg) 50% / 20% no-repeat, transparent;
 }
-#fire-btn.pressing{
+#fire-btn.pressing {
   background: rgb(255, 0, 255, 0.3);
 }
 #start-btn {

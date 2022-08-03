@@ -4,9 +4,7 @@
   position: relative;
   top: 20px;
   border-radius: 50%;
-  background: radial-gradient(ellipse at 50% 55%, lightgray, rgb(65, 8, 65, 0.8), black);
-  border: 1px solid alicewhite;
-  transition: 1s ease-in;
+  background: radial-gradient(ellipse at 50% 55%, lightgray, rgb(65, 8, 65), black);
 }
 .scene {
   width: 100%;
@@ -30,7 +28,7 @@
   position: relative;
   top: 5em;
   z-index: 8;
-  background: radial-gradient(circle at 60% 10%, rgb(255, 255, 255) 20%, rgba(67, 67, 67, 0.8) 80%, black);
+  background: radial-gradient(circle at 60% 10%, rgb(255, 255, 255) 20%, rgba(67, 67, 67) 80%, black);
   transition: 1s linear 3s;
   animation: ball-bounce 2s ease-out infinite;
 }
