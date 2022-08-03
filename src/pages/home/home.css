@@ -31,7 +31,7 @@
   background: linear-gradient(transparent 33%, blue 80%);
 }
 .text-box p {
-  width: 222px;
+  width: 220px;
   padding: 20px 0;
   margin-bottom: 5px;
   font-size: clamp(0.6rem, 5vw, 1.3rem);
