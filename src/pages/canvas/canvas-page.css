@@ -67,15 +67,12 @@
 #canvas-game {
   max-width: 100%;
   max-height: 100%;
-  border: 2px solid lightgray;
-  border-top: 3px solid gray;
-  border-bottom: 4px solid white;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   overflow: hidden;
-  font-family: Sega;
+  /* font-family: Sega; */
 }
 #layer1,
 #layer2,
@@ -105,39 +102,27 @@
   overflow: hidden;
 }
 #x-pad div {
+  width: 120px;
+  height: 60px;
   position: absolute;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  background: url(../../icons/angle-down-trans-white.svg) 50% / 10% no-repeat, transparent;
 }
 #x-pad-up {
-  width: 120px;
-  height: 60px;
-  clip-path: polygon(50% 0, 100% 100%, 0 100%);
   transform: rotate(180deg);
-  background: url(../../icons/angle-down-trans-white.svg) 50% / 10% no-repeat, transparent;
 }
 #x-pad-down {
-  width: 120px;
-  height: 60px;
   top: 50%;
-  clip-path: polygon(50% 0, 100% 100%, 0 100%);
-  background: url(../../icons/angle-down-trans-white.svg) 50% / 10% no-repeat, transparent;
 }
 #x-pad-left {
-  width: 120px;
-  height: 60px;
   top: 25%;
   left: -25%;
-  clip-path: polygon(50% 0, 100% 100%, 0 100%);
   transform: rotate(90deg);
-  background: url(../../icons/angle-down-trans-white.svg) 50% / 10% no-repeat, transparent;
 }
 #x-pad-right {
-  width: 120px;
-  height: 60px;
   top: 25%;
   left: 25%;
-  clip-path: polygon(50% 0, 100% 100%, 0 100%);
   transform: rotate(270deg);
-  background: url(../../icons/angle-down-trans-white.svg) 50% / 10% no-repeat, transparent;
 }
 #x-pad-up.pressing,
 #x-pad-down.pressing,

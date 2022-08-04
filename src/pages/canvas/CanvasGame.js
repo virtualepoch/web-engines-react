@@ -23,8 +23,8 @@ export default function CanvasGame() {
   useEffect(() => {
     const canvas = canvasGame.current;
     const ctx = canvas.getContext("2d");
-    canvas.width = 1000;
-    canvas.height = 500;
+    canvas.width = 1050;
+    canvas.height = 450;
 
     class InputHandler {
       constructor(game) {
@@ -55,7 +55,6 @@ export default function CanvasGame() {
         this.fireBtn.addEventListener("touchend", () => {
           this.fireBtn.classList.remove("pressing");
         });
-
         // EVENT LISTENER FOR MOBILE START BUTTON //////////////
         this.startBtn = document.getElementById("start-btn");
         this.startBtn.addEventListener("click", () => {
@@ -74,7 +73,6 @@ export default function CanvasGame() {
           }
           this.xPadUp.classList.remove("pressing");
         });
-
         this.xPadDown = document.getElementById("x-pad-down");
         this.xPadDown.addEventListener("touchstart", () => {
           this.game.keys.push("xPadDown");
@@ -86,7 +84,6 @@ export default function CanvasGame() {
           }
           this.xPadDown.classList.remove("pressing");
         });
-
         this.xPadLeft = document.getElementById("x-pad-left");
         this.xPadLeft.addEventListener("touchstart", () => {
           this.game.keys.push("xPadLeft");
@@ -98,7 +95,6 @@ export default function CanvasGame() {
           }
           this.xPadLeft.classList.remove("pressing");
         });
-
         this.xPadRight = document.getElementById("x-pad-right");
         this.xPadRight.addEventListener("touchstart", () => {
           this.game.keys.push("xPadRight");
@@ -110,8 +106,6 @@ export default function CanvasGame() {
           }
           this.xPadRight.classList.remove("pressing");
         });
-
-        ///////////////////////////////////////////////////
       }
     }
 
@@ -455,7 +449,7 @@ export default function CanvasGame() {
       constructor(game) {
         this.game = game;
         this.fontSize = 20;
-        this.fontFamily = "Sega";
+        this.fontFamily = "Blackpast";
         this.color = "white";
       }
       draw(context) {
@@ -490,8 +484,8 @@ export default function CanvasGame() {
             message1 = "You Win!";
             message2 = "Well Done!";
           } else {
-            message1 = "You Lose!";
-            message2 = "Try again next time!";
+            message1 = "You Lose";
+            message2 = "Press start to try again";
           }
           context.font = "50px " + this.fontFamily;
           context.fillText(message1, this.game.width * 0.5, this.game.height * 0.5 - 40);
