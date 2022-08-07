@@ -1,42 +1,21 @@
+import { Link } from "react-router-dom";
+import horsemen2 from "../../images/horsemen2.png";
+import "./cgi.css";
+
 export default function Cgi() {
-  // const circle = {
-  //   radius: 1,
-  //   location: {
-  //     x: 1,
-  //     y: 1,
-  //   },
-  //   draw: function () {
-  //     console.log("draw");
-  //   },
-  // };
-
-  // circle.draw();
-
-  // function createCircle(radius) {
-  //   return {
-  //     radius,
-  //     draw: function () {
-  //       console.log("factory function");
-  //     },
-  //   };
-  // }
-  // const circle = createCircle(1);
-  // circle.draw();
-
-function Circle(radius) {
-  this.radius = radius;
-  this.draw = function(){
-    console.log('constructor function')
-  }
-}
-
-const another = new Circle(1);
-another.draw()
-
   return (
-    <div className="page-updating">
+    <div className="cgi-page">
       <h1>CGI Tutorials</h1>
-      <p>This section is currently being updated. Thanks for your patience.</p>
+      <div className="sub-heading">
+        <h2>Learn to add</h2>
+        <h2 className="animated-text">3D</h2>
+        <h2>models to your Site! -also known as CGI (Computer-generated imagery).</h2>
+      </div>
+      <div className="cgi-model-container">
+        <h2>Four Horsemen 2/4 Pestilence and Famine</h2>
+        <img className="cgi-model-image" src={horsemen2}></img>
+        <Link className="cgi-model-link" to={"/cgi/cgi-models/horsemen-model-2"}>Press here to view in 3-D</Link>
+      </div>
     </div>
   );
 }
