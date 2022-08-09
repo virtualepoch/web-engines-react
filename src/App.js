@@ -14,6 +14,7 @@ import Canvas from "./pages/canvas/Canvas";
 import CanvasGame from "./pages/canvas/CanvasGame";
 import Cgi from "./pages/cgi/Cgi";
 import HorsemenModel2 from "./pages/cgi/cgi-models/HorsemenModel2";
+import AyanamiModel from "./pages/cgi/cgi-models/AyanamiModel";
 import "./pages/common.css";
 
 function useScrollToTop() {
@@ -44,6 +45,7 @@ function App() {
           <Route path="/html-canvas/canvas-game" element={<CanvasGame />} />
           <Route path="/cgi" element={<Cgi />} />
           <Route path="/cgi/cgi-models/horsemen-model-2" element={<HorsemenModel2 />} />
+          <Route path="/cgi/cgi-models/ayanami-model" element={<AyanamiModel />} />
         </Routes>
       </section>
     </>

@@ -91,7 +91,7 @@
 }
 
 .cgi-model-section {
-  min-height: 100vh;
+  height: calc(100vh - 60px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,6 +101,11 @@
 }
 .horsemen-2-canvas {
   width: 100%;
-  min-height: 100vh;
-  background: blue;
+  max-height: 600px;
+  border: solid;
+  background: linear-gradient(rgba(0, 0, 0, 0), grey, black, black), url("../../images/pexels-pixabay-sunpurple-640.jpg");
+  background-size: 100%;
+}
+.ayanami-canvas {
+  background: linear-gradient(purple, pink, purple);
 }

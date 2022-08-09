@@ -36,7 +36,7 @@
 }
 .site-title {
   padding-right: 4px;
-  background-image: linear-gradient(to right, magenta,pink, magenta);
+  background-image: linear-gradient(to right, magenta, pink, magenta);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font: 400 clamp(1.65rem, 5vw, 2rem) Lorea;

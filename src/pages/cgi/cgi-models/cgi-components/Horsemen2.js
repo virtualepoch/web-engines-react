@@ -12,7 +12,7 @@ import { useGLTF } from '@react-three/drei'
 export default function Horsemen2(props) {
   const { nodes, materials } = useGLTF('/horsemen2.gltf')
   return (
-    <group {...props} dispose={null} scale={30}>
+    <group {...props} dispose={null} scale={15}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
           <primitive object={nodes._rootJoint} />
