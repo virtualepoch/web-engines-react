@@ -9,10 +9,10 @@ title: Four Horsemen (2/4): Pestilence and Famine
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function Model(props) {
+export default function Horsemen2(props) {
   const { nodes, materials } = useGLTF('/horsemen2.gltf')
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} scale={30}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
           <primitive object={nodes._rootJoint} />
