@@ -4,7 +4,7 @@ import { Canvas } from "@react-three/fiber";
 import Ayanami from './cgi-components/Ayanami'
 import { OrbitControls } from "@react-three/drei";
 
-export default function HorsemenModel2() {
+export default function AyanamiModel() {
   return (
     <div className="cgi-model-section">
       <BackBtn />
