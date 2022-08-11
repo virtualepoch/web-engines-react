@@ -13,7 +13,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 25px;
-  transition: min-width 300ms ease-in-out;
+  transition: min-width 300ms cubic-bezier(0.18, 0.89, 0.32, 1.15);
 }
 .search-bar-input {
   width: 100%;
@@ -36,7 +36,6 @@
   background: url(/src/icons/magnifying-glass-solid-white.svg) 50% 50% / 50% 50% no-repeat;
   cursor: pointer;
   pointer-events: none;
-  transition: transform 500ms ease-in-out;
 }
 .search-bar-container:focus-within {
   min-width: calc(100% - 65px);

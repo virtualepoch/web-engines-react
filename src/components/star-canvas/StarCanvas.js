@@ -16,8 +16,8 @@ export default function StarCanvas() {
     ctx.lineCap = "round";
     ctx.shadowColor = "rgba(0,0,0,0.9)";
     ctx.shadowOffsetX = 0;
-    ctx.shadowOffsetY = 7;
-    ctx.shadowBlur = 9;
+    ctx.shadowOffsetY = 5;
+    ctx.shadowBlur = 3;
 
     // effect settings
     let sizeAdjuster = 0.15;
@@ -26,7 +26,7 @@ export default function StarCanvas() {
     const branches = 2;
 
     let sides = 8;
-    let scale = 0.88;
+    let scale = 1;
     let spread = 0.2;
     let hue = 200;
     let color = "hsl(" + hue + ", 100%, 50%)";
