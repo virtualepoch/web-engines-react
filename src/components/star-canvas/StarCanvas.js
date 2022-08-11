@@ -26,7 +26,7 @@ export default function StarCanvas() {
     const branches = 2;
 
     let sides = 8;
-    let scale = 1;
+    let scale = 0.9;
     let spread = 0.2;
     let hue = 200;
     let color = "hsl(" + hue + ", 100%, 50%)";
