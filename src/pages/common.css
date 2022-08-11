@@ -5,7 +5,6 @@
   padding: 50px 0 0 0;
   position: relative;
   background: inherit;
-  pointer-events: none;
   overflow-x: hidden;
 }
 .page-updating {

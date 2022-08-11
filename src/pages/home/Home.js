@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
+import StarCanvas from "../../components/star-canvas/StarCanvas";
 import "./home.css";
 
 export default function Home() {
   return (
     <div className="home-page">
+      <StarCanvas />
       <div className="text-box">
         <h1>Welcome to JavaScriptive</h1>
         <p>

@@ -46,3 +46,6 @@
   text-rendering: optimizeLegibility;
   font-family: "Cormorant", sans-serif;
 }
+body {
+  background: black;
+}
