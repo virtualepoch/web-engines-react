@@ -24,6 +24,7 @@
 }
 .left-side-header,
 .right-side-header {
+  --size: 33px;
   display: flex;
   align-items: center;
 }
@@ -40,13 +41,6 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font: 400 clamp(1.65rem, 5vw, 2rem) Lorea;
-}
-.search-btn {
-  width: 33px;
-  height: 33px;
-  margin: 0 5px;
-  background: url(/src/icons/magnifying-glass-solid-white.svg) 50% 50% / 70% 70% no-repeat;
-  cursor: pointer;
 }
 .nav-btn {
   width: 50px;

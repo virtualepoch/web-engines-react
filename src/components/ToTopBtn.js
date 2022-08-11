@@ -13,7 +13,6 @@ export default function ToTopBtn() {
 
   function ScrollToTop() {
     document.documentElement.scrollTo({ top: 0, behavior: "smooth" });
-    document.documentElement.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   return <div className="to-top-btn" ref={toTopBtn} onClick={ScrollToTop}></div>;

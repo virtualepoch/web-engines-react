@@ -9,10 +9,7 @@
   background: linear-gradient(black, rgb(175, 175, 175), black);
 }
 .cgi-page h1 {
-  font: 200 clamp(1.3rem, 5vw, 1.7rem) sans-serif;
-}
-.cgi-page h1 {
-  font: 200 clamp(1.1rem, 5vw, 1.5rem) sans-serif;
+  font: 600 clamp(1.5rem, 5vw, 1.9rem) sans-serif;
 }
 .cgi-page p {
   padding: 5px 0;
@@ -21,7 +18,10 @@
 .sub-heading {
   display: flex;
   flex-wrap: wrap;
-  padding: 30px;
+  padding: 50px 0;
+}
+.cgi-page h2 {
+  width: fit-content;
 }
 .animated-text {
   padding: 0 15px;
@@ -109,6 +109,6 @@
 .ayanami-canvas {
   background: linear-gradient(purple, pink, purple);
 }
-.dragonfly-canvas {
-  background: url(../../images/moon.jpg) 50% / 100% no-repeat, black;
+.test-canvas {
+  background: radial-gradient(black 50%,gray);
 }

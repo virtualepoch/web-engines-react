@@ -10,7 +10,7 @@ export default function Cgi() {
       <div className="sub-heading">
         <h2>Learn to add</h2>
         <h2 className="animated-text">3D</h2>
-        <h2>models to your Site! -also known as CGI (Computer-generated imagery).</h2>
+        <h2>models to your Site!</h2>
       </div>
       <div className="cgi-model-container">
         <h2>Four Horsemen 2/4 Pestilence and Famine</h2>

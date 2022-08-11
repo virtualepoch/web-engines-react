@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
+import SearchBar from "../search-bar/SearchBar";
 import "./header.css";
 
 export default function Header() {
@@ -49,7 +50,7 @@ export default function Header() {
               </CustomLink>
             </ul>
           </nav>
-          <div className="search-btn"></div>
+          <SearchBar/>
           <div className="nav-btn" ref={navBtn} onClick={openCloseMainNav}>
             <div className="nav-btn-bars close-anim"></div>
           </div>

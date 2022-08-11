@@ -9,11 +9,11 @@ title: Taeyeon_TEST_dragon
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function Model(props) {
+export default function Model(props) {
   const { nodes, materials } = useGLTF('/taeyeon_dragon.gltf')
   return (
-    <group {...props} dispose={null}>
-      <group rotation={[-Math.PI / 2, 0, 0]}>
+    <group {...props} dispose={null} scale={0.05}>
+      <group rotation={[-Math.PI / 2, 0, -1]}>
         <group rotation={[Math.PI / 2, 0, 0]}>
           <group position={[5.43, 3.22, 10.93]} rotation={[-1.64, -0.08, -2.3]} scale={[18.26, 18.37, 18.02]}>
             <mesh geometry={nodes.Abdomen1_Skin_0.geometry} material={materials.Skin} />
