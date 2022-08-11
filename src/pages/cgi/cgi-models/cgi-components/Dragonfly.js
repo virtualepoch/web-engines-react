@@ -6,11 +6,11 @@ source: https://sketchfab.com/3d-models/butterfly-dragonfly-r-fuliginosa-b8b1543
 title: チョウトンボ Butterfly Dragonfly, R. fuliginosa
 */
 
-import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import React, { useRef } from "react";
+import { useGLTF } from "@react-three/drei";
 
 export default function Model(props) {
-  const { nodes, materials } = useGLTF('/dragonfly.gltf')
+  const { nodes, materials } = useGLTF("/dragonfly.gltf");
   return (
     <group {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
@@ -19,14 +19,14 @@ export default function Model(props) {
             {/* <mesh geometry={nodes.Object_4.geometry} material={materials['Material.001']} /> */}
           </group>
           <group position={[0.02, 0, 0.06]} rotation={[1.12, 0.02, -1.62]}>
-            <mesh geometry={nodes.Object_6.geometry} material={materials['QS1302-W07-1all-1']} />
-            <mesh geometry={nodes.Object_7.geometry} material={materials['QS1302-W07-1all-1']} />
-            <mesh geometry={nodes.Object_8.geometry} material={materials['QS1302-W07-1all-1']} />
+            <mesh geometry={nodes.Object_6.geometry} material={materials["QS1302-W07-1all-1"]} />
+            <mesh geometry={nodes.Object_7.geometry} material={materials["QS1302-W07-1all-1"]} />
+            <mesh geometry={nodes.Object_8.geometry} material={materials["QS1302-W07-1all-1"]} />
           </group>
         </group>
       </group>
     </group>
-  )
+  );
 }
 
-useGLTF.preload('/dragonfly.gltf')
+useGLTF.preload("/dragonfly.gltf");

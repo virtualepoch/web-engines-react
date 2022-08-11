@@ -91,17 +91,15 @@
 }
 
 .cgi-model-section {
-  height: calc(100vh - 60px);
+  height: calc(100vh - 50px);
+  padding: 10px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 12px;
   background: white;
   pointer-events: all;
 }
 .horsemen-2-canvas {
-  width: 100%;
-  max-height: 600px;
   border: solid;
   background: linear-gradient(rgba(0, 0, 0, 0), grey, black, black), url("../../images/pexels-pixabay-sunpurple-640.jpg");
   background-size: 100%;
@@ -109,6 +107,6 @@
 .ayanami-canvas {
   background: linear-gradient(purple, pink, purple);
 }
-.test-canvas {
-  background: radial-gradient(black 50%,gray);
+.delorean-high-canvas {
+  background: conic-gradient(white, black 5%, white 10%, black 15%, white 20%, black 25%, white 30%, black 35%, white 40%, black 45%, white 50%, black 55%, white 60%, black 65%, white 70%, black 75%, white 80%, black 85%, white 90%, black 95%, white 100%);
 }

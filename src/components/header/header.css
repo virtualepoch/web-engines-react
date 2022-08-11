@@ -37,7 +37,7 @@
 }
 .site-title {
   padding-right: 4px;
-  background-image: linear-gradient(to right, magenta, pink, magenta);
+  background-image: linear-gradient(to right, magenta, purple, magenta);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font: 400 clamp(1.65rem, 5vw, 2rem) Lorea;
@@ -115,8 +115,6 @@
 li.active .link,
 .link:hover {
   transform: scale(1.1);
-  border-top: 1px solid magenta;
-  border-left: 1px solid magenta;
   box-shadow: 1px 4px 2px 3px rgb(0, 0, 0, 0.2);
   background: white;
   color: black;
