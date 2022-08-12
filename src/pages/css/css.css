@@ -5,14 +5,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  pointer-events: all;
 }
 .css-page h1 {
   font: 200 clamp(1.3rem, 5vw, 1.7rem) sans-serif;
 }
 .css-page p {
-  padding: 5px 0;
-  font: lighter clamp(0.7rem, 5vw, 1rem) sans-serif;
+  padding: 20px 0;
+  font: clamp(0.7rem, 5vw, 1rem) sans-serif;
 }
 .css-page .heading {
   width: fit-content;
@@ -185,7 +184,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  pointer-events: none;
+  background: white;
 }
 .css-page-footer p {
   width: 222px;

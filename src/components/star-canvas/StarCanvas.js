@@ -26,7 +26,7 @@ export default function StarCanvas() {
     const branches = 2;
 
     let sides = 8;
-    let scale = 0.8;
+    let scale = 0.88;
     let spread = 0.2;
     let hue = 200;
     let color = "hsl(" + hue + ", 100%, 50%)";
@@ -99,13 +99,6 @@ export default function StarCanvas() {
       // updateSliders();
       drawFractal();
     });
-
-    // const homePage = homePageRef.current;
-    // homePage.addEventListener("click", function () {
-    //   randomizeFractal();
-    //   // updateSliders();
-    //   drawFractal();
-    // });
 
     function resetFractal() {
       sides = 8;

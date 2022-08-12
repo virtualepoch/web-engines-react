@@ -8,7 +8,7 @@
   overflow-x: hidden;
 }
 .page-updating {
-  height: 90vh;
+  height: calc(100vh - 50px);
   padding: 20px;
   display: flex;
   flex-direction: column;
