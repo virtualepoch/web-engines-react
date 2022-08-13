@@ -8,8 +8,10 @@ import "./css.css";
 export default function Css() {
   return (
     <div className="css-page">
-      <h1 className="heading">Welcome to the CSS Section</h1>
+      <div className="hero-section">
+      <h1 className="heading">CSS Tutorials</h1>
       <BallScene />
+      </div>
       <div className="main-content">
         <h1>The following tutorials can all be completed with plain old CSS.</h1>
         <section className="effects-section">

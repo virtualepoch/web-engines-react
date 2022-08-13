@@ -36,7 +36,7 @@
   background: url(/src/logos/jsive-logo-at-100.png) 50% / 77% 77% no-repeat;
 }
 .site-title {
-  padding-right: 4px;
+  padding: 0 3px;
   background-image: linear-gradient(to right, magenta 65%, pink);
   background-clip: text;
   -webkit-text-fill-color: transparent;

@@ -23,6 +23,7 @@
 .ball {
   width: 1em;
   height: 2em;
+  border-bottom: 1px solid rgb(0, 255, 255);
   border-radius: 50%;
   position: relative;
   top: 5em;
@@ -34,7 +35,6 @@
   0%,
   100% {
     top: 5.3em;
-    border-bottom: 2px solid rgb(0, 255, 255);
   }
   50% {
     top: -1em;
@@ -69,19 +69,18 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  border: 1px solid turquoise;
-  background: aqua;
 }
 .cube .front {
   transform: translateZ(0.5em);
-  background: mediumslateblue;
+  background: rgb(0, 0, 255);
 }
 .cube .left {
   transform: rotateY(270deg) translateZ(0.5em);
-  background: magenta;
+  background: rgb(0, 170, 255);
 }
 .cube .top {
   transform: translateY(-50%) rotateX(90deg);
+  background: aqua;
 }
 .cube .ball-shadow {
   position: relative;
