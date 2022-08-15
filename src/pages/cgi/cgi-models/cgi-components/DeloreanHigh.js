@@ -6,51 +6,42 @@ source: https://sketchfab.com/3d-models/delorean-highpoly-18ecd0636aaa4373a903b7
 title: Delorean (highpoly)
 */
 
-import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import React, { useRef } from "react";
+import { useGLTF } from "@react-three/drei";
 
 export default function Model(props) {
-  const { nodes, materials } = useGLTF('/delorean-high.gltf')
+  const { nodes, materials } = useGLTF("/delorean-high.gltf");
   return (
-    <group {...props} dispose={null} scale={0.5}>
-      <group rotation={[-Math.PI / 2, 0, 0]}>
+    <group {...props} dispose={null} scale={0.6}>
+      <group rotation={[-Math.PI / 2.5, 0, 3.15]}>
         <group rotation={[Math.PI / 2, 0, 0]}>
           <group position={[1.99, 0.15, -1.78]} rotation={[-1.76, 1.49, -1.54]} scale={[0.08, 0.04, 0.09]}>
-            <mesh geometry={nodes.Object_4.geometry} material={materials.material} />
+            {/* Side hose braces */}
+            {/* <mesh geometry={nodes.Object_4.geometry} material={materials.material} /> */}
           </group>
           <group position={[1.99, -0.2, 4.65]} scale={[0.03, 0.01, 0.04]}>
-            <mesh geometry={nodes.Object_6.geometry} material={materials.material} />
-            <mesh geometry={nodes.Object_7.geometry} material={materials.Material} />
+            {/* <mesh geometry={nodes.Object_6.geometry} material={materials.material} /> */}
+            {/* <mesh geometry={nodes.Object_7.geometry} material={materials.Material} /> */}
           </group>
-          <group position={[2.11, -0.37, -1.66]} rotation={[2.86, 0, 0]} scale={[0.05, 0.09, 0.05]}>
-            <mesh geometry={nodes.Object_9.geometry} material={materials.material_0} />
+          <group position={[2.47, -0.37, -1.66]} rotation={[2.86, 0, 0]} scale={[0.05, 0.09, 0.05]}>
+            {/* <mesh geometry={nodes.Object_9.geometry} material={materials.material_0} /> */}
           </group>
-          <group scale={[0.01, 0, 0.01]}>
-            <mesh geometry={nodes.Object_11.geometry} material={materials.Cromado} />
-          </group>
-          <group position={[1.56, -0.05, 4.8]}>
-            <mesh geometry={nodes.Object_13.geometry} material={materials['Material.013']} />
-          </group>
-          <group position={[1.12, -0.05, 4.8]}>
-            <mesh geometry={nodes.Object_15.geometry} material={materials['Material.013']} />
-          </group>
-          <group position={[-1.13, -0.05, 4.8]}>
-            <mesh geometry={nodes.Object_17.geometry} material={materials['Material.013']} />
-          </group>
-          <group position={[-1.57, -0.05, 4.8]}>
-            <mesh geometry={nodes.Object_19.geometry} material={materials['Material.013']} />
-          </group>
+          <group scale={[0.01, 0, 0.01]}>{/* <mesh geometry={nodes.Object_11.geometry} material={materials.Cromado} /> */}</group>
+          <group position={[1.56, -0.05, 4.8]}>{/* <mesh geometry={nodes.Object_13.geometry} material={materials['Material.013']} /> */}</group>
+          <group position={[1.12, -0.05, 4.8]}>{/* <mesh geometry={nodes.Object_15.geometry} material={materials['Material.013']} /> */}</group>
+          <group position={[-1.13, -0.05, 4.8]}>{/* <mesh geometry={nodes.Object_17.geometry} material={materials['Material.013']} /> */}</group>
+          <group position={[-1.57, -0.05, 4.8]}>{/* <mesh geometry={nodes.Object_19.geometry} material={materials['Material.013']} /> */}</group>
           <group position={[2.2, 0, 0]} rotation={[Math.PI / 2, 0, -Math.PI / 2]}>
-            <mesh geometry={nodes.Object_21.geometry} material={materials['Material.006']} />
+            <mesh geometry={nodes.Object_21.geometry} material={materials["Material.006"]} />
           </group>
           <group position={[2.2, 0.12, 0.01]} rotation={[Math.PI / 2, 0, -Math.PI / 2]}>
-            <mesh geometry={nodes.Object_23.geometry} material={materials['Material.004']} />
+            <mesh geometry={nodes.Object_23.geometry} material={materials["Material.004"]} />
           </group>
           <group position={[2.2, 0.13, -0.03]} rotation={[Math.PI / 2, 0, -Math.PI / 2]}>
-            <mesh geometry={nodes.Object_25.geometry} material={materials['Material.005']} />
+            <mesh geometry={nodes.Object_25.geometry} material={materials["Material.005"]} />
           </group>
           <group position={[2.2, 0.13, -0.01]} rotation={[Math.PI / 2, 0, -Math.PI / 2]}>
-            <mesh geometry={nodes.Object_27.geometry} material={materials['Material.003']} />
+            <mesh geometry={nodes.Object_27.geometry} material={materials["Material.003"]} />
           </group>
           <group position={[0, 0, 4.13]}>
             <mesh geometry={nodes.Object_29.geometry} material={materials.Brushed_Metal} />
@@ -141,8 +132,8 @@ export default function Model(props) {
           <group position={[0, 0.71, -3.94]} scale={[0.5, 0.54, 0.5]}>
             <mesh geometry={nodes.Object_93.geometry} material={materials.Fusao} />
             <mesh geometry={nodes.Object_94.geometry} material={materials.Fusao} />
-            <mesh geometry={nodes.Object_95.geometry} material={materials['Material.004']} />
-            <mesh geometry={nodes.Object_96.geometry} material={materials['Material.009']} />
+            <mesh geometry={nodes.Object_95.geometry} material={materials["Material.004"]} />
+            <mesh geometry={nodes.Object_96.geometry} material={materials["Material.009"]} />
           </group>
           <group position={[0, 0.04, -3.93]}>
             <mesh geometry={nodes.Object_98.geometry} material={materials.Interior} />
@@ -157,17 +148,17 @@ export default function Model(props) {
           <group position={[0, 0.52, -2.97]} scale={0.95}>
             <mesh geometry={nodes.Object_105.geometry} material={materials.Mr_Fusion} />
           </group>
-          <mesh geometry={nodes.Object_107.geometry} material={materials['Material.011']} />
-          <mesh geometry={nodes.Object_109.geometry} material={materials['Material.010']} />
-          <mesh geometry={nodes.Object_110.geometry} material={materials['Material.008']} />
+          <mesh geometry={nodes.Object_107.geometry} material={materials["Material.011"]} />
+          <mesh geometry={nodes.Object_109.geometry} material={materials["Material.010"]} />
+          <mesh geometry={nodes.Object_110.geometry} material={materials["Material.008"]} />
           <mesh geometry={nodes.Object_111.geometry} material={materials.Interior} />
-          <mesh geometry={nodes.Object_112.geometry} material={materials['Material.004']} />
-          <mesh geometry={nodes.Object_113.geometry} material={materials['Material.012']} />
+          <mesh geometry={nodes.Object_112.geometry} material={materials["Material.004"]} />
+          <mesh geometry={nodes.Object_113.geometry} material={materials["Material.012"]} />
           <group position={[0, -0.93, -2.97]}>
-            <mesh geometry={nodes.Object_115.geometry} material={materials['Material.011']} />
+            <mesh geometry={nodes.Object_115.geometry} material={materials["Material.011"]} />
           </group>
           <group position={[0, -0.52, -2.97]}>
-            <mesh geometry={nodes.Object_117.geometry} material={materials['Material.001']} />
+            <mesh geometry={nodes.Object_117.geometry} material={materials["Material.001"]} />
             <mesh geometry={nodes.Object_118.geometry} material={materials.material} />
           </group>
           <group position={[0, 0.04, -3.93]}>
@@ -206,7 +197,7 @@ export default function Model(props) {
           </group>
           <group position={[0, 0.5, -2.97]}>
             <mesh geometry={nodes.Object_144.geometry} material={materials.Interior} />
-            <mesh geometry={nodes.Object_145.geometry} material={materials['Material.001']} />
+            <mesh geometry={nodes.Object_145.geometry} material={materials["Material.001"]} />
           </group>
           <group position={[0, 0.32, -2.93]}>
             <mesh geometry={nodes.Object_147.geometry} material={materials.Mr_Fusion} />
@@ -215,8 +206,8 @@ export default function Model(props) {
             <mesh geometry={nodes.Object_149.geometry} material={materials.material} />
           </group>
           <group position={[0, 0.5, -2.97]}>
-            <mesh geometry={nodes.Object_151.geometry} material={materials['Material.001']} />
-            <mesh geometry={nodes.Object_152.geometry} material={materials['Material.008']} />
+            <mesh geometry={nodes.Object_151.geometry} material={materials["Material.001"]} />
+            <mesh geometry={nodes.Object_152.geometry} material={materials["Material.008"]} />
             <mesh geometry={nodes.Object_153.geometry} material={materials.Interior} />
           </group>
           <group position={[0, -0.37, 5.35]} rotation={[Math.PI / 2, 0, 0]} scale={[1, 1, 0.13]}>
@@ -272,18 +263,18 @@ export default function Model(props) {
             <mesh geometry={nodes.Object_190.geometry} material={materials.Placa} />
           </group>
           <group position={[1.86, -0.97, 3.06]} rotation={[0, 0.3, 0]} scale={[0.88, 0.74, 0.74]}>
-            <mesh geometry={nodes.Object_192.geometry} material={materials['Material.002']} />
+            <mesh geometry={nodes.Object_192.geometry} material={materials["Material.002"]} />
           </group>
           <group position={[1.86, -0.97, 3.06]} rotation={[-Math.PI, -0.3, -Math.PI / 2]} scale={0.47}>
             <mesh geometry={nodes.Object_194.geometry} material={materials.material} />
           </group>
           <group position={[-1.78, -0.97, 3.06]} rotation={[0, 0.3, 0]} scale={[0.88, 0.74, 0.74]}>
-            <mesh geometry={nodes.Object_196.geometry} material={materials['Material.002']} />
+            <mesh geometry={nodes.Object_196.geometry} material={materials["Material.002"]} />
           </group>
         </group>
       </group>
     </group>
-  )
+  );
 }
 
-useGLTF.preload('/delorean-high.gltf')
+useGLTF.preload("/delorean-high.gltf");

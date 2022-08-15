@@ -9,8 +9,8 @@ export default function Css() {
   return (
     <div className="css-page">
       <div className="hero-section">
-      <h1 className="heading">CSS Tutorials</h1>
-      <BallScene />
+        <h1 className="heading">CSS Tutorials</h1>
+        <BallScene />
       </div>
       <div className="main-content">
         <h1>The following tutorials can all be completed with plain old CSS.</h1>
