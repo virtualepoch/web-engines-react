@@ -108,13 +108,13 @@
   padding: 7px;
   font: 20px sans-serif;
   color: black;
-  box-shadow: 1px 2px 2px 2px rgb(0, 0, 0, 0.2);
+  box-shadow: 1px 2px 4px 1px rgb(0, 0, 0, 0.2);
   background: rgb(6, 133, 251);
 }
 li.active .link,
 .link:hover {
   transform: scale(1.1);
-  box-shadow: 1px 4px 2px 3px rgb(0, 0, 0, 0.2);
+  box-shadow: 1px 3px 4px 1px rgb(0, 0, 0, 0.2);
   background: white;
   color: black;
 }
