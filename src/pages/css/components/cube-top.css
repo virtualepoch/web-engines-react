@@ -82,9 +82,10 @@
   position: relative;
   top: 50px;
   transform-style: preserve-3d;
+  transform: rotateY(35deg);
   animation: spinning-top-rotateY 8s linear infinite;
 }
-@keyframes spinning-top-rotateY {
+@keyframes spinning-to-rotateY {
   to {
     transform: rotateY(360deg);
   }
@@ -92,7 +93,7 @@
 .spinning-top.anim {
   animation: spinning-top-anim-2 8s ease-in infinite;
 }
-@keyframes spinning-top-anim-2 {
+@keyframes spinning-to-anim-2 {
   20% {
     top: 50px;
     right: 0;
@@ -145,14 +146,15 @@
 
 .spinning-top .front,
 .spinning-top .back {
-  background: linear-gradient(purple, rgb(0, 155, 255));
+  background: rgb(255, 0, 255, 0.5);
 }
 .spinning-top .left,
 .spinning-top .right {
   background: linear-gradient(rgb(0, 155, 255), purple);
 }
 .spinning-top .front {
-  transform: translateZ(13px) rotateX(-15deg);
+  transform-origin: 25px 100px;
+  transform: rotateY(-43px);
 }
 .spinning-top .right {
   transform: rotateY(-270deg) translateX(25px) rotateX(-15deg) translateY(3px);
