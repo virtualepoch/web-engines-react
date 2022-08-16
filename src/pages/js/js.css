@@ -1,13 +1,83 @@
-.typed-text-box{
-    width: 500px;
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid cyan;
+.javascript-page {
+  min-height: calc(100vh - 50px);
+  padding: 50px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
 }
-.typed-text-box h2{
-    padding: 20px;
-    border: solid aqua;
+.typed-text-box {
+  width: 500px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid cyan;
+}
+.typed-text-box h2 {
+  padding: 20px;
+  border: solid aqua;
+}
+.transform-origin-box {
+  width: 100%;
+  height: 500px;
+  margin: 100px 0;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+  perspective-origin: 50% -20%;
+  background: linear-gradient(0deg, hsl(200, 100%, 50%) 10%, rgba(0, 0, 255, 0.7) 13% 21%, hsl(200, 100%, 50%) 24% 31%, rgba(0, 0, 255, 0.7) 33% 39%, rgb(0, 170, 255) 41% 46%, rgba(0, 0, 255, 0.7) 48% 52%, hsl(200, 100%, 50%) 51% 54%, rgba(0, 0, 255, 0.7) 55% 57%, transparent);
+}
+.transform-triangle {
+  width: 200px;
+  height: 300px;
+  transform-style: preserve-3d;
+  animation: triangle-spin 10s linear infinite;
+}
+@keyframes triangle-spin {
+  to {
+    transform: rotateY(360deg);
+  }
+}
+.transform-triangle div {
+  width: 200px;
+  height: 300px;
+  position: absolute;
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  transform-origin: 100px 300px;
+}
+.transform-triangle .small {
+  width: 70px;
+  background: rgb(255, 0, 255, 0.7);
+}
+.transform-triangle .front {
+  background: rgb(0, 0, 255, 0.4);
+  transform: rotateX(-7deg);
+}
+.transform-triangle .front-small {
+  transform: translateX(65px) rotateX(-18deg);
+}
+.transform-triangle .back {
+  background: rgb(0, 0, 255, 0.4);
+  transform: rotateX(7deg);
+}
+.transform-triangle .back-small {
+  transform: translateX(65px) rotateX(18deg);
+}
+.transform-triangle .left {
+  background: rgb(128, 0, 128, 0.4);
+  transform: rotateY(90deg) rotateX(-7deg);
+}
+.transform-triangle .left-small {
+  transform: rotateY(90deg) rotateX(-18deg) translate(65px);
+}
+.transform-triangle .right {
+  background: rgb(128, 0, 128, 0.4);
+  transform: rotateY(-90deg) rotateX(-7deg);
+}
+.transform-triangle .right-small {
+  transform: rotateY(-90deg) rotateX(-18deg) translate(65px);
 }

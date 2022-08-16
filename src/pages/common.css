@@ -7,15 +7,6 @@
   background: inherit;
   overflow-x: hidden;
 }
-.page-updating {
-  height: calc(100vh - 50px);
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: white;
-}
 .home-footer {
   width: fit-content;
   height: fit-content;
