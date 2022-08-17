@@ -10,6 +10,7 @@ export default function SpinningTop() {
   }
   return (
     <div className="spinning-top-container">
+      <div className="sun"></div>
       <div className="spinning-top" ref={spinningTop} onClick={startAnim}>
         <div className="side front"></div>
         <div className="side right"></div>
