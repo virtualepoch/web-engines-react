@@ -14,6 +14,9 @@
   overflow: hidden;
   background: linear-gradient(white, skyblue 30% 40%, pink 40%, rgb(255, 95, 255) 54%, white);
 }
+.spinning-top-container {
+  perspective-origin: 50% 10%;
+}
 /* COLOR CUBE //////////////// */
 .color-cube {
   height: 100px;
@@ -85,7 +88,7 @@
   transform: rotateY(35deg);
   animation: spinning-top-rotateY 8s linear infinite;
 }
-@keyframes spinning-to-rotateY {
+@keyframes spinning-top-rotateY {
   to {
     transform: rotateY(360deg);
   }
@@ -93,7 +96,7 @@
 .spinning-top.anim {
   animation: spinning-top-anim-2 8s ease-in infinite;
 }
-@keyframes spinning-to-anim-2 {
+@keyframes spinning-top-anim-2 {
   20% {
     top: 50px;
     right: 0;
@@ -141,38 +144,40 @@
   height: 100%;
   width: 100%;
   position: absolute;
+  transform-origin: 25px 100px;
   clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
 }
-
 .spinning-top .front,
 .spinning-top .back {
-  background: rgb(255, 0, 255, 0.5);
+  background: rgb(255, 0, 255, 0.6);
+}
+.spinning-top .front {
+  transform: rotateX(-7deg);
+}
+.spinning-top .back {
+  transform: rotateX(7deg);
 }
 .spinning-top .left,
 .spinning-top .right {
-  background: linear-gradient(rgb(0, 155, 255), purple);
-}
-.spinning-top .front {
-  transform-origin: 25px 100px;
-  transform: rotateY(-43px);
-}
-.spinning-top .right {
-  transform: rotateY(-270deg) translateX(25px) rotateX(-15deg) translateY(3px);
-  transform-origin: 100% 0;
-}
-.spinning-top .back {
-  transform: translateZ(-13px) rotateY(180deg) rotateX(-15deg);
+  background: rgb(0, 155, 255, 0.5);
 }
 .spinning-top .left {
-  transform: rotateY(90deg) translateX(-25px) rotateX(15deg) translateZ(12px) translateY(3px);
-  transform-origin: 0 50%;
+  transform: rotateY(90deg) rotateX(-7deg);
+}
+.spinning-top .right {
+  transform: rotateY(90deg) rotateX(7deg);
 }
 .spinning-top .top {
-  height: 50px;
+  width: 60px;
+  height: 60px;
   clip-path: none;
-  top: -25px;
+  /* border: 3px solid rgb(0, 0, 255, 0.5); */
+  border-radius: 50%;
+  top: -30px;
+  right: -5px;
+  transform-origin: 30px 30px;
   transform: rotateX(90deg) rotateZ(180deg);
-  background: url(../../../logos/jsive-logo-at-100.png) 50% / 90% no-repeat, radial-gradient(magenta, pink);
+  background: url(../../../logos/jsive-logo-at-100.png) 50% / 70% no-repeat, rgb(255, 0, 255, 0.5);
 }
 .spinning-top-container .shadow {
   width: 50px;
