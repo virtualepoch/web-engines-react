@@ -4,18 +4,21 @@ import SearchBar from "../search-bar/SearchBar";
 import "./header.css";
 
 export default function Header() {
-  const mainNav = useRef(null);
   const navBtn = useRef(null);
+  const mainNav = useRef(null);
+  const closeNavBox = useRef(null);
 
   function openCloseMainNav() {
-    mainNav.current.classList.toggle("open");
     navBtn.current.classList.toggle("open");
+    mainNav.current.classList.toggle("open");
+    closeNavBox.current.classList.toggle("open");
   }
 
   function closeMainNav() {
     if (mainNav.current.classList.contains("open")) {
       mainNav.current.classList.remove("open");
       navBtn.current.classList.remove("open");
+      closeNavBox.current.classList.remove("open");
     } else {
       return;
     }
@@ -31,6 +34,7 @@ export default function Header() {
           </Link>
         </div>
         <div className="right-side-header">
+          <div className="close-nav-box" ref={closeNavBox} onClick={closeMainNav}></div>
           <nav className="main-nav" ref={mainNav}>
             <ul>
               <CustomLink onClick={closeMainNav} to={"/"}>
@@ -50,7 +54,7 @@ export default function Header() {
               </CustomLink>
             </ul>
           </nav>
-          <SearchBar/>
+          <SearchBar />
           <div className="nav-btn" ref={navBtn} onClick={openCloseMainNav}>
             <div className="nav-btn-bars close-anim"></div>
           </div>
