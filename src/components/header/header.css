@@ -106,12 +106,12 @@
   height: calc(100vh - 50px);
   position: fixed;
   top: 50px;
-  right: -100vw;
-  transition: 0.3s ease-in-out;
-  background: rgb(0, 0, 0, 0.2);
+  right: 0;
+  display: none;
+  background: rgb(0, 0, 0, 0.3);
 }
 .close-nav-box.open {
-  right: 0;
+  display: block;
 }
 .link {
   width: 100%;
