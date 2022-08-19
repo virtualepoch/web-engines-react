@@ -46,10 +46,9 @@
   height: 33px;
   border: none;
   font: 22px/33px sans-serif;
-  background: url(/src/icons/angle-up-solid-white.svg) 50%/50% no-repeat;
 }
 .open-close-controls-btn.open {
-  background: url(/src/icons/xmark-solid-white.svg) 50%/50% no-repeat;
+  background: red;
 }
 #randomize-btn,
 #reset-btn {

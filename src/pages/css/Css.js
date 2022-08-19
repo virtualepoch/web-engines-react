@@ -41,7 +41,9 @@ export default function Css() {
             </div>
             <div className="column">
               <SpinningTop />
+              <Link to={"/css/top-spin-tut"}>
               <p>ENTER THE SPINNING TOP TUTORIAL</p>
+              </Link>
             </div>
           </div>
         </section>

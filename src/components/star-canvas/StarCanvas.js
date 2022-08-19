@@ -9,15 +9,15 @@ export default function StarCanvas() {
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
-    canvas.width = window.innerWidth / 1.5;
-    canvas.height = window.innerHeight / 1.5;
+    canvas.width = window.innerWidth * 0.3;
+    canvas.height = window.innerHeight * 0.3;
 
     ctx.fillStyle = "blue";
     ctx.lineCap = "round";
-    ctx.shadowColor = "rgba(0,0,0,0.8)";
+    ctx.shadowColor = "rgba(0,0,0,0.5)";
     ctx.shadowOffsetX = 0;
-    ctx.shadowOffsetY = 5;
-    ctx.shadowBlur = 5;
+    ctx.shadowOffsetY = 7;
+    ctx.shadowBlur = 7;
 
     // effect settings
     let sizeAdjuster = 0.15;
@@ -26,12 +26,12 @@ export default function StarCanvas() {
     const branches = 2;
 
     let sides = 8;
-    let scale = 0.88;
-    let spread = 0.2;
+    let scale = 1;
+    let spread = 0.3;
     let hue = 200;
     let color = "hsl(" + hue + ", 100%, 50%)";
     // let color2 = "hsl(" + (hue + 180) + ", 100%, 50%)";
-    let lineWidth = 30;
+    let lineWidth = 25;
     let pointX = 0;
     let pointY = size;
 
@@ -103,7 +103,7 @@ export default function StarCanvas() {
     function resetFractal() {
       sides = 8;
       scale = 0.88;
-      spread = 0.2;
+      spread = 0.3;
       color = "hsl(" + hue + ", 100%, 50%)";
       lineWidth = 30;
     }
@@ -117,12 +117,12 @@ export default function StarCanvas() {
     window.addEventListener("resize", function () {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
-      size = canvas.width < canvas.height ? canvas.width * 0.3 : canvas.height * 0.3;
+      size = canvas.width < canvas.height ? canvas.width * 0.2 : canvas.height * 0.2;
       ctx.lineCap = "round";
-      ctx.shadowColor = "rgba(0,0,0,0.9)";
+      ctx.shadowColor = "rgba(0,0,0,0.5)";
       ctx.shadowOffsetX = 0;
       ctx.shadowOffsetY = 7;
-      ctx.shadowBlur = 9;
+      ctx.shadowBlur = 7;
       drawFractal();
     });
   }, []);

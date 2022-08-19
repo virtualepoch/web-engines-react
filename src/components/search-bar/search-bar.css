@@ -82,5 +82,5 @@
 .search-bar-container:focus-within .search-btn {
   pointer-events: all;
   border-radius: 25px;
-  background: url(/src/icons/magnifying-glass-solid-white.svg) 50% 50% / 50% 50% no-repeat, linear-gradient(blue, pink);
+  background: linear-gradient(blue, pink);
 }

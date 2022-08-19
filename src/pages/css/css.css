@@ -151,7 +151,7 @@
   border: 1px solid white;
   border-radius: 50%;
   box-shadow: -2px 0 5px 2px rgb(0, 0, 0, 0.3);
-  background: url(../../icons/angle-left-solid-white.svg) center / 40% no-repeat, rgb(0, 180, 255, 0.5);
+  background: rgb(0, 180, 255, 0.5);
 }
 .cube-effects-container {
   width: 100%;
