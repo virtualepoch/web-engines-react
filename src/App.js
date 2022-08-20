@@ -1,7 +1,7 @@
 import { Route, Routes, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Header from "./components/header/Header";
-import ToTopBtn from "./components/to-top-btn/ToTopBtn";
+import ToTopBtn from "./components/ToTopBtn";
 import TodoPage from "./components/todo/TodoPage";
 import Home from "./pages/home/Home";
 import Css from "./pages/css/Css";

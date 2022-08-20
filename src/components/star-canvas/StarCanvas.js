@@ -141,7 +141,7 @@ export default function StarCanvas() {
       <div id="canvas-controls" ref={canvasControls}>
         <div className="controls-row1">
           <p>BACKGROUND CONTROLS</p>
-          <button className="open-close-controls-btn" ref={openCloseBtn} onClick={openCloseControls}></button>
+          <div className="open-close-controls-btn" ref={openCloseBtn} onClick={openCloseControls}></div>
         </div>
         <button id="randomize-btn" ref={randomizeBtnRef}>
           Randomize!

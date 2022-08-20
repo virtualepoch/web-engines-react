@@ -10,18 +10,24 @@
 #canvas-controls {
   width: 200px;
   position: fixed;
-  left: 0px;
-  bottom: -50px;
-  z-index: 3333;
+  left: 0;
+  bottom: -55px;
+  z-index: 88888;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-top-right-radius: 11px;
+  border-top-right-radius: 12px;
   background: rgba(0, 0, 0, 0.3);
   transition: all 400ms ease-in-out;
 }
 #canvas-controls.open {
   bottom: 0;
+}
+#canvas-controls.open .open-close-controls-btn::before {
+  left: 6px;
+}
+#canvas-controls.open .open-close-controls-btn::after {
+  left: -5px;
 }
 @media (max-width: 777px) {
   #canvas-controls {
@@ -39,16 +45,38 @@
   padding-left: 11px;
   color: white;
   text-align: center;
-  font-size: 11px;
+  font-size: 12px;
 }
 .open-close-controls-btn {
-  width: 33px;
-  height: 33px;
-  border: none;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-top-right-radius: 12px;
   font: 22px/33px sans-serif;
+  cursor: pointer;
 }
-.open-close-controls-btn.open {
-  background: red;
+.open-close-controls-btn:hover {
+  background: rgb(0, 0, 255, 0.5);
+}
+.open-close-controls-btn::before,
+.open-close-controls-btn::after {
+  content: "";
+  width: 12px;
+  height: 1px;
+  position: relative;
+  left: 3px;
+  transform: rotate(-45deg);
+  background: white;
+}
+.open-close-controls-btn::after {
+  left: -1px;
+  transform: rotate(45deg);
+}
+.open-close-controls-btn.open:hover {
+  background: rgb(255, 0, 0, 0.5);
 }
 #randomize-btn,
 #reset-btn {
@@ -57,7 +85,7 @@
   border: 1px solid black;
   border-radius: 11px;
   cursor: pointer;
-  font-size: 11px;
+  font-size: 13px;
   color: white;
 }
 #reset-btn {

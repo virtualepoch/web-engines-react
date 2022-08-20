@@ -4,10 +4,10 @@ export default function ToTopBtn() {
   const toTopBtn = useRef(null);
 
   window.onscroll = function () {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-      toTopBtn.current.style.scale = 1;
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      toTopBtn.current.style.transform = "scale(1)";
     } else {
-      toTopBtn.current.style.scale = 0;
+      toTopBtn.current.style.transform = "scale(0)";
     }
   };
 
@@ -23,14 +23,11 @@ export default function ToTopBtn() {
       left: "10px",
       bottom: "10px",
       zIndex: 8888,
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      color: "white",
       borderRadius: "50%",
       boxShadow: "-1px 1px 3px 1px rgb(0, 0, 0, 0.3)",
       background: "white",
       cursor: "pointer",
+      transform: "scale(0)",
       transition: "all 100ms linear",
     },
     arrowLine: {
