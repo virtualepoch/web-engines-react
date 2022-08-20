@@ -1,14 +1,13 @@
 import React, { useRef } from "react";
-import "../to-top-btn/to-top-btn.css";
 
 export default function ToTopBtn() {
   const toTopBtn = useRef(null);
 
   window.onscroll = function () {
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-      toTopBtn.current.classList.add("open");
+      toTopBtn.current.style.scale = 1;
     } else {
-      toTopBtn.current.classList.remove("open");
+      toTopBtn.current.style.scale = 0;
     }
   };
 
@@ -16,5 +15,45 @@ export default function ToTopBtn() {
     document.documentElement.scrollTo({ top: 0, behavior: "smooth" });
   }
 
-  return <div className="to-top-btn" ref={toTopBtn} onClick={ScrollToTop}></div>;
+  var styles = {
+    toTopBtn: {
+      width: "35px",
+      height: "35px",
+      position: "fixed",
+      left: "10px",
+      bottom: "10px",
+      zIndex: 8888,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      color: "white",
+      borderRadius: "50%",
+      boxShadow: "-1px 1px 3px 1px rgb(0, 0, 0, 0.3)",
+      background: "white",
+      cursor: "pointer",
+      transition: "all 100ms linear",
+    },
+    arrowLine: {
+      width: "12px",
+      height: "2px",
+      position: "absolute",
+      top: "14px",
+      left: "8px",
+      background: "rgb(100, 100, 100)",
+      transform: "rotate(-45deg)",
+      // pointerEvents: "none",
+    },
+    arrowLine2: {
+      left: null,
+      right: "8px",
+      transform: "rotate(45deg)",
+    },
+  };
+
+  return (
+    <div style={styles.toTopBtn} ref={toTopBtn} onClick={ScrollToTop}>
+      <div style={styles.arrowLine}></div>
+      <div style={{ ...styles.arrowLine, ...styles.arrowLine2 }}></div>
+    </div>
+  );
 }

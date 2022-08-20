@@ -9,8 +9,8 @@ export default function StarCanvas() {
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
-    canvas.width = window.innerWidth * 0.3;
-    canvas.height = window.innerHeight * 0.3;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
     ctx.fillStyle = "blue";
     ctx.lineCap = "round";
@@ -20,7 +20,7 @@ export default function StarCanvas() {
     ctx.shadowBlur = 7;
 
     // effect settings
-    let sizeAdjuster = 0.15;
+    let sizeAdjuster = 0.2;
     let size = canvas.width < canvas.height ? canvas.width * sizeAdjuster : canvas.height * sizeAdjuster;
     const maxLevel = 5;
     const branches = 2;
@@ -117,7 +117,7 @@ export default function StarCanvas() {
     window.addEventListener("resize", function () {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
-      size = canvas.width < canvas.height ? canvas.width * 0.2 : canvas.height * 0.2;
+      size = canvas.width < canvas.height ? canvas.width * sizeAdjuster : canvas.height * sizeAdjuster;
       ctx.lineCap = "round";
       ctx.shadowColor = "rgba(0,0,0,0.5)";
       ctx.shadowOffsetX = 0;
