@@ -3,15 +3,8 @@
   flex-direction: column;
   align-items: center;
 }
-.hero-section {
-  width: 100%;
-  padding: 33px 0 0 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: conic-gradient(magenta, purple 5%, magenta 10%, purple 15%, magenta 20%, purple 25%, magenta 30%, purple 35%, magenta 40%, purple 45%, magenta 50%, purple 55%, magenta 60%, purple 65%, magenta 70%, purple 75%, magenta 80%, purple 85%, magenta 90%, purple 95%, magenta 100%);
-}
 .css-page h1 {
+  margin: 50px 0 0 0;
   font: 600 clamp(1.3rem, 5vw, 1.7rem) sans-serif;
 }
 .css-page p {

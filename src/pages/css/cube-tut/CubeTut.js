@@ -8,9 +8,9 @@ export default function TextWaveEffectTut() {
   const codeEx1 = `<div class="cube-container">
   <div class="color-cube">
     <div class="side front"></div>
-    <div class="side right"></div>
     <div class="side back"></div>
     <div class="side left"></div>
+    <div class="side right"></div>
     <div class="side top"></div>
     <div class="side bottom"></div>
     <div class="side shadow"></div>
@@ -48,6 +48,10 @@ export default function TextWaveEffectTut() {
   border: 2px solid rgba(255, 0, 255, 0.5);
   background: rgb(0, 0, 255, 0.5);
 }
+.color-cube .back {
+  transform: translateZ(-50px) rotateY(180deg);
+  background: limegreen;
+}
 .color-cube .left {
   transform: translateX(-50px) rotateY(90deg);
   background: red;
@@ -55,10 +59,6 @@ export default function TextWaveEffectTut() {
 .color-cube .right {
   transform: translateX(50px) rotateY(90deg);
   background: blue;
-}
-.color-cube .back {
-  transform: translateZ(-50px) rotateY(180deg);
-  background: limegreen;
 }
 .color-cube .top {
   transform: translateY(-50px) rotateX(90deg) ;
@@ -172,9 +172,9 @@ export default function TextWaveEffectTut() {
         <p>Output:</p>
         <div className="cube-container">
           <div className="color-cube-ex">
+            <div className="side back"></div>
             <div className="side left"></div>
             <div className="side right"></div>
-            <div className="side back"></div>
             <div className="side top"></div>
             <div className="side bottom"></div>
           </div>

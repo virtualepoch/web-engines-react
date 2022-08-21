@@ -49,14 +49,17 @@
 .color-cube .back {
   background: url(../../../logos/jsive-logo-at-100.png) 50% / 70% no-repeat, rgb(0, 0, 255, 0.5);
 }
+.color-cube .front {
+  transform: translateZ(50px);
+}
+.color-cube .back {
+  transform: translateZ(-50px) rotateY(180deg);
+}
 .color-cube .left {
   transform: translateX(-50px) rotateY(90deg);
 }
 .color-cube .right {
   transform: translateX(50px) rotateY(90deg);
-}
-.color-cube .back {
-  transform: translateZ(-50px) rotateY(180deg);
 }
 .color-cube .top {
   background: rgb(255, 0, 255, 0.5);
@@ -65,9 +68,6 @@
 .color-cube .bottom {
   background: rgb(255, 0, 255, 0.5);
   transform: translateY(50px) rotateX(90deg);
-}
-.color-cube .front {
-  transform: translateZ(50px);
 }
 .color-cube .shadow {
   border: none;

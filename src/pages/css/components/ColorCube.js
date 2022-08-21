@@ -12,9 +12,9 @@ export default function ColorCube() {
     <div className="cube-container">
       <div className="color-cube" ref={colorCube} onClick={startAnim}>
         <div className="side front"></div>
-        <div className="side right"></div>
         <div className="side back"></div>
         <div className="side left"></div>
+        <div className="side right"></div>
         <div className="side top"></div>
         <div className="side bottom"></div>
         <div className="side shadow"></div>

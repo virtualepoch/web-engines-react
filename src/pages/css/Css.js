@@ -8,22 +8,20 @@ import "./css.css";
 export default function Css() {
   return (
     <div className="css-page">
-      <div className="hero-section">
-        <h1 className="heading">CSS Tutorials</h1>
-        <BallScene />
-      </div>
+      <h1 className="heading">CSS Tutorials</h1>
+      <BallScene />
       <div className="main-content">
         <h1>The following tutorials can all be completed with plain old CSS.</h1>
         <section className="effects-section">
           <h1>Learn to create border or text effects</h1>
-          <p>Click either box to enter the tutorial</p>
+          <p>Click either box to enter the tutorial.</p>
           <div className="effects-container">
             <div className="border-effect-container">
               <Link className="border-effect-link" to={"/css/border-effect-tut"}>
                 <BorderEffect />
               </Link>
             </div>
-            <div className="or-text-box">-or-</div>
+            <div className="or-text-box">-OR-</div>
             <Link className="text-wave-effect-container" to={"/css/text-wave-effect-tut"}>
               <h2>text effects</h2>
             </Link>
@@ -42,7 +40,7 @@ export default function Css() {
             <div className="column">
               <SpinningTop />
               <Link to={"/css/top-spin-tut"}>
-              <p>ENTER THE SPINNING TOP TUTORIAL</p>
+                <p>ENTER THE SPINNING TOP TUTORIAL</p>
               </Link>
             </div>
           </div>

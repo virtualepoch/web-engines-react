@@ -42,25 +42,27 @@ export default function AllCodeContainer() {
 .color-cube .back {
   background: url('link to your logo') 50%/80% no-repeat, rgb(0, 0, 255, 0.5);
 }
+.color-cube .front {
+  transform: translateZ(50px);
+}
+.color-cube .back {
+  transform: translateZ(-50px) rotateY(180deg);
+}
 .color-cube .left {
   transform: translateX(-50px) rotateY(90deg);
 }
 .color-cube .right {
   transform: translateX(50px) rotateY(90deg);
 }
-.color-cube .back {
-  transform: translateZ(-50px) rotateY(180deg);
+.color-cube .top,
+.color-cube .bottom {
+  background: rgb(255, 0, 255, 0.5);
 }
 .color-cube .top {
   transform: translateY(-50px) rotateX(90deg);
-  background: rgb(255, 0, 255, 0.5);
 }
 .color-cube .bottom {
   transform: translateY(50px) rotateX(90deg);
-  background: rgb(255, 0, 255, 0.5);
-}
-.color-cube .front {
-  transform: translateZ(50px);
 }
 .color-cube .shadow {
   border: none;
@@ -75,9 +77,9 @@ export default function AllCodeContainer() {
 <div class="cube-container">
   <div class="color-cube">
     <div class="side front"></div>
-    <div class="side right"></div>
     <div class="side back"></div>
     <div class="side left"></div>
+    <div class="side right"></div>
     <div class="side top"></div>
     <div class="side bottom"></div>
     <div class="side shadow"></div>
