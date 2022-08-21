@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import BorderEffect from "./components/BorderEffect";
 import ColorCube from "./components/ColorCube";
 import SpinningTop from "./components/SpinningTop";
+import Footer from "../../components/Footer";
 import "./css.css";
 
 export default function Css() {
@@ -45,10 +46,8 @@ export default function Css() {
             </div>
           </div>
         </section>
+        <Footer />
       </div>
-      <footer className="css-page-footer">
-        <p>www.JavaScriptive.com</p>
-      </footer>
     </div>
   );
 }

@@ -20,16 +20,3 @@
   color: white;
   font: clamp(0.8rem, 5vw, 1.2rem) Lorea;
 }
-.footer {
-  width: 222px;
-  height: 222px;
-  margin: 50px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font: clamp(0.8rem, 5vw, 1.2rem) Lorea;
-  border-radius: 50%;
-  box-shadow: 0 4px 4px 3px rgb(0, 0, 0, 0.2), inset 0 -7px 22px 8px rgb(0, 0, 183);
-  background: radial-gradient(circle at 60% 30%, rgb(255, 255, 255, 0.7) 5%, rgba(18, 74, 164, 0.9), rgba(31, 31, 255, 0.5), black 98%);
-}

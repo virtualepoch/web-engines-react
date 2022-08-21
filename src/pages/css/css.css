@@ -15,11 +15,12 @@
   width: fit-content;
   height: 70px;
   padding: 0 18px;
-  border-radius: 8px;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
   display: flex;
   align-items: center;
-  color: white;
-  background: linear-gradient(0deg, hsl(200, 100%, 50%) 10%, rgba(0, 0, 255, 0.7) 13% 21%, hsl(200, 100%, 50%) 24% 31%, rgba(0, 0, 255, 0.7) 33% 39%, rgb(0, 170, 255) 41% 46%, rgba(0, 0, 255, 0.7) 48% 52%, hsl(200, 100%, 50%) 51% 54%, rgba(0, 0, 255, 0.7) 55% 57%, transparent);
+  color: blue;
+  background: linear-gradient(0deg, cyan 10%, deepskyblue 13% 21%, cyan 24% 31%, deepskyblue 33% 39%, cyan 41% 46%, deepskyblue 48% 52%, cyan 51% 54%, white 55% 57%, transparent), radial-gradient(circle at 50%, yellow 20%, pink 25% 30%, white);
 }
 .main-content {
   width: 100%;
@@ -163,24 +164,4 @@
   border-radius: 8px;
   box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
   background: linear-gradient(to bottom right, #0097db, pink);
-}
-.css-page-footer {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: white;
-}
-.css-page-footer p {
-  width: 222px;
-  height: 222px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: magenta;
-  font: 100 clamp(0.8rem, 5vw, 1.2rem) Lorea;
-  border-radius: 50%;
-  box-shadow: 0 5px 5px 5px rgb(0, 0, 0, 0.2), inset 0 -7px 22px 8px rgb(0, 0, 183);
-  background: url(/src/logos/jsive-logo-at-100.png) 50%/50% no-repeat, radial-gradient(circle at 60% 30%, rgb(255, 255, 255, 0.7) 5%, rgba(18, 74, 164, 0.9), rgba(31, 31, 255, 0.5), black 98%);
 }

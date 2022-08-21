@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import BackBtn from "../components/BackBtn";
 import BorderEffect from "../components/BorderEffect";
 import AllCodeContainer from "./AllCodeContainer";
+import Footer from "../../../components/Footer";
 import "../tuts-common.css";
 import "./border-effect-tut.css";
 
@@ -157,7 +158,7 @@ export default function BorderEffectTut() {
       </div>
       <p>There you have it. This is just one example of the many things you can accomplish with just a few lines of CSS.</p>
       <BackBtn />
-      <footer className="footer">www.JavaScriptive.com</footer>
+      <Footer />
     </div>
   );
 }

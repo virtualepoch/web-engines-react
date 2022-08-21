@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import BackBtn from "../components/BackBtn";
 import ColorCube from "../components/ColorCube";
 import AllCodeContainer from "./AllCodeContainer";
+import Footer from "../../../components/Footer";
 import "./cube-tut.css";
 
 export default function TextWaveEffectTut() {
@@ -191,7 +192,7 @@ export default function TextWaveEffectTut() {
       </div>
       <p>There you have it. Another example of what can be done with the power of CSS.</p>
       <BackBtn />
-      <footer className="footer">www.JavaScriptive.com</footer>
+      <Footer />
     </div>
   );
 }
