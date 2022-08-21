@@ -4,7 +4,7 @@ import SpinningTop from "../components/SpinningTop";
 import AllCodeContainer from "./AllCodeContainer";
 import "./top-spin-tut.css";
 
-export default function TextWaveEffectTut() {
+export default function TopSpinTut() {
   const codeEx1 = `<div class="cube-container">
   <div class="color-cube">
     <div class="side front"></div>
@@ -123,7 +123,7 @@ export default function TextWaveEffectTut() {
   return (
     <div className="tut-page-container">
       <BackBtn />
-      <h1>Rotating Cube Effect</h1>
+      <h1>Spinning Top Effect</h1>
       <SpinningTop />
       <p>
         In this tutorial we provide, and walk you through, all the code needed to create this spinning top. We will use the 'transform-style: preserve-3d' CSS style property again to give the top depth. We will also introduce the 'perspective-origin' CSS property which will help with the rotation of the sides to make everything line up perfectly. We will then again use an '@keyframes' animation to make the top spin. If you wish to copy all the code for this project, you can do that{" "}

@@ -13,7 +13,7 @@ export default function Model(props) {
   const { nodes, materials } = useGLTF("/delorean-high.gltf");
   return (
     <group {...props} dispose={null} scale={0.6}>
-      <group rotation={[-Math.PI / 2.5, 0, 3.15]}>
+      <group rotation={[-Math.PI / 2, 0, 3.15]}>
         <group rotation={[Math.PI / 2, 0, 0]}>
           <group position={[1.99, 0.15, -1.78]} rotation={[-1.76, 1.49, -1.54]} scale={[0.08, 0.04, 0.09]}>
             {/* Side hose braces */}

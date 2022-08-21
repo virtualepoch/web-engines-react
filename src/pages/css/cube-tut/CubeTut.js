@@ -163,7 +163,7 @@ export default function TextWaveEffectTut() {
           <div className="color-cube-ex border"></div>
         </div>
       </div>
-      <p>Now that we have the parent element styled we will start styling the children, or 'sides'. We can give all sides a universal styling using the class name 'side'. Here we will also style the left, right, back, top, and bottom sides, each with a different color. We won't style the front yet so that we can see what's going on with the other sides. We'll also remove the border of our 'color-cube'.</p>
+      <p>Now that we have the parent element styled we will start styling the children, or 'sides'. We can give all sides a universal styling using the class name 'side'. Here we will also style the back, left, right, top, and bottom sides —each with a different color. We won't style the front yet so that we can see what's going on with the other sides. We'll also remove the border of our 'color-cube'.</p>
       <div className="code-example-container">
         <pre className="code-example">{codeEx4}</pre>
         <button className="copy-code-btn" ref={copyBtn4Ref} onClick={copyCodeEx4}></button>

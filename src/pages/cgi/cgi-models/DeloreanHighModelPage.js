@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import BackBtn from "../../css/components/BackBtn";
+import BackBtnFixed from "../../css/components/BackBtnFixed";
 import { Canvas } from "@react-three/fiber";
 import DeloreanHigh from "./cgi-components/DeloreanHigh";
 import { OrbitControls } from "@react-three/drei";
@@ -7,7 +7,7 @@ import { OrbitControls } from "@react-three/drei";
 export default function TestModel() {
   return (
     <div className="cgi-model-section">
-      <BackBtn />
+      <BackBtnFixed />
       <h1>Delorean</h1>
       <Canvas className="delorean-high-canvas">
         <OrbitControls enableZoom={true} />

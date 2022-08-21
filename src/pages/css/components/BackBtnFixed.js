@@ -1,16 +1,21 @@
 import { useNavigate } from "react-router-dom";
 
-export default function BackBtn() {
+export default function BackBtnFixed() {
   const navigate = useNavigate();
 
   var style = {
     backBtn: {
       width: "40px",
       height: "40px",
-      position: "relative",
+      position: "fixed",
+      top: "60px",
+      left: "0",
+      right: "0",
+      margin: "auto",
+      zIndex: "8888",
       borderRadius: "50%",
       boxShadow: "0 1px 5px 2px rgb(0, 0, 0, 0.3)",
-      background: "rgb(50, 180, 255)",
+      background: "rgb(0, 180, 255, 0.5)",
       cursor: "pointer",
     },
     arrowLine: {
