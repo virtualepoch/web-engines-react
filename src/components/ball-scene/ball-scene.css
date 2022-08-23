@@ -57,11 +57,9 @@
 @keyframes cube-crush {
   10%,
   93% {
-    height: 1.5em;
     top: 5.5em;
   }
   50% {
-    height: 2em;
     top: 5em;
   }
 }
@@ -79,18 +77,22 @@
   background: rgb(0, 170, 255);
 }
 .cube .top {
+  width: 1em;
+  height: 1em;
   transform: translateY(-50%) rotateX(90deg);
   background: aqua;
 }
 .cube .ball-shadow {
-  position: relative;
-  background: radial-gradient(rgb(0, 0, 0, 0.6), rgba(0, 0, 0, 0) 50%);
-  height: 1em;
-  width: 1em;
-  top: -0.505em;
+  background: radial-gradient(rgb(0, 0, 0, 0.4), rgba(0, 0, 0, 0) 50%);
+  top: -0.44em;
   transform: rotateX(90deg);
   box-shadow: none;
   animation: ball-shadow-scale 2s ease-in infinite;
+}
+@media (max-width: 700px) {
+  .cube .ball-shadow {
+    display: none;
+  }
 }
 @keyframes ball-shadow-scale {
   0%,

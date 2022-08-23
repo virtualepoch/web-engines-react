@@ -6,19 +6,17 @@ import Footer from "../../../components/Footer";
 import "./top-spin-tut.css";
 
 export default function TopSpinTut() {
-  const codeEx1 = `<div class="cube-container">
-  <div class="color-cube">
+  const codeEx1 = `<div class="spinning-top-container">
+  <div class="spinning-top">
     <div class="side front"></div>
-    <div class="side right"></div>
     <div class="side back"></div>
     <div class="side left"></div>
+    <div class="side right"></div>
     <div class="side top"></div>
-    <div class="side bottom"></div>
-    <div class="side shadow"></div>
   </div>
+  <div class="shadow"></div>
 </div>`;
-
-  const codeEx2 = `.cube-container {
+  const codeEx2 = `.spinning-top-container {
   width: 300px;
   height: 300px;
   border-top: 4px solid gray;
@@ -29,45 +27,66 @@ export default function TopSpinTut() {
   align-items: center;
   justify-content: center;
   perspective: 600px;
-  perspective-origin: 50%;
+  perspective-origin: 50% 10%;
   overflow: hidden;
   background: linear-gradient(white, skyblue 30% 40%, pink 40%,
   rgb(255, 95, 255) 54%, white);
 }`;
-  const codeEx3 = `.color-cube {
+  const codeEx3 = `.spinning-top {
   height: 100px;
-  width: 100px;
+  width: 50px;
+  border: solid;
   position: relative;
+  top: 50px;
   transform-style: preserve-3d;
-  animation: color-cube-rotateY 12s linear infinite;
-  border: solid black;
+  animation: spinning-top-rotateY 2s linear infinite;
 }`;
-  const codeEx4 = `.color-cube .side {
+  const codeEx4 = `.spinning-top .side {
   height: 100%;
   width: 100%;
   position: absolute;
-  border: 2px solid rgba(255, 0, 255, 0.5);
-  background: rgb(0, 0, 255, 0.5);
+  transform-origin: 25px 100px;
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
 }
-.color-cube .left {
-  transform: translateX(-50px) rotateY(90deg);
-  background: red;
+.spinning-top .front,
+.spinning-top .back {
+  background: rgb(255, 0, 255, 0.6);
 }
-.color-cube .right {
-  transform: translateX(50px) rotateY(90deg);
-  background: blue;
+.spinning-top .front {
+  transform: rotateX(-7deg);
 }
-.color-cube .back {
-  transform: translateZ(-50px) rotateY(180deg);
-  background: limegreen;
+.spinning-top .back {
+  transform: rotateX(7deg);
 }
-.color-cube .top {
-  transform: translateY(-50px) rotateX(90deg) ;
-  background: yellow;
+.spinning-top .left,
+.spinning-top .right {
+  background: rgb(0, 155, 255, 0.5);
 }
-.color-cube .bottom {
-  transform: translateY(50px) rotateX(90deg);
-  background: aqua;
+.spinning-top .left {
+  transform: rotateY(90deg) rotateX(-7deg);
+}
+.spinning-top .right {
+  transform: rotateY(90deg) rotateX(7deg);
+}
+.spinning-top .top {
+  width: 60px;
+  height: 60px;
+  clip-path: none;
+  border-radius: 50%;
+  top: -30px;
+  right: -5px;
+  transform-origin: 30px 30px;
+  transform: rotateX(90deg) rotateZ(180deg);
+  background: rgb(255, 0, 255, 0.5);
+}
+.spinning-top-container .shadow {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 10px;
+  transform: rotateX(90deg);
+  border-radius: 50%;
+  background: radial-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.05));
 }`;
   const codeEx5 = `.color-cube .front {
   transform: translateZ(50px);
@@ -144,7 +163,7 @@ export default function TopSpinTut() {
         <pre className="code-example">{codeEx1}</pre>
         <button className="copy-code-btn" ref={copyBtn1Ref} onClick={copyCodeEx1}></button>
       </div>
-      <p>Everything else is done with CSS. So, we'll start by styling the 'cube-container'. Notice we have the 'perspective' and 'perspective-origin' style properties. These are used to change the perspective depth and viewing position of the 3d effect.</p>
+      <p>Everything else is done with CSS. So, we'll start by styling the 'spinning-top-container'. Notice we have the 'perspective' and 'perspective-origin' style properties. These are used to change the perspective depth and viewing position of the 3d effect.</p>
       <div className="code-example-container">
         <pre className="code-example">{codeEx2}</pre>
         <button className="copy-code-btn" ref={copyBtn2Ref} onClick={copyCodeEx2}></button>
@@ -153,7 +172,7 @@ export default function TopSpinTut() {
         <p>Output:</p>
         <div className="cube-container"></div>
       </div>
-      <p>Next, we have to style the 'color-cube'. Here is where the most important style is, the 'transform-style: preserve-3d'. This will give depth to the sides of our cube. We'll also add the 'animation' reference but will not create the animation itself until the end. Lastly, we'll add a border so we can see the element.</p>
+      <p>Next, we have to style the 'spinning-top'. Here is where the most important style is, the 'transform-style: preserve-3d'. This will give depth to the sides of our top. We'll add the 'animation' reference but will not create the animation itself until the end. We'll also add a border so we can see the element.</p>
       <div className="code-example-container">
         <pre className="code-example">{codeEx3}</pre>
         <button className="copy-code-btn" ref={copyBtn3Ref} onClick={copyCodeEx3}></button>
@@ -161,10 +180,10 @@ export default function TopSpinTut() {
       <div className="border-ex-1">
         <p>Output:</p>
         <div className="cube-container">
-          <div className="color-cube-ex border"></div>
+          <div className="top-spin-ex border"></div>
         </div>
       </div>
-      <p>Now that we have the parent element styled we will start styling the children, or 'sides'. We can give all sides a universal styling using the class name 'side'. Here we will also style the left, right, back, top, and bottom sides, each with a different color. We won't style the front yet so that we can see what's going on with the other sides. We'll also remove the border of our 'color-cube'.</p>
+      <p>Now that we have the parent element styled we will start styling the children, or 'sides'. We can give all sides a universal styling using the class name 'side'. Here we will also give individual stylings to the left, right, back, and top sides. We won't style the front yet so that we can see what's going on with the other sides. We'll also remove the border of our 'spinning-top'.</p>
       <div className="code-example-container">
         <pre className="code-example">{codeEx4}</pre>
         <button className="copy-code-btn" ref={copyBtn4Ref} onClick={copyCodeEx4}></button>

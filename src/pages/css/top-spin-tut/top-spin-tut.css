@@ -1,8 +1,9 @@
-.color-cube-ex {
+.top-spin-ex {
   height: 100px;
-  width: 100px;
+  width: 50px;
   position: relative;
   transform-style: preserve-3d;
+  border: solid;
 }
 .color-cube-ex.border {
   border: solid black;
