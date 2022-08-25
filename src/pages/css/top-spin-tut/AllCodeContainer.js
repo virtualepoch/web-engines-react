@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 export default function AllCodeContainer() {
   const allCode = `<head>
 <style>
-.cube-container {
+.spinning-top-container {
   width: 300px;
   height: 300px;
   border-top: 4px solid gray;
@@ -14,74 +14,33 @@ export default function AllCodeContainer() {
   align-items: center;
   justify-content: center;
   perspective: 600px;
-  perspective-origin: 50%;
+  perspective-origin: 50% 10%;
   overflow: hidden;
-  background: linear-gradient(white, skyblue 30% 40%, pink 40%, rgb(255, 95, 255) 54%, white);
+  background: linear-gradient(white, skyblue 30% 40%, pink 40%,
+  rgb(255, 95, 255) 54%, white);
 }
-/* COLOR CUBE //////////////// */
-.color-cube {
+.spinning-top {
   height: 100px;
-  width: 100px;
+  width: 50px;
+  border: solid;
   position: relative;
+  top: 50px;
   transform-style: preserve-3d;
-  animation: color-cube-rotateY 12s linear infinite;
-}
-@keyframes color-cube-rotateY {
-  to {
-    transform: rotateY(360deg);
-  }
-}
-.color-cube .side {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  border: 2px solid rgba(255, 0, 255, 0.5);
-  background: rgb(0, 0, 255, 0.5);
-}
-.color-cube .front,
-.color-cube .back {
-  background: url('link to your logo') 50%/80% no-repeat, rgb(0, 0, 255, 0.5);
-}
-.color-cube .left {
-  transform: translateX(-50px) rotateY(90deg);
-}
-.color-cube .right {
-  transform: translateX(50px) rotateY(90deg);
-}
-.color-cube .back {
-  transform: translateZ(-50px) rotateY(180deg);
-}
-.color-cube .top {
-  transform: translateY(-50px) rotateX(90deg);
-  background: rgb(255, 0, 255, 0.5);
-}
-.color-cube .bottom {
-  transform: translateY(50px) rotateX(90deg);
-  background: rgb(255, 0, 255, 0.5);
-}
-.color-cube .front {
-  transform: translateZ(50px);
-}
-.color-cube .shadow {
-  border: none;
-  border-radius: 5px;
-  background: radial-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.05));
-  transform: translateY(120px) rotateX(90deg);
+  animation: spinning-top-rotateY 2s linear infinite;
 }
 </style>
 </head>
 
 <body>
-<div class="cube-container">
-  <div class="color-cube">
+<div class="spinning-top-container">
+  <div class="spinning-top">
     <div class="side front"></div>
-    <div class="side right"></div>
     <div class="side back"></div>
     <div class="side left"></div>
+    <div class="side right"></div>
     <div class="side top"></div>
-    <div class="side bottom"></div>
-    <div class="side shadow"></div>
   </div>
+  <div class="shadow"></div>
 </div>
 </body>
 `;

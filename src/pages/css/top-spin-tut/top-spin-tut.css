@@ -1,45 +1,21 @@
-.top-spin-ex {
-  height: 100px;
+.spinning-top-example-1 {
   width: 50px;
-  position: relative;
-  transform-style: preserve-3d;
+  height: 100px;
   border: solid;
+  position: relative;
+  top: 50px;
 }
-.color-cube-ex.border {
-  border: solid black;
+.spinning-top-example-2 {
+  border: solid;
+  transform: rotateY(20deg);
+  animation: none;
 }
-.color-cube-ex .side {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  border: 2px solid rgba(255, 0, 255, 0.5);
-  background: rgb(0, 0, 255, 0.5);
-}
-.color-cube-ex .left {
-  transform: translateX(-50px) rotateY(90deg);
+.spinning-top-example-2 .top-left-example {
   background: red;
 }
-.color-cube-ex .right {
-  transform: translateX(50px) rotateY(90deg);
+.spinning-top-example-2 .top-right-example {
   background: blue;
 }
-.color-cube-ex .back {
-  transform: translateZ(-50px);
-  background: limegreen;
-}
-.color-cube-ex .top {
-  transform: translateY(-50px) rotateX(90deg);
+.spinning-top-example-2 .top-back-example {
   background: yellow;
-}
-.color-cube-ex .bottom {
-  transform: translateY(50px) rotateX(90deg);
-  background: aqua;
-}
-.color-cube-ex .front {
-  transform: translateZ(50px);
-}
-.color-cube-ex .shadow {
-  box-shadow: 0 0 5px 5px rgb(0, 0, 0, 0.05);
-  background: radial-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.05));
-  transform: translateY(120px) rotateX(90deg);
 }

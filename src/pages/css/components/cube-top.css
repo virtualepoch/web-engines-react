@@ -145,7 +145,7 @@
   height: 100%;
   width: 100%;
   position: absolute;
-  transform-origin: 25px 100px;
+  transform-origin: 50% 100%;
   clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
 }
 .spinning-top .front,
@@ -163,10 +163,10 @@
   background: rgb(0, 155, 255, 0.5);
 }
 .spinning-top .left {
-  transform: rotateY(90deg) rotateX(-7deg);
+  transform: rotateY(90deg) rotateX(7deg);
 }
 .spinning-top .right {
-  transform: rotateY(90deg) rotateX(7deg);
+  transform: rotateY(90deg) rotateX(-7deg);
 }
 .spinning-top .top {
   width: 60px;
@@ -175,7 +175,7 @@
   border-radius: 50%;
   top: -30px;
   right: -5px;
-  transform-origin: 30px 30px;
+  transform-origin: initial;
   transform: rotateX(90deg) rotateZ(180deg);
   background: url(../../../logos/jsive-logo-at-100.png) 50% / 70% no-repeat, rgb(255, 0, 255, 0.5);
 }
