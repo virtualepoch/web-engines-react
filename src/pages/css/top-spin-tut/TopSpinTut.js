@@ -29,8 +29,8 @@ export default function TopSpinTut() {
   perspective: 600px;
   perspective-origin: 50% 10%;
   overflow: hidden;
-  background: linear-gradient(white, skyblue 30% 40%, pink 40%,
-  rgb(255, 95, 255) 54%, white);
+  background: linear-gradient(white, skyblue 30% 40%,
+  pink 40%, rgb(255, 95, 255) 54%, white);
 }`;
   const codeEx3 = `.spinning-top {
   width: 50px;
@@ -76,7 +76,8 @@ export default function TopSpinTut() {
   right: -5px;
   transform-origin: initial;
   transform: rotateX(90deg) rotateZ(180deg);
-  background: url(../link to your logo) 50% / 70% no-repeat, rgb(255, 0, 255, 0.5);
+  background: url(../link to your logo) 50% / 70% no-repeat,
+  rgb(255, 0, 255, 0.5);
 }
 .spinning-top-container .shadow {
   width: 50px;
@@ -85,7 +86,8 @@ export default function TopSpinTut() {
   bottom: 10px;
   transform: rotateX(90deg);
   border-radius: 50%;
-  background: radial-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.05));
+  background: radial-gradient(rgb(0, 0, 0, 0.1),
+  rgb(0, 0, 0, 0.05));
 }
 @keyframes spinning-top-rotateY {
   to {
@@ -135,7 +137,7 @@ export default function TopSpinTut() {
       <h1>Spinning Top Effect</h1>
       <SpinningTop />
       <p>
-        In this tutorial we provide, and walk you through, all the code needed to create this spinning top. We will use the 'transform-style: preserve-3d' CSS style property to give the top depth. We will also introduce the 'perspective-origin' CSS property which will help with the rotation of the sides to make everything line up perfectly. We will then again use an '@keyframes' animation to make the top spin. If you wish to copy all the code for this project, you can do that{" "}
+        In this tutorial we provide, and walk you through, all the code needed to create this spinning top. The 'clip-path' CSS style property will turn the sides of our spinning top into triangles. The 'transform-style: preserve-3d' CSS style property will give it depth. The 'transform-origin' CSS style property will allow all sides to be rotated from the same point. We will use an '@keyframes' animation to make the top spin. If you wish to copy all the code for this project, you can do that{" "}
         <div className="open-all-code" onClick={openCloseAllCode}>
           here
         </div>
@@ -147,12 +149,12 @@ export default function TopSpinTut() {
         </button>
         <AllCodeContainer />
       </div>
-      <p>First, we will add all the HTML elements we need and give them each individual class names.</p>
+      <p>First, we will add all the HTML elements we need and give them each individual class names. We will also give the children of the 'spinning-top' a universal class name of 'side'.</p>
       <div className="code-example-container">
         <pre className="code-example">{codeEx1}</pre>
         <button className="copy-code-btn" ref={copyBtn1Ref} onClick={copyCodeEx1}></button>
       </div>
-      <p>Everything else is done with CSS. So, we'll start by styling the 'spinning-top-container'. Notice we have the 'perspective' and 'perspective-origin' style properties. These are used to change the perspective depth and viewing position of the 3d effect.</p>
+      <p>Everything else is done with CSS. So, we'll start by styling the 'spinning-top-container'. Notice we have the 'perspective' and 'perspective-origin' style properties. These are used to adjust the perspective depth and viewing position of the 3d effect.</p>
       <div className="code-example-container">
         <pre className="code-example">{codeEx2}</pre>
         <button className="copy-code-btn" ref={copyBtn2Ref} onClick={copyCodeEx2}></button>
@@ -172,7 +174,7 @@ export default function TopSpinTut() {
           <div className="spinning-top-example-1"></div>
         </div>
       </div>
-      <p>Now that we have the parent element styled we will start styling the children, or 'sides'. We can give all sides a universal styling using the class name 'side'. Here we will also give individual stylings to the back, left, and right sides. We won't style the front yet so that we can see what's going on with the other sides. We'll also rotate the 'spinning-top' 30 degrees to get a better view of what's going on.</p>
+      <p>Now that we have the parent element styled we will start styling the children, or 'sides'. We won't style the front yet so that we can see what's going on with the other sides. We'll also rotate the 'spinning-top' 50 degrees and scale it up to get a better view of what's going on.</p>
       <div className="code-example-container">
         <pre className="code-example">{codeEx4}</pre>
         <button className="copy-code-btn" ref={copyBtn4Ref} onClick={copyCodeEx4}></button>
@@ -188,7 +190,7 @@ export default function TopSpinTut() {
           <div className="shadow"></div>
         </div>
       </div>
-      <p>Finally, all we have to do is add the front side, shadow, top and the animation. We need to remove the border. We'll also change the background colors to look better (we threw our logo in there too).</p>
+      <p>Finally, all we have to do is add the front side, shadow, top, and animation. Don't forget to also remove the border. We'll also change the background colors to look better (we threw our logo in there too).</p>
       <div className="code-example-container">
         <pre className="code-example">{codeEx5}</pre>
         <button className="copy-code-btn" ref={copyBtn5} onClick={copyCodeEx5}></button>

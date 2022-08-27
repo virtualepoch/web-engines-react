@@ -7,7 +7,7 @@
 }
 .spinning-top-example-2 {
   border: solid;
-  transform: rotateY(20deg);
+  transform: rotateY(50deg) scale(1.5);
   animation: none;
 }
 .spinning-top-example-2 .top-left-example {
