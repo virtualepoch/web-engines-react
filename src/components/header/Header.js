@@ -24,13 +24,15 @@ export default function Header() {
     }
   }
 
+  const titleEnding = "ive";
+
   return (
     <header className="header">
       <div className="top-header">
         <div className="left-side-header">
           <div className="main-logo"></div>
           <Link to={"/"}>
-            <h1 className="site-title">JavaScriptive</h1>
+            <h1 className="site-title">JavaScript{titleEnding}</h1>
           </Link>
         </div>
         <div className="right-side-header">

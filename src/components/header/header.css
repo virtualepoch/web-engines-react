@@ -37,10 +37,11 @@
 }
 .site-title {
   padding: 0 3px;
-  background-image: linear-gradient(to right, magenta 65%, pink);
+  background-image: linear-gradient(115deg, rgb(140, 255, 251) 0% 76%, rgb(56, 168, 243) 81% 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font: 400 clamp(1.65rem, 5vw, 2rem) Lorea;
+  letter-spacing: 1px;
 }
 .nav-btn {
   width: 50px;
