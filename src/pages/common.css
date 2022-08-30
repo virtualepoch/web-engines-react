@@ -20,3 +20,12 @@
   color: white;
   font: clamp(0.8rem, 5vw, 1.2rem) Lorea;
 }
+.heading {
+  width: fit-content;
+  height: 70px;
+  margin-top: 50px;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  font: 600 clamp(1.3rem, 5vw, 1.7rem) sans-serif;
+}

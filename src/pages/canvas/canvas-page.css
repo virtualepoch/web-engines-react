@@ -1,6 +1,6 @@
 .canvas-page {
   min-height: calc(100vh - 50px);
-  padding: 50px 12px;
+  padding: 0 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,10 +14,24 @@
 .canvas-game-link {
   max-width: 500px;
   padding: 10px 0;
-  font: 30px Blackpast;
+  font: 600 clamp(1.3rem, 5vw, 1.7rem) Blackpast;
 }
 .canvas-page p {
-  font: 20px sans-serif;
+  font: 18px sans-serif;
+}
+.franks-link {
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+  padding: 0 0 0 10px;
+  font: 600 20px sans-serif;
+  border: 1px solid red;
+  border-radius: 10px;
+}
+.franks-link i {
+  width: 50px;
+  height: 40px;
+  background: url(../../icons/youtube-brands.svg) 50% / 70% no-repeat;
 }
 .canvas-page .bold-text {
   font: 700 25px sans-serif;
@@ -39,7 +53,7 @@
   color: white;
   border: 10px solid rgb(255, 0, 255, 0.5);
   border-radius: 8px;
-  box-shadow: 1px 2px 2px 2px rgb(0, 0, 0, 0.2);
+  box-shadow: 1px 2px 4px 2px rgb(0, 0, 0, 0.2);
   background: linear-gradient(30deg, blue, purple);
 }
 .canvas-game-container {

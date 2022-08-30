@@ -38,7 +38,7 @@ export default function Js() {
 
   return (
     <div className="javascript-page">
-      <h1>JavaScript Tutorials</h1>
+      <h1 className="heading">JavaScript Tutorials</h1>
       <p>This section is currently being updated. Thanks for your patience.</p>
       <div className="typed-text-box">
         TEXT BOX 1<h2 className="typed-text" ref={textBox1}></h2>

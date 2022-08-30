@@ -48,7 +48,7 @@ export default function ToTopBtn() {
   };
 
   return (
-    <div style={styles.toTopBtn} ref={toTopBtn} onClick={ScrollToTop}>
+    <div className="to-top-btn" style={styles.toTopBtn} ref={toTopBtn} onClick={ScrollToTop}>
       <div style={styles.arrowLine}></div>
       <div style={{ ...styles.arrowLine, ...styles.arrowLine2 }}></div>
     </div>

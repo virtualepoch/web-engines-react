@@ -49,3 +49,10 @@
 body {
   background: rgb(240, 240, 240);
 }
+@media (min-width: 1200px) {
+  .to-top-btn {
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}

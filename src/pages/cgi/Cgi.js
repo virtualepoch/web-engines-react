@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 import horsemen2 from "../../images/horsemen2.png";
 import ayanami from "../../images/ayanami.png";
 import delorean from "../../images/delorean.png";
-import Footer from "../../components/Footer"
+import Footer from "../../components/Footer";
 import "./cgi.css";
 
 export default function Cgi() {
   return (
     <div className="cgi-page">
-      <h1>CGI Tutorials</h1>
+      <h1 className="heading">CGI Tutorials</h1>
       <div className="sub-heading">
         <h2>Learn to add</h2>
         <h2 className="animated-text">3D</h2>
