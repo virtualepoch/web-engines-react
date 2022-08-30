@@ -4,7 +4,42 @@
   position: relative;
   top: 20px;
   border-radius: 50%;
-  background: radial-gradient(ellipse at 50% 55%, lightgray, rgb(65, 8, 65), black);
+  /* background: radial-gradient(ellipse at 50% 55%, lightgray, rgb(65, 8, 65), black); */
+  background: linear-gradient(0deg, cyan 10%, deepskyblue 13% 21%, cyan 24% 31%, deepskyblue 33% 39%, cyan 41% 46%, deepskyblue 48% 52%, cyan 51% 54%, white 55% 57%, transparent), radial-gradient(circle at 50%, yellow 20%, pink 25% 30%, white);
+  animation: sunrise 4s infinite;
+}
+@keyframes sunrise {
+  10% {
+    background: linear-gradient(0deg, cyan 10%, deepskyblue 13% 21%, cyan 24% 31%, deepskyblue 33% 39%, cyan 41% 46%, deepskyblue 48% 52%, cyan 51% 54%, white 55% 57%, transparent), radial-gradient(circle at 50% 40%, yellow 20%, pink 25% 30%, white);
+  }
+  20% {
+    background: linear-gradient(0deg, cyan 10%, deepskyblue 13% 21%, cyan 24% 31%, deepskyblue 33% 39%, cyan 41% 46%, deepskyblue 48% 52%, cyan 51% 54%, white 55% 57%, transparent), radial-gradient(circle at 50% 30%, yellow 20%, pink 25% 30%, white);
+  }
+  30% {
+    background: linear-gradient(0deg, cyan 10%, deepskyblue 13% 21%, cyan 24% 31%, deepskyblue 33% 39%, cyan 41% 46%, deepskyblue 48% 52%, cyan 51% 54%, white 55% 57%, transparent), radial-gradient(circle at 50% 20%, yellow 20%, pink 25% 30%, white);
+  }
+  40% {
+    background: linear-gradient(0deg, cyan 10%, deepskyblue 13% 21%, cyan 24% 31%, deepskyblue 33% 39%, cyan 41% 46%, deepskyblue 48% 52%, cyan 51% 54%, white 55% 57%, transparent), radial-gradient(circle at 50% 10%, yellow 20%, pink 25% 30%, white);
+  }
+  50% {
+    background: linear-gradient(0deg, cyan 10%, deepskyblue 13% 21%, cyan 24% 31%, deepskyblue 33% 39%, cyan 41% 46%, deepskyblue 48% 52%, cyan 51% 54%, white 55% 57%, transparent), radial-gradient(circle at 50% 0, yellow 20%, pink 25% 30%, white);
+  }
+  60% {
+    background: linear-gradient(0deg, cyan 10%, deepskyblue 13% 21%, cyan 24% 31%, deepskyblue 33% 39%, cyan 41% 46%, deepskyblue 48% 52%, cyan 51% 54%, white 55% 57%, transparent), radial-gradient(circle at 50% -10%, yellow 20%, pink 25% 30%, white);
+  }
+  70% {
+    background: linear-gradient(0deg, cyan 10%, deepskyblue 13% 21%, cyan 24% 31%, deepskyblue 33% 39%, cyan 41% 46%, deepskyblue 48% 52%, cyan 51% 54%, white 55% 57%, transparent), radial-gradient(circle at 50% -20%, yellow 20%, pink 25% 30%, white);
+  }
+  80% {
+    background: linear-gradient(0deg, cyan 10%, deepskyblue 13% 21%, cyan 24% 31%, deepskyblue 33% 39%, cyan 41% 46%, deepskyblue 48% 52%, cyan 51% 54%, white 55% 57%, transparent), radial-gradient(circle at 50% -30%, yellow 20%, pink 25% 30%, white);
+  }
+  90% {
+    background: linear-gradient(0deg, cyan 10%, deepskyblue 13% 21%, cyan 24% 31%, deepskyblue 33% 39%, cyan 41% 46%, deepskyblue 48% 52%, cyan 51% 54%, white 55% 57%, transparent), radial-gradient(circle at 50% -40%, yellow 20%, pink 25% 30%, white);
+  }
+  to {
+    background: linear-gradient(0deg, cyan 10%, deepskyblue 13% 21%, cyan 24% 31%, deepskyblue 33% 39%, cyan 41% 46%, deepskyblue 48% 52%, cyan 51% 54%, white 55% 57%, transparent), radial-gradient(circle at 50% -50%, yellow 20%, pink 25% 30%, white);
+    animation-timing-function: ease-in-out;
+  }
 }
 .ball-scene {
   width: 100%;
@@ -23,12 +58,11 @@
 .ball {
   width: 1em;
   height: 2em;
-  border-bottom: 1px solid rgb(0, 255, 255);
   border-radius: 50%;
   position: relative;
   top: 5em;
   z-index: 8;
-  background: radial-gradient(circle at 60% 10%, rgb(255, 255, 255) 20%, rgba(67, 67, 67) 80%, black);
+  background: radial-gradient(circle at 60% 10%, rgb(255, 255, 255) 20%, rgb(205, 205, 205) 80%, rgb(175, 175, 175));
   animation: ball-bounce 2s ease-out infinite;
 }
 @keyframes ball-bounce {
@@ -111,6 +145,6 @@
   border-top-right-radius: 50%;
   border-top-left-radius: 50%;
   transform: rotateX(105deg);
-  background: radial-gradient(transparent 20%, rgb(0, 0, 0, 0.5) 50%, rgb(0, 0, 0, 0.9) 60%), repeating-conic-gradient(from 45deg, rgb(70, 0, 128) 0deg 90deg, rgb(255, 255, 255) 90deg 180deg);
+  background: radial-gradient(transparent 20%, rgba(255, 255, 255, 0.8) 60%), repeating-conic-gradient(from 45deg, rgb(70, 0, 128, 0.3) 0deg 90deg, rgb(255, 255, 255) 90deg 180deg);
   background-size: 100%, 1em 1em;
 }

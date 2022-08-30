@@ -17,8 +17,8 @@ export default function ToTopBtn() {
 
   var styles = {
     toTopBtn: {
-      width: "35px",
-      height: "35px",
+      width: "40px",
+      height: "40px",
       position: "fixed",
       left: "10px",
       bottom: "10px",
@@ -34,15 +34,15 @@ export default function ToTopBtn() {
       width: "12px",
       height: "2px",
       position: "absolute",
-      top: "14px",
-      left: "8px",
+      top: "17px",
+      left: "11px",
       background: "rgb(100, 100, 100)",
       transform: "rotate(-45deg)",
       // pointerEvents: "none",
     },
     arrowLine2: {
       left: null,
-      right: "8px",
+      right: "10px",
       transform: "rotate(45deg)",
     },
   };

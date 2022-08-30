@@ -7,9 +7,9 @@ export default function Canvas() {
       <h1 className="heading">HTML-Canvas Tutorials</h1>
       <p>This section is currently being updated. Thanks for your patience.</p>
       <p>In the mean time, check out this JavaScript game we are experimenting with.</p>
-      <p className="attribution">The attribution for this game goes to a very talented developer from the UK whose YouTube channel is called Frank's laboratory. He wrote all the code and designed and created all of the assets. He has several very fun and interesting tutorials that are great resources if you want to learn how to use the HTML Canvas properly. You can find a link to his tutorial page here:</p>
+      <p className="attribution">The attribution for this game goes to a very talented developer from the UK whose YouTube channel is called Frank's laboratory. He wrote all the code and designed and created all of the assets. He has several very fun and interesting tutorials that are great resources if you want to learn how to use the HTML Canvas properly. You can find a link to his channel here:</p>
       <a className="franks-link" href="https://www.youtube.com/Frankslaboratory" rel="noreferrer" target="_blank">
-        Franks laboratory <i></i>
+        <i></i>Franks laboratory
       </a>
       <p>Game objective:</p>
       <p className="bold-text">80 points within 20 seconds</p>

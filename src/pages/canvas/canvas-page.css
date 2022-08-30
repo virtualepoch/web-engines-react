@@ -23,7 +23,7 @@
   display: flex;
   align-items: center;
   margin: 30px 0;
-  padding: 0 0 0 10px;
+  padding: 0 10px 0 0;
   font: 600 20px sans-serif;
   border: 1px solid red;
   border-radius: 10px;
@@ -34,19 +34,19 @@
   background: url(../../icons/youtube-brands.svg) 50% / 70% no-repeat;
 }
 .canvas-page .bold-text {
-  font: 700 25px sans-serif;
+  font: 500 20px/20px sans-serif;
 }
 .canvas-page .mobile-landscape-alert {
   padding: 50px 0;
   color: red;
-  font: 800 30px sans-serif;
+  font: 600 20px sans-serif;
   text-transform: uppercase;
 }
 .canvas-game-link {
   width: fit-content;
   height: fit-content;
   padding: 10px 20px;
-  margin: 30px auto;
+  margin: 30px auto 100px auto;
   display: flex;
   align-items: center;
   justify-content: center;
