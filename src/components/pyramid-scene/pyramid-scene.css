@@ -6,23 +6,24 @@
   justify-content: center;
   perspective: 1300px;
   perspective-origin: 50% -10%;
-  background: linear-gradient(lightgrey 3%, skyblue 15%, pink 50%, white 55%, yellow 50%, gold 60%, orange);
+  background: linear-gradient(0deg, gold 10%, orange 13% 21%, gold 24% 31%, orange 33% 39%, gold 41% 46%, orange 48% 51%, gold 53% 54%, white 55% 57%, transparent), radial-gradient(circle at 50% -10%, gold 20%, pink 25% 30%, skyblue 40%);
   border-top: 10px solid gray;
   border-left: 10px solid rgb(192, 192, 192);
   border-bottom: 10px solid rgb(222, 222, 222);
   border-right: 10px solid rgb(154, 154, 154);
   overflow: hidden;
+  box-sizing: border-box;
 }
 .pyramid {
   width: 400px;
   height: 300px;
-  position: relative;
-  top: 40px;
-  z-index: -1;
+  position: absolute;
+  top: 100px;
+  z-index: 7;
   transform-style: preserve-3d;
   transform: rotateY(30deg);
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .pyramid {
     transform: rotateY(30deg) scale3d(0.5, 0.5, 0.5) translateY(50px);
   }
@@ -35,7 +36,7 @@
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   transform-origin: 50% 0;
   border: 1px solid rgb(0, 0, 0);
-  background: linear-gradient(aqua 20%, rgb(0, 0, 0, 0) 20%, rgb(0, 0, 0, 0) 40%, aqua 40%, aqua 60%, rgb(0, 0, 0, 0) 60%, rgb(0, 0, 0, 0) 80%, aqua 80%);
+  background: linear-gradient(turquoise 20%, rgb(0, 0, 0, 0) 20%, rgb(0, 0, 0, 0) 40%, turquoise 40%, turquoise 60%, rgb(0, 0, 0, 0) 60%, rgb(0, 0, 0, 0) 80%, turquoise 80%);
   box-shadow: inset 0 -5px 13px 5px rgb(0, 0, 0, 0.3);
 }
 @media (max-width: 600px) {
@@ -51,7 +52,7 @@
 }
 .pyramid .left,
 .pyramid .right {
-  background: linear-gradient(rgb(22, 6, 79) 20%, rgb(0, 0, 0, 0) 20%, rgb(0, 0, 0, 0) 40%, rgb(22, 6, 79) 40%, rgb(22, 6, 79) 60%, rgb(0, 0, 0, 0) 60%, rgb(0, 0, 0, 0) 80%, rgb(22, 6, 79) 80%);
+  background: linear-gradient(blue 20%, rgb(0, 0, 0, 0) 20%, rgb(0, 0, 0, 0) 40%, blue 40%, blue 60%, rgb(0, 0, 0, 0) 60%, rgb(0, 0, 0, 0) 80%, blue 80%);
   box-shadow: inset 0 -5px 13px 5px rgb(0, 0, 0, 0.3);
 }
 .pyramid .left {
