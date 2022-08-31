@@ -6,7 +6,7 @@
   justify-content: center;
   perspective: 1300px;
   perspective-origin: 50% -10%;
-  background: linear-gradient(rgb(80, 83, 84), rgb(255, 210, 210), black, silver);
+  background: linear-gradient(lightgrey 3%, skyblue 15%, pink 50%, white 55%, yellow 50%, gold 60%, orange);
   border-top: 10px solid gray;
   border-left: 10px solid rgb(192, 192, 192);
   border-bottom: 10px solid rgb(222, 222, 222);
@@ -17,21 +17,14 @@
   width: 400px;
   height: 300px;
   position: relative;
-  top: 100px;
-  z-index: 8;
+  top: 40px;
+  z-index: -1;
   transform-style: preserve-3d;
-  animation: pyramid-spin 8s ease-in 2s infinite;
+  transform: rotateY(30deg);
 }
-@keyframes pyramid-spin {
-  80% {
-    left: 100px;
-  }
-  90% {
-    left: -100px;
-  }
-  100% {
-    transform: rotateY(14400deg);
-    top: 200px;
+@media (max-width: 600px) {
+  .pyramid {
+    transform: rotateY(30deg) scale3d(0.5, 0.5, 0.5) translateY(50px);
   }
 }
 .pyramid div {
@@ -51,22 +44,10 @@
   }
 }
 .pyramid .front {
-  transform: rotateX(30deg);
-  animation: rotateX 8s ease-in-out 2s infinite;
-}
-@keyframes rotateX {
-  100% {
-    transform: rotateX(120deg);
-  }
+  transform: rotateX(41.7deg);
 }
 .pyramid .back {
-  transform: rotateY(180deg) rotateX(30deg);
-  animation: rotateYX 8s ease-in-out 2s infinite;
-}
-@keyframes rotateYX {
-  100% {
-    transform: rotateY(180deg) rotateX(120deg);
-  }
+  transform: rotateY(180deg) rotateX(41.7deg);
 }
 .pyramid .left,
 .pyramid .right {
@@ -74,22 +55,10 @@
   box-shadow: inset 0 -5px 13px 5px rgb(0, 0, 0, 0.3);
 }
 .pyramid .left {
-  transform: rotateY(-90deg) rotateX(30deg);
-  animation: rotateY-90X150 8s ease-in-out 2s infinite;
-}
-@keyframes rotateY-90X150 {
-  100% {
-    transform: rotateY(-90deg) rotateX(120deg);
-  }
+  transform: rotateY(-90deg) rotateX(41.7deg);
 }
 .pyramid .right {
-  transform: rotateY(90deg) rotateX(30deg);
-  animation: rotateY90X150 8s ease-in-out 2s infinite;
-}
-@keyframes rotateY90X150 {
-  100% {
-    transform: rotateY(90deg) rotateX(120deg);
-  }
+  transform: rotateY(90deg) rotateX(41.7deg);
 }
 .pyramid-container .floor {
   width: 2000px;
