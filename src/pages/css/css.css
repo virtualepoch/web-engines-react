@@ -8,11 +8,8 @@
   font: clamp(0.7rem, 5vw, 1rem) sans-serif;
 }
 .css-page .heading {
-  width: 90%;
-  border-radius: 20px;
   color: blue;
   justify-content: center;
-  background: linear-gradient(0deg, cyan 10%, deepskyblue 13% 21%, cyan 24% 31%, deepskyblue 33% 39%, cyan 41% 46%, deepskyblue 48% 52%, cyan 51% 54%, white 55% 57%, transparent), radial-gradient(circle at 50%, yellow 20%, pink 25% 30%, white);
 }
 .main-content {
   width: 100%;
