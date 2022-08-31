@@ -1,4 +1,4 @@
-import BallScene from "../../components/ball-scene/BallScene";
+import PyramidScene from "../../components/pyramid-scene/PyramidScene";
 import { Link } from "react-router-dom";
 import BorderEffect from "./components/BorderEffect";
 import ColorCube from "./components/ColorCube";
@@ -10,7 +10,7 @@ export default function Css() {
   return (
     <div className="css-page">
       <h1 className="heading">CSS Tutorials</h1>
-      <BallScene />
+      <PyramidScene />
       <div className="main-content">
         <h1>The following tutorials can all be completed with plain old CSS.</h1>
         <section className="effects-section">
