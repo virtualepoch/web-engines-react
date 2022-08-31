@@ -7,10 +7,6 @@
   padding: 20px 0;
   font: clamp(0.7rem, 5vw, 1rem) sans-serif;
 }
-.css-page .heading {
-  color: blue;
-  justify-content: center;
-}
 .main-content {
   width: 100%;
   padding: 10px;

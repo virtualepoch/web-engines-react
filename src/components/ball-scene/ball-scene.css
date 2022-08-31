@@ -5,6 +5,8 @@
   /* background: radial-gradient(ellipse at 50% 55%, lightgray, rgb(65, 8, 65), black); */
   background: linear-gradient(0deg, cyan 10%, deepskyblue 13% 21%, cyan 24% 31%, deepskyblue 33% 39%, cyan 41% 46%, deepskyblue 48% 52%, cyan 54% 54%, white 55% 57%, transparent), radial-gradient(circle at 50% 20%, yellow 10%, pink 15% 30%, skyblue);
   animation: sunrise 4s infinite;
+  border: 7px solid rgb(255, 0, 255, 0.2);
+  border-radius: 10px;
 }
 .ball-scene {
   width: 100%;
