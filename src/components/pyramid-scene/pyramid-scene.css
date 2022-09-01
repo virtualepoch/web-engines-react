@@ -22,7 +22,7 @@
   z-index: 7;
   transform-style: preserve-3d;
   /* transform: rotateY(30deg); */
-  animation: pyramid-rotateY 8s linear infinite;
+  animation: pyramid-rotateY 16s linear infinite;
 }
 @keyframes pyramid-rotateY {
   100% {
@@ -35,8 +35,8 @@
     perspective: 1000px;
   }
   .pyramid {
-    top: 80px;
-    animation: pyramid-rotateY-small 8s linear infinite;
+    top: 70px;
+    animation: pyramid-rotateY-small 16s linear infinite;
   }
 }
 @keyframes pyramid-rotateY-small {
