@@ -8,6 +8,11 @@
   animation-timing-function: steps(10);
   animation-iteration-count: infinite;
 }
+.bird.comic {
+  background-image: url(/src/images/FlyingGameCharacter.svg);
+  animation-name: fly-cycle-comic;
+  animation-timing-function: steps(4);
+}
 @media (max-width: 700px) {
   .bird {
     transform: scale(0.5);
@@ -29,6 +34,10 @@
   animation-duration: 1.1s;
   animation-delay: -0.5s;
 }
+.bird.comic {
+  animation-duration: 0.5s;
+  animation-delay: -0.5s;
+}
 .bird-container {
   position: absolute;
   top: 20%;
@@ -39,6 +48,13 @@
   animation-name: fly-right-one;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+}
+.bird-container.comic {
+  animation-name: fly-right-two;
+  animation-duration: 30s;
+  animation-delay: 0s;
+  top: 70%;
+  z-index: 8;
 }
 .bird-container.one {
   animation-duration: 15s;
@@ -61,6 +77,11 @@
 @keyframes fly-cycle {
   100% {
     background-position: -900px 0;
+  }
+}
+@keyframes fly-cycle-comic {
+  100% {
+    background-position: -366px 0;
   }
 }
 @keyframes fly-right-one {
@@ -105,10 +126,10 @@
   40% {
     transform: translateY(-2.5vh) translateX(70vw) scale(0.5);
   }
-  50% {
-    transform: translateY(0vh) translateX(90vw) scale(0.45);
+  45% {
+    transform: translateY(0vh) translateX(80vw) scale(0.45);
   }
-  51% {
+  46% {
     transform: translateY(0vh) translateX(110vw) scale(0.45);
   }
   100% {
