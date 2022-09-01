@@ -8,7 +8,44 @@
   position: absolute;
   top: 100px;
   z-index: 888;
+  background-image: url(/src/images/crystal-160.jpg);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* animation: shake-sun-glasses 5000ms ease-in-out infinite; */
 }
+/* @media (max-width: 700px) {
+  .heading.css-heading {
+    transform: scale(0.5);
+  }
+} */
+/* .heading.css-heading::after {
+  content: "";
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  top: 59px;
+  left: 30px;
+  border-bottom: 2px solid black;
+  opacity: 0.2;
+  border-bottom-left-radius: 50%;
+} */
+/* @keyframes shake-sun-glasses {
+  2% {
+    transform: rotate(5deg);
+  }
+  4% {
+    transform: rotate(-5deg);
+  }
+  6% {
+    transform: rotate(5deg);
+  }
+  8% {
+    transform: rotate(5deg);
+  }
+  10% {
+    transform: rotate(0);
+  }
+} */
 .css-page p {
   padding: 20px 0;
   font: clamp(0.7rem, 5vw, 1rem) sans-serif;

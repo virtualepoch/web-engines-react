@@ -8,17 +8,14 @@
   position: relative;
   perspective: 1300px;
   perspective-origin: 50% -10%;
-  background: linear-gradient(0deg, rgb(255, 255, 176) 0 47%, transparent 50%), radial-gradient(circle at 50% -10%, yellow 9%, gold 16%, pink 20% 22%, skyblue 40%);
-  border: 7px solid rgb(230, 230, 230);
-  border-top: 10px solid rgb(215, 215, 215);
-  border-bottom: 5px solid rgb(245, 245, 245);
+  background: linear-gradient(0deg, rgb(255, 255, 176) 0 47%, transparent 50%), radial-gradient(circle at 50% 15%, yellow 9%, gold 16%, pink 20% 22%, skyblue 40%);
   overflow: hidden;
 }
 .pyramid {
   width: 400px;
   height: 300px;
   position: absolute;
-  top: 120px;
+  top: 150px;
   z-index: 7;
   transform-style: preserve-3d;
   /* transform: rotateY(30deg); */
@@ -36,7 +33,7 @@
   }
   .pyramid {
     top: 70px;
-    animation: pyramid-rotateY-small 16s linear infinite;
+    animation: pyramid-rotateY-small 25s linear infinite;
   }
 }
 @keyframes pyramid-rotateY-small {
@@ -54,38 +51,45 @@
   backface-visibility: visible;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   transform-origin: 50% 0;
-  background: linear-gradient(turquoise 20%, rgb(0, 0, 0, 0) 20%, rgb(0, 0, 0, 0) 40%, turquoise 40%, turquoise 60%, rgb(0, 0, 0, 0) 60%, rgb(0, 0, 0, 0) 80%, turquoise 80%);
-}
-.pyramid div::after {
-  content: "";
-  width: 400px;
-  height: 300px;
-  position: absolute;
-  background-image: url(/src/images/crystal-640.jpg);
+  /* background: linear-gradient(turquoise 20%, rgb(0, 0, 0, 0) 20%, rgb(0, 0, 0, 0) 40%, turquoise 40%, turquoise 60%, rgb(0, 0, 0, 0) 60%, rgb(0, 0, 0, 0) 80%, turquoise 80%); */
   background-size: 100% 100%;
-  opacity: 0.4;
+  background-image: url(/src/images/crystal-320.jpg);
+  opacity: 0.5;
 }
-@media (max-width: 600px) {
-  .pyramid div {
-    box-shadow: none;
-  }
+.pyramid .front.small,
+.pyramid .back.small,
+.pyramid .left.small,
+.pyramid .right.small {
+  width: 50%;
+  height: 50%;
+  top: 75%;
+  transform: none;
+  opacity: 0.7;
+  background-image: url(/src/images/crystal-80.jpg);
 }
 .pyramid .front {
   transform: rotateX(41.7deg);
 }
+.pyramid .front.small {
+  transform: rotateX(138deg) translateX(50%);
+}
 .pyramid .back {
   transform: rotateY(180deg) rotateX(41.7deg);
 }
-.pyramid .left,
-.pyramid .right {
-  background: linear-gradient(deepskyblue 20%, rgb(0, 0, 0, 0) 20%, rgb(0, 0, 0, 0) 40%, deepskyblue 40%, deepskyblue 60%, rgb(0, 0, 0, 0) 60%, rgb(0, 0, 0, 0) 80%, deepskyblue 80%);
-  box-shadow: inset 0 -5px 13px 5px rgb(0, 0, 0, 0.3);
+.pyramid .back.small {
+  transform: rotateY(180deg) rotateX(138deg) translateX(-50%);
 }
 .pyramid .left {
   transform: rotateY(-90deg) rotateX(41.7deg);
 }
+.pyramid .left.small {
+  transform: translateX(50%) rotateY(-90deg) rotateX(138deg);
+}
 .pyramid .right {
   transform: rotateY(90deg) rotateX(41.7deg);
+}
+.pyramid .right.small {
+  transform: translateX(50%) rotateY(90deg) rotateX(138deg);
 }
 .pyramid .bottom {
   width: 400px;
@@ -93,17 +97,14 @@
   clip-path: none;
   transform-origin: initial;
   transform: rotateX(90deg) translateZ(-24px);
-  background: rgb(0, 255, 255, 0.5);
-}
-.pyramid .bottom::after {
-  display: none;
+  background-image: url(/src/images/crystal-160.jpg);
 }
 .pyramid .bottom.shadow {
   transform: rotateX(90deg) translateZ(-54px);
   border-radius: 20px;
   background: radial-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.2), rgb(0, 0, 0, 0));
 }
-.pyramid-container .floor {
+/* .pyramid-container .floor {
   width: 2000px;
   height: 900px;
   clip-path: none;
@@ -111,5 +112,4 @@
   top: -40px;
   background: linear-gradient(transparent, rgb(255, 0, 0, 0.5), black);
   transform: rotateX(90deg);
-  display: none;
-}
+} */

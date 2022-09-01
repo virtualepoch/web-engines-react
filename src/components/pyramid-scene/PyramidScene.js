@@ -6,9 +6,13 @@ export default function PyramicScene() {
     <div className="pyramid-container">
       <div className="pyramid">
         <div className="front"></div>
+        <div className="front small"></div>
         <div className="right"></div>
+        <div className="right small"></div>
         <div className="back"></div>
+        <div className="back small"></div>
         <div className="left"></div>
+        <div className="left small"></div>
         <div className="bottom"></div>
         <div className="bottom shadow"></div>
       </div>
