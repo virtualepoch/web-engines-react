@@ -9,23 +9,25 @@ export default function PyramicScene() {
         <div className="right"></div>
         <div className="back"></div>
         <div className="left"></div>
+        <div className="bottom"></div>
+        <div className="bottom shadow"></div>
       </div>
       <div className="floor"></div>
 
-      <div class="bird-container bird-container--one">
-        <div class="bird bird--one"></div>
+      <div class="bird-container one">
+        <div class="bird one"></div>
       </div>
 
-      <div class="bird-container bird-container--two">
-        <div class="bird bird--two"></div>
+      <div class="bird-container two">
+        <div class="bird two"></div>
       </div>
 
-      <div class="bird-container bird-container--three">
-        <div class="bird bird--three"></div>
+      <div class="bird-container three">
+        <div class="bird three"></div>
       </div>
 
-      <div class="bird-container bird-container--four">
-        <div class="bird bird--four"></div>
+      <div class="bird-container four">
+        <div class="bird four"></div>
       </div>
 
     </div>
