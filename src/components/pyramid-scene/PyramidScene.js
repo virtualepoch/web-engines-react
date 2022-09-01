@@ -29,7 +29,6 @@ export default function PyramicScene() {
       <div class="bird-container four">
         <div class="bird four"></div>
       </div>
-
     </div>
   );
 }

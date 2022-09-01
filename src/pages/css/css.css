@@ -3,6 +3,12 @@
   flex-direction: column;
   align-items: center;
 }
+.heading.css-heading {
+  margin-top: 0px;
+  position: absolute;
+  top: 100px;
+  z-index: 888;
+}
 .css-page p {
   padding: 20px 0;
   font: clamp(0.7rem, 5vw, 1rem) sans-serif;
