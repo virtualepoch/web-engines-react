@@ -13,6 +13,7 @@ export default function PyramicScene() {
         <div className="back small"></div>
         <div className="left"></div>
         <div className="left small"></div>
+        <div className="logo"></div>
         <div className="bottom"></div>
         <div className="bottom shadow"></div>
       </div>

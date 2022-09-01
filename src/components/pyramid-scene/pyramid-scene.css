@@ -64,7 +64,7 @@
   height: 50%;
   top: 75%;
   transform: none;
-  opacity: 0.7;
+  opacity: 0.3;
   background-image: url(/src/images/crystal-80.jpg);
 }
 .pyramid .front {
@@ -90,6 +90,26 @@
 }
 .pyramid .right.small {
   transform: translateX(50%) rotateY(90deg) rotateX(138deg);
+}
+.pyramid .logo {
+  clip-path: none;
+  width: 50%;
+  height: 50%;
+  background: url(/src/logos/jsive-logo-at-100.png) 50%/50% no-repeat;
+  opacity: 1;
+  transform: translateX(50%) translateY(25%);
+  animation: rotate-opposite 16s linear infinite;
+}
+@media (max-width: 700px) {
+  .pyramid .logo {
+    animation-duration: 25s;
+    background: url(/src/logos/jsive-logo-at-50.png) 50%/50% no-repeat;
+  }
+}
+@keyframes rotate-opposite {
+  to {
+    transform: translateX(50%) translateY(25%) rotateY(-360deg);
+  }
 }
 .pyramid .bottom {
   width: 400px;
