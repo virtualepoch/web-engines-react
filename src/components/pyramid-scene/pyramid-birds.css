@@ -9,7 +9,8 @@
   animation-iteration-count: infinite;
 }
 .bird.comic {
-  background-image: url(/src/images/FlyingGameCharacter.svg);
+  width: 185px;
+  background-image: url(/src/images/FlyingGameCharacter51.png);
   animation-name: fly-cycle-comic;
   animation-timing-function: steps(4);
 }
@@ -81,7 +82,7 @@
 }
 @keyframes fly-cycle-comic {
   100% {
-    background-position: -366px 0;
+    background-position: -736px 0;
   }
 }
 @keyframes fly-right-one {

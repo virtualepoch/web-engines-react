@@ -20,7 +20,7 @@ export default function ToTopBtn() {
       width: "40px",
       height: "40px",
       position: "fixed",
-      left: "10px",
+      right: "10px",
       bottom: "10px",
       zIndex: 8888,
       borderRadius: "50%",

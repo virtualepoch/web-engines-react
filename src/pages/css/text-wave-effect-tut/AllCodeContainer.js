@@ -21,13 +21,13 @@ export default function AllCodeContainer() {
   .text-wave-effect-container h2 {
     position: relative;
     font: 3rem Poppins, sans-serif;
-    color: white;
+    color: blue;
   }
   .text-wave-effect-container h2::after {
     content: "text effects";
     position: absolute;
     left: 0;
-    color: blue;
+    color: aqua;
     animation: wave-text-anim 3s ease-in-out infinite;
   }
   @keyframes wave-text-anim {

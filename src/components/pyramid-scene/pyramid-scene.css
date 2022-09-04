@@ -103,7 +103,7 @@
 @media (max-width: 700px) {
   .pyramid .logo {
     animation-duration: 25s;
-    background: url(/src/logos/jsive-logo-at-50.png) 50%/50% no-repeat;
+    background: url(/src/logos/jsive-logo-at-75.png) 50%/50% no-repeat;
   }
 }
 @keyframes rotate-opposite {
