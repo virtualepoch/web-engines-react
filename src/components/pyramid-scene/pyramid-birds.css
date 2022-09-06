@@ -1,8 +1,10 @@
 .bird {
   background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg);
   background-size: auto 100%;
-  width: 88px;
-  height: 125px;
+  /* width: 88px;
+  height: 125px; ==THESE ARE THE ORIGINAL SIZES */
+  width: 100%;
+  aspect-ratio: 8/12;
   will-change: background-position;
   animation-name: fly-cycle;
   animation-timing-function: steps(10);
@@ -14,11 +16,11 @@
   animation-name: fly-cycle-comic;
   animation-timing-function: steps(4);
 } */
-@media (max-width: 700px) {
+/* @media (max-width: 700px) {
   .bird {
     transform: scale(0.5);
   }
-}
+} */
 .bird.one {
   animation-duration: 1s;
   animation-delay: -0.5s;
@@ -40,8 +42,10 @@
   animation-delay: -0.5s;
 } */
 .bird-container {
+  width: 5%;
+  aspect-ratio: 8/12;
   position: absolute;
-  top: 20%;
+  top: 30%;
   left: -10%;
   z-index: 8;
   transform: scale(0) translateX(-10vw);
@@ -64,7 +68,8 @@
 .bird-container.two {
   animation-duration: 16s;
   animation-delay: 1s;
-  z-index: 6;
+  z-index: 888;
+  animation-name: fly-right-two;
 }
 .bird-container.three {
   animation-duration: 14.6s;
@@ -73,23 +78,25 @@
 .bird-container.four {
   animation-duration: 16s;
   animation-delay: 10.25s;
-  z-index: 6;
+  z-index: 888;
+  animation-name: fly-right-two;
 }
-@media (max-width: 700px) {
+/* @media (max-width: 700px) {
   .bird-container.four {
     display: none;
   }
-}
+} */
 @keyframes fly-cycle {
   100% {
-    background-position: -900px 0;
+    /* background-position: -900px 0; ==THIS IS THE ORIGINAL SIZING */
+    background-position: -110% 0;
   }
 }
-@keyframes fly-cycle-comic {
+/* @keyframes fly-cycle-comic {
   100% {
     background-position: -736px 0;
   }
-}
+} */
 @keyframes fly-right-one {
   0% {
     transform: scale(0.3) translateX(-10vw);
@@ -127,7 +134,7 @@
     transform: translateY(-4vh) translateX(30vw) scale(0.6);
   }
   30% {
-    transform: translateY(1vh) translateX(50vw) scale(0.45);
+    transform: translateY(3vh) translateX(50vw) scale(0.45);
   }
   40% {
     transform: translateY(-2.5vh) translateX(70vw) scale(0.5);
