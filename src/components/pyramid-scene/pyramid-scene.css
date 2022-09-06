@@ -17,7 +17,7 @@
   aspect-ratio: 4/3;
   position: absolute;
   bottom: 15%;
-  z-index: 0;
+  z-index: 7;
   transform-style: preserve-3d;
   /* transform: rotateY(30deg); */
   animation: pyramid-rotateY 33s linear infinite;

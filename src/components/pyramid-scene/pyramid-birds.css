@@ -68,7 +68,7 @@
 .bird-container.two {
   animation-duration: 16s;
   animation-delay: 1s;
-  z-index: 888;
+  z-index: 6;
   animation-name: fly-right-two;
 }
 .bird-container.three {
@@ -78,7 +78,7 @@
 .bird-container.four {
   animation-duration: 16s;
   animation-delay: 10.25s;
-  z-index: 888;
+  z-index: 6;
   animation-name: fly-right-two;
 }
 /* @media (max-width: 700px) {
@@ -137,7 +137,7 @@
     transform: translateY(3vh) translateX(50vw) scale(0.45);
   }
   40% {
-    transform: translateY(-2.5vh) translateX(70vw) scale(0.5);
+    transform: translateY(2.5vh) translateX(70vw) scale(0.5);
   }
   45% {
     transform: translateY(0vh) translateX(80vw) scale(0.45);
