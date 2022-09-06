@@ -1,14 +1,15 @@
 .pyramid-container {
   /* width: calc(100% - 20px); do this if you want 10px margins*/
   width: 100%;
-  height: 500px;
+  aspect-ratio: 16/9;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   perspective: 1300px;
   perspective-origin: 50% -10%;
-  background: linear-gradient(0deg, rgb(255, 255, 176) 0 47%, transparent 50%), radial-gradient(circle at 50% 15%, yellow 9%, gold 16%, pink 20% 22%, skyblue 40%);
+  /* background: linear-gradient(0deg, rgb(255, 255, 176) 0 47%, transparent 50%), radial-gradient(circle at 50% 15%, yellow 9%, gold 16%, pink 20% 22%, skyblue 40%); */
+  background: url(/src/images/sunset-water16-9.jpg) 50%/100% 100%;
   overflow: hidden;
 }
 .pyramid {
@@ -19,21 +20,22 @@
   z-index: 7;
   transform-style: preserve-3d;
   /* transform: rotateY(30deg); */
-  animation: pyramid-rotateY 16s linear infinite;
+  animation: pyramid-rotateY 33s linear infinite;
 }
 @keyframes pyramid-rotateY {
   100% {
     transform: rotateY(360deg);
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 500px) {
   .pyramid-container {
-    height: 400px;
     perspective: 1000px;
+    aspect-ratio: 4/3;
+    background: url(/src/images/sunset-water4-3w300.jpg) 50% / 100% 100%;
   }
   .pyramid {
     top: 70px;
-    animation: pyramid-rotateY-small 25s linear infinite;
+    animation: pyramid-rotateY-small 33s linear infinite;
   }
 }
 @keyframes pyramid-rotateY-small {

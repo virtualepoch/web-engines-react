@@ -35,9 +35,9 @@ export default function PyramicScene() {
         <div class="bird four"></div>
       </div>
 
-      <div class="bird-container comic">
+      {/* <div class="bird-container comic">
         <div class="bird comic"></div>
-      </div>
+      </div> */}
     </div>
   );
 }
