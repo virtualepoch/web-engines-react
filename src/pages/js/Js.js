@@ -1,11 +1,19 @@
 import React, { useRef, useEffect } from "react";
 import "./js.css";
+import RainCanvas from "../../components/RainCanvas";
 
 export default function Js() {
+  const heading = useRef(null);
+  const textContainer1 = useRef(null);
+  const textContainer2 = useRef(null);
   const textBox1 = useRef(null);
   const textBox2 = useRef(null);
 
   useEffect(() => {
+    heading.current.classList.add("load");
+    textContainer1.current.classList.add("load");
+    textContainer2.current.classList.add("load");
+
     const phrase1 = "Hello";
     const phrase2 = "Universe";
     let i = 0;
@@ -19,9 +27,11 @@ export default function Js() {
         i++;
       }
       textBox1.current.innerHTML = text1.join("");
-      setTimeout(typePhrase1, 250);
+      setTimeout(typePhrase1, 300);
     }
-    typePhrase1();
+    setTimeout(function () {
+      typePhrase1();
+    }, 2250);
 
     function typePhrase2() {
       if (j < phrase2.length) {
@@ -29,35 +39,26 @@ export default function Js() {
         j++;
       }
       textBox2.current.innerHTML = text2.join("");
-      setTimeout(typePhrase2, 250);
+      setTimeout(typePhrase2, 300);
     }
     setTimeout(function () {
       typePhrase2();
-    }, 1250);
+    }, 4250);
   }, []);
 
   return (
     <div className="javascript-page">
-      <h1 className="heading">JavaScript Tutorials</h1>
-      <p>This section is currently being updated. Thanks for your patience.</p>
-      <div className="typed-text-box">
-        TEXT BOX 1<h2 className="typed-text" ref={textBox1}></h2>
+      <h1 className="heading" ref={heading}>
+        JavaScript Tutorials
+      </h1>
+      <p className="hero-text">Let's add some functionality to our web apps with JavaScript!</p>
+      <div className="typed-text-box text-box-1" ref={textContainer1}>
+        <h2 className="typed-text" ref={textBox1}></h2>
       </div>
-      <div className="typed-text-box">
-        TEXT BOX 2<h2 className="typed-text" ref={textBox2}></h2>
+      <div className="typed-text-box text-box-2" ref={textContainer2}>
+        <h2 className="typed-text" ref={textBox2}></h2>
       </div>
-      <div className="transform-origin-box">
-        <div className="transform-triangle">
-          <div className="front"></div>
-          <div className="front-small small"></div>
-          <div className="back"></div>
-          <div className="back-small small"></div>
-          <div className="left"></div>
-          <div className="left-small small"></div>
-          <div className="right"></div>
-          <div className="right-small small"></div>
-        </div>
-      </div>
+      <RainCanvas />
     </div>
   );
 }

@@ -18,6 +18,7 @@
   justify-content: space-around;
   text-align: center;
   color: white;
+  pointer-events: none;
 }
 .text-box h1 {
   padding: 33px 5px 5px 5px;

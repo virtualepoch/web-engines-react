@@ -69,7 +69,6 @@
   animation-duration: 16s;
   animation-delay: 1s;
   z-index: 6;
-  animation-name: fly-right-two;
 }
 .bird-container.three {
   animation-duration: 14.6s;
@@ -79,7 +78,6 @@
   animation-duration: 16s;
   animation-delay: 10.25s;
   z-index: 6;
-  animation-name: fly-right-two;
 }
 /* @media (max-width: 700px) {
   .bird-container.four {
