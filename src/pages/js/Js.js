@@ -63,17 +63,20 @@ export default function Js() {
   const rainCanvasContainer = useRef(null);
   const javascriptPage = useRef(null);
 
-  function displayCard1() {
+  function startJSTut() {
     rainCanvasContainer.current.classList.add("load");
     javascriptPage.current.classList.add("sub-heading-part");
-    javascriptPage.current.classList.add("display-card-1");
-    javascriptPage.current.classList.remove("display-card-2");
+    javascriptPage.current.classList.add("display-card-1-initial");
   }
   function backToLanding() {
     rainCanvasContainer.current.classList.remove("load");
     javascriptPage.current.classList.remove("display-card-1");
+    javascriptPage.current.classList.remove("display-card-1-initial");
     javascriptPage.current.classList.remove("sub-heading-part");
-
+  }
+  function displayCard1() {
+    javascriptPage.current.classList.add("display-card-1");
+    javascriptPage.current.classList.remove("display-card-2");
   }
   function displayCard2() {
     javascriptPage.current.classList.remove("display-card-1");
@@ -93,7 +96,7 @@ export default function Js() {
       <h2 className="sub-heading sub-heading-1">Let's add some functionality to our web apps with JavaScript!</h2>
       <h2 className="sub-heading sub-heading-2">You can continue with this fun and interactive tutorial or jump straight to a tut of your choice from the JavaScript drop-down menu.</h2>
       <div className="action-btn-container" ref={actionBtnContainer}>
-        <div className="action-btn action-btn-1" onClick={displayCard1}>
+        <div className="action-btn action-btn-1" onClick={startJSTut}>
           <p ref={textBox1}></p>
           <p ref={textBox2}></p>
           <p ref={textBox3}></p>

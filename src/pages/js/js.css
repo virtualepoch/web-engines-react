@@ -129,9 +129,22 @@
   max-width: 700px;
   font: clamp(0.8rem, 5vw, 1.2rem) sans-serif;
 }
+/* JS TUT START */
+.javascript-page.display-card-1-initial .javascript-card-1 {
+  transition: all 0.8s ease-in-out 1.5s;
+  transform: scale(1);
+}
+.javascript-page.display-card-1-initial .action-btn-1,
+.javascript-page.display-card-1-initial .action-btn-3,
+.javascript-page.display-card-1-initial .action-btn-4 {
+  display: none;
+}
+.javascript-page.display-card-1-initial .action-btn-2 {
+  display: flex;
+}
 /* DISPLAY CARD 1 */
 .javascript-page.display-card-1 .javascript-card-1 {
-  transition: all 0.8s ease-in-out 1.5s;
+  transition: all 0.8s ease-in-out;
   transform: scale(1);
 }
 .javascript-page.display-card-1 .action-btn-1,
