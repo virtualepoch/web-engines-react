@@ -60,22 +60,35 @@ export default function Js() {
     }, 3000);
   }, []);
 
+  const rainCanvasContainer = useRef(null);
+  const javascriptPage = useRef(null);
+
+  function changeAnim() {
+    rainCanvasContainer.current.classList.add("load");
+    javascriptPage.current.classList.add("load");
+  }
+
   return (
-    <div className="javascript-page">
+    <div className="javascript-page" ref={javascriptPage}>
       <h1 className="heading" ref={heading}>
         JavaScript Tutorials
       </h1>
       <div className="border-effect-box-js"></div>
-      <h2 className="sub-heading">Let's add some functionality to our web apps with JavaScript!</h2>
-      <h2 className="sub-heading">You can continue with this fun and interactive tutorial or jump straight to a tut of your choice in the JavaScript drop-down menu.</h2>
+      <h2 className="sub-heading sub-heading-1">Let's add some functionality to our web apps with JavaScript!</h2>
+      <h2 className="sub-heading sub-heading-2">You can continue with this fun and interactive tutorial or jump straight to a tut of your choice in the JavaScript drop-down menu.</h2>
       <div className="action-btn-container" ref={actionBtnContainer}>
-        <div className="action-btn">
+        <div className="action-btn" onClick={changeAnim}>
           <p ref={textBox1}></p>
           <p ref={textBox2}></p>
           <p ref={textBox3}></p>
         </div>
       </div>
-      <RainCanvas />
+      <div className="rain-canvas-container" ref={rainCanvasContainer}>
+        <RainCanvas />
+      </div>
+      <div className="javascript-section-1">
+        <p>JavaScript is used to make a web page interactive. It takes in user inputs and interactions and makes computations and changes based on the input.</p>
+      </div>
     </div>
   );
 }
