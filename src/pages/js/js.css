@@ -33,10 +33,6 @@
   z-index: 10;
   transform: scale(0);
 }
-.javascript-page .action-btn-container.load {
-  transition: 1s ease-in 1s;
-  transform: scale(1);
-}
 .javascript-page .action-btn {
   width: 200px;
   height: 40px;
@@ -52,34 +48,18 @@
   box-shadow: inset 3px -3px 4px 1px rgb(0, 0, 0, 0.5);
   animation: js-pulse 4s ease-in-out infinite 2s;
   cursor: pointer;
+  display: none;
 }
 @keyframes js-pulse {
   50% {
     transform: scale(1.03);
   }
 }
-.javascript-page .action-btn-2 {
-  display: none;
+.javascript-page .action-btn-container.load {
+  transition: 1s ease-in 1s;
+  transform: scale(1);
 }
-.javascript-page.load .action-btn-1 {
-  display: none;
-}
-.javascript-page.load .action-btn-2 {
-  display: flex;
-}
-.javascript-page.act-btn-3 .action-btn-2 {
-  display: none;
-}
-.javascript-page .action-btn-3 {
-  display: none;
-}
-.javascript-page.act-btn-3 .action-btn-3 {
-  display: flex;
-}
-.javascript-page .action-btn-4 {
-  display: none;
-}
-.javascript-page.act-btn-4 .action-btn-4 {
+.action-btn-container.load .action-btn-1 {
   display: flex;
 }
 .rain-canvas-container {
@@ -104,7 +84,7 @@
   transform: translateX(0);
   opacity: 1;
 }
-.javascript-page.load .sub-heading-1 {
+.javascript-page.sub-heading-part .sub-heading-1 {
   transition: 0.8s ease-in-out;
   transform: translateX(-100vw);
   opacity: 0;
@@ -114,7 +94,7 @@
   transform: translateX(0);
   opacity: 1;
 }
-.javascript-page.load .sub-heading-2 {
+.javascript-page.sub-heading-part .sub-heading-2 {
   transition: 0.8s ease-in-out;
   transform: translateX(100vw);
   opacity: 0;
@@ -144,27 +124,68 @@
 }
 .javascript-page .javascript-card-1 p,
 .javascript-page .javascript-card-2 p,
-.javascript-page .javascript-card-2 p {
+.javascript-page .javascript-card-3 p {
   width: 80%;
   max-width: 700px;
   font: clamp(0.8rem, 5vw, 1.2rem) sans-serif;
 }
-.javascript-page.load .javascript-card-1 {
+/* DISPLAY CARD 1 */
+.javascript-page.display-card-1 .javascript-card-1 {
   transition: all 0.8s ease-in-out 1.5s;
   transform: scale(1);
 }
-.action-btn-2-back {
+.javascript-page.display-card-1 .action-btn-1,
+.javascript-page.display-card-1 .action-btn-3,
+.javascript-page.display-card-1 .action-btn-4 {
+  display: none;
+}
+.javascript-page.display-card-1 .action-btn-2 {
+  display: flex;
+}
+/* DISPLAY CARD 2 */
+.javascript-page.display-card-2 .javascript-card-2 {
+  transition: all 0.8s ease-in-out;
+  transform: scale(1);
+}
+.javascript-page.display-card-2 .javascript-card-1,
+.javascript-page.display-card-2 .javascript-card-3 {
+  transition: all 0.8s ease-in-out;
+  transform: scale(0);
+}
+.javascript-page.display-card-2 .action-btn-1,
+.javascript-page.display-card-2 .action-btn-2,
+.javascript-page.display-card-2 .action-btn-4 {
+  display: none;
+}
+.javascript-page.display-card-2 .action-btn-3 {
+  display: flex;
+}
+/* DISPLAY CARD 3 */
+.javascript-page.display-card-3 .javascript-card-3 {
+  transition: all 0.8s ease-in-out;
+  transform: scale(1);
+}
+.javascript-page.display-card-3 .javascript-card-1,
+.javascript-page.display-card-3 .javascript-card-2 {
+  transition: all 0.8s ease-in-out;
+  transform: scale(0);
+}
+.javascript-page.display-card-3 .action-btn-1,
+.javascript-page.display-card-3 .action-btn-2,
+.javascript-page.display-card-3 .action-btn-3 {
+  display: none;
+}
+.javascript-page.display-card-3 .action-btn-4 {
+  display: flex;
+}
+
+.action-btn-2-back,
+.action-btn-3-back {
   width: 100%;
   border-right: 1px solid white;
 }
-.action-btn-2-forward {
+.action-btn-2-forward,
+.action-btn-3-forward {
   width: 100%;
   border-left: 1px solid white;
-}
-.javascript-card-1.clear {
-  transform: scale(0);
-}
-.javascript-card-2.open {
-  transform: scale(1);
-  background-color: gray;
 }

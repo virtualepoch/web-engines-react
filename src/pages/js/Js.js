@@ -62,41 +62,27 @@ export default function Js() {
 
   const rainCanvasContainer = useRef(null);
   const javascriptPage = useRef(null);
-  const jsCard1 = useRef(null);
-  const jsCard2 = useRef(null);
-  const jsCard3 = useRef(null);
 
-  function moveForward() {
+  function displayCard1() {
     rainCanvasContainer.current.classList.add("load");
-    javascriptPage.current.classList.add("load");
+    javascriptPage.current.classList.add("sub-heading-part");
+    javascriptPage.current.classList.add("display-card-1");
+    javascriptPage.current.classList.remove("display-card-2");
   }
-  function moveBack() {
+  function backToLanding() {
     rainCanvasContainer.current.classList.remove("load");
-    javascriptPage.current.classList.remove("load");
-    jsCard2.current.classList.remove("open");
-    javascriptPage.current.classList.remove("act-btn-2");
+    javascriptPage.current.classList.remove("display-card-1");
+    javascriptPage.current.classList.remove("sub-heading-part");
+
   }
-  function moveForward2() {
-    jsCard1.current.classList.add("clear");
-    jsCard2.current.classList.add("open");
-    javascriptPage.current.classList.add("act-btn-3");
+  function displayCard2() {
+    javascriptPage.current.classList.remove("display-card-1");
+    javascriptPage.current.classList.remove("display-card-3");
+    javascriptPage.current.classList.add("display-card-2");
   }
-  function moveBack2() {
-    jsCard1.current.classList.remove("clear");
-    jsCard2.current.classList.remove("open");
-    javascriptPage.current.classList.remove("act-btn-3");
-    javascriptPage.current.classList.add("act-btn-2");
-  }
-  function moveForward3() {
-    jsCard2.current.classList.add("clear");
-    jsCard3.current.classList.add("open");
-    javascriptPage.current.classList.add("act-btn-4");
-  }
-  function moveBack3() {
-    jsCard1.current.classList.remove("clear");
-    jsCard2.current.classList.remove("open");
-    javascriptPage.current.classList.remove("act-btn-4");
-    javascriptPage.current.classList.add("act-btn-3");
+  function displayCard3() {
+    javascriptPage.current.classList.remove("display-card-2");
+    javascriptPage.current.classList.add("display-card-3");
   }
 
   return (
@@ -107,42 +93,42 @@ export default function Js() {
       <h2 className="sub-heading sub-heading-1">Let's add some functionality to our web apps with JavaScript!</h2>
       <h2 className="sub-heading sub-heading-2">You can continue with this fun and interactive tutorial or jump straight to a tut of your choice from the JavaScript drop-down menu.</h2>
       <div className="action-btn-container" ref={actionBtnContainer}>
-        <div className="action-btn action-btn-1" onClick={moveForward}>
+        <div className="action-btn action-btn-1" onClick={displayCard1}>
           <p ref={textBox1}></p>
           <p ref={textBox2}></p>
           <p ref={textBox3}></p>
         </div>
         <div className="action-btn action-btn-2">
-          <p className="action-btn-2-back" onClick={moveBack}>
+          <p className="action-btn-2-back" onClick={backToLanding}>
             Prev/
           </p>
-          <p className="action-btn-2-forward" onClick={moveForward2}>
+          <p className="action-btn-2-forward" onClick={displayCard2}>
             /Next
           </p>
         </div>
         <div className="action-btn action-btn-3">
-          <p className="action-btn-3-back" onClick={moveBack2}>
+          <p className="action-btn-3-back" onClick={displayCard1}>
             Prev/
           </p>
-          <p className="action-btn-3-forward" onClick={moveForward3}>
+          <p className="action-btn-3-forward" onClick={displayCard3}>
             /Next
           </p>
         </div>
-        <div className="action-btn action-btn-4" onClick={moveBack3}>
+        <div className="action-btn action-btn-4" onClick={displayCard2}>
           BACK
         </div>
       </div>
       <div className="rain-canvas-container" ref={rainCanvasContainer}>
         <RainCanvas />
       </div>
-      <div className="javascript-card-1" ref={jsCard1}>
-        <p>JavaScript is used to make a web page interactive. It takes in user inputs and interactions and makes computations and changes based on the input.</p>
+      <div className="javascript-card-1">
+        <p>CARD 1 -JavaScript is used to make a web page interactive. It takes in user inputs and interactions and makes computations and changes based on the input.</p>
       </div>
-      <div className="javascript-card-2" ref={jsCard2}>
-        <p>One of the most common things JavaScript is used for is to make things on a webpage change when a user taps or clicks objects on the screen.</p>
+      <div className="javascript-card-2">
+        <p>CARD 2 -One of the most common things JavaScript is used for is to make things on a webpage change when a user taps or clicks objects on the screen.</p>
       </div>
-      <div className="javascript-card-3" ref={jsCard3}>
-        <p>Tap pr Click the color box below and we'll demonstrate how JavaScript works.</p>
+      <div className="javascript-card-3">
+        <p>CARD 3 -Tap pr Click the color box below and we'll demonstrate how JavaScript works.</p>
       </div>
     </div>
   );
