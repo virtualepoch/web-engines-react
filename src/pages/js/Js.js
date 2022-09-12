@@ -62,6 +62,8 @@ export default function Js() {
 
   const rainCanvasContainer = useRef(null);
   const javascriptPage = useRef(null);
+  const jsSection1 = useRef(null);
+  const jsSection2 = useRef(null);
 
   function changeAnim() {
     rainCanvasContainer.current.classList.add("load");
@@ -70,6 +72,13 @@ export default function Js() {
   function changeAnimBack() {
     rainCanvasContainer.current.classList.remove("load");
     javascriptPage.current.classList.remove("load");
+    jsSection2.current.classList.remove("open");
+    javascriptPage.current.classList.remove("act-btn-3");
+  }
+  function moveForward() {
+    jsSection1.current.classList.add("clear");
+    jsSection2.current.classList.add("open");
+    javascriptPage.current.classList.add("act-btn-3");
   }
 
   return (
@@ -86,15 +95,25 @@ export default function Js() {
           <p ref={textBox3}></p>
         </div>
         <div className="action-btn action-btn-2">
-          <p className="action-btn-2-back" onClick={changeAnimBack} >Prev/</p>
-          <p className="action-btn-2-forward">/Next</p>
+          <p className="action-btn-2-back" onClick={changeAnimBack}>
+            Prev/
+          </p>
+          <p className="action-btn-2-forward" onClick={moveForward}>
+            /Next
+          </p>
+        </div>
+        <div className="action-btn action-btn-3" onClick={changeAnimBack}>
+          BACK
         </div>
       </div>
       <div className="rain-canvas-container" ref={rainCanvasContainer}>
         <RainCanvas />
       </div>
-      <div className="javascript-section-1">
+      <div className="javascript-section-1" ref={jsSection1}>
         <p>JavaScript is used to make a web page interactive. It takes in user inputs and interactions and makes computations and changes based on the input.</p>
+      </div>
+      <div className="javascript-section-2" ref={jsSection2}>
+        <p>One of the most common things JavaScript is used for is to make things on a webpage change when a user taps or clicks objects on the screen.</p>
       </div>
     </div>
   );
