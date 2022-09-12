@@ -7,16 +7,50 @@
   background: black;
 }
 .javascript-page .heading {
-  position: relative;
-  top: -50px;
   z-index: 2;
   color: white;
   transform: scale(0);
 }
 .javascript-page .heading.load {
-  transition: 1.7s ease-in;
-  top: 0;
+  transition: 1.5s ease-in;
   transform: scale(1);
+}
+.javascript-page .border-effect-box-js {
+  width: 80%;
+  max-width: 500px;
+  height: 2px;
+  position: relative;
+  z-index: 2;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  overflow: hidden;
+}
+.javascript-page .border-effect-box-js::before {
+  content: "";
+  width: 700px;
+  height: 700px;
+  position: absolute;
+  left: -20%;
+  top: -450px;
+  background: conic-gradient(from 0.75turn, aqua, rgb(0, 0, 0, 0), rgb(0, 0, 0, 0));
+  animation: rotate 8s infinite linear 1.5s;
+}
+@keyframes rotate {
+  25% {
+    transform: rotate(-360deg);
+  }
+  50% {
+    transform: rotate(-720deg);
+  }
+  75% {
+    transform: rotate(-1400deg);
+  }
+  80% {
+    transform: rotate(-2480deg);
+  }
+  100% {
+    transform: rotate(-3960deg);
+  }
 }
 .javascript-page h2 {
   max-width: 500px;
@@ -36,7 +70,7 @@
   transform: scale(0);
 }
 .javascript-page .action-btn-container.load {
-  transition: 1s ease-in 7s;
+  transition: 1s ease-in 1s;
   transform: scale(1);
 }
 .javascript-page .action-btn {
@@ -51,26 +85,11 @@
   /* border: 1px solid white; */
   border-radius: 40px;
   background: linear-gradient(45deg, rgb(255, 255, 255), rgb(255, 255, 255, 0.5), rgb(255, 255, 255, 0.3), rgb(255, 255, 255, 0.5), rgb(255, 255, 255, 0.3), rgb(255, 255, 255, 0.5), rgb(255, 255, 255));
-  box-shadow: inset 3px -3px 4px 1px rgb(0, 0, 0, 0.5), 0 0 5px 2px white;
-  animation: pulse 3s ease-in-out infinite 8s;
+  box-shadow: inset 3px -3px 4px 1px rgb(0, 0, 0, 0.5), 0 0 10px 2px rgb(255, 255, 255, 0.5);
+  animation: pulse 2s ease-in-out infinite 2s;
 }
 @keyframes pulse {
   50% {
-    transform: scale(1.08) rotate(0);
-  }
-  53% {
-    transform: scale(1.08) rotate(3deg);
-  }
-  56% {
-    transform: scale(1.08) rotate(-3deg);
-  }
-  59% {
-    transform: scale(1.08) rotate(3deg);
-  }
-  62% {
-    transform: scale(1.08) rotate(-3deg);
-  }
-  66% {
-    transform: scale(1.08) rotate(0);
+    transform: scale(1.03);
   }
 }
