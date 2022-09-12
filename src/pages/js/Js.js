@@ -67,20 +67,27 @@ export default function Js() {
     rainCanvasContainer.current.classList.add("load");
     javascriptPage.current.classList.add("load");
   }
+  function changeAnimBack() {
+    rainCanvasContainer.current.classList.remove("load");
+    javascriptPage.current.classList.remove("load");
+  }
 
   return (
     <div className="javascript-page" ref={javascriptPage}>
       <h1 className="heading" ref={heading}>
         JavaScript Tutorials
       </h1>
-      <div className="border-effect-box-js"></div>
       <h2 className="sub-heading sub-heading-1">Let's add some functionality to our web apps with JavaScript!</h2>
       <h2 className="sub-heading sub-heading-2">You can continue with this fun and interactive tutorial or jump straight to a tut of your choice in the JavaScript drop-down menu.</h2>
       <div className="action-btn-container" ref={actionBtnContainer}>
-        <div className="action-btn" onClick={changeAnim}>
+        <div className="action-btn action-btn-1" onClick={changeAnim}>
           <p ref={textBox1}></p>
           <p ref={textBox2}></p>
           <p ref={textBox3}></p>
+        </div>
+        <div className="action-btn action-btn-2">
+          <p className="action-btn-2-back" onClick={changeAnimBack} >Prev/</p>
+          <p className="action-btn-2-forward">/Next</p>
         </div>
       </div>
       <div className="rain-canvas-container" ref={rainCanvasContainer}>
