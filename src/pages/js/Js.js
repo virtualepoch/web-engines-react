@@ -62,22 +62,40 @@ export default function Js() {
 
   const rainCanvasContainer = useRef(null);
   const javascriptPage = useRef(null);
-  const jsSection1 = useRef(null);
-  const jsSection2 = useRef(null);
+  const jsCard1 = useRef(null);
+  const jsCard2 = useRef(null);
+  const jsCard3 = useRef(null);
 
-  function changeAnim() {
+  function moveForward() {
     rainCanvasContainer.current.classList.add("load");
     javascriptPage.current.classList.add("load");
   }
-  function changeAnimBack() {
+  function moveBack() {
     rainCanvasContainer.current.classList.remove("load");
     javascriptPage.current.classList.remove("load");
-    jsSection2.current.classList.remove("open");
-    javascriptPage.current.classList.remove("act-btn-3");
+    jsCard2.current.classList.remove("open");
+    javascriptPage.current.classList.remove("act-btn-2");
   }
-  function moveForward() {
-    jsSection1.current.classList.add("clear");
-    jsSection2.current.classList.add("open");
+  function moveForward2() {
+    jsCard1.current.classList.add("clear");
+    jsCard2.current.classList.add("open");
+    javascriptPage.current.classList.add("act-btn-3");
+  }
+  function moveBack2() {
+    jsCard1.current.classList.remove("clear");
+    jsCard2.current.classList.remove("open");
+    javascriptPage.current.classList.remove("act-btn-3");
+    javascriptPage.current.classList.add("act-btn-2");
+  }
+  function moveForward3() {
+    jsCard2.current.classList.add("clear");
+    jsCard3.current.classList.add("open");
+    javascriptPage.current.classList.add("act-btn-4");
+  }
+  function moveBack3() {
+    jsCard1.current.classList.remove("clear");
+    jsCard2.current.classList.remove("open");
+    javascriptPage.current.classList.remove("act-btn-4");
     javascriptPage.current.classList.add("act-btn-3");
   }
 
@@ -87,33 +105,44 @@ export default function Js() {
         JavaScript Tutorials
       </h1>
       <h2 className="sub-heading sub-heading-1">Let's add some functionality to our web apps with JavaScript!</h2>
-      <h2 className="sub-heading sub-heading-2">You can continue with this fun and interactive tutorial or jump straight to a tut of your choice in the JavaScript drop-down menu.</h2>
+      <h2 className="sub-heading sub-heading-2">You can continue with this fun and interactive tutorial or jump straight to a tut of your choice from the JavaScript drop-down menu.</h2>
       <div className="action-btn-container" ref={actionBtnContainer}>
-        <div className="action-btn action-btn-1" onClick={changeAnim}>
+        <div className="action-btn action-btn-1" onClick={moveForward}>
           <p ref={textBox1}></p>
           <p ref={textBox2}></p>
           <p ref={textBox3}></p>
         </div>
         <div className="action-btn action-btn-2">
-          <p className="action-btn-2-back" onClick={changeAnimBack}>
+          <p className="action-btn-2-back" onClick={moveBack}>
             Prev/
           </p>
-          <p className="action-btn-2-forward" onClick={moveForward}>
+          <p className="action-btn-2-forward" onClick={moveForward2}>
             /Next
           </p>
         </div>
-        <div className="action-btn action-btn-3" onClick={changeAnimBack}>
+        <div className="action-btn action-btn-3">
+          <p className="action-btn-3-back" onClick={moveBack2}>
+            Prev/
+          </p>
+          <p className="action-btn-3-forward" onClick={moveForward3}>
+            /Next
+          </p>
+        </div>
+        <div className="action-btn action-btn-4" onClick={moveBack3}>
           BACK
         </div>
       </div>
       <div className="rain-canvas-container" ref={rainCanvasContainer}>
         <RainCanvas />
       </div>
-      <div className="javascript-section-1" ref={jsSection1}>
+      <div className="javascript-card-1" ref={jsCard1}>
         <p>JavaScript is used to make a web page interactive. It takes in user inputs and interactions and makes computations and changes based on the input.</p>
       </div>
-      <div className="javascript-section-2" ref={jsSection2}>
+      <div className="javascript-card-2" ref={jsCard2}>
         <p>One of the most common things JavaScript is used for is to make things on a webpage change when a user taps or clicks objects on the screen.</p>
+      </div>
+      <div className="javascript-card-3" ref={jsCard3}>
+        <p>Tap pr Click the color box below and we'll demonstrate how JavaScript works.</p>
       </div>
     </div>
   );
