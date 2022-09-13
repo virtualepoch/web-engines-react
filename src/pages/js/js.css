@@ -62,7 +62,8 @@
 .action-btn-container.load .action-btn-1 {
   display: flex;
 }
-.rain-canvas-container {
+.rain-canvas-container-dark,
+.rain-canvas-container-light {
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -73,7 +74,11 @@
   z-index: 1;
   transition: 0.5s ease-in-out 0.2s;
 }
-.rain-canvas-container.load {
+.rain-canvas-container-light {
+  display: none;
+}
+.rain-canvas-container-dark.load,
+.rain-canvas-container-light.load {
   height: calc(100vh - 50px);
   transition: 2s ease-in-out 0.5s;
   transform: scale(20);
@@ -201,4 +206,41 @@
 .action-btn-3-forward {
   width: 100%;
   border-left: 1px solid white;
+}
+.dark-light-theme-btn {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 12;
+  border-radius: 50%;
+  background: rgb(255, 255, 200);
+  box-shadow: 0 0 10px 1px red;
+}
+.javascript-page.theme-light {
+  background: white;
+}
+.javascript-page.theme-light .heading,
+.javascript-page.theme-light h2,
+.javascript-page.theme-light .javascript-card-1,
+.javascript-page.theme-light .javascript-card-2,
+.javascript-page.theme-light .javascript-card-3 {
+  color: black;
+}
+.javascript-page.theme-light .javascript-card-1,
+.javascript-page.theme-light .javascript-card-2,
+.javascript-page.theme-light .javascript-card-3 {
+  background: white;
+  border: 1px solid;
+}
+.rain-canvas-container-dark.remove {
+  display: none;
+}
+.rain-canvas-container-light.add {
+  display: block;
+}
+.javascript-page.theme-light .dark-light-theme-btn {
+  background: radial-gradient(circle at 80% 50%, darkgray 55%, black);
+  box-shadow: 0 0 10px 1px black;
 }

@@ -98,5 +98,5 @@ export default function RainCanvas() {
     });
   }, []);
 
-  return <canvas id="rain-canvas" ref={canvasRef}></canvas>;
+  return <canvas id="rain-canvas-dark" ref={canvasRef}></canvas>;
 }

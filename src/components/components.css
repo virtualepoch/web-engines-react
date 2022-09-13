@@ -1,4 +1,5 @@
-#rain-canvas {
+#rain-canvas-dark,
+#rain-canvas-light {
   width: 100%;
   height: 100%;
 }

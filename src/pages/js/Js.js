@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import "./js.css";
-import RainCanvas from "../../components/RainCanvas";
+import RainCanvasDark from "../../components/RainCanvasDark";
+import RainCanvasLight from "../../components/RainCanvasLight";
 
 export default function Js() {
   const heading = useRef(null);
@@ -60,16 +61,19 @@ export default function Js() {
     }, 3000);
   }, []);
 
-  const rainCanvasContainer = useRef(null);
+  const rainCanvasContainerDark = useRef(null);
+  const rainCanvasContainerLight = useRef(null);
   const javascriptPage = useRef(null);
 
   function startJSTut() {
-    rainCanvasContainer.current.classList.add("load");
+    rainCanvasContainerDark.current.classList.add("load");
+    rainCanvasContainerLight.current.classList.add("load");
     javascriptPage.current.classList.add("sub-heading-part");
     javascriptPage.current.classList.add("display-card-1-initial");
   }
   function backToLanding() {
-    rainCanvasContainer.current.classList.remove("load");
+    rainCanvasContainerDark.current.classList.remove("load");
+    rainCanvasContainerLight.current.classList.remove("load");
     javascriptPage.current.classList.remove("display-card-1");
     javascriptPage.current.classList.remove("display-card-1-initial");
     javascriptPage.current.classList.remove("sub-heading-part");
@@ -87,7 +91,11 @@ export default function Js() {
     javascriptPage.current.classList.remove("display-card-2");
     javascriptPage.current.classList.add("display-card-3");
   }
-
+function changeTheme(){
+  javascriptPage.current.classList.toggle("theme-light");
+  rainCanvasContainerDark.current.classList.toggle("remove");
+  rainCanvasContainerLight.current.classList.toggle("add");
+}
   return (
     <div className="javascript-page" ref={javascriptPage}>
       <h1 className="heading" ref={heading}>
@@ -121,8 +129,11 @@ export default function Js() {
           BACK
         </div>
       </div>
-      <div className="rain-canvas-container" ref={rainCanvasContainer}>
-        <RainCanvas />
+      <div className="rain-canvas-container-dark" ref={rainCanvasContainerDark}>
+        <RainCanvasDark />
+      </div>
+      <div className="rain-canvas-container-light" ref={rainCanvasContainerLight}>
+        <RainCanvasLight />
       </div>
       <div className="javascript-card-1">
         <p>CARD 1 -JavaScript is used to make a web page interactive. It takes in user inputs and interactions and makes computations and changes based on the input.</p>
@@ -133,6 +144,7 @@ export default function Js() {
       <div className="javascript-card-3">
         <p>CARD 3 -Tap pr Click the color box below and we'll demonstrate how JavaScript works.</p>
       </div>
+      <div className="dark-light-theme-btn" onClick={changeTheme}></div>
     </div>
   );
 }
