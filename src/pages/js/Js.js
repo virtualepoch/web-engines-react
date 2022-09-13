@@ -91,11 +91,28 @@ export default function Js() {
     javascriptPage.current.classList.remove("display-card-2");
     javascriptPage.current.classList.add("display-card-3");
   }
-function changeTheme(){
-  javascriptPage.current.classList.toggle("theme-light");
-  rainCanvasContainerDark.current.classList.toggle("remove");
-  rainCanvasContainerLight.current.classList.toggle("add");
-}
+  function changeTheme() {
+    javascriptPage.current.classList.toggle("theme-light");
+    rainCanvasContainerDark.current.classList.toggle("remove");
+    rainCanvasContainerLight.current.classList.toggle("add");
+  }
+
+  const jsCard1 = useRef(null);
+  const card1p4 = useRef(null);
+  let hue1 = 0;
+  let hue2 = 180;
+  let card1BgColor;
+  let card1FontColor;
+  let randomNum = Math.random() * 360;
+  function changeColor() {
+    card1BgColor = "hsl(" + (hue1 += randomNum) + ", 100%, 50%)";
+    card1FontColor = "hsl(" + (hue2 += randomNum) + ", 100%, 50%)";
+    jsCard1.current.style.backgroundColor = card1BgColor;
+    jsCard1.current.style.color = card1FontColor;
+    jsCard1.current.style.animationTimingFunction = 0;
+    card1p4.current.style.opacity = 1;
+  }
+
   return (
     <div className="javascript-page" ref={javascriptPage}>
       <h1 className="heading" ref={heading}>
@@ -129,14 +146,18 @@ function changeTheme(){
           BACK
         </div>
       </div>
+      <div className="dark-light-theme-btn" onClick={changeTheme}></div>
       <div className="rain-canvas-container-dark" ref={rainCanvasContainerDark}>
         <RainCanvasDark />
       </div>
       <div className="rain-canvas-container-light" ref={rainCanvasContainerLight}>
         <RainCanvasLight />
       </div>
-      <div className="javascript-card-1">
-        <p>CARD 1 -JavaScript is used to make a web page interactive. It takes in user inputs and interactions and makes computations and changes based on the input.</p>
+      <div className="javascript-card-1" onClick={changeColor} ref={jsCard1}>
+        <p className="card-1-p card1p1">CARD 1 -JavaScript is used to make a web page interactive. It takes in user inputs and interactions and makes computations and changes based on the input.</p>
+        <p className="card-1-p card1p2">Every single button you tapped or clicked on this website used JavaScript to take in that interaction or input and make changes to the visual content displayed.</p>
+        <p className="card-1-p card1p3">For example, tap or click anywhere on this white card.</p>
+        <p className="card-1-p card1p4" ref={card1p4}>JavaScript just did that!</p>
       </div>
       <div className="javascript-card-2">
         <p>CARD 2 -One of the most common things JavaScript is used for is to make things on a webpage change when a user taps or clicks objects on the screen.</p>
@@ -144,7 +165,6 @@ function changeTheme(){
       <div className="javascript-card-3">
         <p>CARD 3 -Tap pr Click the color box below and we'll demonstrate how JavaScript works.</p>
       </div>
-      <div className="dark-light-theme-btn" onClick={changeTheme}></div>
     </div>
   );
 }
