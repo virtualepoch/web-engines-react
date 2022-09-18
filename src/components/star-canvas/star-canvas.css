@@ -5,7 +5,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: linear-gradient(90deg, blue, purple, black, purple, blue);
+  background: linear-gradient(90deg, blue, black, blue);
 }
 #canvas-controls {
   width: 200px;
