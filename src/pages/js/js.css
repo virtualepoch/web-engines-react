@@ -115,7 +115,7 @@
   width: calc(100% - 20px);
   max-width: 1000px;
   height: calc(100% - 70px);
-  padding: 100px 0;
+  padding: 50px 0;
   position: absolute;
   top: 60px;
   left: 0;
@@ -134,6 +134,13 @@
   transform: scale(0);
   overflow-y: auto;
 }
+@media (min-width: 700px) {
+  .javascript-page .javascript-card-1,
+  .javascript-page .javascript-card-2,
+  .javascript-page .javascript-card-3 {
+    padding: 100px 0;
+  }
+}
 .javascript-page .javascript-card-1 p,
 .javascript-page .javascript-card-2 p,
 .javascript-page .javascript-card-3 p {
@@ -142,15 +149,23 @@
   font: clamp(0.8rem, 5vw, 1.2rem) sans-serif;
   margin-bottom: 30px;
 }
-.card1p4{
+.card1p4 {
   margin: 30px auto;
   opacity: 0;
-  transition: 1s ease-in 2s;
+  transition: 1s ease-in 1s;
+}
+.card1p5 {
+  margin: 30px auto;
+  opacity: 0;
+  transition: 1s ease-in 2.4s;
 }
 /* JS TUT START */
 .javascript-page.display-card-1-initial .javascript-card-1 {
   transition: all 0.8s ease-in-out 1.5s;
   transform: scale(1);
+}
+.javascript-page .javascript-card-1.color-change {
+  transition: all 0.5s ease-in-out;
 }
 .javascript-page.display-card-1-initial .action-btn-1,
 .javascript-page.display-card-1-initial .action-btn-3,

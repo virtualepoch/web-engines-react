@@ -12,7 +12,7 @@
   perspective: 600px;
   perspective-origin: 50%;
   overflow: hidden;
-  background: linear-gradient(white, skyblue 30% 40%, pink 40%, rgb(255, 95, 255) 54%, white);
+  background: linear-gradient(white, skyblue 30% 50%, lightgray 52%, white);
 }
 .spinning-top-container {
   perspective-origin: 50% -10%;

@@ -8,9 +8,10 @@
   position: absolute;
   top: 100px;
   z-index: 88;
-  background-image: url(/src/images/crystal-160.jpg);
+  color: #38a8f3;
+  /* background-image: url(/src/images/crystal-160.jpg);
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
 }
 .css-page p {
   padding: 20px 0;

@@ -99,18 +99,21 @@ export default function Js() {
 
   const jsCard1 = useRef(null);
   const card1p4 = useRef(null);
+  const card1p5 = useRef(null);
   let hue1 = 0;
   let hue2 = 180;
   let card1BgColor;
   let card1FontColor;
   let randomNum = Math.random() * 360;
+
   function changeColor() {
     card1BgColor = "hsl(" + (hue1 += randomNum) + ", 100%, 50%)";
     card1FontColor = "hsl(" + (hue2 += randomNum) + ", 100%, 50%)";
     jsCard1.current.style.backgroundColor = card1BgColor;
     jsCard1.current.style.color = card1FontColor;
-    jsCard1.current.style.animationTimingFunction = 0;
+    jsCard1.current.classList.add("color-change");
     card1p4.current.style.opacity = 1;
+    card1p5.current.style.opacity = 1;
   }
 
   return (
@@ -154,13 +157,16 @@ export default function Js() {
         <RainCanvasLight />
       </div>
       <div className="javascript-card-1" onClick={changeColor} ref={jsCard1}>
-        <p className="card-1-p card1p1">CARD 1 -JavaScript is used to make a web page interactive. It takes in user inputs and interactions and makes computations and changes based on the input.</p>
+        <p className="card-1-p card1p1">CARD 1 - JavaScript is used to make a web page interactive. It takes in user inputs and interactions and makes computations and changes based on the input. According to Wikipedia, as of 2022, JavaScript is the dominant client-side language with 98% of ALL websites using it.</p>
         <p className="card-1-p card1p2">Every single button you tapped or clicked on this website used JavaScript to take in that interaction or input and make changes to the visual content displayed.</p>
         <p className="card-1-p card1p3">For example, tap or click anywhere on this white card.</p>
-        <p className="card-1-p card1p4" ref={card1p4}>JavaScript just did that!</p>
+        <p className="card-1-p card1p4" ref={card1p4}>
+          JavaScript just did that!
+        </p>
+        <p className="card-1-p card1p5" ref={card1p5}>So what is happening here? This is a simple JavaScript function that tells JavaScript to generate a random number for a color hue and then apply it to the background color and text color every time the user clicks or taps the page.<br></br><br></br> Pretty cool!</p>
       </div>
       <div className="javascript-card-2">
-        <p>CARD 2 -One of the most common things JavaScript is used for is to make things on a webpage change when a user taps or clicks objects on the screen.</p>
+        <p>CARD 2 - We'd like to start off with a tutorial on how to set up a navigation menu button that when clicked causes a menu box to slide onto the screen.<br></br><br></br>These are extremely important for websites viewed on mobile devices to ensure easy navigation of a site. For instance, this website uses a menu button and menu box when viewed on a mobile device or tablet. They are also helpful organizational tools for large sites with dozens or even hundreds of links.<br></br><br></br> It's fairly simple to set up a button for a nav menu. You simply have to know how to position the menu off screen and then when the user clicks the button you use JavaScript to change the position of the menu box.</p>
       </div>
       <div className="javascript-card-3">
         <p>CARD 3 -Tap pr Click the color box below and we'll demonstrate how JavaScript works.</p>
