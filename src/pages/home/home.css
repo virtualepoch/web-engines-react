@@ -85,6 +85,7 @@
   text-orientation: upright;
   color: white;
   font: 11px/33px sans-serif;
+  pointer-events: none;
 }
 .tap-message-2 {
   left: calc(100vw - 20px);
