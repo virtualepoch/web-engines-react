@@ -54,14 +54,6 @@
     transform: rotateY(360deg) rotateX(0);
   }
 }
-@media (max-width: 700px) {
-  .pyramid-container {
-    background: url(/src/images/sunset-water4-3w300.jpg) 50% / 100% 100%;
-  }
-  .pyramid {
-    bottom: 7%;
-  }
-}
 .pyramid div {
   width: 100%;
   aspect-ratio: 4/3;
@@ -82,6 +74,17 @@
   opacity: 0.3;
   background-image: url(/src/images/crystal-80.jpg);
 }
+@media (max-width: 700px) {
+  .pyramid-container {
+    background: url(/src/images/sunset-water4-3w300.jpg) 50% / 100% 100%;
+  }
+  .pyramid {
+    bottom: 7%;
+  }
+  .pyramid div {
+    background-image: url(/src/images/crystal-160.jpg);
+  }
+}
 .pyramid .front {
   transform: rotateX(41.7deg);
 }
@@ -89,11 +92,11 @@
   width: 100%;
   height: 100%;
   opacity: 0.9;
-  background: url(/src/logos/jsive-logo-at-100.png) 50%/30% no-repeat;
+  background: url(/src/logos/jsive-logo-at-100.png) 50% 70%/30% no-repeat;
 }
 @media (max-width: 700px) {
-  .pyramid .front::after {
-    background: url(/src/logos/jsive-logo-at-75.png) 50%/50% no-repeat;
+  .pyramid .logo {
+    background: url(/src/logos/jsive-logo-at-75.png) 50% 70%/30% no-repeat;
   }
 }
 .pyramid .front.small {
