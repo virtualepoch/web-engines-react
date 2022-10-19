@@ -4,6 +4,7 @@ import SearchBar from "../search-bar/SearchBar";
 import "./header.css";
 
 export default function Header() {
+  
   const navBtn = useRef(null);
   const mainNav = useRef(null);
   const closeNavBox = useRef(null);

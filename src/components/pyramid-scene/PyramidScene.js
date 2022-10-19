@@ -1,9 +1,11 @@
 import "../../components/pyramid-scene/pyramid-scene.css";
 import "../../components/pyramid-scene/pyramid-birds.css";
+import LoadingOverlay from "../LoadingOverlay";
 
-export default function PyramicScene() {
+export default function PyramidScene() {
   return (
     <div className="pyramid-container">
+      <LoadingOverlay />
       <div className="pyramid">
         <div className="front">
           <div className="logo"></div>
