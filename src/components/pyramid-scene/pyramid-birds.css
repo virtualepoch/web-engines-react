@@ -64,7 +64,6 @@
 .bird-container.one {
   animation-duration: 15s;
   animation-delay: 0;
-  border: solid red;
 }
 .reflection {
   position: relative;
