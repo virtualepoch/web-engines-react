@@ -42,7 +42,7 @@
   animation-delay: -0.5s;
 } */
 .bird-container {
-  width: 5%;
+  width: 3%;
   aspect-ratio: 8/12;
   position: absolute;
   top: 30%;
@@ -64,6 +64,13 @@
 .bird-container.one {
   animation-duration: 15s;
   animation-delay: 0;
+  border: solid red;
+}
+.reflection {
+  position: relative;
+  top: 800%;
+  transform: rotateX(180deg);
+  opacity: 0.05;
 }
 .bird-container.two {
   animation-duration: 16s;

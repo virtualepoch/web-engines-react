@@ -9,7 +9,7 @@
   perspective: 1300px;
   perspective-origin: 50% -10%;
   /* background: linear-gradient(0deg, rgb(255, 255, 176) 0 47%, transparent 50%), radial-gradient(circle at 50% 15%, yellow 9%, gold 16%, pink 20% 22%, skyblue 40%); */
-  background: url(/src/images/sunset-water16-9.jpg) 50%/100% 100%;
+  background: url(/src/images/moon-balloon-edit.jpg) 50%/100% 100%;
   overflow: hidden;
 }
 .pyramid {
@@ -64,14 +64,14 @@
   /* background: linear-gradient(turquoise 20%, rgb(0, 0, 0, 0) 20%, rgb(0, 0, 0, 0) 40%, turquoise 40%, turquoise 60%, rgb(0, 0, 0, 0) 60%, rgb(0, 0, 0, 0) 80%, turquoise 80%); */
   background-size: 100% 100%;
   background-image: url(/src/images/crystal-320.jpg);
-  opacity: 0.5;
+  opacity: 0.2;
 }
 .pyramid .small {
   width: 50%;
   height: 50%;
   top: 75%;
   transform: none;
-  opacity: 0.3;
+  opacity: 0.4;
   background-image: url(/src/images/crystal-80.jpg);
 }
 @media (max-width: 700px) {
@@ -91,7 +91,7 @@
 .pyramid .logo {
   width: 100%;
   height: 100%;
-  opacity: 0.9;
+  opacity: 1;
   background: url(/src/logos/jsive-logo-at-100.png) 50% 70%/30% no-repeat;
 }
 @media (max-width: 700px) {

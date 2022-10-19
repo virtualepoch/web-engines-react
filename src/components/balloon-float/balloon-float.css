@@ -1,0 +1,49 @@
+.balloon-float-container {
+  /* width: calc(100% - 20px); do this if you want 10px margins*/
+  width: 100%;
+  aspect-ratio: 16/9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: url(/src/images/moon-balloon-edit.jpg) 50%/100% 100%;
+  overflow: hidden;
+}
+.balloon {
+  width: 15%;
+  aspect-ratio: 4/5;
+  background: url(/src/images/balloon.png) 50%/100% 100%;
+  position: relative;
+  z-index: 7;
+  animation: float-left 32s infinite linear;
+}
+@keyframes float-left {
+  0% {
+    top: 0;
+    left: 60%;
+  }
+  25% {
+    top: -10%;
+    left: 30%;
+  }
+  50% {
+    top: 0;
+    left: 0;
+  }
+  75% {
+    top: -10%;
+    left: -30%;
+  }
+  100% {
+    top: 0;
+    left: -60%;
+  }
+}
+.balloon-reflection {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 150%;
+  background: url(/src/images/balloon-reflect.png) 50%/100% 100%;
+  opacity: 0.15;
+}
