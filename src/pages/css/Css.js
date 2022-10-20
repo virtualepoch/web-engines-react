@@ -49,6 +49,8 @@ export default function Css() {
             </div>
           </div>
           <Kaleidoscope />
+          <div className="image-test-1"></div>
+          <div className="image-test-2"></div>
         </section>
         <Footer />
       </div>
