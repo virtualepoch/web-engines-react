@@ -8,42 +8,67 @@
   width: 100%;
   aspect-ratio: 1/1;
   display: flex;
-  /* align-items: center; */
-  /* justify-self: center; */
-  perspective: 900px;
-  perspective-origin: 50% 20%;
+  perspective: 150px;
+  perspective-origin: 50%;
+  overflow: hidden;
+}
+.kaleidoscope-container-bg {
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  z-index: 3;
+  animation: kaleidoscope-bg-rotate 10s infinite linear;
+  background: conic-gradient(aqua, white 5%, aqua 10%, white 15%, aqua 20%, white 25%, aqua 30%, white 35%, aqua 40%, white 45%, aqua 50%, white 55%, aqua 60%, white 65%, aqua 70%, white 75%, aqua 80%, white 85%, aqua 90%, white 95%, aqua 100%);
+}
+@keyframes kaleidoscope-bg-rotate {
+  to {
+    transform: rotate(360deg);
+  }
 }
 .kaleidoscope-box {
   width: 50%;
   aspect-ratio: 1/1;
-  margin: auto;
+  margin: 25%;
+  position: absolute;
+  z-index: 88;
   transform-style: preserve-3d;
-  animation: kaleidoscope-anim 10s infinite linear;
+  animation: kaleidoscope-anim 21s infinite linear;
 }
 @keyframes kaleidoscope-anim {
   to {
-    transform: rotateY(1080deg) rotateX(360deg);
+    transform: rotateY(3600deg) rotateX(3600deg) rotateZ(360deg);
   }
 }
 .kaleidoscope {
   width: 100%;
   height: 100%;
   position: absolute;
-  background: rgb(255, 0, 255, 0.5);
+  z-index: 88;
+  background: rgb(0, 0, 255, 0.2);
   clip-path: polygon(15% 15%, 40% 20%, 50% 0%, 60% 20%, 85% 15%, 80% 40%, 100% 50%, 80% 60%, 85% 85%, 60% 80%, 50% 100%, 40% 80%, 15% 85%, 20% 60%, 0% 50%, 20% 40%);
 }
 .kaleidoscope-bubble {
   width: 100%;
   height: 100%;
   position: absolute;
-  border: 4vw solid rgb(0, 0, 255, 0.3);
+  border: 1px solid rgb(255, 0, 255, 0.6);
   border-radius: 50%;
 }
 .kaleidoscope.duplicate {
   transform: rotateY(90deg);
-  background: rgb(0, 0, 255, 0.3);
+  background: rgb(255, 0, 255, 0.2);
 }
 .kaleidoscope-bubble.duplicate {
   transform: rotateY(90deg);
-  border: 4vw solid rgb(255, 0, 255, 0.3);
+  border: 1px solid rgb(0, 255, 255, 0.6);
+}
+.kaleidoscope.duplicate-2 {
+  transform: rotateX(90deg);
+  background: rgb(0, 255, 255, 0.2);
+}
+.kaleidoscope-bubble.duplicate-2 {
+  transform: rotateX(90deg);
+  border: 1px solid rgb(0, 0, 255, 0.4);
 }

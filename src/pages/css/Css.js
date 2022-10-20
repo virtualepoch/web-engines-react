@@ -14,7 +14,6 @@ export default function Css() {
       <h1 className="heading css-heading">CSS Tutorials</h1>
       {/* <PyramidScene /> */}
       <BalloonFloat />
-      <Kaleidoscope />
       <div className="main-content">
         <h1>The following tutorials can all be completed with plain old CSS.</h1>
         <section className="effects-section">
@@ -49,6 +48,7 @@ export default function Css() {
               </Link>
             </div>
           </div>
+          <Kaleidoscope />
         </section>
         <Footer />
       </div>
