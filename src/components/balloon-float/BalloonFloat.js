@@ -5,7 +5,7 @@ import LoadingOverlay from "../LoadingOverlay";
 export default function BalloonFloat() {
   return (
     <div className="balloon-float-container">
-      {/* <LoadingOverlay /> */}
+      <LoadingOverlay />
       <div className="balloon">
         <div className="balloon-reflection"></div>
       </div>
