@@ -47,3 +47,14 @@
   background: url(/src/images/balloon-reflect.png) 50%/100% 100%;
   opacity: 0.15;
 }
+@media (max-width: 700px) {
+  .balloon-float-container {
+    background: url(/src/images/moon-balloon-400.jpg) 50%/100% 100%;
+  }
+  .balloon {
+    background: url(/src/images/balloon-50.png) 50%/100% 100%;
+  }
+  .balloon-reflection {
+    background: url(/src/images/balloon-reflect-50.png) 50%/100% 100%;
+  }
+}

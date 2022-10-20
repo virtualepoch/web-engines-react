@@ -87,7 +87,7 @@
   position: relative;
   top: 50px;
   transform-style: preserve-3d;
-  animation: spinning-top-rotateY 1s linear infinite;
+  animation: spinning-top-rotateY 2s linear infinite;
 }
 @keyframes spinning-top-rotateY {
   to {
@@ -150,7 +150,7 @@
 }
 .spinning-top .front,
 .spinning-top .back {
-  background: rgb(255, 0, 255, 0.6);
+  background: rgb(255, 0, 255, 0.4);
 }
 .spinning-top .front {
   transform: rotateX(-7deg);
@@ -160,7 +160,7 @@
 }
 .spinning-top .left,
 .spinning-top .right {
-  background: rgb(0, 155, 255, 0.5);
+  background: rgb(0, 155, 255, 0.4);
 }
 .spinning-top .left {
   transform: rotateY(90deg) rotateX(7deg);
@@ -169,15 +169,13 @@
   transform: rotateY(90deg) rotateX(-7deg);
 }
 .spinning-top .top {
-  width: 60px;
-  height: 60px;
-  clip-path: none;
-  border-radius: 50%;
-  top: -30px;
-  right: -5px;
+  width: 50px;
+  height: 50px;
+  clip-path: polygon(0% 25%, 25% 25%, 25% 0%, 75% 0%, 75% 25%, 100% 25%, 100% 75%, 75% 75%, 75% 100%, 25% 100%, 25% 75%, 0% 75%);
+  top: -24.5px;
   transform-origin: initial;
-  transform: rotateX(90deg) rotateZ(180deg);
-  background: url(../../../logos/jsive-logo-at-100.png) 50% / 70% no-repeat, rgb(255, 0, 255, 0.5);
+  transform: rotateX(90deg);
+  background: url(../../../logos/jsive-logo-at-100.png) 50% / 40% no-repeat, rgb(0, 55, 255, 0.4);
 }
 .spinning-top-container .shadow {
   width: 50px;

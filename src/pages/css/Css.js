@@ -6,6 +6,7 @@ import ColorCube from "./components/ColorCube";
 import SpinningTop from "./components/SpinningTop";
 import Footer from "../../components/Footer";
 import "./css.css";
+import Kaleidoscope from "../../components/Kaleidoscope";
 
 export default function Css() {
   return (
@@ -13,6 +14,7 @@ export default function Css() {
       <h1 className="heading css-heading">CSS Tutorials</h1>
       {/* <PyramidScene /> */}
       <BalloonFloat />
+      <Kaleidoscope />
       <div className="main-content">
         <h1>The following tutorials can all be completed with plain old CSS.</h1>
         <section className="effects-section">

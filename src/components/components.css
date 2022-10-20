@@ -4,5 +4,46 @@
   height: 100%;
 }
 
-
-
+.kaleidoscope-container {
+  width: 100%;
+  aspect-ratio: 1/1;
+  display: flex;
+  /* align-items: center; */
+  /* justify-self: center; */
+  perspective: 900px;
+  perspective-origin: 50% 20%;
+}
+.kaleidoscope-box {
+  width: 50%;
+  aspect-ratio: 1/1;
+  margin: auto;
+  transform-style: preserve-3d;
+  animation: kaleidoscope-anim 10s infinite linear;
+}
+@keyframes kaleidoscope-anim {
+  to {
+    transform: rotateY(1080deg) rotateX(360deg);
+  }
+}
+.kaleidoscope {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgb(255, 0, 255, 0.5);
+  clip-path: polygon(15% 15%, 40% 20%, 50% 0%, 60% 20%, 85% 15%, 80% 40%, 100% 50%, 80% 60%, 85% 85%, 60% 80%, 50% 100%, 40% 80%, 15% 85%, 20% 60%, 0% 50%, 20% 40%);
+}
+.kaleidoscope-bubble {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border: 4vw solid rgb(0, 0, 255, 0.3);
+  border-radius: 50%;
+}
+.kaleidoscope.duplicate {
+  transform: rotateY(90deg);
+  background: rgb(0, 0, 255, 0.3);
+}
+.kaleidoscope-bubble.duplicate {
+  transform: rotateY(90deg);
+  border: 4vw solid rgb(255, 0, 255, 0.3);
+}
