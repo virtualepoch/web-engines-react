@@ -8,7 +8,7 @@
   width: 100%;
   aspect-ratio: 1/1;
   display: flex;
-  perspective: 150px;
+  perspective: 200px;
   perspective-origin: 50%;
   overflow: hidden;
 }
@@ -20,12 +20,7 @@
   left: -50%;
   z-index: 3;
   animation: kaleidoscope-bg-rotate 10s infinite linear;
-  background: conic-gradient(aqua, white 5%, aqua 10%, white 15%, aqua 20%, white 25%, aqua 30%, white 35%, aqua 40%, white 45%, aqua 50%, white 55%, aqua 60%, white 65%, aqua 70%, white 75%, aqua 80%, white 85%, aqua 90%, white 95%, aqua 100%);
-}
-@keyframes kaleidoscope-bg-rotate {
-  to {
-    transform: rotate(360deg);
-  }
+  /* background: linear-gradient(-45deg,magenta 30%, blue, rgb(255,255,255,.2), blue, rgb(255, 255, 255, 0.2) 70%); */
 }
 .kaleidoscope-box {
   width: 50%;
@@ -34,11 +29,11 @@
   position: absolute;
   z-index: 88;
   transform-style: preserve-3d;
-  animation: kaleidoscope-anim 21s infinite linear;
+  animation: kaleidoscope-anim 11s infinite linear;
 }
 @keyframes kaleidoscope-anim {
   to {
-    transform: rotateY(3600deg) rotateX(3600deg) rotateZ(360deg);
+    transform: rotateY(360deg) rotateX(360deg) rotateZ(360deg);
   }
 }
 .kaleidoscope {
@@ -49,11 +44,23 @@
   background: rgb(0, 0, 255, 0.2);
   clip-path: polygon(15% 15%, 40% 20%, 50% 0%, 60% 20%, 85% 15%, 80% 40%, 100% 50%, 80% 60%, 85% 85%, 60% 80%, 50% 100%, 40% 80%, 15% 85%, 20% 60%, 0% 50%, 20% 40%);
 }
+.kaleidoscope-child {
+  width: 100%;
+  height: 100%;
+  background: conic-gradient(transparent, rgb(255, 0, 255, 0.7) 5%, transparent 10%, rgb(255, 0, 255, 0.7) 15%, transparent 20%, rgb(255, 0, 255, 0.7) 25%, transparent 30%, rgb(255, 0, 255, 0.7) 35%, transparent 40%, rgb(255, 0, 255, 0.7) 45%, transparent 50%, rgb(255, 0, 255, 0.7) 55%, transparent 60%, rgb(255, 0, 255, 0.7) 65%, transparent 70%, rgb(255, 0, 255, 0.7) 75%, transparent 80%, rgb(255, 0, 255, 0.7) 85%, transparent 90%, rgb(255, 0, 255, 0.7) 95%, transparent 100%);
+  animation: conic-rotate 2s linear infinite;
+}
+@keyframes conic-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
 .kaleidoscope-bubble {
   width: 100%;
   height: 100%;
   position: absolute;
-  border: 1px solid rgb(255, 0, 255, 0.6);
+  border: 1px solid rgb(0, 0, 255);
+  background: rgb(0, 255, 255, 0.5);
   border-radius: 50%;
 }
 .kaleidoscope.duplicate {
@@ -62,7 +69,6 @@
 }
 .kaleidoscope-bubble.duplicate {
   transform: rotateY(90deg);
-  border: 1px solid rgb(0, 255, 255, 0.6);
 }
 .kaleidoscope.duplicate-2 {
   transform: rotateX(90deg);
@@ -70,29 +76,4 @@
 }
 .kaleidoscope-bubble.duplicate-2 {
   transform: rotateX(90deg);
-  border: 1px solid rgb(0, 0, 255, 0.4);
-}
-.image-test {
-  width: 100%;
-  aspect-ratio: 16/9;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font: 700 clamp(0.7rem, 5vw, 3rem) sans-serif;
-}
-.test-1 {
-  background: url(/src/images/moon-balloon-1000.jpg) 50%/100% 100%;
-}
-.test-2 {
-  background: url(/src/images/moon-balloon-900.jpg) 50%/100% 100%;
-}
-.test-3 {
-  background: url(/src/images/moon-balloon-800.jpg) 50%/100% 100%;
-}
-.test-4 {
-  background: url(/src/images/moon-balloon-700.jpg) 50%/100% 100%;
-}
-.test-5 {
-  background: url(/src/images/moon-balloon-600.jpg) 50%/100% 100%;
 }

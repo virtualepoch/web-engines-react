@@ -58,11 +58,6 @@ export default function Css() {
             </div>
           </div>
           <Kaleidoscope />
-          <div className="image-test test-1">1000</div>
-          <div className="image-test test-2">900</div>
-          <div className="image-test test-3">800</div>
-          <div className="image-test test-4">700</div>
-          <div className="image-test test-5">600</div>
         </section>
         <Footer />
       </div>

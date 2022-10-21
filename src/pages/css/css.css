@@ -16,7 +16,7 @@
 .css-heading-testing {
   width: 100%;
   position: relative;
-  background: radial-gradient(circle at 50% 10%, yellow,white,rgb(0, 200, 200) 30%, transparent);
+  background: radial-gradient(circle at 50% 10%, yellow, white, rgb(0, 200, 200) 30%, transparent);
 }
 .css-heading-testing-bg {
   width: 50%;
@@ -31,7 +31,7 @@
   background: url(/src/images/cloud1.png) 100%/100% 100%;
   animation-duration: 100s;
 }
-.bg-1.edit{
+.bg-1.edit {
   transform: translateZ(180deg);
   animation-delay: -5s;
   animation-duration: 200s;
@@ -42,7 +42,7 @@
   background: url(/src/images/cloud2.png) 100%/100% 100%;
   animation-duration: 50s;
 }
-.bg-2.edit{
+.bg-2.edit {
   transform: rotate(180deg);
   animation-delay: -5s;
   animation-duration: 150s;
