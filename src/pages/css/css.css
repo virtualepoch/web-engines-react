@@ -16,13 +16,7 @@
 .css-heading-testing {
   width: 100%;
   position: relative;
-  background: radial-gradient(circle at 50%, rgb(0, 0, 0, 0.5), transparent);
-  animation: opacity-flicker 100ms linear infinite;
-}
-@keyframes opacity-flicker {
-  to{
-    opacity: 0;
-  }
+  background: radial-gradient(circle at 50%, rgb(0, 200, 200, 0.5), transparent);
 }
 .css-heading-testing-bg {
   width: 400%;
@@ -64,7 +58,7 @@
   margin: auto;
   will-change: background-position;
   animation: fly-cycle 2s steps(10) infinite;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 @keyframes fly-cycle {
   100% {
