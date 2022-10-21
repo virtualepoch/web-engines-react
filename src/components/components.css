@@ -82,17 +82,17 @@
   font: 700 clamp(0.7rem, 5vw, 3rem) sans-serif;
 }
 .test-1 {
-  background: url(/src/images/moon-balloon-640.jpg) 50%/100% 100%;
-}
-.test-2 {
   background: url(/src/images/moon-balloon-1000.jpg) 50%/100% 100%;
 }
+.test-2 {
+  background: url(/src/images/moon-balloon-900.jpg) 50%/100% 100%;
+}
 .test-3 {
-  background: url(/src/images/moon-balloon-1280.jpg) 50%/100% 100%;
+  background: url(/src/images/moon-balloon-800.jpg) 50%/100% 100%;
 }
 .test-4 {
-  background: url(/src/images/moon-balloon-1400.jpg) 50%/100% 100%;
+  background: url(/src/images/moon-balloon-700.jpg) 50%/100% 100%;
 }
 .test-5 {
-  background: url(/src/images/moon-balloon-1920.jpg) 50%/100% 100%;
+  background: url(/src/images/moon-balloon-600.jpg) 50%/100% 100%;
 }

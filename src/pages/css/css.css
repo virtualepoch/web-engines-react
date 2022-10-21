@@ -16,37 +16,49 @@
 .css-heading-testing {
   width: 100%;
   position: relative;
-  background: radial-gradient(circle at 50%, rgb(0, 200, 200, 0.5), transparent);
+  background: radial-gradient(circle at 50% 10%, yellow,white,rgb(0, 200, 200) 30%, transparent);
 }
 .css-heading-testing-bg {
-  width: 400%;
-  height: 100%;
+  width: 50%;
+  aspect-ratio: 2/1;
   position: absolute;
-  left: 50%;
-  top: 0;
+  left: 120%;
+  top: 20%;
+  opacity: 0.4;
   animation: background-move linear infinite;
 }
 .bg-1 {
-  background: url(/src/images/layer1.png) 100%/100% 100%;
-  opacity: 0.6;
-  animation-duration: 211s;
+  background: url(/src/images/cloud1.png) 100%/100% 100%;
+  animation-duration: 100s;
+}
+.bg-1.edit{
+  transform: translateZ(180deg);
+  animation-delay: -5s;
+  animation-duration: 200s;
+  top: 0;
 }
 .bg-2 {
-  background: url(/src/images/layer2.png) 100%/100% 100%;
-  animation-duration: 40s;
+  width: 30%;
+  background: url(/src/images/cloud2.png) 100%/100% 100%;
+  animation-duration: 50s;
+}
+.bg-2.edit{
+  transform: rotate(180deg);
+  animation-delay: -5s;
+  animation-duration: 150s;
+  top: -10%;
 }
 @keyframes background-move {
   to {
-    left: -400%;
+    left: -100%;
   }
 }
 .css-bird-container {
   width: 70%;
-  aspect-ratio: 8/12;
+  aspect-ratio: 1/1;
   margin: auto;
   position: relative;
-  top: 20vw;
-  will-change: transform;
+  display: flex;
 }
 .css-bird {
   background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg);
@@ -58,7 +70,6 @@
   margin: auto;
   will-change: background-position;
   animation: fly-cycle 2s steps(10) infinite;
-  opacity: 0.2;
 }
 @keyframes fly-cycle {
   100% {

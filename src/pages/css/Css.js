@@ -15,8 +15,10 @@ export default function Css() {
       {/* <PyramidScene /> */}
       {/* <BalloonFloat /> */}
       <div className="css-heading-testing">
-        {/* <div className="css-heading-testing-bg bg-1"></div>
-        <div className="css-heading-testing-bg bg-2"></div> */}
+        <div className="css-heading-testing-bg bg-1"></div>
+        <div className="css-heading-testing-bg bg-2"></div>
+        <div className="css-heading-testing-bg bg-1 edit"></div>
+        <div className="css-heading-testing-bg bg-2 edit"></div>
         <div className="css-bird-container">
           <div className="css-bird"></div>
         </div>
@@ -56,11 +58,11 @@ export default function Css() {
             </div>
           </div>
           <Kaleidoscope />
-          <div className="image-test test-1">640</div>
-          <div className="image-test test-2">1000</div>
-          <div className="image-test test-3">1280</div>
-          <div className="image-test test-4">1400</div>
-          <div className="image-test test-5">1920</div>
+          <div className="image-test test-1">1000</div>
+          <div className="image-test test-2">900</div>
+          <div className="image-test test-3">800</div>
+          <div className="image-test test-4">700</div>
+          <div className="image-test test-5">600</div>
         </section>
         <Footer />
       </div>
