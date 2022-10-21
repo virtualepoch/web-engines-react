@@ -15,7 +15,8 @@ export default function Css() {
       {/* <PyramidScene /> */}
       {/* <BalloonFloat /> */}
       <div className="css-heading-testing">
-        <div className="css-heading-testing-bg"></div>
+        <div className="css-heading-testing-bg bg-1"></div>
+        <div className="css-heading-testing-bg bg-2"></div>
         <div className="css-bird-container">
           <div className="css-bird"></div>
         </div>

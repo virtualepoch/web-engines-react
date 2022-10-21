@@ -8,35 +8,45 @@
   position: absolute;
   top: 100px;
   z-index: 88;
-  color: #38a8f3;
+  /* color: #38a8f3; */
+  color: white;
   /* background-image: url(/src/images/crystal-160.jpg);
   background-clip: text;
   -webkit-text-fill-color: transparent; */
-  background: radial-gradient(black,transparent 70%);
 }
 .css-heading-testing {
   width: 100%;
   position: relative;
+  background: radial-gradient(circle at 50% 20%, orange, yellow, aqua 30%);
 }
 .css-heading-testing-bg {
-  width: 200%;
+  width: 400%;
   height: 100%;
   position: absolute;
-  left: 0;
+  left: 50%;
   top: 0;
-  background: url(/src/images/mountain-panorama-1200.jpg) 50%/100% 100%;
-  animation: background-move 32s linear infinite;
+  animation: background-move linear infinite;
+}
+.bg-1 {
+  background: url(/src/images/layer1.png) 100%/100% 100%;
+  opacity: 0.6;
+  animation-duration: 211s;
+}
+.bg-2 {
+  background: url(/src/images/layer2.png) 100%/100% 100%;
+  animation-duration: 40s;
 }
 @keyframes background-move {
   to {
-    left: -100%;
+    left: -400%;
   }
 }
 .css-bird-container {
-  width: 50%;
+  width: 40%;
   aspect-ratio: 8/12;
   margin: auto;
   position: relative;
+  top: 33px;
   will-change: transform;
 }
 .css-bird {
@@ -44,7 +54,7 @@
   background-size: auto 100%;
   /* width: 88px;
   height: 125px; ==THESE ARE THE ORIGINAL SIZES */
-  width: 80%;
+  width: 50%;
   aspect-ratio: 8/12;
   margin: auto;
   will-change: background-position;
