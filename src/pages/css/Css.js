@@ -13,7 +13,13 @@ export default function Css() {
     <div className="css-page">
       <h1 className="heading css-heading">CSS Tutorials</h1>
       {/* <PyramidScene /> */}
-      <BalloonFloat />
+      {/* <BalloonFloat /> */}
+      <div className="css-heading-testing">
+        <div className="css-heading-testing-bg"></div>
+        <div className="css-bird-container">
+          <div className="css-bird"></div>
+        </div>
+      </div>
       <div className="main-content">
         <h1>The following tutorials can all be completed with plain old CSS.</h1>
         <section className="effects-section">
@@ -49,8 +55,11 @@ export default function Css() {
             </div>
           </div>
           <Kaleidoscope />
-          <div className="image-test-1"></div>
-          <div className="image-test-2"></div>
+          <div className="image-test test-1">640</div>
+          <div className="image-test test-2">1000</div>
+          <div className="image-test test-3">1280</div>
+          <div className="image-test test-4">1400</div>
+          <div className="image-test test-5">1920</div>
         </section>
         <Footer />
       </div>

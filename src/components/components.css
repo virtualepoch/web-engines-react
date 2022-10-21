@@ -72,13 +72,27 @@
   transform: rotateX(90deg);
   border: 1px solid rgb(0, 0, 255, 0.4);
 }
-.image-test-1{
+.image-test {
   width: 100%;
   aspect-ratio: 16/9;
-  background: url(/src/images/moon-balloon-edit.jpg) 50%/100% 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 700 clamp(0.7rem, 5vw, 3rem) sans-serif;
 }
-.image-test-2{
-  width: 100%;
-  aspect-ratio: 16/9;
-  background: url(/src/images/moon-balloon-400.jpg) 50%/100% 100%;
+.test-1 {
+  background: url(/src/images/moon-balloon-640.jpg) 50%/100% 100%;
+}
+.test-2 {
+  background: url(/src/images/moon-balloon-1000.jpg) 50%/100% 100%;
+}
+.test-3 {
+  background: url(/src/images/moon-balloon-1280.jpg) 50%/100% 100%;
+}
+.test-4 {
+  background: url(/src/images/moon-balloon-1400.jpg) 50%/100% 100%;
+}
+.test-5 {
+  background: url(/src/images/moon-balloon-1920.jpg) 50%/100% 100%;
 }

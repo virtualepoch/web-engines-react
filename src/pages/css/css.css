@@ -12,6 +12,50 @@
   /* background-image: url(/src/images/crystal-160.jpg);
   background-clip: text;
   -webkit-text-fill-color: transparent; */
+  background: radial-gradient(black,transparent 70%);
+}
+.css-heading-testing {
+  width: 100%;
+  position: relative;
+}
+.css-heading-testing-bg {
+  width: 200%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url(/src/images/mountain-panorama-1200.jpg) 50%/100% 100%;
+  animation: background-move 32s linear infinite;
+}
+@keyframes background-move {
+  to {
+    left: -100%;
+  }
+}
+.css-bird-container {
+  width: 50%;
+  aspect-ratio: 8/12;
+  margin: auto;
+  position: relative;
+  will-change: transform;
+}
+.css-bird {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg);
+  background-size: auto 100%;
+  /* width: 88px;
+  height: 125px; ==THESE ARE THE ORIGINAL SIZES */
+  width: 80%;
+  aspect-ratio: 8/12;
+  margin: auto;
+  will-change: background-position;
+  animation: fly-cycle 2s steps(10) infinite;
+  opacity: 0.8;
+}
+@keyframes fly-cycle {
+  100% {
+    /* background-position: -900px 0; ==THIS IS THE ORIGINAL SIZING */
+    background-position: -110% 0;
+  }
 }
 .css-page p {
   padding: 20px 0;
