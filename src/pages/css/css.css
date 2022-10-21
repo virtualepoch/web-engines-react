@@ -8,8 +8,7 @@
   position: absolute;
   top: 100px;
   z-index: 88;
-  /* color: #38a8f3; */
-  color: white;
+  color: #38a8f3;
   /* background-image: url(/src/images/crystal-160.jpg);
   background-clip: text;
   -webkit-text-fill-color: transparent; */
@@ -17,7 +16,13 @@
 .css-heading-testing {
   width: 100%;
   position: relative;
-  background: radial-gradient(circle at 50% 20%, orange, yellow, aqua 30%);
+  background: radial-gradient(circle at 50%, rgb(0, 0, 0, 0.5), transparent);
+  animation: opacity-flicker 100ms linear infinite;
+}
+@keyframes opacity-flicker {
+  to{
+    opacity: 0;
+  }
 }
 .css-heading-testing-bg {
   width: 400%;
@@ -42,11 +47,11 @@
   }
 }
 .css-bird-container {
-  width: 40%;
+  width: 70%;
   aspect-ratio: 8/12;
   margin: auto;
   position: relative;
-  top: 33px;
+  top: 20vw;
   will-change: transform;
 }
 .css-bird {
@@ -59,7 +64,7 @@
   margin: auto;
   will-change: background-position;
   animation: fly-cycle 2s steps(10) infinite;
-  opacity: 0.8;
+  opacity: 0.5;
 }
 @keyframes fly-cycle {
   100% {
