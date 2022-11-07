@@ -77,6 +77,14 @@
     background-position: -110% 0;
   }
 }
+.css-canvas-testing {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border: solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .css-page p {
   padding: 20px 0;
   font: clamp(0.7rem, 5vw, 1rem) sans-serif;

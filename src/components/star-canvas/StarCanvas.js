@@ -2,9 +2,28 @@ import React, { useEffect, useRef } from "react";
 import "./star-canvas.css";
 
 export default function StarCanvas() {
+  const style = {
+    canvas: {
+      width: "100vw",
+      height: "100vh",
+      position: "fixed",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)",
+      background: "linear-gradient(90deg, blue, black, blue)",
+    },
+  };
+
   const canvasRef = useRef(null);
+  const canvasControls = useRef(null);
+  const openCloseBtn = useRef(null);
   const randomizeBtnRef = useRef(null);
   const resetBtnRef = useRef(null);
+
+  function openCloseControls() {
+    canvasControls.current.classList.toggle("open");
+    openCloseBtn.current.classList.toggle("open");
+  }
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -27,13 +46,16 @@ export default function StarCanvas() {
 
     let sides = 8;
     let scale = 1;
-    let spread = 0.3;
-    let hue = 200;
+    let spread = 0.2;
+    let hue = 180;
     let color = "hsl(" + hue + ", 100%, 50%)";
     // let color2 = "hsl(" + (hue + 180) + ", 100%, 50%)";
     let lineWidth = 25;
     let pointX = 0;
     let pointY = size;
+
+    // controls
+    const randomizeBtn = randomizeBtnRef.current;
 
     function drawBranch(level) {
       if (level > maxLevel) return;
@@ -57,7 +79,6 @@ export default function StarCanvas() {
       ctx.fill();
     }
 
-    const randomizeBtn = randomizeBtnRef.current;
     function drawFractal() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.save();
@@ -86,7 +107,7 @@ export default function StarCanvas() {
       color = "hsl(" + hue + ", 100%, 50%)";
       // color2 = "hsl(" + (hue + 180) + ", 100%, 50%)";
       drawFractal();
-      lineWidth = Math.floor(Math.random() * 30 + 20);
+      lineWidth = Math.floor(Math.random() * 20 + 10);
       //   textBox.style.color = color2;
     }
     randomizeBtn.addEventListener("click", function () {
@@ -102,10 +123,10 @@ export default function StarCanvas() {
 
     function resetFractal() {
       sides = 8;
-      scale = 0.88;
-      spread = 0.3;
+      scale = 1;
+      spread = 0.2;
       color = "hsl(" + hue + ", 100%, 50%)";
-      lineWidth = 30;
+      lineWidth = 25;
     }
     const resetBtn = resetBtnRef.current;
     resetBtn.addEventListener("click", function () {
@@ -125,19 +146,17 @@ export default function StarCanvas() {
       ctx.shadowBlur = 7;
       drawFractal();
     });
+
+    const slider_spread = document.getElementById("spread");
+    const label_spread = document.getElementById("forSpread");
+    slider_spread.addEventListener("change", function (e) {
+      console.log(e.target.value);
+    });
   }, []);
-
-  const canvasControls = useRef(null);
-  const openCloseBtn = useRef(null);
-
-  function openCloseControls() {
-    canvasControls.current.classList.toggle("open");
-    openCloseBtn.current.classList.toggle("open");
-  }
 
   return (
     <>
-      <canvas id="canvas1" ref={canvasRef}></canvas>
+      <canvas style={style.canvas} ref={canvasRef}></canvas>
       <div id="canvas-controls" ref={canvasControls}>
         <div className="controls-row1">
           <p>BACKGROUND CONTROLS</p>
@@ -146,14 +165,16 @@ export default function StarCanvas() {
         <button id="randomize-btn" ref={randomizeBtnRef}>
           Randomize!
         </button>
-        {/* <div className="slider-container">
-          <label htmlFor="spread">Spread: </label>
-          <input id="spread" type="range" min="-0.1" max="3.1" step="0.01" value="1" />
+        <div className="slider-container">
+          <label id="forSpread" for="spread">
+            Spread:{" "}
+          </label>
+          <input id="spread" type="range" min="-0.1" max="3.1" step="0.02" value="1" />
         </div>
         <div className="slider-container">
-          <label htmlFor="sides">Sides: </label>
+          <label for="sides">Sides: </label>
           <input id="sides" type="range" min="2" max="22" step="1" value="5" />
-        </div> */}
+        </div>
         <button id="reset-btn" ref={resetBtnRef}>
           Reset
         </button>

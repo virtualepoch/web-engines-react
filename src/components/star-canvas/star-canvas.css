@@ -1,17 +1,8 @@
-#canvas1 {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: linear-gradient(90deg, blue, black, blue);
-}
 #canvas-controls {
   width: 200px;
   position: fixed;
   left: 0;
-  bottom: -55px;
+  bottom: -125px;
   z-index: 88888;
   display: flex;
   flex-direction: column;
@@ -27,7 +18,7 @@
   left: 6px;
 }
 #canvas-controls.open .open-close-controls-btn::after {
-  left: -5px;
+  left: -6px;
 }
 @media (max-width: 777px) {
   #canvas-controls {
@@ -93,13 +84,13 @@
 }
 .slider-container {
   /* MADE SLIDERS DISPLAY NONE HERE !!!!!! */
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: space-between;
 }
 #canvas-controls label,
 #canvas-controls input {
-  padding: 7px 0;
+  padding: 10px 5px;
   color: white;
-  font-size: 9px;
+  font-size: 13px;
 }
