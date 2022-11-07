@@ -1,5 +1,5 @@
 // import PyramidScene from "../../components/pyramid-scene/PyramidScene";
-import BalloonFloat from "../../components/balloon-float/BalloonFloat";
+// import BalloonFloat from "../../components/balloon-float/BalloonFloat";
 import { Link } from "react-router-dom";
 import BorderEffect from "./components/BorderEffect";
 import ColorCube from "./components/ColorCube";
@@ -7,7 +7,7 @@ import SpinningTop from "./components/SpinningTop";
 import Footer from "../../components/Footer";
 import "./css.css";
 import Kaleidoscope from "../../components/Kaleidoscope";
-import GameTest from "../../components/GameTest";
+import LoadingOverlay from "../../components/LoadingOverlay";
 
 export default function Css() {
   return (
@@ -16,19 +16,15 @@ export default function Css() {
       {/* <PyramidScene /> */}
       {/* <BalloonFloat /> */}
       <div className="css-heading-testing">
-        <div className="css-heading-testing-bg bg-1"></div>
+        <LoadingOverlay />
+        {/* <div className="css-heading-testing-bg bg-1"></div>
         <div className="css-heading-testing-bg bg-2"></div>
         <div className="css-heading-testing-bg bg-1 edit"></div>
-        <div className="css-heading-testing-bg bg-2 edit"></div>
+        <div className="css-heading-testing-bg bg-2 edit"></div> */}
         <div className="css-bird-container">
           <div className="css-bird"></div>
         </div>
       </div>
-      
-      <div className="css-canvas-testing">
-        <GameTest />
-      </div>
-
       <div className="main-content">
         <h1>The following tutorials can all be completed with plain old CSS.</h1>
         <section className="effects-section">

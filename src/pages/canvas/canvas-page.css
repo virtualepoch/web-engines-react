@@ -9,6 +9,14 @@
   background: white;
   pointer-events: all;
 }
+.canvas-testing {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border: solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .canvas-page p,
 .canvas-page h1,
 .canvas-game-link {
