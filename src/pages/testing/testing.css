@@ -1,0 +1,70 @@
+.sunrise-css {
+  animation: sunrise 4s linear infinite;
+}
+@keyframes sunrise {
+  5% {
+    background: linear-gradient(0deg, cyan 10%, deepskyblue 13% 21%, cyan 24% 31%, deepskyblue 33% 39%, cyan 41% 46%, deepskyblue 48% 51%, cyan 53% 54%, white 55% 57%, transparent), radial-gradient(circle at 50% 45%, yellow 10%, pink 15% 30%, white);
+  }
+  10% {
+    background: linear-gradient(0deg, cyan 10%, deepskyblue 13% 21%, cyan 24% 31%, deepskyblue 33% 39%, cyan 41% 46%, deepskyblue 48% 51%, cyan 53% 54%, white 55% 57%, transparent), radial-gradient(circle at 50% 40%, yellow 10%, pink 15% 30%, white);
+  }
+  15% {
+    background: linear-gradient(0deg, cyan 10%, deepskyblue 13% 21%, cyan 24% 31%, deepskyblue 33% 39%, cyan 41% 46%, deepskyblue 48% 51%, cyan 53% 54%, white 55% 57%, transparent), radial-gradient(circle at 50% 35%, yellow 10%, pink 15% 30%, white);
+  }
+  20% {
+    background: linear-gradient(0deg, cyan 10%, deepskyblue 13% 21%, cyan 24% 31%, deepskyblue 33% 39%, cyan 41% 46%, deepskyblue 48% 51%, cyan 53% 54%, white 55% 57%, transparent), radial-gradient(circle at 50% 30%, yellow 10%, pink 15% 30%, white);
+  }
+  25% {
+    background: linear-gradient(0deg, cyan 10%, deepskyblue 13% 21%, cyan 24% 31%, deepskyblue 33% 39%, cyan 41% 46%, deepskyblue 48% 51%, cyan 53% 54%, white 55% 57%, transparent), radial-gradient(circle at 50% 25%, yellow 10%, pink 15% 30%, white);
+  }
+  30% {
+    background: linear-gradient(0deg, cyan 10%, deepskyblue 13% 21%, cyan 24% 31%, deepskyblue 33% 39%, cyan 41% 46%, deepskyblue 48% 51%, cyan 53% 54%, white 55% 57%, transparent), radial-gradient(circle at 50% 20%, yellow 10%, pink 15% 30%, white);
+  }
+  35% {
+    background: linear-gradient(0deg, cyan 10%, deepskyblue 13% 21%, cyan 24% 31%, deepskyblue 33% 39%, cyan 41% 46%, deepskyblue 48% 51%, cyan 53% 54%, white 55% 57%, transparent), radial-gradient(circle at 50% 15%, yellow 10%, pink 15% 30%, white);
+  }
+  40% {
+    background: linear-gradient(0deg, cyan 10%, deepskyblue 13% 21%, cyan 24% 31%, deepskyblue 33% 39%, cyan 41% 46%, deepskyblue 48% 51%, cyan 53% 54%, white 55% 57%, transparent), radial-gradient(circle at 50% 10%, yellow 10%, pink 15% 30%, white);
+  }
+  45% {
+    background: linear-gradient(0deg, cyan 10%, deepskyblue 13% 21%, cyan 24% 31%, deepskyblue 33% 39%, cyan 41% 46%, deepskyblue 48% 51%, cyan 53% 54%, white 55% 57%, transparent), radial-gradient(circle at 50% 5%, yellow 10%, pink 15% 30%, white);
+  }
+  50% {
+    background: linear-gradient(0deg, cyan 10%, deepskyblue 13% 21%, cyan 24% 31%, deepskyblue 33% 39%, cyan 41% 46%, deepskyblue 48% 51%, cyan 53% 54%, white 55% 57%, transparent), radial-gradient(circle at 50% 0, yellow 10%, pink 15% 30%, white);
+  }
+  55% {
+    background: linear-gradient(0deg, cyan 10%, deepskyblue 13% 21%, cyan 24% 31%, deepskyblue 33% 39%, cyan 41% 46%, deepskyblue 48% 51%, cyan 53% 54%, white 55% 57%, transparent), radial-gradient(circle at 50% -5%, yellow 10%, pink 15% 30%, white);
+  }
+  60% {
+    background: linear-gradient(0deg, cyan 10%, deepskyblue 13% 21%, cyan 24% 31%, deepskyblue 33% 39%, cyan 41% 46%, deepskyblue 48% 51%, cyan 53% 54%, white 55% 57%, transparent), radial-gradient(circle at 50% -10%, yellow 10%, pink 15% 30%, white);
+  }
+  65% {
+    background: linear-gradient(0deg, cyan 10%, deepskyblue 13% 21%, cyan 24% 31%, deepskyblue 33% 39%, cyan 41% 46%, deepskyblue 48% 51%, cyan 53% 54%, white 55% 57%, transparent), radial-gradient(circle at 50% -15%, yellow 10%, pink 15% 30%, white);
+  }
+  70% {
+    background: linear-gradient(0deg, cyan 10%, deepskyblue 13% 21%, cyan 24% 31%, deepskyblue 33% 39%, cyan 41% 46%, deepskyblue 48% 51%, cyan 53% 54%, white 55% 57%, transparent), radial-gradient(circle at 50% -20%, yellow 10%, pink 15% 30%, white);
+  }
+  75% {
+    background: linear-gradient(0deg, cyan 10%, deepskyblue 13% 21%, cyan 24% 31%, deepskyblue 33% 39%, cyan 41% 46%, deepskyblue 48% 51%, cyan 53% 54%, white 55% 57%, transparent), radial-gradient(circle at 50% -25%, yellow 10%, pink 15% 30%, white);
+  }
+  80% {
+    background: linear-gradient(0deg, cyan 10%, deepskyblue 13% 21%, cyan 24% 31%, deepskyblue 33% 39%, cyan 41% 46%, deepskyblue 48% 51%, cyan 53% 54%, white 55% 57%, transparent), radial-gradient(circle at 50% -30%, yellow 10%, pink 15% 30%, white);
+  }
+  85% {
+    background: linear-gradient(0deg, cyan 10%, deepskyblue 13% 21%, cyan 24% 31%, deepskyblue 33% 39%, cyan 41% 46%, deepskyblue 48% 51%, cyan 53% 54%, white 55% 57%, transparent), radial-gradient(circle at 50% -35%, yellow 10%, pink 15% 30%, white);
+  }
+  90% {
+    background: linear-gradient(0deg, cyan 10%, deepskyblue 13% 21%, cyan 24% 31%, deepskyblue 33% 39%, cyan 41% 46%, deepskyblue 48% 51%, cyan 53% 54%, white 55% 57%, transparent), radial-gradient(circle at 50% -40%, yellow 10%, pink 15% 30%, white);
+  }
+  95% {
+    background: linear-gradient(0deg, cyan 10%, deepskyblue 13% 21%, cyan 24% 31%, deepskyblue 33% 39%, cyan 41% 46%, deepskyblue 48% 51%, cyan 53% 54%, white 55% 57%, transparent), radial-gradient(circle at 50% -45%, yellow 10%, pink 15% 30%, white);
+  }
+  100% {
+    background: linear-gradient(0deg, cyan 10%, deepskyblue 13% 21%, cyan 24% 31%, deepskyblue 33% 39%, cyan 41% 46%, deepskyblue 48% 51%, cyan 53% 54%, white 55% 57%, transparent), radial-gradient(circle at 50% -50%, yellow 10%, pink 15% 30%, white);
+    animation-timing-function: ease-in-out;
+  }
+}
+
+.sunset-ocean {
+  background: linear-gradient(0deg, cyan 10%, deepskyblue 13% 21%, cyan 24% 31%, deepskyblue 33% 39%, cyan 41% 46%, deepskyblue 48% 51%, cyan 53% 54%, white 55% 57%, transparent), radial-gradient(circle at 50% -10%, yellow 20%, pink 25% 30%, skyblue 40%);
+}

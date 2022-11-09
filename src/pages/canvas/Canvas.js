@@ -5,9 +5,6 @@ import "./canvas-page.css";
 export default function Canvas() {
   return (
     <div className="canvas-page">
-      <div className="canvas-testing">
-        <GameTest />
-      </div>
       <h1 className="heading">HTML-Canvas Tutorials</h1>
       <p>This section is currently being updated. Thanks for your patience.</p>
       <p>In the mean time, check out this JavaScript game we are experimenting with.</p>

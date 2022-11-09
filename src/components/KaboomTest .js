@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 
-export default function GameTest() {
+export default function KaboomTest() {
   const styleSheet = {
     canvas: {
       width: "600px",

@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Swiper from "../../components/Swiper";
 import horsemen2 from "../../images/horsemen2.png";
 import ayanami from "../../images/ayanami.png";
 import delorean from "../../images/delorean.png";

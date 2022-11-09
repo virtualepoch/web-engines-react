@@ -16,6 +16,7 @@ import Cgi from "./pages/cgi/Cgi";
 import HorsemenModel2 from "./pages/cgi/cgi-models/HorsemenModel2";
 import AyanamiModel from "./pages/cgi/cgi-models/AyanamiModel";
 import DeloreanHighModelPage from "./pages/cgi/cgi-models/DeloreanHighModelPage";
+import Testing from "./pages/testing/Testing";
 import "./pages/common.css";
 
 function useScrollToTop() {
@@ -48,6 +49,7 @@ function App() {
           <Route path="/cgi/cgi-models/horsemen-model-2" element={<HorsemenModel2 />} />
           <Route path="/cgi/cgi-models/ayanami-model" element={<AyanamiModel />} />
           <Route path="/cgi/cgi-models/delorean-high-model" element={<DeloreanHighModelPage />} />
+          <Route path="/testing" element={<Testing />} />
         </Routes>
       </section>
     </>
