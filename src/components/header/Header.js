@@ -38,9 +38,9 @@ export default function Header() {
     siteTitle: {
       padding: "0 3px",
       backgroundImage: "linear-gradient(115deg, rgb(140, 255, 251) 0% 76%, #38a8f3 79% 100%)",
-      webkitBackgroundClip: "text",
+      WebkitBackgroundClip: "text",
       backgroundClip: "text",
-      webkitTextFillColor: "transparent",
+      WebkitTextFillColor: "transparent",
       font: "400 clamp(1.65rem, 5vw, 2rem) Lorea",
       color: "#38a8f3",
       letterSpacing: "1px",

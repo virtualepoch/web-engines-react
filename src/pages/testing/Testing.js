@@ -1,4 +1,4 @@
-import GameTest from "../../components/GameTest";
+// import GameTest from "../../components/GameTest";
 import { ImageEffectCanvas } from "../../components/ImageEffectCanvas";
 import "./testing.css";
 
@@ -53,7 +53,7 @@ export default function Testing() {
       <ImageEffectCanvas />
       <p style={style.testHeading}>GameTest</p>
       <div style={style.testing}>
-        <GameTest />
+        {/* <GameTest /> */}
       </div>
       <p style={style.testContainer} className="sunrise-css">
         SUNRISE CSS
