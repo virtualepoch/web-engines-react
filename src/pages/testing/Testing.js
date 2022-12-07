@@ -50,7 +50,7 @@ export default function Testing() {
     <div style={style.page}>
       <h1 style={style.text}>THE TEST PAGE</h1>
       <p style={style.pTag}>This section is where I will be testing and storing various little projects I'm working on.</p>
-      <h2 style={style.text}>Image Effect Canvas</h2>
+      <h2 style={style.text}>Image Effect Canvas Test</h2>
       <ImageEffectCanvas />
       <p style={style.testHeading}>GameTest</p>
       <div style={style.testing}>{/* <GameTest /> */}</div>
