@@ -30,7 +30,7 @@ export default function Testing() {
     },
     pTag: {
       maxWidth: "500px",
-      padding: "10px 0",
+      padding: "30px 0",
       font: "18px sans-serif",
     },
     testHeading: {
@@ -50,11 +50,10 @@ export default function Testing() {
     <div style={style.page}>
       <h1 style={style.text}>THE TEST PAGE</h1>
       <p style={style.pTag}>This section is where I will be testing and storing various little projects I'm working on.</p>
+      <h2 style={style.text}>Image Effect Canvas</h2>
       <ImageEffectCanvas />
       <p style={style.testHeading}>GameTest</p>
-      <div style={style.testing}>
-        {/* <GameTest /> */}
-      </div>
+      <div style={style.testing}>{/* <GameTest /> */}</div>
       <p style={style.testContainer} className="sunrise-css">
         SUNRISE CSS
       </p>
