@@ -18,7 +18,7 @@ export function ImageEffectCanvas() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     let particlesArray = [];
-    const numberOfParticles = 1000;
+    const numberOfParticles = 500;
 
     let mappedImage = [];
     for (let y = 0; y < canvas.height; y++) {
