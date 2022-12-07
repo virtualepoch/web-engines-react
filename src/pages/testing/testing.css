@@ -1,7 +1,7 @@
 .sunrise-css {
   animation: sunrise 4s linear infinite;
 }
-@keyframes sunrise {
+@keyframes sunriseXXX {
   5% {
     background: linear-gradient(0deg, cyan 10%, deepskyblue 13% 21%, cyan 24% 31%, deepskyblue 33% 39%, cyan 41% 46%, deepskyblue 48% 51%, cyan 53% 54%, white 55% 57%, transparent), radial-gradient(circle at 50% 45%, yellow 10%, pink 15% 30%, white);
   }
