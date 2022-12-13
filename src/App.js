@@ -18,6 +18,7 @@ import AyanamiModel from "./pages/cgi/cgi-models/AyanamiModel";
 import DeloreanHighModelPage from "./pages/cgi/cgi-models/DeloreanHighModelPage";
 import Testing from "./pages/testing/Testing";
 import "./pages/common.css";
+import { AngledHighlights } from "./pages/testing/landing-pages/AngledHighlights";
 
 function useScrollToTop() {
   const { pathname } = useLocation();
@@ -50,6 +51,7 @@ function App() {
           <Route path="/cgi/cgi-models/ayanami-model" element={<AyanamiModel />} />
           <Route path="/cgi/cgi-models/delorean-high-model" element={<DeloreanHighModelPage />} />
           <Route path="/testing" element={<Testing />} />
+          <Route path="/landing-pages/angled-highlights" element={<AngledHighlights />} />
         </Routes>
       </section>
     </>

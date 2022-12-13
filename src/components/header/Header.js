@@ -99,9 +99,9 @@ export default function Header() {
               <CustomLink onClick={closeMainNav} to={"/cgi"}>
                 CGI
               </CustomLink>
-              <CustomLink onClick={closeMainNav} to={"/testing"}>
+              {/* <CustomLink onClick={closeMainNav} to={"/testing"}>
                 T
-              </CustomLink>
+              </CustomLink> */}
             </ul>
           </nav>
           <SearchBar />
