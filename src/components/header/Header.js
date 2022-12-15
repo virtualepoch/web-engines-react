@@ -3,7 +3,7 @@ import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import SearchBar from "../search-bar/SearchBar";
 import "./header.css";
 
-export default function Header() {
+export function Header() {
   const styleSheet = {
     header: {
       position: "fixed",

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import BorderEffect from "./components/BorderEffect";
 import ColorCube from "./components/ColorCube";
 import SpinningTop from "./components/SpinningTop";
-import Footer from "../../components/Footer";
+import { Footer } from "../../components/Footer";
 import "./css.css";
 import Kaleidoscope from "../../components/Kaleidoscope";
 import LoadingOverlay from "../../components/LoadingOverlay";

@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import BackBtnFixed from "../../css/components/BackBtnFixed";
+import { BackBtnFixed } from "../../../components/BackBtnFixed";
 import { Canvas } from "@react-three/fiber";
 import Horsemen2 from "./cgi-components/Horsemen2";
 import { OrbitControls } from "@react-three/drei";

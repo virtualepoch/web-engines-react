@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-export default function BackBtn() {
+export function BackBtn() {
   const navigate = useNavigate();
 
   var style = {

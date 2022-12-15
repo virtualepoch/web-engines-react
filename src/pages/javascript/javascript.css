@@ -1,0 +1,180 @@
+.javascript-page {
+  position: relative;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  color: black;
+}
+.javascript-page.theme-dark {
+  background: black;
+  color: white;
+}
+
+.rain-canvas-container-dark,
+.rain-canvas-container-light {
+  width: 100vw;
+  height: 100vh;
+  transition: 0.5s ease-in-out 0.2s;
+}
+.rain-canvas-container-dark {
+  display: none;
+}
+.rain-canvas-container-light.remove {
+  display: none;
+}
+.rain-canvas-container-dark.add {
+  display: block;
+}
+.canvas-overlay {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(transparent, white 50%);
+  position: absolute;
+  top: 0;
+}
+.javascript-page.theme-dark .canvas-overlay {
+  background: linear-gradient(transparent, black 50%);
+}
+
+.dark-light-theme-btn {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  z-index: 12;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.dark-light-theme-btn::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  z-index: 12;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 40%, white, lightgray 50%, black);
+  box-shadow: 0 0 10px 1px rgb(0, 0, 0, 0.5);
+}
+.javascript-page.theme-dark .dark-light-theme-btn::after {
+  background: rgb(255, 255, 200);
+  box-shadow: 0 0 10px 1px orangered;
+  transition: all 2s linear;
+}
+.dark-light-theme-btn .theme-btn-note {
+  position: relative;
+  left: 60px;
+  background: black;
+  color: white;
+  border: 1px solid turquoise;
+  border-radius: 10px;
+  padding: 5px;
+  display: none;
+}
+.dark-light-theme-btn:hover .theme-btn-note {
+  display: block;
+}
+.javascript-page.theme-dark .dark-light-theme-btn .theme-btn-note {
+  background: white;
+  color: black;
+}
+
+.javascript-page .landing-content {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.javascript-page .heading {
+  z-index: 2;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at 50%, rgba(255, 255, 255, 0.7) 50%, transparent);
+  transform: scale(0);
+}
+.javascript-page .heading.load {
+  transition: 1.5s ease-in;
+  transform: scale(1);
+}
+
+.javascript-page h2 {
+  max-width: 500px;
+  height: 150px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.javascript-page.theme-dark .heading,
+.javascript-page.theme-dark .sub-heading {
+  background: radial-gradient(ellipse at 50%, rgba(0, 0, 0, 0.5) 50%, transparent);
+}
+
+.javascript-page .sub-heading {
+  padding: 0 10px;
+  transition: 0.5s ease-in-out 0.3s;
+  transform: translateX(0);
+  opacity: 1;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at 50%, rgba(255, 255, 255, 0.7) 50%, transparent);
+}
+
+.javascript-page .main-content {
+  width: 100%;
+  position: relative;
+  top: -500px;
+  font: 600 clamp(0.8rem, 5vw, 1.2rem) sans-serif;
+  background: inherit;
+}
+
+.javascript-page .content-text {
+  font: clamp(0.8rem, 5vw, 1.2rem) sans-serif;
+  padding: 20px 0;
+}
+
+.javascript-page .javascript-color-card {
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 1px 2px 10px 2px rgb(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.javascript-color-card .color-card-p-1 {
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+.javascript-color-card .color-card-p-2 {
+  opacity: 0;
+  transition: all 1s ease-in-out 1s;
+}
+
+.tutorial-heading {
+  margin: 0 auto;
+  font: 600 clamp(0.8rem, 5vw, 1.2rem) sans-serif;
+}
+
+.link-container {
+  width: fit-content;
+  margin: 20px auto;
+}
+
+.nav-menu-btn-link {
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 7px;
+  color: black;
+  box-shadow: 1px 2px 10px 2px rgb(0, 0, 0, 0.4);
+}
+.link-container:hover {
+  transform: scale(1.05);
+}

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import GameTest from "../../components/GameTest";
 import "./canvas-page.css";
 
-export default function Canvas() {
+export function Canvas() {
   return (
     <div className="canvas-page">
       <h1 className="heading">HTML-Canvas Tutorials</h1>

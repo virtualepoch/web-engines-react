@@ -1,10 +1,10 @@
 import React, { useRef } from "react";
-import BackBtn from "../components/BackBtn";
+import { BackBtn } from "../../../components/BackBtn";
 import AllCodeContainer from "./AllCodeContainer";
-import Footer from "../../../components/Footer";
+import { Footer } from "../../../components/Footer";
 import "./text-wave-effect-tut.css";
 
-export default function TextWaveEffectTut() {
+export function TextWaveEffectTut() {
   const codeEx1 = `<div class="text-wave-effect-container">
   <h1>text effects</h1>
 </div>`;

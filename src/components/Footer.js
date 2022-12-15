@@ -1,7 +1,7 @@
 import React from "react";
 import mainLogo from "../logos/jsive-logo-at-100.png";
 
-export default function Footer() {
+export function Footer() {
   var styles = {
     footer: {
       width: "100%",

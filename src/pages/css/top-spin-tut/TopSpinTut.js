@@ -1,11 +1,11 @@
 import React, { useRef } from "react";
-import BackBtn from "../components/BackBtn";
+import { BackBtn } from "../../../components/BackBtn";
 import SpinningTop from "../components/SpinningTop";
 import AllCodeContainer from "./AllCodeContainer";
-import Footer from "../../../components/Footer";
+import { Footer } from "../../../components/Footer";
 import "./top-spin-tut.css";
 
-export default function TopSpinTut() {
+export function TopSpinTut() {
   const codeEx1 = `<div class="spinning-top-container">
   <div class="spinning-top">
     <div class="side front"></div>

@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 
-export default function ToTopBtn() {
+export function ToTopBtn() {
   const toTopBtn = useRef(null);
 
   window.onscroll = function () {

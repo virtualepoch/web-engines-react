@@ -109,9 +109,9 @@ export function AllCodeContainer() {
           <div class="nav-menu-btn-bars"></div>
       </div>
       <div class="main-nav-menu">
-          <p class="link">Page Link</p>
-          <p class="link">Page Link</p>
-          <p class="link">Page Link</p>
+          <a class="link">Page Link</a>
+          <a class="link">Page Link</a>
+          <a class="link">Page Link</a>
       </div>
   </header>
 

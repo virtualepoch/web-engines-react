@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import StarCanvas from "../../components/star-canvas/StarCanvas";
 import "./home.css";
 
-export default function Home() {
+export function Home() {
   return (
     <div className="home-page">
       <StarCanvas />

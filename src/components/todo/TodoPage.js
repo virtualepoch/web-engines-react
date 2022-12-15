@@ -5,7 +5,7 @@ import "./todopage.css";
 
 const LOCAL_STORAGE_KEY = "todoApp.todos";
 
-export default function TodoPage() {
+export function TodoPage() {
   const [todos, setTodos] = useState([]);
   const todoNameRef = useRef();
 

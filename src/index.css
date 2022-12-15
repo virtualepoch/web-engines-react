@@ -46,10 +46,4 @@
   text-rendering: optimizeLegibility;
   font-family: "Cormorant", sans-serif;
 }
-@media (min-width: 1200px) {
-  .to-top-btn {
-    left: 0;
-    right: 0;
-    margin: auto;
-  }
-}
+

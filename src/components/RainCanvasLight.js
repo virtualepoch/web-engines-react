@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "../components/components.css";
 
-export default function RainCanvas() {
+export function RainCanvasLight() {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -12,7 +12,7 @@ export default function RainCanvas() {
 
     let gradient = ctx.createLinearGradient(canvas.width / 10, 0, canvas.width, 0);
     gradient.addColorStop(0, "black");
-    gradient.addColorStop(0.5, "black");
+    gradient.addColorStop(0.5, "white");
     gradient.addColorStop(1, "black");
 
     class Symbol {
