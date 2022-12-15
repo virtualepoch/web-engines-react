@@ -24,6 +24,7 @@
   position: relative;
   transform-style: preserve-3d;
   animation: color-cube-rotateY 12s linear infinite;
+  cursor: pointer;
 }
 @keyframes color-cube-rotateY {
   to {
@@ -88,6 +89,7 @@
   top: 50px;
   transform-style: preserve-3d;
   animation: spinning-top-rotateY 2s linear infinite;
+  cursor: pointer;
 }
 @keyframes spinning-top-rotateY {
   to {

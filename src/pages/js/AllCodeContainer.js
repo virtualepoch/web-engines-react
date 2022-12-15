@@ -2,90 +2,130 @@ import React, { useRef } from "react";
 
 export function AllCodeContainer() {
   const allCode = `<head>
-<style>
-.cube-container {
-  width: 300px;
-  height: 300px;
-  border-top: 4px solid gray;
-  border-left: 4px solid rgb(192, 192, 192);
-  border-bottom: 4px solid rgb(222, 222, 222);
-  border-right: 4px solid rgb(154, 154, 154);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  perspective: 600px;
-  perspective-origin: 50%;
-  overflow: hidden;
-  background: linear-gradient(white, skyblue 30% 40%, pink 40%, rgb(255, 95, 255) 54%, white);
-}
-/* COLOR CUBE //////////////// */
-.color-cube {
-  height: 100px;
-  width: 100px;
-  position: relative;
-  transform-style: preserve-3d;
-  animation: color-cube-rotateY 12s linear infinite;
-}
-@keyframes color-cube-rotateY {
-  to {
-    transform: rotateY(360deg);
-  }
-}
-.color-cube .side {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  border: 2px solid rgba(255, 0, 255, 0.5);
-  background: rgb(0, 0, 255, 0.5);
-}
-.color-cube .front,
-.color-cube .back {
-  background: url('link to your logo') 50%/80% no-repeat, rgb(0, 0, 255, 0.5);
-}
-.color-cube .front {
-  transform: translateZ(50px);
-}
-.color-cube .back {
-  transform: translateZ(-50px) rotateY(180deg);
-}
-.color-cube .left {
-  transform: translateX(-50px) rotateY(90deg);
-}
-.color-cube .right {
-  transform: translateX(50px) rotateY(90deg);
-}
-.color-cube .top,
-.color-cube .bottom {
-  background: rgb(255, 0, 255, 0.5);
-}
-.color-cube .top {
-  transform: translateY(-50px) rotateX(90deg);
-}
-.color-cube .bottom {
-  transform: translateY(50px) rotateX(90deg);
-}
-.color-cube .shadow {
-  border: none;
-  border-radius: 5px;
-  background: radial-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.05));
-  transform: translateY(120px) rotateX(90deg);
-}
-</style>
+  <style>
+
+    body {
+      margin: 0;
+    }
+
+    header {
+      width: 100%;
+      max-height: 70px;
+      background: linear-gradient(45deg, skyblue, aqua);
+      padding: 10px;
+    }
+
+    /* NAVIGATION MENU BUTTON */
+    .nav-menu-btn {
+      width: 50px;
+      height: 50px;
+      background: radial-gradient(white, lightgrey);
+      border-radius: 5px;
+      box-shadow: inset 1px 1px 5px 1px rgb(0, 0, 0, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .nav-menu-btn-bars,
+    .nav-menu-btn-bars::before,
+    .nav-menu-btn-bars::after {
+      width: 29px;
+      height: 2px;
+      background: black;
+      transition: all 500ms ease-in-out;
+    }
+
+    .nav-menu-btn-bars::before,
+    .nav-menu-btn-bars::after {
+      content: "";
+      position: absolute;
+    }
+
+    .nav-menu-btn-bars::before {
+      transform: translateY(-7px);
+    }
+
+    .nav-menu-btn-bars::after {
+      transform: translateY(7px);
+    }
+
+    /* NAV MENU BUTTON CLICK ANIMATION  */
+    .nav-menu-btn.open .nav-menu-btn-bars {
+      transform: rotate(360deg);
+      background: transparent;
+      box-shadow: none;
+      transition: all 1s ease-in-out;
+    }
+
+    .nav-menu-btn.open .nav-menu-btn-bars::before {
+      transform: rotate(45deg);
+    }
+
+    .nav-menu-btn.open .nav-menu-btn-bars::after {
+      transform: rotate(135deg);
+    }
+
+    /* MAIN NAV MENU */
+    .main-nav-menu {
+      background: linear-gradient(45deg, pink, turquoise);
+      width: 100%;
+      max-width: 300px;
+      height: 100%;
+      max-height: 500px;
+      position: fixed;
+      top: 70px;
+      right: -300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: right 0.3s ease-in-out;
+    }
+
+    .main-nav-menu.open {
+      right: 0;
+      transition: right 0.3s ease-in-out;
+    }
+
+    .link {
+      background: linear-gradient(45deg, skyblue, aqua);
+      width: 90%;
+      height: 50px;
+      border: 1px solid;
+      color: rgb(138, 35, 227);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+      
+  </style>
 </head>
 
 <body>
-<div class="cube-container">
-  <div class="color-cube">
-    <div class="side front"></div>
-    <div class="side back"></div>
-    <div class="side left"></div>
-    <div class="side right"></div>
-    <div class="side top"></div>
-    <div class="side bottom"></div>
-    <div class="side shadow"></div>
-  </div>
-</div>
+  <header>
+      <div class="nav-menu-btn" onclick="openCloseMainNav()">
+          <div class="nav-menu-btn-bars"></div>
+      </div>
+      <div class="main-nav-menu">
+          <p class="link">Page Link</p>
+          <p class="link">Page Link</p>
+          <p class="link">Page Link</p>
+      </div>
+  </header>
+
+  <script>
+      const navMenuBtn = document.querySelector(".nav-menu-btn");
+      const mainNav = document.querySelector(".main-nav-menu");
+
+      function openCloseMainNav() {
+          navMenuBtn.classList.toggle("open");
+          mainNav.classList.toggle("open");
+      }
+  </script>
 </body>
+
 `;
 
   const copyAllBtnRef = useRef(null);

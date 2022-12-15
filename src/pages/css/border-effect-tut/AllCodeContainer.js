@@ -37,20 +37,20 @@ export default function AllCodeContainer() {
     }
 
     .border-effect-box::after {
-      content: "Learn how to add border effects";
+      content: "Learn to create border effects";
       width: 208px;
       height: 84px;
       position: relative;
       top: 2px;
       left: 2px;
       border-radius: 5px;
-      color: lightgray;
       display: flex;
       align-items: center;
-      justify-content: flex-end;
-      font: 20px "Cormorant", sans-serif;
+      font: 20px sans-serif;
+      color: white;
       letter-spacing: 2px;
-      background: radial-gradient(rgb(23, 14, 186), black);
+      text-align: center;
+      background: radial-gradient(blue, black);
     }
 
   </style>  

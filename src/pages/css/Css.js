@@ -59,7 +59,7 @@ export function Css() {
               </Link>
             </div>
           </div>
-          <Kaleidoscope />
+          {/* <Kaleidoscope /> */}
         </section>
         <Footer />
       </div>

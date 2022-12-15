@@ -5,76 +5,26 @@ import RainCanvasLight from "../../components/RainCanvasLight";
 import { AllCodeContainer } from "../js/AllCodeContainer";
 
 export function Js() {
-  const codeEx1 = `<header>
-  <button class="nav-menu-btn"></button>
-</header>`;
+  const codeEx1 = `<body>
+  <header>
 
-  const codeEx2 = `.cube-container {
-  width: 300px;
-  height: 300px;
-  border-top: 4px solid gray;
-  border-left: 4px solid rgb(192, 192, 192);
-  border-bottom: 4px solid rgb(222, 222, 222);
-  border-right: 4px solid rgb(154, 154, 154);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  perspective: 600px;
-  perspective-origin: 50%;
-  overflow: hidden;
-  background: linear-gradient(white, skyblue 30% 40%, pink 40%,
-  rgb(255, 95, 255) 54%, white);
-}`;
-  const codeEx3 = `.color-cube {
-  height: 100px;
-  width: 100px;
-  position: relative;
-  transform-style: preserve-3d;
-  animation: color-cube-rotateY 12s linear infinite;
-  border: solid black;
-}`;
-  const codeEx4 = `.color-cube .side {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  border: 2px solid rgba(255, 0, 255, 0.5);
-  background: rgb(0, 0, 255, 0.5);
-}
-.color-cube .back {
-  transform: translateZ(-50px) rotateY(180deg);
-  background: limegreen;
-}
-.color-cube .left {
-  transform: translateX(-50px) rotateY(90deg);
-  background: red;
-}
-.color-cube .right {
-  transform: translateX(50px) rotateY(90deg);
-  background: blue;
-}
-.color-cube .top {
-  transform: translateY(-50px) rotateX(90deg) ;
-  background: yellow;
-}
-.color-cube .bottom {
-  transform: translateY(50px) rotateX(90deg);
-  background: aqua;
-}`;
-  const codeEx5 = `.color-cube .front {
-  transform: translateZ(50px);
-}
-.color-cube .shadow {
-  border: none;
-  border-radius: 5px;
-  background: radial-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.05));
-  transform: translateY(120px) rotateX(90deg);
-}
+    <div class="nav-menu-btn" onclick="openCloseMainNav()">
+      <div class="nav-menu-btn-bars"></div>
+    </div>
 
-@keyframes color-cube-rotateY {
-  to {
-    transform: rotateY(360deg);
-  }
-}`;
+    <div class="main-nav-menu">
+      <p class="link">Page Link</p>
+      <p class="link">Page Link</p>
+      <p class="link">Page Link</p>
+    </div> 
+
+  </header>
+</body>`;
+
+  const codeEx2 = `code example 2`;
+  const codeEx3 = `code example 3`;
+  const codeEx4 = `code example 4`;
+  const codeEx5 = `code example 5`;
 
   var allCodeContainerRef = useRef(null);
   function openCloseAllCode() {
@@ -265,7 +215,7 @@ export function Js() {
         <RainCanvasLight />
       </div>
       <div className="javascript-card-1" onClick={changeColor} ref={jsCard1}>
-        <p className="card-1-p card1p1">On the front end— JavaScript is used to make a web page interactive. It takes in user inputs and interactions and makes computations and changes based on the input. According to Wikipedia, as of 2022, JavaScript is the dominant client-side language with 98% of ALL websites using it.</p>
+        <p className="card-1-p card1p1">JavaScript is used for many different things in web development. One common and beginner friendly thing it's used for is to make a web page interactive. It's able to take in user inputs and interactions(i.e. clicks, taps, swipes) and make computations and changes based on the input. According to Wikipedia, as of 2022, JavaScript is the dominant client-side language with 98% of ALL websites using it.</p>
         <p className="card-1-p card1p2">Every single button you tapped or clicked on this website used JavaScript to take in that interaction or input and make changes to the visual content displayed.</p>
         <p className="card-1-p card1p3">For example, tap or click anywhere on this white card.</p>
         <p className="card-1-p card1p4" ref={card1p4}>
@@ -302,44 +252,31 @@ export function Js() {
           <pre className="code-example">{codeEx1}</pre>
           <button className="copy-code-btn" ref={copyBtn1Ref} onClick={copyCodeEx1}></button>
         </div>
-        <p>Everything else is done with CSS. So, we'll start by styling the 'cube-container'. Notice we have the 'perspective' and 'perspective-origin' style properties. These are used to change the perspective depth and viewing position of the 3d effect.</p>
+        <p>Everything else is done with CSS. Step #1</p>
         <div className="code-example-container">
           <pre className="code-example">{codeEx2}</pre>
           <button className="copy-code-btn" ref={copyBtn2Ref} onClick={copyCodeEx2}></button>
         </div>
         <div className="border-ex-1">
           <p>Output:</p>
-          <div className="cube-container"></div>
         </div>
-        <p>Next, we have to style the 'color-cube'. Here is where the most important style is, the 'transform-style: preserve-3d'. This will give depth to the sides of our cube. We'll also add the 'animation' reference but will not create the animation itself until the end. Lastly, we'll add a border so we can see the element.</p>
+        <p>Step #2</p>
         <div className="code-example-container">
           <pre className="code-example">{codeEx3}</pre>
           <button className="copy-code-btn" ref={copyBtn3Ref} onClick={copyCodeEx3}></button>
         </div>
         <div className="border-ex-1">
           <p>Output:</p>
-          <div className="cube-container">
-            <div className="color-cube-ex border"></div>
-          </div>
         </div>
-        <p>Now that we have the parent element styled we will start styling the children, or 'sides'. We can give all sides a universal styling using the class name 'side'. Here we will also style the back, left, right, top, and bottom sides —each with a different color. We won't style the front yet so that we can see what's going on with the other sides. We'll also remove the border of our 'color-cube'.</p>
+        <p>Step #3</p>
         <div className="code-example-container">
           <pre className="code-example">{codeEx4}</pre>
           <button className="copy-code-btn" ref={copyBtn4Ref} onClick={copyCodeEx4}></button>
         </div>
         <div className="border-ex-1">
           <p>Output:</p>
-          <div className="cube-container">
-            <div className="color-cube-ex">
-              <div className="side back"></div>
-              <div className="side left"></div>
-              <div className="side right"></div>
-              <div className="side top"></div>
-              <div className="side bottom"></div>
-            </div>
-          </div>
         </div>
-        <p>Finally, all we have to do is add the front side, shadow, and the animation. We'll also remove the individual side background colors so they revert back to the transparent color we applied at the beginning (we threw our logo in there too).</p>
+        <p>Step #4</p>
         <div className="code-example-container">
           <pre className="code-example">{codeEx5}</pre>
           <button className="copy-code-btn" ref={copyBtn5} onClick={copyCodeEx5}></button>
@@ -347,7 +284,7 @@ export function Js() {
         <div className="border-ex-1">
           <p>Output:</p>
         </div>
-        <p>There you have it. Another example of what can be done with the power of CSS.</p>
+        <p>There you have it. A useful example of what can be done with the power of JavaScript.</p>
       </div>
     </div>
   );
