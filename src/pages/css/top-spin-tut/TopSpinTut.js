@@ -48,14 +48,17 @@ export default function TopSpinTut() {
   transform-origin: 50% 100%;
   clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
 }
+
 .spinning-top .back {
   background: yellow;
   transform: rotateX(7deg);
 }
+
 .spinning-top .left {
   background: red;
   transform: rotateY(90deg) rotateX(7deg);
 }
+
 .spinning-top .right {
   background: blue;
   transform: rotateY(90deg) rotateX(-7deg);
@@ -64,9 +67,11 @@ export default function TopSpinTut() {
 .spinning-top .back {
   background: rgb(255, 0, 255, 0.6);
 }
+
 .spinning-top .front {
   transform: rotateX(-7deg);
 }
+
 .spinning-top .top {
   width: 60px;
   height: 60px;
@@ -79,6 +84,7 @@ export default function TopSpinTut() {
   background: url(../link to your logo) 50% / 70% no-repeat,
   rgb(255, 0, 255, 0.5);
 }
+
 .spinning-top-container .shadow {
   width: 50px;
   height: 50px;
@@ -89,6 +95,7 @@ export default function TopSpinTut() {
   background: radial-gradient(rgb(0, 0, 0, 0.1),
   rgb(0, 0, 0, 0.05));
 }
+
 @keyframes spinning-top-rotateY {
   to {
     transform: rotateY(-360deg);

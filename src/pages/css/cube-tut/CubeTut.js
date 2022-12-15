@@ -1,11 +1,11 @@
 import React, { useRef } from "react";
 import BackBtn from "../components/BackBtn";
 import ColorCube from "../components/ColorCube";
-import AllCodeContainer from "./AllCodeContainer";
+import { AllCodeContainer } from "./AllCodeContainer";
 import Footer from "../../../components/Footer";
 import "./cube-tut.css";
 
-export default function TextWaveEffectTut() {
+export function CubeTut() {
   const codeEx1 = `<div class="cube-container">
   <div class="color-cube">
     <div class="side front"></div>
@@ -49,22 +49,27 @@ export default function TextWaveEffectTut() {
   border: 2px solid rgba(255, 0, 255, 0.5);
   background: rgb(0, 0, 255, 0.5);
 }
+
 .color-cube .back {
   transform: translateZ(-50px) rotateY(180deg);
   background: limegreen;
 }
+
 .color-cube .left {
   transform: translateX(-50px) rotateY(90deg);
   background: red;
 }
+
 .color-cube .right {
   transform: translateX(50px) rotateY(90deg);
   background: blue;
 }
+
 .color-cube .top {
   transform: translateY(-50px) rotateX(90deg) ;
   background: yellow;
 }
+
 .color-cube .bottom {
   transform: translateY(50px) rotateX(90deg);
   background: aqua;

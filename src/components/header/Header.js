@@ -50,6 +50,7 @@ export default function Header() {
   const navBtn = useRef(null);
   const mainNav = useRef(null);
   const closeNavBox = useRef(null);
+  const titleEnding = "ive";
 
   function openCloseMainNav() {
     navBtn.current.classList.toggle("open");
@@ -67,7 +68,17 @@ export default function Header() {
     }
   }
 
-  const titleEnding = "ive";
+  function CustomLink({ to, children, ...props }) {
+    const resolvedPath = useResolvedPath(to);
+    const isActive = useMatch({ path: resolvedPath.pathname, end: true });
+    return (
+      <li className={isActive ? "active" : ""}>
+        <Link to={to} {...props} className="link">
+          {children}
+        </Link>
+      </li>
+    );
+  }
 
   return (
     <header style={styleSheet.header}>
@@ -111,17 +122,5 @@ export default function Header() {
         </div>
       </div>
     </header>
-  );
-}
-
-function CustomLink({ to, children, ...props }) {
-  const resolvedPath = useResolvedPath(to);
-  const isActive = useMatch({ path: resolvedPath.pathname, end: true });
-  return (
-    <li className={isActive ? "active" : ""}>
-      <Link to={to} {...props} className="link">
-        {children}
-      </Link>
-    </li>
   );
 }

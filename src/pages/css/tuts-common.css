@@ -27,6 +27,7 @@
 .code-example-container {
   max-width: 100%;
   position: relative;
+  color: black;
 }
 .all-code-container {
   display: none;

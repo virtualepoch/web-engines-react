@@ -24,6 +24,7 @@ export default function TextWaveEffectTut() {
   overflow: hidden;
   background: linear-gradient(45deg, purple, magenta);
 }
+
 .text-wave-effect-container h2 {
   position: relative;
   font: 3rem Poppins, sans-serif;

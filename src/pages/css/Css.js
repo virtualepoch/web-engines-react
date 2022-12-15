@@ -9,7 +9,7 @@ import "./css.css";
 import Kaleidoscope from "../../components/Kaleidoscope";
 import LoadingOverlay from "../../components/LoadingOverlay";
 
-export default function Css() {
+export function Css() {
   return (
     <div className="css-page">
       <h1 className="heading css-heading">CSS Tutorials</h1>
