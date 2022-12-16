@@ -1,0 +1,41 @@
+.nav-menu-btn-tut-ex {
+  width: 100%;
+  max-height: 70px;
+  background: linear-gradient(45deg, skyblue, aqua);
+  padding: 10px;
+}
+
+.nav-menu-btn-tut-ex .nav-menu-btn {
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(white, lightgrey);
+  border-radius: 5px;
+  box-shadow: inset 1px 1px 5px 1px rgb(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.nav-menu-btn-tut-ex .nav-menu-btn-bars,
+.nav-menu-btn-tut-ex .nav-menu-btn-bars::before,
+.nav-menu-btn-tut-ex .nav-menu-btn-bars::after {
+  width: 29px;
+  height: 2px;
+  background: black;
+  transition: all 500ms ease-in-out;
+}
+
+.nav-menu-btn-tut-ex .nav-menu-btn-bars::before,
+.nav-menu-btn-tut-ex .nav-menu-btn-bars::after {
+  content: "";
+  position: absolute;
+}
+
+.nav-menu-btn-tut-ex .nav-menu-btn-bars::before {
+  transform: translateY(-7px);
+}
+
+.nav-menu-btn-tut-ex .nav-menu-btn-bars::after {
+  transform: translateY(7px);
+}

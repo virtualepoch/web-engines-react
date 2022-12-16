@@ -13,11 +13,11 @@ export function JavaScript() {
     heading.current.classList.add("load");
 
     function hideThemeBtnNote() {
-      // themeBtnNote.current.style.display = "none";
+      themeBtnNote.current.style.opacity = 0;
     }
     setTimeout(function () {
       hideThemeBtnNote();
-    }, 6000);
+    }, 4000);
   }, []);
 
   const javascriptPage = useRef(null);

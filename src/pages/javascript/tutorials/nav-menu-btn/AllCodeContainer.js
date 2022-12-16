@@ -105,28 +105,26 @@ export function AllCodeContainer() {
 
 <body>
   <header>
-      <div class="nav-menu-btn" onclick="openCloseMainNav()">
-          <div class="nav-menu-btn-bars"></div>
-      </div>
-      <div class="main-nav-menu">
-          <a class="link">Page Link</a>
-          <a class="link">Page Link</a>
-          <a class="link">Page Link</a>
-      </div>
+    <div class="nav-menu-btn" onclick="openCloseMainNav()">
+      <div class="nav-menu-btn-bars"></div>
+    </div>
+    <div class="main-nav-menu">
+      <a class="link" href="/">Page Link</a>
+      <a class="link" href="/">Page Link</a>
+      <a class="link" href="/">Page Link</a>
+    </div>
   </header>
 
   <script>
-      const navMenuBtn = document.querySelector(".nav-menu-btn");
-      const mainNav = document.querySelector(".main-nav-menu");
+    const navMenuBtn = document.querySelector(".nav-menu-btn");
+    const mainNav = document.querySelector(".main-nav-menu");
 
-      function openCloseMainNav() {
-          navMenuBtn.classList.toggle("open");
-          mainNav.classList.toggle("open");
-      }
+    function openCloseMainNav() {
+      navMenuBtn.classList.toggle("open");
+      mainNav.classList.toggle("open");
+    }
   </script>
-</body>
-
-`;
+</body>`;
 
   const copyAllBtnRef = useRef(null);
   function copyAllCode() {

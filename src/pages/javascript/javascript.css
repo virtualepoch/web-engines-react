@@ -62,11 +62,12 @@
 .dark-light-theme-btn .theme-btn-note {
   position: relative;
   left: 65px;
-  background: black;
+  background: darkgray;
   color: white;
-  border: 1px solid turquoise;
+  border: 1px solid black;
   border-radius: 10px;
   padding: 5px;
+  transition: opacity 2s ease-in-out;
   animation: theme-btn-note-pulse 2s ease-in-out infinite;
 }
 .javascript-page.theme-dark .dark-light-theme-btn .theme-btn-note {
@@ -75,7 +76,7 @@
 }
 .dark-light-theme-btn .theme-btn-note::after {
   content: "";
-  background: black;
+  background: darkgray;
   width: 20px;
   height: 20px;
   position: absolute;
