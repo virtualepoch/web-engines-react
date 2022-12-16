@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./javascript.css";
 import { RainCanvasLight } from "../../components/RainCanvasLight";
 import { RainCanvasDark } from "../../components/RainCanvasDark";
+import { Footer } from "../../components/Footer";
 
 export function JavaScript() {
   const heading = useRef(null);
@@ -48,20 +49,19 @@ export function JavaScript() {
       <div className="rain-canvas-container-dark" ref={rainCanvasContainerDark}>
         <RainCanvasDark />
       </div>
-      <div className="canvas-overlay"></div>
-
       <div className="dark-light-theme-btn" onClick={changeTheme}>
         <div className="theme-btn-note">CHANGE COLOR THEME</div>
       </div>
-      <div className="landing-content">
-        <h1 className="heading" ref={heading}>
-          JavaScript Tutorials
-        </h1>
-        <h2 className="sub-heading">Let's add some functionality to our web apps with JavaScript!</h2>
-        <h2 className="sub-heading">Below you will find an introduction to JavaScript as well as tutorials covering some of its most common uses.</h2>
-        <h2 className="sub-heading">Let's dive right in.</h2>
-      </div>
-      <div className="main-content">
+
+      <div className="page-content">
+        <div className="landing-content">
+          <h1 className="heading" ref={heading}>
+            JavaScript Tutorials
+          </h1>
+          <h2 className="sub-heading">Let's add some functionality to our web apps with JavaScript!</h2>
+          <h2 className="sub-heading">Below you will find an introduction to JavaScript as well as tutorials covering some of its most common uses.</h2>
+          <h2 className="sub-heading">Let's dive right in.</h2>
+        </div>
         <p className="content-text">JavaScript is used for many different things in web development. One common and beginner friendly thing it's used for is to make a web page interactive. It's able to take in user inputs and interactions(i.e. clicks, taps, swipes) and make computations and changes based on the input. According to Wikipedia, as of 2022, JavaScript is the dominant client-side language with 98% of ALL websites using it.</p>
         <p className="content-text">Every single button you tapped or clicked on this website used JavaScript to take in that interaction or input and make changes to the visual content displayed.</p>
         <p className="content-text">For example, tap or click anywhere on the white card below.</p>
@@ -86,6 +86,7 @@ export function JavaScript() {
             Enter the Navigation Menu Button Tutorial
           </Link>
         </div>
+        <Footer />
       </div>
     </div>
   );
