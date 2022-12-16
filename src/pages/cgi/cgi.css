@@ -116,7 +116,7 @@
   background: rgb(216, 216, 255);
 }
 .horsemen-2-canvas {
-  background: linear-gradient(rgba(0, 0, 0, 0), grey, black, black), url("../../images/pexels-pixabay-sunpurple-640.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0), grey, black, black), url("../../assets/images/pexels-pixabay-sunpurple-640.jpg");
   background-size: 100%;
 }
 .ayanami-canvas {

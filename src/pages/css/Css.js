@@ -1,5 +1,3 @@
-// import PyramidScene from "../../components/pyramid-scene/PyramidScene";
-// import BalloonFloat from "../../components/balloon-float/BalloonFloat";
 import { Link } from "react-router-dom";
 import BorderEffect from "./components/BorderEffect";
 import ColorCube from "./components/ColorCube";

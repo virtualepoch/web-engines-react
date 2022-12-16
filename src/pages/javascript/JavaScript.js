@@ -7,9 +7,17 @@ import { Footer } from "../../components/Footer";
 
 export function JavaScript() {
   const heading = useRef(null);
+  const themeBtnNote = useRef(null);
 
   useEffect(() => {
     heading.current.classList.add("load");
+
+    function hideThemeBtnNote() {
+      // themeBtnNote.current.style.display = "none";
+    }
+    setTimeout(function () {
+      hideThemeBtnNote();
+    }, 6000);
   }, []);
 
   const javascriptPage = useRef(null);
@@ -50,7 +58,9 @@ export function JavaScript() {
         <RainCanvasDark />
       </div>
       <div className="dark-light-theme-btn" onClick={changeTheme}>
-        <div className="theme-btn-note">CHANGE COLOR THEME</div>
+        <div className="theme-btn-note" ref={themeBtnNote}>
+          CHANGE COLOR THEME
+        </div>
       </div>
 
       <div className="page-content">
@@ -76,6 +86,7 @@ export function JavaScript() {
         </div>
 
         <h2 className="tutorial-heading">Navigation Menu Button Tutorial</h2>
+        <div className="tutorial-heading-image"></div>
         <p className="content-text">
           We'd like to start off with a tutorial on how to set up a navigation menu button that when clicked causes a menu box to slide onto the screen.<br></br>
           <br></br>These are extremely important for websites viewed on mobile devices to ensure easy navigation of a site. For instance, this website uses a menu button and menu box when viewed on a mobile device or tablet. They are also helpful organizational tools for large sites with dozens or even hundreds of links.<br></br>

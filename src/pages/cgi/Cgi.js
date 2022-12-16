@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import horsemen2 from "../../images/horsemen2.png";
-import ayanami from "../../images/ayanami.png";
-import delorean from "../../images/delorean.png";
+import horsemen2 from "../../assets/images/horsemen2.png";
+import ayanami from "../../assets/images/ayanami.png";
+import delorean from "../../assets/images/delorean.png";
 import { Footer } from "../../components/Footer";
 import "./cgi.css";
 

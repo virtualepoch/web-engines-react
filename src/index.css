@@ -1,38 +1,38 @@
 @font-face {
   font-family: Lorea;
-  src: url(./fonts/Lorea.ttf);
+  src: url(./assets/fonts/Lorea.ttf);
 }
 @font-face {
   font-family: Everleigh;
-  src: url(./fonts/Everleigh.otf);
+  src: url(./assets/fonts/Everleigh.otf);
 }
 @font-face {
   font-family: Anime;
-  src: url(./fonts/Anime.otf);
+  src: url(./assets/fonts/Anime.otf);
 }
 @font-face {
   font-family: LightningScript;
-  src: url(./fonts/LightningScript.otf);
+  src: url(./assets/fonts/LightningScript.otf);
 }
 @font-face {
   font-family: Blackpast;
-  src: url(./fonts/Blackpast.otf);
+  src: url(./assets/fonts/Blackpast.otf);
 }
 @font-face {
   font-family: Sega;
-  src: url(./fonts/SEGA.TTF);
+  src: url(./assets/fonts/SEGA.TTF);
 }
 @font-face {
   font-family: Wonderland;
-  src: url(./fonts/Wonderland.ttf);
+  src: url(./assets/fonts/Wonderland.ttf);
 }
 @font-face {
   font-family: CallingFont;
-  src: url(./fonts/CallingFont.ttf);
+  src: url(./assets/fonts/CallingFont.ttf);
 }
 @font-face {
   font-family: Nourandilla;
-  src: url(./fonts/Nouradilla.ttf);
+  src: url(./assets/fonts/Nouradilla.ttf);
 }
 @import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@400&display=swap");
 * {
@@ -46,4 +46,3 @@
   text-rendering: optimizeLegibility;
   font-family: "Cormorant", sans-serif;
 }
-

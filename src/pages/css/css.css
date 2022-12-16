@@ -28,7 +28,7 @@
   animation: background-move linear infinite;
 }
 .bg-1 {
-  background: url(/src/images/cloud1.png) 100%/100% 100%;
+  background: url(/src/assets/images/cloud1.png) 100%/100% 100%;
   animation-duration: 100s;
 }
 .bg-1.edit {
@@ -39,7 +39,7 @@
 }
 .bg-2 {
   width: 30%;
-  background: url(/src/images/cloud2.png) 100%/100% 100%;
+  background: url(/src/assets/images/cloud2.png) 100%/100% 100%;
   animation-duration: 50s;
 }
 .bg-2.edit {

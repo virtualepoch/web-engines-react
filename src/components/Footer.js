@@ -1,5 +1,5 @@
 import React from "react";
-import mainLogo from "../logos/jsive-logo-at-100.png";
+import mainLogo from "../assets/logos/jsive-logo-at-100.png";
 
 export function Footer() {
   var styles = {

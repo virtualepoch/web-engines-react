@@ -66,6 +66,7 @@ export function NavMenuBtnTut() {
     <div className="tut-page-container">
       <BackBtn />
       <h1>JavaScript Navigation Menu Button Tutorial</h1>
+      <div className="tutorial-heading-image"></div>
       <p>
         In this tutorial we provide, and walk you through, all the code needed to create a button that will open a navigation menu. If you'd prefer to just copy all the code you can do that{" "}
         <div className="open-all-code" onClick={openCloseAllCode}>
