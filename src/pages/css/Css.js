@@ -14,7 +14,7 @@ export function Css() {
       {/* <PyramidScene /> */}
       {/* <BalloonFloat /> */}
       <div className="css-heading-testing">
-        <LoadingOverlay />
+        {/* <LoadingOverlay /> */}
         {/* <div className="css-heading-testing-bg bg-1"></div>
         <div className="css-heading-testing-bg bg-2"></div>
         <div className="css-heading-testing-bg bg-1 edit"></div>
@@ -47,13 +47,13 @@ export function Css() {
             <div className="column column-1">
               <ColorCube />
               <Link to={"/css/cube-tut"}>
-                <p>ENTER THE CUBE TUTORIAL</p>
+                <p>THE CUBE TUTORIAL</p>
               </Link>
             </div>
             <div className="column">
               <SpinningTop />
               <Link to={"/css/top-spin-tut"}>
-                <p>ENTER THE SPINNING TOP TUTORIAL</p>
+                <p>THE SPINNING TOP TUTORIAL</p>
               </Link>
             </div>
           </div>

@@ -94,7 +94,7 @@ export function JavaScript() {
         </p>
         <div className="link-container">
           <Link className="nav-menu-btn-link" to={"/javascript/nav-menu-btn-tut"}>
-            Enter the Navigation Menu Button Tutorial
+            The Navigation Menu Button Tutorial
           </Link>
         </div>
         <Footer />

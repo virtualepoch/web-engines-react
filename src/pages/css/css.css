@@ -16,7 +16,7 @@
 .css-heading-testing {
   width: 100%;
   position: relative;
-  background: radial-gradient(circle at 50% 10%, yellow, white, rgb(0, 200, 200) 30%, transparent);
+  background: radial-gradient(circle at 50% 10%, yellow, white, skyblue 30%, transparent);
 }
 .css-heading-testing-bg {
   width: 50%;
