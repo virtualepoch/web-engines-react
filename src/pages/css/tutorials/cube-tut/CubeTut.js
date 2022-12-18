@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
-import { BackBtn } from "../../../components/BackBtn";
-import ColorCube from "../components/ColorCube";
+import { BackBtn } from "../../../../components/BackBtn";
+import { ColorCube } from "../../components/ColorCube";
 import { AllCodeContainer } from "./AllCodeContainer";
-import { Footer } from "../../../components/Footer";
+import { Footer } from "../../../../components/Footer";
 import "./cube-tut.css";
 
 export function CubeTut() {
@@ -129,7 +129,7 @@ export function CubeTut() {
   return (
     <div className="tut-page-container">
       <BackBtn />
-      <h1>Rotating Cube Effect</h1>
+      <h1>How to Style a Rotating 3-D Cube with CSS</h1>
       <ColorCube />
       <p>
         In this tutorial we provide, and walk you through, all the code needed to create this rotating cube. To give the cube depth we use the 'transform-style: preserve-3d' CSS style property. It gives perspective to any child elements that have been rotated along the X, Y, or Z axes. We then use an '@keyframes' animation to make the cube rotate. If you wish to copy all the code for this project, you can do that{" "}

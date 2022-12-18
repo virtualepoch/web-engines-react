@@ -149,9 +149,7 @@ export default function StarCanvas() {
 
     const slider_spread = document.getElementById("spread");
     const label_spread = document.getElementById("forSpread");
-    slider_spread.addEventListener("change", function (e) {
-      console.log(e.target.value);
-    });
+    slider_spread.addEventListener("change", function (e) {});
   }, []);
 
   return (

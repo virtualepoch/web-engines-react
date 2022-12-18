@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
-import "./cube-top.css";
+import "./color-cube.css";
 
-export default function ColorCube() {
+export function ColorCube() {
   const colorCube = useRef(null);
 
   function startAnim() {

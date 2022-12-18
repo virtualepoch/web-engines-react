@@ -5,10 +5,11 @@ import { ToTopBtn } from "./components/ToTopBtn";
 import { TodoPage } from "./components/todo/TodoPage";
 import { Home } from "./pages/home/Home";
 import { Css } from "./pages/css/Css";
-import { BorderEffectTut } from "./pages/css/border-effect-tut/BorderEffectTut";
-import { TextWaveEffectTut } from "./pages/css/text-wave-effect-tut/TextWaveEffectTut";
-import { CubeTut } from "./pages/css/cube-tut/CubeTut";
-import { TopSpinTut } from "./pages/css/top-spin-tut/TopSpinTut";
+import { BorderEffectTut } from "./pages/css/tutorials/border-effect-tut/BorderEffectTut";
+import { TextWaveEffectTut } from "./pages/css/tutorials/text-wave-effect-tut/TextWaveEffectTut";
+import { CubeTut } from "./pages/css/tutorials/cube-tut/CubeTut";
+import { TopSpinTut } from "./pages/css/tutorials/top-spin-tut/TopSpinTut";
+import { PictureCubeEffectTut } from "./pages/css/tutorials/picture-cube-effect-tut/PictureCubeEffectTut";
 import { JavaScript } from "./pages/javascript/JavaScript";
 import { NavMenuBtnTut } from "./pages/javascript/tutorials/nav-menu-btn/NavMenuBtnTut";
 import { Canvas } from "./pages/canvas/Canvas";
@@ -44,6 +45,7 @@ function App() {
           <Route path="/css/text-wave-effect-tut" element={<TextWaveEffectTut />} />
           <Route path="/css/cube-tut" element={<CubeTut />} />
           <Route path="/css/top-spin-tut" element={<TopSpinTut />} />
+          <Route path="/css/picture-cube-effect-tut" element={<PictureCubeEffectTut />} />
           <Route path="/javascript" element={<JavaScript />} />
           <Route path="/javascript/nav-menu-btn-tut" element={<NavMenuBtnTut />} />
           <Route path="/html-canvas" element={<Canvas />} />

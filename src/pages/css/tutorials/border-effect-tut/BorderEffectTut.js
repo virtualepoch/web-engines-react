@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
-import { BackBtn } from "../../../components/BackBtn";
-import BorderEffect from "../components/BorderEffect";
-import AllCodeContainer from "./AllCodeContainer";
-import { Footer } from "../../../components/Footer";
+import { BackBtn } from "../../../../components/BackBtn";
+import { BorderEffect } from "../../components/BorderEffect";
+import { AllCodeContainer } from "./AllCodeContainer";
+import { Footer } from "../../../../components/Footer";
 import "../tuts-common.css";
 import "./border-effect-tut.css";
 

@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
-import "./cube-top.css";
+import "./spinning-top.css";
 
-export default function SpinningTop() {
+export function SpinningTop() {
   const spinningTop = useRef(null);
   const shadow = useRef(null);
   function startAnim() {

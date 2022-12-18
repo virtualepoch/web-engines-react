@@ -8,7 +8,7 @@
   position: absolute;
   top: 100px;
   z-index: 88;
-  color: #38a8f3;
+  color: black;
   /* background-image: url(/src/images/crystal-160.jpg);
   background-clip: text;
   -webkit-text-fill-color: transparent; */
@@ -204,27 +204,24 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 20px;
 }
 
 .cube-effects-container .column {
-  margin-bottom: 200px;
+  width: fit-content;
+  margin-bottom: 100px;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
-.cube-effects-container p {
+.cube-effects-container h1 {
   width: 100%;
+  max-width: 300px;
   padding: 5px;
-  color: white;
-  text-align: center;
-  border: 1px solid rgb(255, 0, 255, 0.5);
+  color: black;
   box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(to bottom right, #0097db, pink);
 }
 
-.cube-effects-container p:hover {
-  border-radius: 8px;
-  transform: scale(1.05);
+.cube-effects-container h1:hover {
+  text-decoration: underline;
 }

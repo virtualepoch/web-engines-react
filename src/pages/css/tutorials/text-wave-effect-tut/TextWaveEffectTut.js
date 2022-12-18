@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
-import { BackBtn } from "../../../components/BackBtn";
-import AllCodeContainer from "./AllCodeContainer";
-import { Footer } from "../../../components/Footer";
+import { BackBtn } from "../../../../components/BackBtn";
+import { AllCodeContainer } from "./AllCodeContainer";
+import { Footer } from "../../../../components/Footer";
 import "./text-wave-effect-tut.css";
 
 export function TextWaveEffectTut() {

@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
-import { BackBtn } from "../../../components/BackBtn";
-import SpinningTop from "../components/SpinningTop";
-import AllCodeContainer from "./AllCodeContainer";
-import { Footer } from "../../../components/Footer";
+import { BackBtn } from "../../../../components/BackBtn";
+import { SpinningTop } from "../../components/SpinningTop";
+import { AllCodeContainer } from "./AllCodeContainer";
+import { Footer } from "../../../../components/Footer";
 import "./top-spin-tut.css";
 
 export function TopSpinTut() {
@@ -141,8 +141,15 @@ export function TopSpinTut() {
   return (
     <div className="tut-page-container">
       <BackBtn />
-      <h1>Spinning Top Effect</h1>
+      <h1>
+        How to Style a Rotating 3D Top<br></br>with CSS in 5 Steps
+      </h1>
       <SpinningTop />
+      <div className="article-info">
+        <p className="author">Written by: Craig Kaufman</p>
+        <p className="update">Updated: Dec. 17 2022</p>
+        <p className="update">Read time approx. 20min</p>
+      </div>
       <p>
         In this tutorial we provide, and walk you through, all the code needed to create this spinning top. The 'clip-path' CSS style property will turn the sides of our spinning top into triangles. The 'transform-style: preserve-3d' CSS style property will give it depth. The 'transform-origin' CSS style property will allow all sides to be rotated from the same point. We will use an '@keyframes' animation to make the top spin. If you wish to copy all the code for this project, you can do that{" "}
         <div className="open-all-code" onClick={openCloseAllCode}>
@@ -156,55 +163,65 @@ export function TopSpinTut() {
         </button>
         <AllCodeContainer />
       </div>
-      <p>First, we will add all the HTML elements we need and give them each individual class names. We will also give the children of the 'spinning-top' a universal class name of 'side'.</p>
-      <div className="code-example-container">
-        <pre className="code-example">{codeEx1}</pre>
-        <button className="copy-code-btn" ref={copyBtn1Ref} onClick={copyCodeEx1}></button>
-      </div>
-      <p>Everything else is done with CSS. So, we'll start by styling the 'spinning-top-container'. Notice we have the 'perspective' and 'perspective-origin' style properties. These are used to adjust the perspective depth and viewing position of the 3d effect.</p>
-      <div className="code-example-container">
-        <pre className="code-example">{codeEx2}</pre>
-        <button className="copy-code-btn" ref={copyBtn2Ref} onClick={copyCodeEx2}></button>
-      </div>
-      <div className="border-ex-1">
-        <p>Output:</p>
-        <div className="cube-container"></div>
-      </div>
-      <p>Next, we have to style the 'spinning-top'. Here is where the most important style is, the 'transform-style: preserve-3d'. This will give depth to the sides of our top. We'll add the 'animation' reference but will not create the animation itself until the end. We'll also add a border so we can see the element.</p>
-      <div className="code-example-container">
-        <pre className="code-example">{codeEx3}</pre>
-        <button className="copy-code-btn" ref={copyBtn3Ref} onClick={copyCodeEx3}></button>
-      </div>
-      <div className="border-ex-1">
-        <p>Output:</p>
-        <div className="cube-container">
-          <div className="spinning-top-example-1"></div>
+      <div className="tutorial-step-container">
+        <p>Step #1: We will add all the HTML elements we need and give them each individual class names. We will also give the children of the 'spinning-top' a universal class name of 'side'.</p>
+        <div className="code-example-container">
+          <pre className="code-example">{codeEx1}</pre>
+          <button className="copy-code-btn" ref={copyBtn1Ref} onClick={copyCodeEx1}></button>
         </div>
       </div>
-      <p>Now that we have the parent element styled we will start styling the children, or 'sides'. We won't style the front yet so that we can see what's going on with the other sides. We'll also rotate the 'spinning-top' 50 degrees and scale it up to get a better view of what's going on.</p>
-      <div className="code-example-container">
-        <pre className="code-example">{codeEx4}</pre>
-        <button className="copy-code-btn" ref={copyBtn4Ref} onClick={copyCodeEx4}></button>
+      <div className="tutorial-step-container">
+        <p>Step #2: Everything else is done with CSS. So, we'll start by styling the 'spinning-top-container'. Notice we have the 'perspective' and 'perspective-origin' style properties. These are used to adjust the perspective depth and viewing position of the 3d effect.</p>
+        <div className="code-example-container">
+          <pre className="code-example">{codeEx2}</pre>
+          <button className="copy-code-btn" ref={copyBtn2Ref} onClick={copyCodeEx2}></button>
+        </div>
+        <div className="border-ex-1">
+          <p>Output:</p>
+          <div className="cube-container"></div>
+        </div>
       </div>
-      <div className="border-ex-1">
-        <p>Output:</p>
-        <div className="spinning-top-container">
-          <div className="spinning-top spinning-top-example-2">
-            <div className="side left top-left-example"></div>
-            <div className="side right top-right-example"></div>
-            <div className="side back top-back-example"></div>
+      <div className="tutorial-step-container">
+        <p>Step #3: Next, we have to style the 'spinning-top'. Here is where the most important style is, the 'transform-style: preserve-3d'. This will give depth to the sides of our top. We'll add the 'animation' reference but will not create the animation itself until the end. We'll also add a border so we can see the element.</p>
+        <div className="code-example-container">
+          <pre className="code-example">{codeEx3}</pre>
+          <button className="copy-code-btn" ref={copyBtn3Ref} onClick={copyCodeEx3}></button>
+        </div>
+        <div className="border-ex-1">
+          <p>Output:</p>
+          <div className="cube-container">
+            <div className="spinning-top-example-1"></div>
           </div>
-          <div className="shadow"></div>
         </div>
       </div>
-      <p>Finally, all we have to do is add the front side, shadow, top, and animation. Don't forget to also remove the border. We'll also change the background colors to look better (we threw our logo in there too).</p>
-      <div className="code-example-container">
-        <pre className="code-example">{codeEx5}</pre>
-        <button className="copy-code-btn" ref={copyBtn5} onClick={copyCodeEx5}></button>
+      <div className="tutorial-step-container">
+        <p>Step #4: Now that we have the parent element styled we will start styling the children, or 'sides'. We won't style the front yet so that we can see what's going on with the other sides. We'll also rotate the 'spinning-top' 50 degrees and scale it up to get a better view of what's going on.</p>
+        <div className="code-example-container">
+          <pre className="code-example">{codeEx4}</pre>
+          <button className="copy-code-btn" ref={copyBtn4Ref} onClick={copyCodeEx4}></button>
+        </div>
+        <div className="border-ex-1">
+          <p>Output:</p>
+          <div className="spinning-top-container">
+            <div className="spinning-top spinning-top-example-2">
+              <div className="side left top-left-example"></div>
+              <div className="side right top-right-example"></div>
+              <div className="side back top-back-example"></div>
+            </div>
+            <div className="shadow"></div>
+          </div>
+        </div>
       </div>
-      <div className="border-ex-1">
-        <p>Output:</p>
-        <SpinningTop />
+      <div className="tutorial-step-container">
+        <p>Step #5: Finally, all we have to do is add the front side, shadow, top, and animation. Don't forget to also remove the border. We'll also change the background colors to look better (we threw our logo in there too).</p>
+        <div className="code-example-container">
+          <pre className="code-example">{codeEx5}</pre>
+          <button className="copy-code-btn" ref={copyBtn5} onClick={copyCodeEx5}></button>
+        </div>
+        <div className="border-ex-1">
+          <p>Output:</p>
+          <SpinningTop />
+        </div>
       </div>
       <p>There you have it. Another example of what can be done with the power of CSS.</p>
       <BackBtn />

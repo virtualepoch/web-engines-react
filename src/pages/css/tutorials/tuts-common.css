@@ -14,6 +14,15 @@
 .tut-page-container h1 {
   padding: 22px;
 }
+.tut-page-container .article-info {
+  width: 90%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  margin-top: 30px;
+}
 .tut-page-container p {
   max-width: 800px;
   padding: 33px 0;
@@ -23,6 +32,14 @@
   text-decoration-line: underline;
   color: blue;
   cursor: pointer;
+}
+.tutorial-step-container {
+  margin: 10px auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 1px 1px 5px 1px rgb(0, 0, 0, 0.5);
 }
 .code-example-container {
   max-width: 100%;

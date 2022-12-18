@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 
-export default function AllCodeContainer() {
+export function AllCodeContainer() {
   const allCode = `<head>
   <style>
 
