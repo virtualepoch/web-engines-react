@@ -88,6 +88,11 @@ export function TextWaveEffectTut() {
       <div className="text-wave-effect-container">
         <h2>text effects</h2>
       </div>
+      <div className="article-info">
+        <p className="info author">Written by — Craig Kaufman</p>
+        <p className="info update">Updated — Dec. 17 2022</p>
+        <p className="info">Read time — approx. 3 mins</p>
+      </div>
       <p>
         In this tutorial we provide, and walk you through, all the code needed to create this cool text effect. This is done using a single CSS pseudo-classe. If you'd prefer to just copy all the code you can do that{" "}
         <div className="open-all-code" onClick={openCloseAllCode}>
@@ -101,45 +106,53 @@ export function TextWaveEffectTut() {
         </button>
         <AllCodeContainer />
       </div>
-      <p>
-        This text effect is made up of only two elements. The first one is the container &lt;div&gt;. It's simply used here to give our text effect box a border and background. We will assign it a class name of 'text-wave-effect-container'. It contains the second element which will be an &lt;h1&gt;.<br></br>
-        <br></br>The &lt;h1&gt; is the actual text of our text effect.
-      </p>
-      <div className="code-example-container">
-        <pre className="code-example">{codeEx1}</pre>
-        <button className="copy-code-btn" ref={copyBtn1Ref} onClick={copyCodeEx1}></button>
-      </div>
-      <p>Everything else is done with CSS. So, we'll start by styling the container and text.</p>
-      <div className="code-example-container">
-        <pre className="code-example">{codeEx2}</pre>
-        <button className="copy-code-btn" ref={copyBtn2Ref} onClick={copyCodeEx2}></button>
-      </div>
-      <div className="border-ex-1">
-        <p>Output:</p>
-        <div className="text-wave-effect-container example-1">
-          <h2>text effects</h2>
+      <div className="tutorial-step-container">
+        <p>
+          Step #1: This text effect is made up of only two elements. The first one is the container &lt;div&gt;. It's simply used here to give our text effect box a border and background. We will assign it a class name of 'text-wave-effect-container'. It contains the second element which will be an &lt;h1&gt;.<br></br>
+          <br></br>The &lt;h1&gt; is the actual text of our text effect.
+        </p>
+        <div className="code-example-container">
+          <pre className="code-example">{codeEx1}</pre>
+          <button className="copy-code-btn" ref={copyBtn1Ref} onClick={copyCodeEx1}></button>
         </div>
       </div>
-      <p>Then we have to style the pseudo-class.</p>
-      <div className="code-example-container">
-        <pre className="code-example">{codeEx3}</pre>
-        <button className="copy-code-btn" ref={copyBtn3Ref} onClick={copyCodeEx3}></button>
-      </div>
-      <div className="border-ex-1">
-        <p>Output:</p>
-        <div className="text-wave-effect-container example-2">
-          <h2>text effects</h2>
+      <div className="tutorial-step-container">
+        <p>Step #2: Everything else is done with CSS. So, we'll start by styling the container and text.</p>
+        <div className="code-example-container">
+          <pre className="code-example">{codeEx2}</pre>
+          <button className="copy-code-btn" ref={copyBtn2Ref} onClick={copyCodeEx2}></button>
+        </div>
+        <div className="border-ex-1">
+          <p>Output:</p>
+          <div className="text-wave-effect-container example-1">
+            <h2>text effects</h2>
+          </div>
         </div>
       </div>
-      <p>All that's left is to add the '@keyframes' animation.</p>
-      <div className="code-example-container">
-        <pre className="code-example">{codeEx4}</pre>
-        <button className="copy-code-btn" ref={copyBtn4Ref} onClick={copyCodeEx4}></button>
+      <div className="tutorial-step-container">
+        <p>Step #3: Then we have to style the pseudo-class.</p>
+        <div className="code-example-container">
+          <pre className="code-example">{codeEx3}</pre>
+          <button className="copy-code-btn" ref={copyBtn3Ref} onClick={copyCodeEx3}></button>
+        </div>
+        <div className="border-ex-1">
+          <p>Output:</p>
+          <div className="text-wave-effect-container example-2">
+            <h2>text effects</h2>
+          </div>
+        </div>
       </div>
-      <div className="border-ex-1">
-        <p>Output:</p>
-        <div className="text-wave-effect-container">
-          <h2>text effects</h2>
+      <div className="tutorial-step-container">
+        <p>Step #4: All that's left is to add the '@keyframes' animation.</p>
+        <div className="code-example-container">
+          <pre className="code-example">{codeEx4}</pre>
+          <button className="copy-code-btn" ref={copyBtn4Ref} onClick={copyCodeEx4}></button>
+        </div>
+        <div className="border-ex-1">
+          <p>Output:</p>
+          <div className="text-wave-effect-container">
+            <h2>text effects</h2>
+          </div>
         </div>
       </div>
       <p>There you have it. Another example of what can be done with just a few lines of CSS.</p>

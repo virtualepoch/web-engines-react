@@ -146,9 +146,9 @@ export function TopSpinTut() {
       </h1>
       <SpinningTop />
       <div className="article-info">
-        <p className="author">Written by: Craig Kaufman</p>
-        <p className="update">Updated: Dec. 17 2022</p>
-        <p className="update">Read time approx. 20min</p>
+        <p className="info author">Written by — Craig Kaufman</p>
+        <p className="info update">Updated — Dec. 17 2022</p>
+        <p className="info">Read time — approx. 10 mins</p>
       </div>
       <p>
         In this tutorial we provide, and walk you through, all the code needed to create this spinning top. The 'clip-path' CSS style property will turn the sides of our spinning top into triangles. The 'transform-style: preserve-3d' CSS style property will give it depth. The 'transform-origin' CSS style property will allow all sides to be rotated from the same point. We will use an '@keyframes' animation to make the top spin. If you wish to copy all the code for this project, you can do that{" "}

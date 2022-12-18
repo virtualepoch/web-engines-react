@@ -1,0 +1,60 @@
+/* BORDER EFFECT /////////// */
+.border-effect-container {
+  height: fit-content;
+  margin: 12px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.border-effect-wrapper {
+  width: fit-content;
+  border: 1px solid;
+  border-radius: 6px;
+}
+.border-effect-box {
+  width: 212px;
+  height: 88px;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 1px 2px 3px 3px rgba(0, 0, 0, 0.4);
+}
+.border-effect-box h1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  padding: 10px;
+  color: white;
+}
+.border-effect-box::before {
+  content: "";
+  width: 200%;
+  height: 400%;
+  position: absolute;
+  left: -50%;
+  top: -150%;
+  background: conic-gradient(blue, aqua);
+  animation: rotate 4s infinite linear;
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.border-effect-box::after {
+  content: "Learn to Style Border Effects";
+  width: 208px;
+  height: 84px;
+  position: relative;
+  top: 2px;
+  left: 2px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  font: 20px sans-serif;
+  color: white;
+  letter-spacing: 2px;
+  text-align: center;
+  background: radial-gradient(blue, black);
+}

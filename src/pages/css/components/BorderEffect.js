@@ -1,4 +1,4 @@
-import "../css.css";
+import "../components/border-effect.css";
 
 export function BorderEffect() {
   return (

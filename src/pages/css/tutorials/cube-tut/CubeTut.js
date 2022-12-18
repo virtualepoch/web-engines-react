@@ -131,6 +131,11 @@ export function CubeTut() {
       <BackBtn />
       <h1>How to Style a Rotating 3-D Cube with CSS</h1>
       <ColorCube />
+      <div className="article-info">
+        <p className="info author">Written by — Craig Kaufman</p>
+        <p className="info update">Updated — Dec. 17 2022</p>
+        <p className="info">Read time — approx. 10 mins</p>
+      </div>
       <p>
         In this tutorial we provide, and walk you through, all the code needed to create this rotating cube. To give the cube depth we use the 'transform-style: preserve-3d' CSS style property. It gives perspective to any child elements that have been rotated along the X, Y, or Z axes. We then use an '@keyframes' animation to make the cube rotate. If you wish to copy all the code for this project, you can do that{" "}
         <div className="open-all-code" onClick={openCloseAllCode}>
@@ -144,56 +149,66 @@ export function CubeTut() {
         </button>
         <AllCodeContainer />
       </div>
-      <p>First, we will add all the HTML elements we need and give them each individual class names.</p>
-      <div className="code-example-container">
-        <pre className="code-example">{codeEx1}</pre>
-        <button className="copy-code-btn" ref={copyBtn1Ref} onClick={copyCodeEx1}></button>
-      </div>
-      <p>Everything else is done with CSS. So, we'll start by styling the 'cube-container'. Notice we have the 'perspective' and 'perspective-origin' style properties. These are used to change the perspective depth and viewing position of the 3d effect.</p>
-      <div className="code-example-container">
-        <pre className="code-example">{codeEx2}</pre>
-        <button className="copy-code-btn" ref={copyBtn2Ref} onClick={copyCodeEx2}></button>
-      </div>
-      <div className="border-ex-1">
-        <p>Output:</p>
-        <div className="cube-container"></div>
-      </div>
-      <p>Next, we have to style the 'color-cube'. Here is where the most important style is, the 'transform-style: preserve-3d'. This will give depth to the sides of our cube. We'll also add the 'animation' reference but will not create the animation itself until the end. Lastly, we'll add a border so we can see the element.</p>
-      <div className="code-example-container">
-        <pre className="code-example">{codeEx3}</pre>
-        <button className="copy-code-btn" ref={copyBtn3Ref} onClick={copyCodeEx3}></button>
-      </div>
-      <div className="border-ex-1">
-        <p>Output:</p>
-        <div className="cube-container">
-          <div className="color-cube-ex border"></div>
+      <div className="tutorial-step-container">
+        <p>Step #1: First, we will add all the HTML elements we need and give them each individual class names.</p>
+        <div className="code-example-container">
+          <pre className="code-example">{codeEx1}</pre>
+          <button className="copy-code-btn" ref={copyBtn1Ref} onClick={copyCodeEx1}></button>
         </div>
       </div>
-      <p>Now that we have the parent element styled we will start styling the children, or 'sides'. We can give all sides a universal styling using the class name 'side'. Here we will also style the back, left, right, top, and bottom sides —each with a different color. We won't style the front yet so that we can see what's going on with the other sides. We'll also remove the border of our 'color-cube'.</p>
-      <div className="code-example-container">
-        <pre className="code-example">{codeEx4}</pre>
-        <button className="copy-code-btn" ref={copyBtn4Ref} onClick={copyCodeEx4}></button>
+      <div className="tutorial-step-container">
+        <p>Step #2: Everything else is done with CSS. So, we'll start by styling the 'cube-container'. Notice we have the 'perspective' and 'perspective-origin' style properties. These are used to change the perspective depth and viewing position of the 3d effect.</p>
+        <div className="code-example-container">
+          <pre className="code-example">{codeEx2}</pre>
+          <button className="copy-code-btn" ref={copyBtn2Ref} onClick={copyCodeEx2}></button>
+        </div>
+        <div className="border-ex-1">
+          <p>Output:</p>
+          <div className="cube-container"></div>
+        </div>
       </div>
-      <div className="border-ex-1">
-        <p>Output:</p>
-        <div className="cube-container">
-          <div className="color-cube-ex">
-            <div className="side back"></div>
-            <div className="side left"></div>
-            <div className="side right"></div>
-            <div className="side top"></div>
-            <div className="side bottom"></div>
+      <div className="tutorial-step-container">
+        <p>Step #3: Next, we have to style the 'color-cube'. Here is where the most important style is, the 'transform-style: preserve-3d'. This will give depth to the sides of our cube. We'll also add the 'animation' reference but will not create the animation itself until the end. Lastly, we'll add a border so we can see the element.</p>
+        <div className="code-example-container">
+          <pre className="code-example">{codeEx3}</pre>
+          <button className="copy-code-btn" ref={copyBtn3Ref} onClick={copyCodeEx3}></button>
+        </div>
+        <div className="border-ex-1">
+          <p>Output:</p>
+          <div className="cube-container">
+            <div className="color-cube-ex border"></div>
           </div>
         </div>
       </div>
-      <p>Finally, all we have to do is add the front side, shadow, and the animation. We'll also remove the individual side background colors so they revert back to the transparent color we applied at the beginning (we threw our logo in there too).</p>
-      <div className="code-example-container">
-        <pre className="code-example">{codeEx5}</pre>
-        <button className="copy-code-btn" ref={copyBtn5} onClick={copyCodeEx5}></button>
+      <div className="tutorial-step-container">
+        <p>Step #4: Now that we have the parent element styled we will start styling the children, or 'sides'. We can give all sides a universal styling using the class name 'side'. Here we will also style the back, left, right, top, and bottom sides —each with a different color. We won't style the front yet so that we can see what's going on with the other sides. We'll also remove the border of our 'color-cube'.</p>
+        <div className="code-example-container">
+          <pre className="code-example">{codeEx4}</pre>
+          <button className="copy-code-btn" ref={copyBtn4Ref} onClick={copyCodeEx4}></button>
+        </div>
+        <div className="border-ex-1">
+          <p>Output:</p>
+          <div className="cube-container">
+            <div className="color-cube-ex">
+              <div className="side back"></div>
+              <div className="side left"></div>
+              <div className="side right"></div>
+              <div className="side top"></div>
+              <div className="side bottom"></div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="border-ex-1">
-        <p>Output:</p>
-        <ColorCube />
+      <div className="tutorial-step-container">
+        <p>Step #5: Finally, all we have to do is add the front side, shadow, and the animation. We'll also remove the individual side background colors so they revert back to the transparent color we applied at the beginning (we threw our logo in there too).</p>
+        <div className="code-example-container">
+          <pre className="code-example">{codeEx5}</pre>
+          <button className="copy-code-btn" ref={copyBtn5} onClick={copyCodeEx5}></button>
+        </div>
+        <div className="border-ex-1">
+          <p>Output:</p>
+          <ColorCube />
+        </div>
       </div>
       <p>There you have it. Another example of what can be done with the power of CSS.</p>
       <BackBtn />

@@ -1,6 +1,7 @@
 .tut-page-container * {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
 .tut-page-container {
   width: 100%;
   min-height: 100vh;
@@ -11,28 +12,42 @@
   pointer-events: all;
   background: white;
 }
+
 .tut-page-container h1 {
   padding: 22px;
 }
+
 .tut-page-container .article-info {
-  width: 90%;
+  width: calc(100% - 10px);
   height: fit-content;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
-  border-top: 1px solid;
-  border-bottom: 1px solid;
   margin-top: 30px;
+  gap: 10px;
 }
+
+.tut-page-container .article-info .info {
+  width: 100%;
+  min-width: 100px;
+  flex: 1;
+  box-shadow: -2px 2px 3px 0.1px rgb(0, 0, 0, 0.3);
+  padding: 5px;
+  position: relative;
+}
+
 .tut-page-container p {
   max-width: 800px;
   padding: 33px 0;
 }
+
 .open-all-code {
   display: inline;
   text-decoration-line: underline;
   color: blue;
   cursor: pointer;
 }
+
 .tutorial-step-container {
   width: calc(100% - 10px);
   margin: 10px auto;
@@ -42,23 +57,28 @@
   align-items: center;
   box-shadow: 1px 1px 5px 1px rgb(0, 0, 0, 0.5);
 }
+
 .code-example-container {
   max-width: 100%;
   position: relative;
   color: black;
 }
+
 .all-code-container {
   display: none;
 }
+
 .all-code-container.open {
   display: flex;
 }
+
 .close-all-code {
   width: 30px;
   height: 30px;
   position: absolute;
   right: 0;
 }
+
 .code-example {
   max-width: 100%;
   padding: 22px;
@@ -66,6 +86,7 @@
   font: 15px Consolas, "Courier New", monospace;
   background: hsl(0deg 0% 97%);
 }
+
 .copy-code-btn {
   width: 40px;
   height: 40px;
@@ -77,6 +98,7 @@
   box-shadow: inset 0 0 4px 1px rgb(0, 0, 0, 0.05);
   background: url(/src/assets/icons/copy-solid-color.svg) 70% 70% / 50% no-repeat hsl(0deg 0% 97%);
 }
+
 .copy-code-btn::after {
   content: "code copied";
   width: 80px;
@@ -88,6 +110,7 @@
   color: gray;
   display: none;
 }
+
 .copy-code-btn.clicked.copy-code-btn::after {
   display: block;
 }

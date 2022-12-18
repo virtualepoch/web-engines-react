@@ -27,7 +27,7 @@ export function Css() {
       <div className="main-content">
         <h1>The following tutorials can all be completed with plain old CSS.</h1>
         <section className="effects-section">
-          <h1>Learn to create border or text effects</h1>
+          <h1>Learn to Style Border And Text Effects with CSS</h1>
           <p>Click either box to enter the tutorial.</p>
           <div className="effects-container">
             <div className="border-effect-container">
