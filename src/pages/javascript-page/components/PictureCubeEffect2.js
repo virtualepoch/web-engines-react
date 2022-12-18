@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import { RainCanvasDark } from "../../../components/RainCanvasDark";
 import "./picture-cube-effect.css";
 
-export function PictureCubeEffect() {
+export function PictureCubeEffect2() {
   const pictureCubePosZContainer = useRef(null);
   const pictureCube = useRef(null);
 
@@ -36,11 +36,8 @@ export function PictureCubeEffect() {
   }
 
   return (
-    <div className="picture-cube-container" onClick={rotatePictureCube}>
+    <div className="picture-cube-container picture-cube-container-2" onClick={rotatePictureCube}>
       <div className="click-tap-message">click/tap screen</div>
-      <div className="picture-cube-rain-canvas">
-        <RainCanvasDark />
-      </div>
       <div className="picture-cube-pos-z-container" ref={pictureCubePosZContainer}>
         <div className="picture-cube" ref={pictureCube}>
           <div className="side front"></div>

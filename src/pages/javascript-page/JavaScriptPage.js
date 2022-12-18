@@ -5,6 +5,7 @@ import { RainCanvasLight } from "../../components/RainCanvasLight";
 import { RainCanvasDark } from "../../components/RainCanvasDark";
 import { PictureCubeEffect } from "../javascript-page/components/PictureCubeEffect";
 import { Footer } from "../../components/Footer";
+import { PictureCubeEffect2 } from "./components/PictureCubeEffect2";
 
 export function JavaScriptPage() {
   const heading = useRef(null);
@@ -95,7 +96,6 @@ export function JavaScriptPage() {
         <div className="cube-effects-container">
           <div className="column column-1">
             <div className="tutorial-heading-image"></div>
-
             <Link to={"/javascript/nav-menu-btn-tut"}>
               <h1>How to Style and Code a Navigation Menu & Button with CSS & JavaScript</h1>{" "}
             </Link>
@@ -106,8 +106,14 @@ export function JavaScriptPage() {
               <h1>How to Style and Code a Picture Cube Effect with CSS & JavaScript</h1>{" "}
             </Link>
           </div>
+          <PictureCubeEffect2 />
         </div>
         <Footer />
+        <div className="credits-section">
+          <p>photos used on this page were created by:</p>
+          <a href="https://www.pexels.com/photo/electronic-system-with-electric-circuits-6432110/">Nic Wood: https://www.pexels.com/photo/electronic-system-with-electric-circuits-6432110/</a>
+          <a href="https://www.pexels.com/photo/photo-of-deep-sky-object-816608/">Alex Andrews: https://www.pexels.com/photo/photo-of-deep-sky-object-816608/</a>
+        </div>
       </div>
     </div>
   );

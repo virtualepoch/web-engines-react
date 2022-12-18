@@ -35,3 +35,9 @@ h1 {
 .sub-heading {
   font: clamp(0.8rem, 5vw, 1.2rem) sans-serif;
 }
+.credits-section {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
