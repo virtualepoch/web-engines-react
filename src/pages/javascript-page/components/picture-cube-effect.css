@@ -11,7 +11,8 @@
   perspective: 600px;
   perspective-origin: 50%;
   overflow: hidden;
-  background: linear-gradient(white, skyblue 30% 50%, lightgray 52%, white);
+  /* background: linear-gradient(white, skyblue 30% 50%, lightgray 52%, white); */
+  background: url(https://images.pexels.com/photos/3520692/pexels-photo-3520692.jpeg) 50%/100% 100%;
 }
 .picture-cube-rotate-deg {
   width: 100%;
