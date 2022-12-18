@@ -196,7 +196,7 @@ export function PictureCubeEffectTut() {
         <PictureCubeEffect />
       </div>
       <p>There you have it. Another example of what can be done with the power of CSS.</p> */}
-      <div style={{padding:"100px 20px"}}>We apologize however this page is being updated momentarily.</div>
+      <div style={{ padding: "100px 20px" }}>We apologize however this page is being updated momentarily.</div>
       <BackBtn />
       <Footer />
     </div>

@@ -5,7 +5,7 @@ import delorean from "../../assets/images/delorean.png";
 import { Footer } from "../../components/Footer";
 import "./cgi.css";
 
-export default function Cgi() {
+export default function CgiPage() {
   return (
     <div className="cgi-page">
       <h1 className="heading">CGI Tutorials</h1>

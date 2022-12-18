@@ -3,24 +3,24 @@ import { useEffect } from "react";
 import { Header } from "./components/header/Header";
 import { ToTopBtn } from "./components/ToTopBtn";
 import { TodoPage } from "./components/todo/TodoPage";
-import { Home } from "./pages/home/Home";
-import { Css } from "./pages/css/Css";
-import { BorderEffectTut } from "./pages/css/tutorials/border-effect-tut/BorderEffectTut";
-import { TextWaveEffectTut } from "./pages/css/tutorials/text-wave-effect-tut/TextWaveEffectTut";
-import { CubeTut } from "./pages/css/tutorials/cube-tut/CubeTut";
-import { TopSpinTut } from "./pages/css/tutorials/top-spin-tut/TopSpinTut";
-import { PictureCubeEffectTut } from "./pages/css/tutorials/picture-cube-effect-tut/PictureCubeEffectTut";
-import { JavaScript } from "./pages/javascript/JavaScript";
-import { NavMenuBtnTut } from "./pages/javascript/tutorials/nav-menu-btn/NavMenuBtnTut";
-import { Canvas } from "./pages/canvas/Canvas";
-import CanvasGame from "./pages/canvas/CanvasGame";
-import Cgi from "./pages/cgi/Cgi";
-import HorsemenModel2 from "./pages/cgi/cgi-models/HorsemenModel2";
-import AyanamiModel from "./pages/cgi/cgi-models/AyanamiModel";
-import DeloreanHighModelPage from "./pages/cgi/cgi-models/DeloreanHighModelPage";
-import Testing from "./pages/testing/Testing";
+import { HomePage } from "./pages/home-page/HomePage";
+import { CssPage } from "./pages/css-page/CssPage";
+import { BorderEffectTut } from "./pages/css-page/tutorials/border-effect-tut/BorderEffectTut";
+import { TextWaveEffectTut } from "./pages/css-page/tutorials/text-wave-effect-tut/TextWaveEffectTut";
+import { CubeTut } from "./pages/css-page/tutorials/cube-tut/CubeTut";
+import { TopSpinTut } from "./pages/css-page/tutorials/top-spin-tut/TopSpinTut";
+import { PictureCubeEffectTut } from "./pages/javascript-page/tutorials/picture-cube-effect-tut/PictureCubeEffectTut";
+import { JavaScriptPage } from "./pages/javascript-page/JavaScriptPage";
+import { NavMenuBtnTut } from "./pages/javascript-page/tutorials/nav-menu-btn/NavMenuBtnTut";
+import { CanvasPage } from "./pages/canvas-page/CanvasPage";
+import CanvasGame from "./pages/canvas-page/CanvasGame";
+import CgiPage from "./pages/cgi-page/CgiPage";
+import HorsemenModel2 from "./pages/cgi-page/cgi-models/HorsemenModel2";
+import AyanamiModel from "./pages/cgi-page/cgi-models/AyanamiModel";
+import DeloreanHighModelPage from "./pages/cgi-page/cgi-models/DeloreanHighModelPage";
+import { TestingPage } from "./pages/testing-page/TestingPage";
 import "./pages/pages.css";
-import { AngledHighlights } from "./pages/testing/landing-pages/AngledHighlights";
+import { AngledHighlights } from "./pages/testing-page/landing-pages/AngledHighlights";
 
 function useScrollToTop() {
   const { pathname } = useLocation();
@@ -39,22 +39,22 @@ function App() {
       <TodoPage />
       <section className="page-container">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/css" element={<Css />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/css" element={<CssPage />} />
           <Route path="/css/border-effect-tut" element={<BorderEffectTut />} />
           <Route path="/css/text-wave-effect-tut" element={<TextWaveEffectTut />} />
           <Route path="/css/cube-tut" element={<CubeTut />} />
           <Route path="/css/top-spin-tut" element={<TopSpinTut />} />
-          <Route path="/css/picture-cube-effect-tut" element={<PictureCubeEffectTut />} />
-          <Route path="/javascript" element={<JavaScript />} />
+          <Route path="/javascript" element={<JavaScriptPage />} />
           <Route path="/javascript/nav-menu-btn-tut" element={<NavMenuBtnTut />} />
-          <Route path="/html-canvas" element={<Canvas />} />
+          <Route path="/javascript/picture-cube-effect-tut" element={<PictureCubeEffectTut />} />
+          <Route path="/html-canvas" element={<CanvasPage />} />
           <Route path="/html-canvas/canvas-game" element={<CanvasGame />} />
-          <Route path="/cgi" element={<Cgi />} />
+          <Route path="/cgi" element={<CgiPage />} />
           <Route path="/cgi/cgi-models/horsemen-model-2" element={<HorsemenModel2 />} />
           <Route path="/cgi/cgi-models/ayanami-model" element={<AyanamiModel />} />
           <Route path="/cgi/cgi-models/delorean-high-model" element={<DeloreanHighModelPage />} />
-          <Route path="/testing" element={<Testing />} />
+          <Route path="/testing" element={<TestingPage />} />
           <Route path="/landing-pages/angled-highlights" element={<AngledHighlights />} />
         </Routes>
       </section>

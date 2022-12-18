@@ -1,9 +1,9 @@
 // import GameTest from "../../components/GameTest";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { ImageEffectCanvas } from "../../components/ImageEffectCanvas";
 import "./testing.css";
 
-export default function Testing() {
+export function TestingPage() {
   const style = {
     page: {
       minHeight: "calc(100vh - 50px)",
@@ -63,10 +63,10 @@ export default function Testing() {
       <p style={style.testHeading}>Landing pages</p>
       <div style={style.landingPagesContainer}>
         <Link to={"/landing-pages/angled-highlights"}>
-        <div style={style.landingPageContainer}>
-          <h2 style={style.landingPageDescription}>Angled Highlights</h2>
-          <div style={style.landingPageImage}></div>
-        </div>
+          <div style={style.landingPageContainer}>
+            <h2 style={style.landingPageDescription}>Angled Highlights</h2>
+            <div style={style.landingPageImage}></div>
+          </div>
         </Link>
       </div>
       <p style={style.testHeading}>GameTest</p>

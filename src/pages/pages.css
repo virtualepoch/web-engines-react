@@ -30,7 +30,7 @@
   font: 600 clamp(1.3rem, 5vw, 1.7rem) sans-serif;
 }
 h1 {
-  font: 500 clamp(1.3rem, 5vw, 1.7rem) sans-serif;
+  font: 400 clamp(1.3rem, 5vw, 1.4rem) sans-serif;
 }
 .sub-heading {
   font: clamp(0.8rem, 5vw, 1.2rem) sans-serif;

@@ -156,14 +156,14 @@
   gap: 20px;
 }
 
-.cube-effects-container .column {
+.column {
   width: fit-content;
   margin-bottom: 100px;
   display: flex;
   flex-direction: column;
 }
 
-.cube-effects-container h1 {
+.column h1 {
   width: 100%;
   max-width: 300px;
   padding: 5px;
@@ -171,6 +171,6 @@
   box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.cube-effects-container h1:hover {
+.column h1:hover {
   text-decoration: underline;
 }

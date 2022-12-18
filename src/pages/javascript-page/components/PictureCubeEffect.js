@@ -31,7 +31,6 @@ export function PictureCubeEffect() {
     pictureCubePosZContainer.current.classList.add("anim");
     setTimeout(function () {
       pictureCubePosZContainer.current.classList.remove("anim");
-
     }, 2000);
   }
 

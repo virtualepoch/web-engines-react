@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import "./javascript.css";
 import { RainCanvasLight } from "../../components/RainCanvasLight";
 import { RainCanvasDark } from "../../components/RainCanvasDark";
+import { PictureCubeEffect } from "../javascript-page/components/PictureCubeEffect";
 import { Footer } from "../../components/Footer";
 
-export function JavaScript() {
+export function JavaScriptPage() {
   const heading = useRef(null);
   const themeBtnNote = useRef(null);
 
@@ -85,17 +86,26 @@ export function JavaScript() {
           </p>
         </div>
 
-        <h2 className="tutorial-heading">Navigation Menu Button Tutorial</h2>
-        <div className="tutorial-heading-image"></div>
+        <h2 className="tutorial-heading">Below you will find some Useful JavaScript Tutorials</h2>
         <p className="content-text">
           We'd like to start off with a tutorial on how to set up a navigation menu button that when clicked causes a menu box to slide onto the screen.<br></br>
           <br></br>These are extremely important for websites viewed on mobile devices to ensure easy navigation of a site. For instance, this website uses a menu button and menu box when viewed on a mobile device or tablet. They are also helpful organizational tools for large sites with dozens or even hundreds of links.<br></br>
           <br></br> It's fairly simple to set up a button for a nav menu. You simply have to know how to position the menu off screen and then when the user clicks the button you use JavaScript to change the position of the menu box.
         </p>
-        <div className="link-container">
-          <Link className="nav-menu-btn-link" to={"/javascript/nav-menu-btn-tut"}>
-            The Navigation Menu Button Tutorial
-          </Link>
+        <div className="cube-effects-container">
+          <div className="column column-1">
+            <div className="tutorial-heading-image"></div>
+
+            <Link to={"/javascript/nav-menu-btn-tut"}>
+              <h1>How to Style and Code a Navigation Menu & Button with CSS & JavaScript</h1>{" "}
+            </Link>
+          </div>
+          <div className="column column-1">
+            <PictureCubeEffect />
+            <Link to={"/javascript/picture-cube-effect-tut"}>
+              <h1>How to Style and Code a Picture Cube Effect with CSS & JavaScript</h1>{" "}
+            </Link>
+          </div>
         </div>
         <Footer />
       </div>

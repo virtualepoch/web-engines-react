@@ -2,13 +2,12 @@ import { Link } from "react-router-dom";
 import { BorderEffect } from "./components/BorderEffect";
 import { ColorCube } from "./components/ColorCube";
 import { SpinningTop } from "./components/SpinningTop";
-import { PictureCubeEffect } from "../css/components/PictureCubeEffect";
 import { Footer } from "../../components/Footer";
 import "./css.css";
 import Kaleidoscope from "../../components/Kaleidoscope";
 import LoadingOverlay from "../../components/LoadingOverlay";
 
-export function Css() {
+export function CssPage() {
   return (
     <div className="css-page">
       <h1 className="heading css-heading">CSS Tutorials</h1>
@@ -55,12 +54,6 @@ export function Css() {
               <SpinningTop />
               <Link to={"/css/top-spin-tut"}>
                 <h1>How to Style a Rotating 3D Top with CSS</h1>
-              </Link>
-            </div>
-            <div className="column column-1">
-              <PictureCubeEffect />
-              <Link to={"/css/picture-cube-effect-tut"}>
-                <h1>How to Style and Code a Picture Cube Effect with CSS & JavaScript</h1>{" "}
               </Link>
             </div>
           </div>
