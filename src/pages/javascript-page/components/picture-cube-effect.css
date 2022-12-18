@@ -137,7 +137,7 @@
 
 .picture-cube .front,
 .picture-cube .back {
-  background: url(../../../assets/logos/jsive-logo-at-100.png) 50% / 40% no-repeat, rgb(0, 0, 255, 0.5);
+  background: url(../../../assets/logos/jsive-logo-at-100.png) 50% / 40% no-repeat, linear-gradient(45deg, rgb(0, 0, 255), rgb(64, 224, 208, 0.99), rgb(0, 0, 255, 0.85), rgb(64, 224, 208, 0.99), rgb(0, 0, 255));
 }
 
 .picture-cube .front {
@@ -151,11 +151,11 @@
 
 .picture-cube .left,
 .picture-cube .right {
-  width: 103%;
+  width: 100%;
   transform: translateX(-150px) rotateY(-90deg);
   background: url(../../../assets/images/pexels-nic-wood-6432110-edit.jpg);
 }
 
 .picture-cube .right {
-  transform: translateX(142px) rotateY(90deg);
+  transform: translateX(150px) rotateY(90deg);
 }

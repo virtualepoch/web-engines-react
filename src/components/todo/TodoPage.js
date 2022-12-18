@@ -39,11 +39,16 @@ export function TodoPage() {
     setTodos(newTodos);
   }
 
-  const openCloseBtn = useRef(null);
+  const openTodoPageBtn = useRef(null);
   const todoPage = useRef(null);
-  function openCloseBtnToggle() {
-    openCloseBtn.current.classList.toggle("open");
-    todoPage.current.classList.toggle("open");
+
+  function openTodoPage() {
+    todoPage.current.classList.add("open");
+    openTodoPageBtn.current.classList.add("todo-open");
+  }
+  function closeTodoPage() {
+    todoPage.current.classList.remove("open");
+    openTodoPageBtn.current.classList.remove("todo-open");
   }
 
   return (
@@ -61,8 +66,9 @@ export function TodoPage() {
           Clear Completed Todos
         </button>
         <div>{todos.filter((todo) => !todo.complete).length} left todos</div>
+        <div className="close-todo-page-btn" onClick={closeTodoPage}></div>
       </div>
-      <div className="open-close-btn" ref={openCloseBtn} onClick={openCloseBtnToggle}></div>
+      <div className="open-todo-page-btn" ref={openTodoPageBtn} onClick={openTodoPage}></div>
     </>
   );
 }

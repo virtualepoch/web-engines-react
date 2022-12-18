@@ -29,7 +29,7 @@ export function Footer() {
 
   return (
     <footer style={styles.footer}>
-      <p style={styles.footerText}>JavaScriptive</p>
+      <p style={styles.footerText}>JavaScriptive.com</p>
     </footer>
   );
 }

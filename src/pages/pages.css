@@ -7,6 +7,7 @@
   background: inherit;
   overflow-x: hidden;
 }
+
 .home-footer {
   width: fit-content;
   height: fit-content;
@@ -20,6 +21,7 @@
   color: white;
   font: clamp(0.8rem, 5vw, 1.2rem) Lorea;
 }
+
 .heading {
   width: fit-content;
   height: 70px;
@@ -29,12 +31,15 @@
   align-items: center;
   font: 600 clamp(1.3rem, 5vw, 1.7rem) sans-serif;
 }
+
 h1 {
   font: 400 clamp(1.3rem, 5vw, 1.4rem) sans-serif;
 }
+
 .sub-heading {
   font: clamp(0.8rem, 5vw, 1.2rem) sans-serif;
 }
+
 .credits-section {
   padding: 10px;
   display: flex;

@@ -6,6 +6,7 @@ import { RainCanvasDark } from "../../components/RainCanvasDark";
 import { PictureCubeEffect } from "../javascript-page/components/PictureCubeEffect";
 import { Footer } from "../../components/Footer";
 import { PictureCubeEffect2 } from "./components/PictureCubeEffect2";
+import { SectionDivider } from "../../components/SectionDivider";
 
 export function JavaScriptPage() {
   const heading = useRef(null);
@@ -108,6 +109,7 @@ export function JavaScriptPage() {
           </div>
           <PictureCubeEffect2 />
         </div>
+        <SectionDivider />
         <Footer />
         <div className="credits-section">
           <p>photos used on this page were created by:</p>

@@ -6,6 +6,7 @@ import { Footer } from "../../components/Footer";
 import "./css.css";
 import Kaleidoscope from "../../components/Kaleidoscope";
 import LoadingOverlay from "../../components/LoadingOverlay";
+import { SectionDivider } from "../../components/SectionDivider";
 
 export function CssPage() {
   return (
@@ -59,7 +60,12 @@ export function CssPage() {
           </div>
           {/* <Kaleidoscope /> */}
         </section>
+        <SectionDivider />
         <Footer />
+        <div className="credits-section">
+          <p>Images used on this page are from:</p>
+          <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg">https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg</a>
+        </div>
       </div>
     </div>
   );
