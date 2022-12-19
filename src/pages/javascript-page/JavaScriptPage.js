@@ -61,9 +61,9 @@ export function JavaScriptPage() {
         {/* <RainCanvasDark /> */}
       </div>
       <div className="dark-light-theme-btn" onClick={changeTheme}>
-        <div className="theme-btn-note" ref={themeBtnNote}>
+        {/* <div className="theme-btn-note" ref={themeBtnNote}>
           CHANGE COLOR THEME
-        </div>
+        </div> */}
       </div>
 
       <div className="page-content">
