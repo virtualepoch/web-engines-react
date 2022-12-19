@@ -2,7 +2,6 @@
   width: calc(100% - 20px);
   max-width: 800px;
   height: calc(100vh - 70px);
-  min-height: 600px;
   position: fixed;
   top: 60px;
   left: 0;
@@ -16,9 +15,9 @@
   font: 400 20px Lorea;
   color: black;
   overflow-y: auto;
-  background: url(../../assets/images/pexels-pixabay-235985-edit-compressed.jpg) 50%/100% 100%;
-  border: 1px solid;
+  background: url(../../assets/images/pexels-pixabay-235985-edit-compressed.jpg) 50%/100%;
   border-radius: 5px;
+  box-shadow: 1px 1px 5px 2px rgb(0, 0, 0, 0.5);
   scale: 0;
   transition: all 1s ease-in-out;
 }

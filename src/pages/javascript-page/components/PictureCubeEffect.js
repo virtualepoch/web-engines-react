@@ -37,7 +37,7 @@ export function PictureCubeEffect() {
 
   return (
     <div className="picture-cube-container" onClick={rotatePictureCube}>
-      <div className="click-tap-message">click/tap screen</div>
+      <div className="click-tap-message">click/tap</div>
       <div className="picture-cube-rain-canvas">
         <RainCanvasDark />
       </div>

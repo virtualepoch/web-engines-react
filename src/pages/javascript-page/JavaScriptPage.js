@@ -107,6 +107,12 @@ export function JavaScriptPage() {
               <h1>How to Style and Code a Picture Cube Effect with CSS & JavaScript</h1>{" "}
             </Link>
           </div>
+          <div className="column column-1">
+            <PictureCubeEffect2 />
+            <Link to={"/javascript/picture-cube-effect-tut"}>
+              <h1>How to Style and Code a Picture Cube Effect with CSS & JavaScript</h1>{" "}
+            </Link>
+          </div>
           <PictureCubeEffect2 />
         </div>
         <SectionDivider />

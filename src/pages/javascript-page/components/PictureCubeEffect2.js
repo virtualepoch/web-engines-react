@@ -37,7 +37,7 @@ export function PictureCubeEffect2() {
 
   return (
     <div className="picture-cube-container picture-cube-container-2" onClick={rotatePictureCube}>
-      <div className="click-tap-message">click/tap screen</div>
+      <div className="click-tap-message">click/tap</div>
       <div className="picture-cube-pos-z-container" ref={pictureCubePosZContainer}>
         <div className="picture-cube" ref={pictureCube}>
           <div className="side front"></div>
