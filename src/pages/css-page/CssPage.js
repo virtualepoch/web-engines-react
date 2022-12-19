@@ -7,6 +7,7 @@ import "./css.css";
 import Kaleidoscope from "../../components/Kaleidoscope";
 import LoadingOverlay from "../../components/LoadingOverlay";
 import { SectionDivider } from "../../components/SectionDivider";
+import { SpriteScene } from "../../components/sprite-scene/SpriteScene";
 
 export function CssPage() {
   return (
@@ -14,15 +15,16 @@ export function CssPage() {
       <h1 className="heading css-heading">CSS Tutorials</h1>
       {/* <PyramidScene /> */}
       {/* <BalloonFloat /> */}
+      <SpriteScene />
       <div className="css-heading-testing">
         {/* <LoadingOverlay /> */}
         {/* <div className="css-heading-testing-bg bg-1"></div>
         <div className="css-heading-testing-bg bg-2"></div>
         <div className="css-heading-testing-bg bg-1 edit"></div>
         <div className="css-heading-testing-bg bg-2 edit"></div> */}
-        <div className="css-bird-container">
+        {/* <div className="css-bird-container">
           <div className="css-bird"></div>
-        </div>
+        </div> */}
       </div>
       <div className="main-content">
         <h1>The following tutorials can all be completed with plain old CSS.</h1>
