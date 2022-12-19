@@ -9,8 +9,10 @@ export function SpriteScene() {
   };
 
   return (
-    <div className="sprite-scene-container" style={style.spriteSceneContainer}>
-      <div className="monster" style={style.sprite}></div>
-    </div>
+    <>
+      <div className="sprite-scene-container" style={style.spriteSceneContainer}>
+        <div className="monster" style={style.sprite}></div>
+      </div>
+    </>
   );
 }
