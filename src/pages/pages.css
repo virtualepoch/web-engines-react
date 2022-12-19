@@ -33,7 +33,7 @@
 }
 
 h1 {
-  font: 400 clamp(1.3rem, 5vw, 1.4rem) sans-serif;
+  font: 100 clamp(1.1rem, 5vw, 1.3rem) sans-serif;
 }
 
 .sub-heading {

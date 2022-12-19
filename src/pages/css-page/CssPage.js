@@ -29,7 +29,7 @@ export function CssPage() {
       <div className="main-content">
         <h1>The following tutorials can all be completed with plain old CSS.</h1>
         <section className="effects-section">
-          <h1>Learn to Style Border And Text Effects with CSS</h1>
+          <h1>Learn to Style Border and Text Effects with CSS</h1>
           <p>Click either box to enter the tutorial.</p>
           <div className="effects-container">
             <div className="border-effect-container">
@@ -44,8 +44,8 @@ export function CssPage() {
           </div>
         </section>
         <section className="effects-section">
-          <h1>Learn to Create 3-D animations</h1>
-          <p>Tap or click on the 3-D cube or top below to toggle their animations. PLEASE NOTE: Multiple complex animations running at the same time can slow the page down and make scrolling choppy on some devices.</p>
+          <h1>Learn to Style 3D Animations</h1>
+          <p>Tap or click on the 3D cube or top below to toggle their animations. PLEASE NOTE: Multiple complex animations running at the same time can slow the page down and make scrolling choppy on some devices.</p>
           <div className="cube-effects-container">
             <div className="column column-1">
               <ColorCube />
@@ -66,7 +66,7 @@ export function CssPage() {
         <Footer />
         <div className="credits-section">
           <p>Images used on this page are from:</p>
-          <a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg">https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg</a>
+          <a href="">IMAGES INFO</a>
         </div>
       </div>
     </div>
