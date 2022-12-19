@@ -18,7 +18,7 @@
   max-width: 1200px;
   aspect-ratio: 16/9;
   position: fixed;
-  top: 0;
+  top: 50px;
   z-index: 1;
   transition: 0.5s ease-in-out 0.2s;
   background: url(../../assets/gifs/beta-rain-white-320x180.gif);

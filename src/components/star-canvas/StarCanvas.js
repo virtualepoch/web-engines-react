@@ -136,7 +136,6 @@ export default function StarCanvas() {
 
     window.addEventListener("resize", function () {
       canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
       size = canvas.width < canvas.height ? canvas.width * sizeAdjuster : canvas.height * sizeAdjuster;
       ctx.lineCap = "round";
       ctx.shadowColor = "rgba(0,0,0,0.5)";

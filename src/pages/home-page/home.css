@@ -9,6 +9,7 @@
     height: fit-content;
   }
 }
+
 .text-box {
   width: 100%;
   height: 100%;
@@ -20,6 +21,7 @@
   color: white;
   pointer-events: none;
 }
+
 .text-box h1 {
   padding: 33px 5px 5px 5px;
   position: relative;
@@ -31,6 +33,7 @@
   box-shadow: 0 7px 7px 1px rgb(0, 0, 0, 0.3);
   background: linear-gradient(transparent 33%, blue 90%);
 }
+
 .text-box p {
   width: 240px;
   aspect-ratio: 1/1;
@@ -49,6 +52,7 @@
     width: 400px;
   }
 }
+
 .home-page .action-btn {
   width: fit-content;
   height: fit-content;
@@ -68,6 +72,7 @@
     transform: scale(1.1);
   }
 }
+
 .tap-message {
   width: 20px;
   height: fit-content;
@@ -88,6 +93,7 @@
   pointer-events: none;
   background: linear-gradient(to left, transparent,rgb(0, 0, 0, 0.4));
 }
+
 .tap-message-2 {
   left: calc(100vw - 20px);
   background: linear-gradient(to right, transparent,rgb(0, 0, 0, 0.4));
