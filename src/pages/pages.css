@@ -33,11 +33,11 @@
 }
 
 h1 {
-  font: 100 clamp(1.1rem, 5vw, 1.3rem) sans-serif;
+  font: 500 clamp(1.1rem, 5vw, 1.3rem) sans-serif;
 }
 
 .sub-heading {
-  font: clamp(0.8rem, 5vw, 1.2rem) sans-serif;
+  font: 500 clamp(0.8rem, 5vw, 1.2rem) sans-serif;
 }
 
 .credits-section {
