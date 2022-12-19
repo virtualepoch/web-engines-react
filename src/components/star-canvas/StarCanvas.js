@@ -5,11 +5,10 @@ export default function StarCanvas() {
   const style = {
     canvas: {
       width: "100vw",
-      height: "100vh",
+      height: "calc(100vh - 50px)",
       position: "fixed",
-      top: "50%",
-      left: "50%",
-      transform: "translate(-50%, -50%)",
+      top: 0,
+      left: 0,
       background: "linear-gradient(90deg, blue, black, blue)",
     },
   };

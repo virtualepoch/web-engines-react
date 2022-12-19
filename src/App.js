@@ -21,6 +21,7 @@ import DeloreanHighModelPage from "./pages/cgi-page/cgi-models/DeloreanHighModel
 import { TestingPage } from "./pages/testing-page/TestingPage";
 import "./pages/pages.css";
 import { AngledHighlights } from "./pages/testing-page/landing-pages/AngledHighlights";
+import StarCanvas from "./components/star-canvas/StarCanvas";
 
 function useScrollToTop() {
   const { pathname } = useLocation();
@@ -37,6 +38,7 @@ function App() {
       <Header />
       <ToTopBtn />
       <TodoPage />
+      <StarCanvas/>
       <section className="page-container">
         <Routes>
           <Route path="/" element={<HomePage />} />

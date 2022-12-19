@@ -15,6 +15,7 @@
 .rain-canvas-container-dark,
 .rain-canvas-container-light {
   width: 100%;
+  max-width: 1200px;
   aspect-ratio: 16/9;
   position: fixed;
   top: 0;

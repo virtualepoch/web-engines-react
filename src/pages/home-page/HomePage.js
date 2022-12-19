@@ -5,7 +5,7 @@ import "./home.css";
 export function HomePage() {
   return (
     <div className="home-page">
-      <StarCanvas />
+      {/* <StarCanvas /> */}
       <div className="text-box">
         <h1>Welcome to JavaScriptive</h1>
         <p>
