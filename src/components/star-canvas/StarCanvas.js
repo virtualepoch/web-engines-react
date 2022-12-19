@@ -1,14 +1,15 @@
 import React, { useEffect, useRef } from "react";
 import "./star-canvas.css";
 
-export default function StarCanvas() {
+export function StarCanvas() {
   const style = {
     canvas: {
       width: "100vw",
-      height: "calc(100vh - 50px)",
+      height: "100vh",
       position: "fixed",
-      top: 0,
-      left: 0,
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)",
       background: "linear-gradient(90deg, blue, black, blue)",
     },
   };
@@ -45,11 +46,11 @@ export default function StarCanvas() {
 
     let sides = 8;
     let scale = 1;
-    let spread = 0.2;
+    let spread = -0.3;
     let hue = 180;
     let color = "hsl(" + hue + ", 100%, 50%)";
     // let color2 = "hsl(" + (hue + 180) + ", 100%, 50%)";
-    let lineWidth = 25;
+    let lineWidth = 17;
     let pointX = 0;
     let pointY = size;
 
@@ -108,6 +109,9 @@ export default function StarCanvas() {
       drawFractal();
       lineWidth = Math.floor(Math.random() * 20 + 10);
       //   textBox.style.color = color2;
+      console.log(sides);
+      console.log(spread);
+      console.log(lineWidth);
     }
     randomizeBtn.addEventListener("click", function () {
       randomizeFractal();
@@ -136,6 +140,7 @@ export default function StarCanvas() {
 
     window.addEventListener("resize", function () {
       canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
       size = canvas.width < canvas.height ? canvas.width * sizeAdjuster : canvas.height * sizeAdjuster;
       ctx.lineCap = "round";
       ctx.shadowColor = "rgba(0,0,0,0.5)";
@@ -145,9 +150,9 @@ export default function StarCanvas() {
       drawFractal();
     });
 
-    const slider_spread = document.getElementById("spread");
-    const label_spread = document.getElementById("forSpread");
-    slider_spread.addEventListener("change", function (e) {});
+    // const slider_spread = document.getElementById("spread");
+    // const label_spread = document.getElementById("forSpread");
+    // slider_spread.addEventListener("change", function (e) {});
   }, []);
 
   return (
@@ -162,14 +167,12 @@ export default function StarCanvas() {
           Randomize!
         </button>
         <div className="slider-container">
-          <label id="forSpread" for="spread">
-            Spread:{" "}
-          </label>
-          <input id="spread" type="range" min="-0.1" max="3.1" step="0.02" value="1" />
+          {/* <label id="forSpread" for="spread">Spread:{" "}</label> */}
+          {/* <input id="spread" type="range" min="-0.1" max="3.1" step="0.02" value="1" /> */}
         </div>
         <div className="slider-container">
-          <label for="sides">Sides: </label>
-          <input id="sides" type="range" min="2" max="22" step="1" value="5" />
+          {/* <label for="sides">Sides: </label> */}
+          {/* <input id="sides" type="range" min="2" max="22" step="1" value="5" /> */}
         </div>
         <button id="reset-btn" ref={resetBtnRef}>
           Reset

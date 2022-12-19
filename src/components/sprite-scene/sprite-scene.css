@@ -1,7 +1,12 @@
 .sprite-scene-container {
   background: url(../sprite-scene/assets/cityscape01-711x200.jpg) repeat-x;
-  background-size: 711px 300px;
   animation: sprite-scene-background-anim 25s linear infinite;
+}
+@media (max-width:800px) {
+  .sprite-scene-container{
+    background: url(../sprite-scene/assets/cityscape01-356x100.jpg)0 0/  repeat-x;
+    animation: sprite-scene-background-anim2 25s linear infinite;
+  }
 }
 
 @keyframes sprite-scene-background-anim {
@@ -12,6 +17,14 @@
     background-position: -711px;
   }
 }
+@keyframes sprite-scene-background-anim2 {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: -356px;
+  }
+}
 
 .monster {
   height: 100px;
@@ -19,13 +32,30 @@
   background: url(../sprite-scene/assets/monster-100.png);
   transform: rotateY(180deg);
   position: absolute;
-  top: 180px;
+  top: 140px;
   left: calc(50% - 77px);
-  animation: crawl 2000ms steps(21) infinite;
+  animation: crawl-monster-100 2000ms steps(21) infinite;
 }
 
-@keyframes crawl {
+@keyframes crawl-monster-100 {
   100% {
     background-position: -3240px, 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .monster {
+    height: 50px;
+    width: 77px;
+    top: 160px;
+    left: calc(50% - 38px);
+    background: url(../sprite-scene/assets/monster-50.png);
+    animation: crawl-monster-50 2000ms steps(21) infinite;
+  }
+}
+
+@keyframes crawl-monster-50 {
+  100% {
+    background-position: -1620px, 0;
   }
 }

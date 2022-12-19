@@ -15,7 +15,7 @@ export function CssPage() {
       <h1 className="heading css-heading">CSS Tutorials</h1>
       {/* <PyramidScene /> */}
       {/* <BalloonFloat /> */}
-      <SpriteScene />
+      
       <div className="css-heading-testing">
         {/* <LoadingOverlay /> */}
         {/* <div className="css-heading-testing-bg bg-1"></div>
@@ -25,6 +25,7 @@ export function CssPage() {
         {/* <div className="css-bird-container">
           <div className="css-bird"></div>
         </div> */}
+        <SpriteScene />
       </div>
       <div className="main-content">
         <h1>The following tutorials can all be completed with plain old CSS.</h1>

@@ -9,15 +9,15 @@
   top: 100px;
   z-index: 88;
   color: aqua;
-  background: radial-gradient(#38a8f3,transparent 70%);
+  background: radial-gradient(#38a8f3, transparent 70%);
   /* background-image: url(/src/images/crystal-160.jpg);
   background-clip: text;
   -webkit-text-fill-color: transparent; */
 }
 .css-heading-testing {
   width: 100%;
-  position: relative;
-  background: radial-gradient(circle at 50% 10%, yellow, white, skyblue 30%, transparent);
+  height: 200px;
+  /* background: radial-gradient(circle at 50% 10%, yellow, white, skyblue 30%, transparent); */
 }
 .css-heading-testing-bg {
   width: 50%;

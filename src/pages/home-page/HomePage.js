@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import StarCanvas from "../../components/star-canvas/StarCanvas";
+import { StarCanvas } from "../../components/star-canvas/StarCanvas";
 import "./home.css";
 
 export function HomePage() {

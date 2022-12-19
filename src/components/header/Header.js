@@ -37,7 +37,8 @@ export function Header() {
     },
     siteTitle: {
       padding: "0 3px",
-      backgroundImage: "linear-gradient(115deg, rgb(140, 255, 251) 0% 76%, #38a8f3 79% 100%)",
+      backgroundImage: "linear-gradient(115deg, rgb(140, 255, 251) 0% 76%, magenta 79% 100%)",
+      // #38a8f3
       WebkitBackgroundClip: "text",
       backgroundClip: "text",
       WebkitTextFillColor: "transparent",
