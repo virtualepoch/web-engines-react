@@ -11,7 +11,6 @@ export function SpriteScene() {
   return (
     <div className="sprite-scene-container" style={style.spriteSceneContainer}>
       <div className="monster" style={style.sprite}></div>
-      <div className="monster monster-2" style={style.sprite}></div>
     </div>
   );
 }

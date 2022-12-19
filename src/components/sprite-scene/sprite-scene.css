@@ -1,7 +1,7 @@
 .sprite-scene-container {
-  background: url(../sprite-scene/assets/cityscape01-4000x500.jpg) repeat-x;
-  background-size: 4000px 500px;
-  animation: sprite-scene-background-anim 60s linear infinite;
+  background: url(../sprite-scene/assets/cityscape01-711x200.jpg) repeat-x;
+  background-size: 711px 300px;
+  animation: sprite-scene-background-anim 25s linear infinite;
 }
 
 @keyframes sprite-scene-background-anim {
@@ -9,7 +9,7 @@
     background-position: 0;
   }
   100% {
-    background-position: -4000px;
+    background-position: -711px;
   }
 }
 
@@ -19,17 +19,10 @@
   background: url(../sprite-scene/assets/monster-100.png);
   transform: rotateY(180deg);
   position: absolute;
-  top: 230px;
-  left: 30%;
-  animation: crawl 500ms steps(21) infinite;
-}
-
-.monster-2 {
-  top: 260px;
-  left: 50%;
-  z-index: 888;
-  transform: rotateY(180deg) scale(0.4);
-  animation: crawl 200ms steps(21) infinite;
+  top: 180px;
+  left: calc(50% - 77px);
+  scale: 1.2;
+  animation: crawl 2000ms steps(21) infinite;
 }
 
 @keyframes crawl {
