@@ -55,10 +55,10 @@ export function JavaScriptPage() {
   return (
     <div className="javascript-page" ref={javascriptPage}>
       <div className="rain-canvas-container-light" ref={rainCanvasContainerLight}>
-        <RainCanvasLight />
+        {/* <RainCanvasLight /> */}
       </div>
       <div className="rain-canvas-container-dark" ref={rainCanvasContainerDark}>
-        <RainCanvasDark />
+        {/* <RainCanvasDark /> */}
       </div>
       <div className="dark-light-theme-btn" onClick={changeTheme}>
         <div className="theme-btn-note" ref={themeBtnNote}>
