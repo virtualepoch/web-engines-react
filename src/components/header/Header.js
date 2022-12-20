@@ -4,14 +4,13 @@ import SearchBar from "../search-bar/SearchBar";
 import "./header.css";
 
 export function Header() {
-  const styleSheet = {
+  const style = {
     header: {
       position: "fixed",
       top: "0",
       left: "0",
       right: "0",
       zIndex: "88888",
-      transition: "top 0.3s ease-in-out",
     },
     topHeader: {
       maxWidth: "1200px",
@@ -48,21 +47,21 @@ export function Header() {
     },
   };
 
-  const navBtn = useRef(null);
-  const mainNav = useRef(null);
+  const navMenuBtn = useRef(null);
+  const navMenu = useRef(null);
   const closeNavBox = useRef(null);
   const titleEnding = "ive";
 
-  function openCloseMainNav() {
-    navBtn.current.classList.toggle("open");
-    mainNav.current.classList.toggle("open");
+  function openCloseNavMenu() {
+    navMenuBtn.current.classList.toggle("open");
+    navMenu.current.classList.toggle("open");
     closeNavBox.current.classList.toggle("open");
   }
 
-  function closeMainNav() {
-    if (mainNav.current.classList.contains("open")) {
-      mainNav.current.classList.remove("open");
-      navBtn.current.classList.remove("open");
+  function closeNavMenu() {
+    if (navMenu.current.classList.contains("open")) {
+      navMenuBtn.current.classList.remove("open");
+      navMenu.current.classList.remove("open");
       closeNavBox.current.classList.remove("open");
     } else {
       return;
@@ -82,43 +81,43 @@ export function Header() {
   }
 
   return (
-    <header style={styleSheet.header}>
-      <div style={styleSheet.topHeader}>
-        <div style={styleSheet.headerSide}>
-          <div style={styleSheet.mainLogo} className="main-logo"></div>
+    <header style={style.header}>
+      <div style={style.topHeader}>
+        <div style={style.headerSide}>
+          <div style={style.mainLogo} className="main-logo"></div>
           <Link to={"/"}>
-            <h1 style={styleSheet.siteTitle} className="site-title">
+            <h1 style={style.siteTitle} className="site-title">
               JavaScript{titleEnding}
             </h1>
           </Link>
         </div>
-        <div style={styleSheet.headerSide}>
-          <div className="close-nav-box" ref={closeNavBox} onClick={closeMainNav}></div>
-          <nav className="main-nav" ref={mainNav}>
+        <div style={style.headerSide}>
+          <div className="close-nav-box" ref={closeNavBox} onClick={closeNavMenu}></div>
+          <nav className="nav-menu" ref={navMenu}>
             <ul>
-              <CustomLink onClick={closeMainNav} to={"/"}>
+              <CustomLink onClick={closeNavMenu} to={"/"}>
                 Home
               </CustomLink>
-              <CustomLink onClick={closeMainNav} to={"/css"}>
+              <CustomLink onClick={closeNavMenu} to={"/css"}>
                 CSS
               </CustomLink>
-              <CustomLink onClick={closeMainNav} to={"/javascript"}>
+              <CustomLink onClick={closeNavMenu} to={"/javascript"}>
                 JavaScript
               </CustomLink>
-              <CustomLink onClick={closeMainNav} to={"/html-canvas"}>
+              <CustomLink onClick={closeNavMenu} to={"/html-canvas"}>
                 HTML-Canvas
               </CustomLink>
-              <CustomLink onClick={closeMainNav} to={"/cgi"}>
+              <CustomLink onClick={closeNavMenu} to={"/cgi"}>
                 CGI
               </CustomLink>
-              {/* <CustomLink onClick={closeMainNav} to={"/testing"}>
+              {/* <CustomLink onClick={closeNavMenu} to={"/testing"}>
                 T
               </CustomLink> */}
             </ul>
           </nav>
           <SearchBar />
-          <div className="nav-btn" ref={navBtn} onClick={openCloseMainNav}>
-            <div className="nav-btn-bars close-anim"></div>
+          <div className="nav-menu-btn" ref={navMenuBtn} onClick={openCloseNavMenu}>
+            <div className="nav-menu-btn-bars"></div>
           </div>
         </div>
       </div>

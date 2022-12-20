@@ -1,13 +1,3 @@
-.page-container {
-  max-width: 1200px;
-  min-height: 100vh;
-  margin: auto;
-  padding: 50px 0 0 0;
-  position: relative;
-  background: inherit;
-  overflow-x: hidden;
-}
-
 .home-footer {
   width: fit-content;
   height: fit-content;

@@ -1,51 +1,61 @@
 .main-logo {
   background: url(/src/assets/logos/jsive-logo-at-100.png) 50% / 77% 77% no-repeat;
 }
+
 .site-title {
   background-clip: text;
 }
-.nav-btn {
+
+.nav-menu-btn {
   width: 50px;
   height: 50px;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
 }
-.nav-btn-bars,
-.nav-btn-bars::before,
-.nav-btn-bars::after {
+
+.nav-menu-btn-bars,
+.nav-menu-btn-bars::before,
+.nav-menu-btn-bars::after {
   width: 29px;
   height: 2px;
   background: white;
   transition: all 500ms ease-in-out;
 }
-.nav-btn-bars::before,
-.nav-btn-bars::after {
+
+.nav-menu-btn-bars::before,
+.nav-menu-btn-bars::after {
   content: "";
   position: absolute;
 }
-.nav-btn-bars::before {
+
+.nav-menu-btn-bars::before {
   transform: translateY(-7px);
 }
-.nav-btn-bars::after {
+
+.nav-menu-btn-bars::after {
   transform: translateY(7px);
 }
+
 /* OPEN BUTTON ANIMATION  */
-.nav-btn.open .nav-btn-bars {
+.nav-menu-btn.open .nav-menu-btn-bars {
   transform: rotate(360deg);
   background: transparent;
   box-shadow: none;
   transition: all 1s ease-in-out;
 }
-.nav-btn.open .nav-btn-bars::before {
+
+.nav-menu-btn.open .nav-menu-btn-bars::before {
   transform: rotate(45deg);
 }
-.nav-btn.open .nav-btn-bars::after {
+
+.nav-menu-btn.open .nav-menu-btn-bars::after {
   transform: rotate(135deg);
 }
+
 /* // MAIN NAV BOX ///////////////////////// */
-.main-nav {
+.nav-menu {
   width: fit-content;
   height: calc(100vh - 50px);
   padding: 50px 12px;
@@ -60,9 +70,11 @@
   background: white;
   overflow: auto;
 }
-.main-nav.open {
+
+.nav-menu.open {
   right: 0;
 }
+
 .close-nav-box {
   width: 100vw;
   height: calc(100vh - 50px);
@@ -72,32 +84,36 @@
   display: none;
   background: rgb(0, 0, 0, 0.3);
 }
+
 .close-nav-box.open {
   display: block;
 }
+
 .link {
+  color: white;
+  background: rgb(6, 133, 251);
+  box-shadow: 0 2px 5px 2px rgb(0, 0, 0, 0.3);
   width: 100%;
   display: flex;
   justify-content: left;
-  margin: 11px 0;
+  margin: 15px 0;
   padding: 7px;
   font: 20px sans-serif;
-  color: white;
-  box-shadow: 1px 2px 4px 1px rgb(0, 0, 0, 0.2);
-  background: rgb(6, 133, 251);
 }
+
 li.active .link,
 .link:hover {
-  transform: scale(1.1);
-  box-shadow: 1px 3px 4px 1px rgb(0, 0, 0, 0.2);
-  background: white;
   color: black;
+  background: white;
+  transform: scale(1.1);
 }
+
 @media (min-width: 777px) {
   .close-nav-box {
     display: none;
   }
-  .main-nav {
+
+  .nav-menu {
     height: fit-content;
     position: static;
     padding: 0;
@@ -105,19 +121,23 @@ li.active .link,
     background: none;
     box-shadow: none;
   }
-  .main-nav ul {
+
+  .nav-menu ul {
     height: 50px;
     display: flex;
     align-items: center;
   }
-  .main-nav li {
+
+  .nav-menu li {
     margin: 0 7px;
   }
+
   .link {
     margin: 0;
     font-size: 17px;
   }
-  .nav-btn {
+
+  .nav-menu-btn {
     display: none;
   }
 }

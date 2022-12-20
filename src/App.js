@@ -19,8 +19,10 @@ import HorsemenModel2 from "./pages/cgi-page/cgi-models/HorsemenModel2";
 import AyanamiModel from "./pages/cgi-page/cgi-models/AyanamiModel";
 import DeloreanHighModelPage from "./pages/cgi-page/cgi-models/DeloreanHighModelPage";
 import { TestingPage } from "./pages/testing-page/TestingPage";
-import "./pages/pages.css";
 import { AngledHighlights } from "./pages/testing-page/landing-pages/AngledHighlights";
+import { StarCanvas } from "./components/star-canvas/StarCanvas";
+import "./app.css";
+import "./pages/pages.css";
 
 function useScrollToTop() {
   const { pathname } = useLocation();
@@ -31,13 +33,28 @@ function useScrollToTop() {
 }
 
 function App() {
+  const style = {
+    pageContainer: {
+      maxWidth: "1200px",
+      minHeight: "100vh",
+      margin: "auto",
+      padding: "50px 0 0 0",
+      position: "relative",
+      background: "inherit",
+      overflowX: "hidden",
+    },
+  };
+
   useScrollToTop();
   return (
     <>
       <Header />
       <ToTopBtn />
       <TodoPage />
-      <section className="page-container">
+      <div className="star-canvas-container">
+        <StarCanvas />
+      </div>
+      <section style={style.pageContainer}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/css" element={<CssPage />} />
