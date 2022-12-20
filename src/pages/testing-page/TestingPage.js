@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { CanvasImageEffect } from "../../components/CanvasImageEffect";
 import { TransformTriangle } from "../../components/transform-triangle/TransformTriangle";
 import "./testing.css";
+import "./picture-flip.css";
 
 export function TestingPage() {
   const style = {
@@ -59,6 +60,20 @@ export function TestingPage() {
     <div style={style.page}>
       <h1 style={style.text}>THE TEST PAGE</h1>
       <p style={style.pTag}>This section is where I will be testing and storing various little projects I'm working on.</p>
+      <div className="picture-flip-section">
+        <div className="picture-flip-container">
+          <div className="picture-flip-pos-z-container">
+            <div className="picture-flip">
+              <div className="side front">FRONT</div>
+              <div className="side back">BACK</div>
+              <div className="side left"></div>
+              <div className="side right"></div>
+              <div className="side top"></div>
+              <div className="side bottom"></div>
+            </div>
+          </div>
+        </div>
+      </div>
       <TransformTriangle />
       <h2 style={style.text}>Image Effect Canvas Test</h2>
       <CanvasImageEffect />
