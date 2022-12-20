@@ -7,7 +7,9 @@
   perspective: 600px;
   perspective-origin: 50% -10%;
   overflow: hidden;
-  background: linear-gradient(white, skyblue 30% 50%, lightgray 52%, white);
+  border-left: 1px solid rgb(255, 0, 255, 0.3);
+  border-right: 1px solid rgb(255, 0, 255, 0.3);
+  background: linear-gradient(white, skyblue 30% 50%, navy 52%, turquoise, white);
 }
 .spinning-top {
   height: 100px;

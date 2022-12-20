@@ -4,8 +4,8 @@ import { ColorCube } from "./components/ColorCube";
 import { SpinningTop } from "./components/SpinningTop";
 import { Footer } from "../../components/Footer";
 import "./css.css";
-import Kaleidoscope from "../../components/Kaleidoscope";
-import LoadingOverlay from "../../components/LoadingOverlay";
+// import Kaleidoscope from "../../components/Kaleidoscope";
+// import LoadingOverlay from "../../components/LoadingOverlay";
 import { SectionDivider } from "../../components/SectionDivider";
 import { SpriteScene } from "../../components/sprite-scene/SpriteScene";
 
@@ -15,7 +15,7 @@ export function CssPage() {
       <h1 className="heading css-heading">CSS Tutorials</h1>
       {/* <PyramidScene /> */}
       {/* <BalloonFloat /> */}
-      
+
       <div className="css-heading-testing">
         {/* <LoadingOverlay /> */}
         {/* <div className="css-heading-testing-bg bg-1"></div>
@@ -28,7 +28,7 @@ export function CssPage() {
         <SpriteScene />
       </div>
       <div className="main-content">
-        <h1>The following tutorials can all be completed with plain old CSS.</h1>
+        <h1>The following tutorials only require basic knowledge of HTML & CSS.</h1>
         <section className="effects-section">
           <h1>Learn to Style Border and Text Effects with CSS</h1>
           <p>Click either box to enter the tutorial.</p>
