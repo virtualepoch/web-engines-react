@@ -4,6 +4,7 @@ import { CanvasImageEffect } from "../../components/CanvasImageEffect";
 import { TransformTriangle } from "../../components/transform-triangle/TransformTriangle";
 import "./testing.css";
 import "./picture-flip.css";
+import "./image-flip.css";
 
 export function TestingPage() {
   const style = {
@@ -60,6 +61,58 @@ export function TestingPage() {
     <div style={style.page}>
       <h1 style={style.text}>THE TEST PAGE</h1>
       <p style={style.pTag}>This section is where I will be testing and storing various little projects I'm working on.</p>
+      <div className="image-flip-main-row">
+        <div className="content-column">
+          <h1>Welcome to My Portfolio Page</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci ducimus doloremque non iusto, voluptate officia? Quas sint necessitatibus totam esse? Quas, eligendi dolorem sunt quos provident unde tempore dolore adipisci laboriosam quod autem nesciunt non quam et incidunt quasi ducimus ab esse illum. Quis, libero ratione! Facilis doloribus minus asperiores.</p>
+          </div>
+        <div className="image-flip-section">
+          <div className="image-flip-row">
+            <div className="image-flip-container">
+              <div className="image-flip">
+                <div className="side front">#1 FRONT</div>
+                <div className="side back">#1 BACK</div>
+                <div className="side left"></div>
+                <div className="side right"></div>
+                <div className="side top"></div>
+                <div className="side bottom"></div>
+              </div>
+            </div>
+            <div className="image-flip-container">
+              <div className="image-flip">
+                <div className="side front">#2 FRONT</div>
+                <div className="side back">#2 BACK</div>
+                <div className="side left"></div>
+                <div className="side right"></div>
+                <div className="side top"></div>
+                <div className="side bottom"></div>
+              </div>
+            </div>
+          </div>
+          <div className="image-flip-row">
+            <div className="image-flip-container">
+              <div className="image-flip">
+                <div className="side front">#3 FRONT</div>
+                <div className="side back">#3 BACK</div>
+                <div className="side left"></div>
+                <div className="side right"></div>
+                <div className="side top"></div>
+                <div className="side bottom"></div>
+              </div>
+            </div>
+            <div className="image-flip-container">
+              <div className="image-flip">
+                <div className="side front">#4 FRONT</div>
+                <div className="side back">#4 BACK</div>
+                <div className="side left"></div>
+                <div className="side right"></div>
+                <div className="side top"></div>
+                <div className="side bottom"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="picture-flip-section">
         <div className="picture-flip-container">
           <div className="picture-flip-pos-z-container">
