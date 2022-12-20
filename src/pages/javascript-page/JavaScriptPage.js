@@ -1,8 +1,8 @@
 import React, { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./javascript.css";
-import { RainCanvasLight } from "../../components/RainCanvasLight";
-import { RainCanvasDark } from "../../components/RainCanvasDark";
+import { CanvasRainLight } from "../../components/CanvasRainLight";
+import { CanvasRainDark } from "../../components/CanvasRainDark";
 import { PictureCubeEffect } from "../javascript-page/components/PictureCubeEffect";
 import { Footer } from "../../components/Footer";
 import { PictureCubeEffect2 } from "./components/PictureCubeEffect2";
@@ -55,10 +55,10 @@ export function JavaScriptPage() {
   return (
     <div className="javascript-page" ref={javascriptPage}>
       <div className="rain-canvas-container-light" ref={rainCanvasContainerLight}>
-        {/* <RainCanvasLight /> */}
+        {/* <CanvasRainLight /> */}
       </div>
       <div className="rain-canvas-container-dark" ref={rainCanvasContainerDark}>
-        {/* <RainCanvasDark /> */}
+        {/* <CanvasRainDark /> */}
       </div>
       <div className="dark-light-theme-btn" onClick={changeTheme}>
         {/* <div className="theme-btn-note" ref={themeBtnNote}>

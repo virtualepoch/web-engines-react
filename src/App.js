@@ -1,8 +1,8 @@
 import { Route, Routes, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { Header } from "./components/header/Header";
-import { ToTopBtn } from "./components/ToTopBtn";
-// import { TodoPage } from "./components/todo/TodoPage";
+import { BtnToTop } from "./components/BtnToTop";
+import { CanvasStarFractal } from "./components/canvas-star-fractal/CanvasStarFractal";
 import { HomePage } from "./pages/home-page/HomePage";
 import { CssPage } from "./pages/css-page/CssPage";
 import { BorderEffectTut } from "./pages/css-page/tutorials/border-effect-tut/BorderEffectTut";
@@ -20,7 +20,6 @@ import AyanamiModel from "./pages/cgi-page/cgi-models/AyanamiModel";
 import DeloreanHighModelPage from "./pages/cgi-page/cgi-models/DeloreanHighModelPage";
 import { TestingPage } from "./pages/testing-page/TestingPage";
 import { AngledHighlights } from "./pages/testing-page/landing-pages/AngledHighlights";
-import { StarCanvas } from "./components/star-canvas/StarCanvas";
 import "./app.css";
 import "./pages/pages.css";
 
@@ -49,10 +48,9 @@ function App() {
   return (
     <>
       <Header />
-      <ToTopBtn />
-      {/* <TodoPage /> */}
+      <BtnToTop />
       <div className="star-canvas-container">
-        <StarCanvas />
+        <CanvasStarFractal />
       </div>
       <section style={style.pageContainer}>
         <Routes>

@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import { BackBtnFixed } from "../../../components/BackBtnFixed";
+import { BtnBackFixed } from "../../../components/BtnBackFixed";
 import { Canvas } from "@react-three/fiber";
 import Ayanami from "./cgi-components/Ayanami";
 import { OrbitControls } from "@react-three/drei";
@@ -7,7 +7,7 @@ import { OrbitControls } from "@react-three/drei";
 export default function AyanamiModel() {
   return (
     <div className="cgi-model-section">
-      <BackBtnFixed />
+      <BtnBackFixed />
       <h1>Rei Ayanami</h1>
       <Canvas className="ayanami-canvas">
         <OrbitControls enableZoom={true} />

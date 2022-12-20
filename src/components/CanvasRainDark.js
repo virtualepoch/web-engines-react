@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "../components/components.css";
 
-export function RainCanvasDark() {
+export function CanvasRainDark() {
   const canvasRef = useRef(null);
 
   useEffect(() => {

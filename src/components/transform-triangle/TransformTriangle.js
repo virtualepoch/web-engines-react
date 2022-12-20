@@ -1,6 +1,6 @@
-import "../transform-triangle/transform-triangle.css";
+import "./transform-triangle.css";
 
-export default function TransformTriangle() {
+export function TransformTriangle() {
   return (
     <div className="transform-origin-box">
       <div className="transform-triangle">

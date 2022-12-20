@@ -1,6 +1,7 @@
 // import GameTest from "../../components/GameTest";
 import { Link } from "react-router-dom";
-import { ImageEffectCanvas } from "../../components/ImageEffectCanvas";
+import { CanvasImageEffect } from "../../components/CanvasImageEffect";
+import { TransformTriangle } from "../../components/transform-triangle/TransformTriangle";
 import "./testing.css";
 
 export function TestingPage() {
@@ -58,8 +59,9 @@ export function TestingPage() {
     <div style={style.page}>
       <h1 style={style.text}>THE TEST PAGE</h1>
       <p style={style.pTag}>This section is where I will be testing and storing various little projects I'm working on.</p>
+      <TransformTriangle />
       <h2 style={style.text}>Image Effect Canvas Test</h2>
-      <ImageEffectCanvas />
+      <CanvasImageEffect />
       <p style={style.testHeading}>Landing pages</p>
       <div style={style.landingPagesContainer}>
         <Link to={"/landing-pages/angled-highlights"}>

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
-import "./star-canvas.css";
+import "./canvas-star-fractal.css";
 
-export function StarCanvas() {
+export function CanvasStarFractal() {
   const style = {
     canvas: {
       width: "100vw",

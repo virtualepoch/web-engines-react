@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-export function ImageEffectCanvas() {
+export function CanvasImageEffect() {
   const canvasRef = useRef(null);
   const myImage = new Image();
 

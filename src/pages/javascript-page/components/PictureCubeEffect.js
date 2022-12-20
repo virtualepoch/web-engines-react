@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { RainCanvasDark } from "../../../components/RainCanvasDark";
+import { CanvasRainDark } from "../../../components/CanvasRainDark";
 import "./picture-cube-effect.css";
 
 export function PictureCubeEffect() {
@@ -39,7 +39,7 @@ export function PictureCubeEffect() {
     <div className="picture-cube-container" onClick={rotatePictureCube}>
       <div className="click-tap-message">click/tap</div>
       <div className="picture-cube-rain-canvas">
-        <RainCanvasDark />
+        <CanvasRainDark />
       </div>
       <div className="picture-cube-pos-z-container" ref={pictureCubePosZContainer}>
         <div className="picture-cube" ref={pictureCube}>

@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import { StarCanvas } from "../../components/star-canvas/StarCanvas";
+import { CanvasStarFractal } from "../../components/canvas-star-fractal/CanvasStarFractal";
 import "./home.css";
 
 export function HomePage() {
   return (
     <div className="home-page">
-      <StarCanvas />
+      <CanvasStarFractal />
       <div className="text-box">
         <h1>Welcome to JavaScriptive</h1>
         <p>

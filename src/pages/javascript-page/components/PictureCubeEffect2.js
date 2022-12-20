@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { RainCanvasDark } from "../../../components/RainCanvasDark";
+import { CanvasRainDark } from "../../../components/CanvasRainDark";
 import "./picture-cube-effect.css";
 
 export function PictureCubeEffect2() {

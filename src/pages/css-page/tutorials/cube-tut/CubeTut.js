@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { BackBtn } from "../../../../components/BackBtn";
+import { BtnBack } from "../../../../components/BtnBack";
 import { ColorCube } from "../../components/ColorCube";
 import { AllCodeContainer } from "./AllCodeContainer";
 import { Footer } from "../../../../components/Footer";
@@ -128,7 +128,7 @@ export function CubeTut() {
 
   return (
     <div className="tut-page-container">
-      <BackBtn />
+      <BtnBack />
       <h1>How to Style a Rotating 3-D Cube with CSS</h1>
       <ColorCube />
       <div className="article-info">
@@ -211,7 +211,7 @@ export function CubeTut() {
         </div>
       </div>
       <p>There you have it. Another example of what can be done with the power of CSS.</p>
-      <BackBtn />
+      <BtnBack />
       <Footer />
     </div>
   );

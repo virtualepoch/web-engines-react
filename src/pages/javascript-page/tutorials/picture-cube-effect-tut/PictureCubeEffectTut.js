@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { BackBtn } from "../../../../components/BackBtn";
+import { BtnBack } from "../../../../components/BtnBack";
 import { PictureCubeEffect } from "../../components/PictureCubeEffect";
 import { AllCodeContainer } from "./AllCodeContainer";
 import { Footer } from "../../../../components/Footer";
@@ -128,7 +128,7 @@ export function PictureCubeEffectTut() {
 
   return (
     <div className="tut-page-container">
-      <BackBtn />
+      <BtnBack />
       <h1>Welcome to the Picture Cube Effect</h1>
       <PictureCubeEffect />
       {/* <p>
@@ -197,7 +197,7 @@ export function PictureCubeEffectTut() {
       </div>
       <p>There you have it. Another example of what can be done with the power of CSS.</p> */}
       <div style={{ padding: "100px 20px" }}>We apologize however this page is being updated momentarily.</div>
-      <BackBtn />
+      <BtnBack />
       <Footer />
     </div>
   );

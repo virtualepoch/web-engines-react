@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { BackBtn } from "../../../../components/BackBtn";
+import { BtnBack } from "../../../../components/BtnBack";
 import { SpinningTop } from "../../components/SpinningTop";
 import { AllCodeContainer } from "./AllCodeContainer";
 import { Footer } from "../../../../components/Footer";
@@ -140,7 +140,7 @@ export function TopSpinTut() {
 
   return (
     <div className="tut-page-container">
-      <BackBtn />
+      <BtnBack />
       <h1>
         How to Style a Rotating 3D Top<br></br>with CSS in 5 Steps
       </h1>
@@ -224,7 +224,7 @@ export function TopSpinTut() {
         </div>
       </div>
       <p>There you have it. Another example of what can be done with the power of CSS.</p>
-      <BackBtn />
+      <BtnBack />
       <Footer />
     </div>
   );
