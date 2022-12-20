@@ -2,7 +2,7 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { Header } from "./components/header/Header";
 import { ToTopBtn } from "./components/ToTopBtn";
-import { TodoPage } from "./components/todo/TodoPage";
+// import { TodoPage } from "./components/todo/TodoPage";
 import { HomePage } from "./pages/home-page/HomePage";
 import { CssPage } from "./pages/css-page/CssPage";
 import { BorderEffectTut } from "./pages/css-page/tutorials/border-effect-tut/BorderEffectTut";
@@ -50,7 +50,7 @@ function App() {
     <>
       <Header />
       <ToTopBtn />
-      <TodoPage />
+      {/* <TodoPage /> */}
       <div className="star-canvas-container">
         <StarCanvas />
       </div>

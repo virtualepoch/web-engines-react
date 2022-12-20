@@ -20,7 +20,7 @@ export function Header() {
       alignItems: "center",
       justifyContent: "space-between",
       flexWrap: "wrap",
-      boxShadow: "0 2px 3px 1px rgb(0, 0, 0, 0.2)",
+      boxShadow: "0 2px 5px 1px rgb(0, 0, 0, 0.3)",
       background: "linear-gradient(blue, rgb(255, 255, 255, 0.3))",
     },
     headerSide: {
