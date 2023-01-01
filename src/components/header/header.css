@@ -20,7 +20,6 @@
 .nav-menu-btn-bars::after {
   width: 29px;
   height: 2px;
-  background: white;
   transition: all 500ms ease-in-out;
 }
 
@@ -28,30 +27,31 @@
 .nav-menu-btn-bars::after {
   content: "";
   position: absolute;
+  background: white;
 }
 
 .nav-menu-btn-bars::before {
-  transform: translateY(-7px);
+  transform: translateY(-4px);
 }
 
 .nav-menu-btn-bars::after {
-  transform: translateY(7px);
+  transform: translateY(4px);
 }
 
 /* OPEN BUTTON ANIMATION  */
 .nav-menu-btn.open .nav-menu-btn-bars {
   transform: rotate(360deg);
-  background: transparent;
-  box-shadow: none;
   transition: all 1s ease-in-out;
 }
 
 .nav-menu-btn.open .nav-menu-btn-bars::before {
   transform: rotate(45deg);
+  background: magenta;
 }
 
 .nav-menu-btn.open .nav-menu-btn-bars::after {
   transform: rotate(135deg);
+  background: magenta;
 }
 
 /* // MAIN NAV BOX ///////////////////////// */
