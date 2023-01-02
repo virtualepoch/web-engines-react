@@ -63,13 +63,12 @@
   border-radius: 15px;
   box-shadow: 0 3px 5px 3px rgb(0, 0, 0, 0.5), inset 2px -3px 5px 2px rgba(0, 0, 255);
   background: radial-gradient(ellipse at 50% 10%, rgb(103, 192, 255) 5%, rgb(0, 0, 255, 0.8), black);
-  transition: 1s ease;
   pointer-events: all;
   animation: action-btn-pulsing 3s ease-in-out infinite;
 }
 @keyframes action-btn-pulsing {
   50% {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 }
 

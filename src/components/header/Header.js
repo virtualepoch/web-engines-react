@@ -92,7 +92,7 @@ export function Header() {
           </Link>
         </div>
         <div style={style.headerSide}>
-          <div className="close-nav-box" ref={closeNavBox} onClick={closeNavMenu}></div>
+          <div className="close-nav-overlay" ref={closeNavBox} onClick={closeNavMenu}></div>
           <nav className="nav-menu" ref={navMenu}>
             <ul>
               <CustomLink onClick={closeNavMenu} to={"/"}>
@@ -116,8 +116,8 @@ export function Header() {
             </ul>
           </nav>
           <SearchBar />
-          <div className="nav-menu-btn" ref={navMenuBtn} onClick={openCloseNavMenu}>
-            <div className="nav-menu-btn-bars"></div>
+          <div className="button-nav-menu" ref={navMenuBtn} onClick={openCloseNavMenu}>
+            <div className="open-close-bars"></div>
           </div>
         </div>
       </div>
