@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
+import { Logo } from "../logo/Logo";
 import SearchBar from "../search-bar/SearchBar";
 import "./header.css";
 
@@ -21,48 +22,43 @@ export function Header() {
       justifyContent: "space-between",
       flexWrap: "wrap",
       boxShadow: "0 2px 5px 1px rgb(0, 0, 0, 0.3)",
-      background: "linear-gradient(blue, rgb(255, 255, 255, 0.3))",
+      // background: "rgb(0,0,0)",
     },
     headerSide: {
       display: "flex",
       alignItems: "center",
     },
-    mainLogo: {
-      width: "50px",
-      height: "50px",
-      margin: "0 7px",
-      // TODO = FIX IMAGE IMPORT BELOW FOR SITE LOGO CURRENTLY IMPORTED WITH THE STYLESHEET
-      // backgroundImage: "url(/src/logos/jsive-logo-at-100.png)",
-    },
     siteTitle: {
       padding: "0 3px",
-      backgroundImage: "linear-gradient(115deg, rgb(140, 255, 251) 0% 76%, magenta 79% 100%)",
+      backgroundImage: "linear-gradient( white, lightblue)",
       // #38a8f3
       WebkitBackgroundClip: "text",
       backgroundClip: "text",
       WebkitTextFillColor: "transparent",
-      font: "400 clamp(1.65rem, 5vw, 2rem) Lorea",
-      color: "#38a8f3",
+      font: "400 clamp(2rem, 5vw, 4rem) RelicIsland1OTF",
+      color: "blue",
       letterSpacing: "1px",
+      lineHeight: "10px",
     },
   };
 
-  const navMenuBtn = useRef(null);
+  const canvasText = "<canvas>";
+
   const navMenu = useRef(null);
-  const closeNavBox = useRef(null);
-  const titleEnding = "ive";
+  const buttonNavMenu = useRef(null);
+  const closeNavOverlay = useRef(null);
 
   function openCloseNavMenu() {
-    navMenuBtn.current.classList.toggle("open");
     navMenu.current.classList.toggle("open");
-    closeNavBox.current.classList.toggle("open");
+    buttonNavMenu.current.classList.toggle("open");
+    closeNavOverlay.current.classList.toggle("open");
   }
 
   function closeNavMenu() {
     if (navMenu.current.classList.contains("open")) {
-      navMenuBtn.current.classList.remove("open");
       navMenu.current.classList.remove("open");
-      closeNavBox.current.classList.remove("open");
+      buttonNavMenu.current.classList.remove("open");
+      closeNavOverlay.current.classList.remove("open");
     } else {
       return;
     }
@@ -72,51 +68,51 @@ export function Header() {
     const resolvedPath = useResolvedPath(to);
     const isActive = useMatch({ path: resolvedPath.pathname, end: true });
     return (
-      <li className={isActive ? "active" : ""}>
-        <Link to={to} {...props} className="link">
-          {children}
-        </Link>
-      </li>
+      <Link to={to} {...props} className={isActive ? "active link" : "link"}>
+        {children}
+      </Link>
     );
   }
 
   return (
     <header style={style.header}>
-      <div style={style.topHeader}>
+      <div style={style.topHeader} className="top-header">
         <div style={style.headerSide}>
-          <div style={style.mainLogo} className="main-logo"></div>
+          <Logo />
           <Link to={"/"}>
             <h1 style={style.siteTitle} className="site-title">
-              JavaScript{titleEnding}
+              <span className="site-title-word">Web</span>Engines
             </h1>
           </Link>
         </div>
         <div style={style.headerSide}>
-          <div className="close-nav-overlay" ref={closeNavBox} onClick={closeNavMenu}></div>
+          <div className="close-nav-overlay" ref={closeNavOverlay} onClick={closeNavMenu}></div>
           <nav className="nav-menu" ref={navMenu}>
-            <ul>
-              <CustomLink onClick={closeNavMenu} to={"/"}>
-                Home
-              </CustomLink>
-              <CustomLink onClick={closeNavMenu} to={"/css"}>
-                CSS
-              </CustomLink>
-              <CustomLink onClick={closeNavMenu} to={"/javascript"}>
-                JavaScript
-              </CustomLink>
-              <CustomLink onClick={closeNavMenu} to={"/html-canvas"}>
-                HTML-Canvas
-              </CustomLink>
-              <CustomLink onClick={closeNavMenu} to={"/cgi"}>
+            <CustomLink onClick={closeNavMenu} to={"/"}>
+              Home
+              <div className="link-underline"></div>
+            </CustomLink>
+            <CustomLink onClick={closeNavMenu} to={"/css"}>
+              CSS
+              <div className="link-underline"></div>
+            </CustomLink>
+            <CustomLink onClick={closeNavMenu} to={"/javascript"}>
+              JavaScript
+              <div className="link-underline"></div>
+            </CustomLink>
+            <CustomLink onClick={closeNavMenu} to={"/html-canvas"}>
+              {canvasText}
+              <div className="link-underline"></div>
+            </CustomLink>
+            {/* <CustomLink onClick={closeNavMenu} to={"/cgi"}>
                 CGI
-              </CustomLink>
-              {/* <CustomLink onClick={closeNavMenu} to={"/testing"}>
+              </CustomLink> */}
+            {/* <CustomLink onClick={closeNavMenu} to={"/testing"}>
                 T
               </CustomLink> */}
-            </ul>
           </nav>
           <SearchBar />
-          <div className="button-nav-menu" ref={navMenuBtn} onClick={openCloseNavMenu}>
+          <div className="button-nav-menu" ref={buttonNavMenu} onClick={openCloseNavMenu}>
             <div className="open-close-bars"></div>
           </div>
         </div>

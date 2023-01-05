@@ -34,6 +34,41 @@
   font-family: Nourandilla;
   src: url(./assets/fonts/Nouradilla.ttf);
 }
+
+/* RELIC ISLAND ///////////////////////////// */
+@font-face {
+  font-family: RelicIslandOTF;
+  src: url(./assets/fonts/Relic-Island/Relic-Island.otf);
+}
+@font-face {
+  font-family: RelicIslandTTF;
+  src: url(./assets/fonts/Relic-Island/Relic-Island.ttf);
+}
+@font-face {
+  font-family: RelicIsland1OTF;
+  src: url(./assets/fonts/Relic-Island/Relic-Island-1.otf);
+}
+@font-face {
+  font-family: RelicIsland1TTF;
+  src: url(./assets/fonts/Relic-Island/Relic-Island-1.ttf);
+}
+@font-face {
+  font-family: RelicIsland2OTF;
+  src: url(./assets/fonts/Relic-Island/Relic-Island-2.otf);
+}
+@font-face {
+  font-family: RelicIsland2TTF;
+  src: url(./assets/fonts/Relic-Island/Relic-Island-2.ttf);
+}
+@font-face {
+  font-family: RelicIslandFrameOTF;
+  src: url(./assets/fonts/Relic-Island/Relic-Island-Frame.otf);
+}
+@font-face {
+  font-family: RelicIslandFrameTTF;
+  src: url(./assets/fonts/Relic-Island/Relic-Island-Frame.ttf);
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@400&display=swap");
 * {
   margin: 0;

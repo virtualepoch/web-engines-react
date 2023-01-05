@@ -10,7 +10,7 @@ export function CanvasStarFractal() {
       top: "50%",
       left: "50%",
       transform: "translate(-50%, -50%)",
-      background: "linear-gradient(90deg, blue, black, blue)",
+      background: "linear-gradient(90deg, lightgray, gray, lightgray)",
     },
   };
 
@@ -32,7 +32,7 @@ export function CanvasStarFractal() {
     canvas.height = window.innerHeight;
 
     ctx.fillStyle = "blue";
-    ctx.lineCap = "round";
+    // ctx.lineCap = "round";
     ctx.shadowColor = "rgba(0,0,0,0.5)";
     ctx.shadowOffsetX = 0;
     ctx.shadowOffsetY = 7;
@@ -47,8 +47,9 @@ export function CanvasStarFractal() {
     let sides = 8;
     let scale = 1;
     let spread = -0.3;
-    let hue = 180;
-    let color = "hsl(" + hue + ", 100%, 50%)";
+    // let hue = 180;
+    // let color = "hsl(" + hue + ", 100%, 50%)";
+    let color = "darkslategray";
     // let color2 = "hsl(" + (hue + 180) + ", 100%, 50%)";
     let lineWidth = 17;
     let pointX = 0;
@@ -103,8 +104,8 @@ export function CanvasStarFractal() {
     function randomizeFractal() {
       sides = Math.floor(Math.random() * 7 + 3);
       spread = Math.random() * 0.6 - 0.3;
-      let hue = Math.random() * 360;
-      color = "hsl(" + hue + ", 100%, 50%)";
+      // let hue = Math.random() * 360;
+      // color = "hsl(" + hue + ", 100%, 50%)";
       // color2 = "hsl(" + (hue + 180) + ", 100%, 50%)";
       drawFractal();
       lineWidth = Math.floor(Math.random() * 20 + 10);
@@ -128,7 +129,7 @@ export function CanvasStarFractal() {
       sides = 8;
       scale = 1;
       spread = 0.2;
-      color = "hsl(" + hue + ", 100%, 50%)";
+      // color = "hsl(" + hue + ", 100%, 50%)";
       lineWidth = 25;
     }
     const resetBtn = resetBtnRef.current;

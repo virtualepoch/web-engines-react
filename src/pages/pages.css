@@ -9,7 +9,7 @@
   bottom: 0;
   z-index: 88;
   color: white;
-  font: clamp(0.8rem, 5vw, 1.2rem) Lorea;
+  font: clamp(0.8rem, 5vw, 1.2rem) sans-serif;
 }
 
 .heading {

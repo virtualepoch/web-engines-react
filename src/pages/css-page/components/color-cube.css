@@ -40,7 +40,7 @@
   position: absolute;
   border: 1px solid rgba(255, 0, 255, 0.3);
   transform: translateZ(var(--translateZ, 0)) rotateY(var(--rotateY, 0));
-  background: url(../../../assets/logos/jsive-logo-at-100.png) 50% / 70% no-repeat, rgb(0, 0, 255, 0.7);
+  background: url(../../../assets/logos/webengines-512.png) 50% / 70% no-repeat, rgb(0, 0, 255, 0.7);
 }
 
 .color-cube .front {

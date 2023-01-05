@@ -1,0 +1,71 @@
+.main-logo {
+  width: 60px;
+  height: 60px;
+  /* max-width: 1000px;
+  aspect-ratio: 1/1;
+  position: fixed;
+  top: 0;
+  left: 0; */
+  margin: 0 10px;
+  position: relative;
+  filter: drop-shadow(0 0 5px aqua);
+}
+
+.gear-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  /* animation: logo-rotate 3s linear infinite; */
+}
+@keyframes logo-rotate {
+  to {
+    transform: rotate(45deg);
+  }
+}
+
+.teeth {
+  width: 15%;
+  height: 85%;
+  background: lightblue;
+  box-shadow: inset 0 0 1px 1px rgb(255, 255, 255, 0.5);
+  border-radius: 15%;
+  position: absolute;
+}
+.teeth-2 {
+  transform: rotate(45deg);
+}
+.teeth-3 {
+  transform: rotate(90deg);
+}
+.teeth-4 {
+  transform: rotate(135deg);
+}
+.gear-circle {
+  width: 70%;
+  height: 70%;
+  background: lightblue;
+  box-shadow: inset 0 0 1px 1px rgb(255, 255, 255, 0.5);
+  border-radius: 50%;
+  position: relative;
+}
+
+.circle {
+  width: 60%;
+  height: 60%;
+  background: linear-gradient(blue, magenta, blue);
+  border-radius: 50%;
+  position: absolute;
+}
+.ellipse {
+  height: calc(60% + 4px);
+  width: 25%;
+  border: 2px solid lightblue;
+  background: none;
+}
+
+.ellipse-2 {
+  transform: rotate(90deg);
+}

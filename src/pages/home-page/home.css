@@ -1,6 +1,6 @@
 .home-page {
   width: 100%;
-  height: calc(100vh - 50px);
+  height: calc(100vh - 60px);
   position: relative;
   z-index: 888;
 }
@@ -23,15 +23,15 @@
 }
 
 .text-box h1 {
-  padding: 33px 5px 5px 5px;
+  padding: 33px 15px 15px 15px;
   position: relative;
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
-  font: 12px/12px Lorea;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font: 12px/12px sans-serif;
   font-size: clamp(1em, 0.2em + 5vw, 2em);
   letter-spacing: 3px;
   box-shadow: 0 7px 7px 1px rgb(0, 0, 0, 0.3);
-  background: linear-gradient(transparent 33%, blue 90%);
+  background: linear-gradient(transparent 23%, darkslategray 90%);
 }
 
 .text-box p {
@@ -39,13 +39,11 @@
   aspect-ratio: 1/1;
   margin-bottom: 5px;
   position: relative;
-  font-size: clamp(0.6rem, 5vw, 1.3rem);
+  font-size: clamp(1rem, 5vw, 2rem);
   border-radius: 55%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 3px 5px 3px rgb(0, 0, 0, 0.3), inset 0 -7px 22px 8px rgb(0, 0, 183);
-  background: radial-gradient(circle at 60% 30%, rgb(255, 255, 255, 0.7) 5%, rgba(18, 74, 164, 0.9), rgba(31, 31, 255, 0.5), black 98%);
 }
 @media (min-width: 700px) {
   .text-box p {
@@ -55,21 +53,22 @@
 
 .home-page .action-btn {
   width: fit-content;
+  min-width: 200px;
   height: fit-content;
   padding: 7px 25px;
   margin-bottom: 50px;
-  font-size: clamp(1em, 0.2em + 5vw, 1.5em);
+  font: 400 clamp(1em, 0.2em + 5vw, 1.5em) sans-serif;
   color: rgb(255, 255, 255);
-  border-radius: 15px;
-  box-shadow: 0 3px 5px 3px rgb(0, 0, 0, 0.5), inset 2px -3px 5px 2px rgba(0, 0, 255);
-  background: radial-gradient(ellipse at 50% 10%, rgb(103, 192, 255) 5%, rgb(0, 0, 255, 0.8), black);
+  /* border-radius: 15px; */
+  border-radius: 50px;
+  /* box-shadow: 0 3px 5px 3px rgb(0, 0, 0, 0.5), inset 2px -3px 5px 2px darkslategray; */
+  box-shadow: 0 3px 5px 3px rgb(0, 0, 0, 0.3), inset -2px 3px 5px 2px rgb(0, 255, 255, 0.3);
+  /* filter: drop-shadow( 0 0 1px aqua); */
+  /* background: radial-gradient(ellipse at 50% 10%, rgb(103, 192, 255) 5%, darkslategray, black); */
+  background: rgb(191, 0, 191);
   pointer-events: all;
-  animation: action-btn-pulsing 3s ease-in-out infinite;
-}
-@keyframes action-btn-pulsing {
-  50% {
-    transform: scale(1.05);
-  }
+
+  position: relative;
 }
 
 .tap-message {

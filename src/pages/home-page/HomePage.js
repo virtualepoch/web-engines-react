@@ -7,17 +7,15 @@ export function HomePage() {
     <div className="home-page">
       <CanvasStarFractal />
       <div className="text-box">
-        <h1>Welcome to JavaScriptive</h1>
-        <p>
-          ...a place to learn, <br /> and find inspiration. Check out our JavaScript and CSS tutorials or go straight to animation and game development. We hope you find something useful.
-        </p>
+        <h1>Welcome to Web Engines</h1>
+        <p className="fade-phrase">What is Web Engines?<br></br>Simply, a place we share fun and useful things you can do with CSS and JavaScript.</p>
         <Link className="action-btn" to="/css">
           LET'S GO!
         </Link>
       </div>
       <div className="tap-message">tap screen</div>
       <div className="tap-message tap-message-2">tap screen</div>
-      <footer className="home-footer">www.JavaScriptive.com</footer>
+      <footer className="home-footer">www.webengines.org</footer>
     </div>
   );
 }

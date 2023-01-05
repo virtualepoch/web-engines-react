@@ -1,16 +1,69 @@
-.main-logo {
-  background: url(/src/assets/logos/jsive-logo-at-100.png) 50% / 77% 77% no-repeat;
+.top-header {
+  background: darkslategray;
 }
-
 .site-title {
   background-clip: text;
+  filter: drop-shadow(0 0 4px aqua);
+}
+.site-title-word {
+  font: 400 clamp(2rem, 5vw, 4rem) sans-serif;
 }
 
+.close-nav-overlay {
+  width: 100%;
+  height: calc(100% - 50px);
+  position: fixed;
+  top: 60px;
+  left: 0;
+  display: none;
+  background: rgb(0, 0, 0, 0.3);
+}
+
+.close-nav-overlay.open {
+  display: block;
+}
+
+/* MAIN NAV MENU LARGE SCREENS ///////////////////////// */
+.nav-menu {
+  display: flex;
+}
+
+.link {
+  width: fit-content;
+  min-height: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 10px;
+  padding: 0 20px;
+  font: 20px sans-serif;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 5px 1px rgb(0, 0, 0, 0.3);
+}
+.link-underline {
+  width: 0;
+  height: 1px;
+  background: white;
+  transition: width 400ms ease-in-out;
+}
+.link.active .link-underline,
+.link:hover .link-underline {
+  width: 100%;
+}
+
+.link.active,
+.link:hover {
+  box-shadow: inset -2px 3px 5px 1px rgb(0, 0, 0, 0.3), inset 2px -1px 5px 1px rgb(0, 0, 0, 0.2);
+}
+
+/* BUTTON OPEN/CLOSE NAV MENU ////////////////////// */
 .button-nav-menu {
   width: 50px;
   height: 50px;
   cursor: pointer;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
 }
@@ -54,94 +107,40 @@
   background: magenta;
 }
 
-/* // MAIN NAV BOX ///////////////////////// */
-.nav-menu {
-  width: fit-content;
-  height: calc(100vh - 50px);
-  padding: 50px 12px;
-  position: fixed;
-  top: 50px;
-  right: 0;
-  z-index: 888;
-  display: flex;
-  flex-direction: column;
-  transition: 0.3s ease-in-out;
-  box-shadow: -1px 0 3px 1px rgb(0, 0, 0, 0.3);
-  background: linear-gradient(45deg, rgb(107, 107, 107, 0.9), blue);
-  overflow: auto;
-  transform: translateX(100%);
-}
-
-.nav-menu.open {
-  transform: none;
-}
-
-.close-nav-overlay {
-  width: 100%;
-  height: calc(100% - 50px);
-  position: fixed;
-  top: 50px;
-  left: 0;
-  display: none;
-  background: rgb(0, 0, 0, 0.3);
-}
-
-.close-nav-overlay.open {
-  display: block;
-}
-
-.link {
-  width: fit-content;
-  min-width: 150px;
-  min-height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 30px auto;
-  font: 20px sans-serif;
-  color: white;
-  border-radius: 15px;
-  box-shadow: 0 3px 7px 0.1px rgb(255, 165, 0, 0.4);
-  filter: drop-shadow(-1px 1px 1px black);
-}
-
-li.active .link,
-.link:hover {
-  box-shadow: inset -3px 3px 7px 0.1px rgb(255, 165, 0, 0.4);
-}
-
-@media (min-width: 777px) {
+/* MAIN NAV MENU SMALL SCREENS ///////////////////////// */
+@media (max-width: 900px) {
   .close-nav-overlay {
     display: none;
   }
 
   .nav-menu {
-    height: fit-content;
-    position: relative;
-    top: 0;
-    padding: 0;
-    align-items: center;
-    background: none;
-    box-shadow: none;
+    width: fit-content;
+    min-width: 200px;
+    height: calc(100vh - 50px);
+    padding: 50px 12px;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    z-index: 888;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: 0.3s ease-in-out;
+    box-shadow: -1px 0 3px 1px rgb(0, 0, 0, 0.3);
+    background: darkslategray;
+    overflow: auto;
+    transform: translateX(100%);
+  }
+  .nav-menu.open {
     transform: none;
   }
 
-  .nav-menu ul {
-    height: 50px;
-    display: flex;
-    align-items: center;
-  }
-
-  .nav-menu li {
-    margin: 0 7px;
-  }
-
   .link {
-    margin: 0;
+    width: 90%;
     font-size: 17px;
   }
 
   .button-nav-menu {
-    display: none;
+    display: flex;
   }
 }

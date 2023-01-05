@@ -137,7 +137,7 @@
 
 .picture-cube .front,
 .picture-cube .back {
-  background: url(../../../assets/logos/jsive-logo-at-100.png) 50% / 40% no-repeat, linear-gradient(45deg, rgb(0, 0, 255), rgb(64, 224, 208, 0.99), rgb(0, 0, 255, 0.85), rgb(64, 224, 208, 0.99), rgb(0, 0, 255));
+  background: url(../../../assets/logos/webengines-512.png) 50% / 40% no-repeat, linear-gradient(45deg, rgb(0, 0, 255), rgb(64, 224, 208, 0.99), rgb(0, 0, 255, 0.85), rgb(64, 224, 208, 0.99), rgb(0, 0, 255));
 }
 
 .picture-cube .front {
