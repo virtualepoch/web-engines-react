@@ -141,9 +141,9 @@ export function CanvasStarFractal() {
 
     window.addEventListener("resize", function () {
       canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight - 110;
+      // canvas.height = window.innerHeight - 110;
       size = canvas.width < canvas.height ? canvas.width * sizeAdjuster : canvas.height * sizeAdjuster;
-      ctx.lineCap = "round";
+      // ctx.lineCap = "round";
       ctx.shadowColor = "rgba(0,0,0,0.5)";
       ctx.shadowOffsetX = 0;
       ctx.shadowOffsetY = 7;
