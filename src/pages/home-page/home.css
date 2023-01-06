@@ -70,29 +70,3 @@
 
   position: relative;
 }
-
-.tap-message {
-  width: 20px;
-  height: fit-content;
-  padding: 11px 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
-  writing-mode: vertical-lr;
-  text-orientation: upright;
-  color: white;
-  font: 11px/33px sans-serif;
-  pointer-events: none;
-  background: linear-gradient(to left, transparent, rgb(0, 0, 0, 0.4));
-}
-
-.tap-message-2 {
-  left: calc(100vw - 20px);
-  background: linear-gradient(to right, transparent, rgb(0, 0, 0, 0.4));
-}

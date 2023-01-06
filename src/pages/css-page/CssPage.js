@@ -25,7 +25,7 @@ export function CssPage() {
         {/* <div className="css-bird-container">
           <div className="css-bird"></div>
         </div> */}
-        <SpriteScene />
+        {/* <SpriteScene /> */}
       </div>
       <div className="main-content">
         <h1>The following tutorials only require basic knowledge of HTML & CSS.</h1>

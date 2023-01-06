@@ -5,7 +5,7 @@ export function CanvasStarFractal() {
   const style = {
     canvas: {
       width: "100%",
-      height: "calc(100vh - 110px)",
+      height: "100%",
       position: "absolute",
       top: "60px",
       left: "0",
@@ -159,6 +159,8 @@ export function CanvasStarFractal() {
   return (
     <>
       <canvas style={style.canvas} ref={canvasRef}></canvas>
+      <div className="tap-message">tap screen</div>
+      <div className="tap-message tap-message-2">tap screen</div>
       <div id="canvas-controls" ref={canvasControls}>
         <div className="controls-row1">
           <p>BACKGROUND CONTROLS</p>

@@ -11,8 +11,6 @@ export function HomePage() {
           LET'S GO!
         </Link>
       </div>
-      <div className="tap-message">tap screen</div>
-      <div className="tap-message tap-message-2">tap screen</div>
       <footer className="home-footer">www.webengines.org</footer>
     </div>
   );

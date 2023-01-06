@@ -8,11 +8,8 @@
   position: absolute;
   top: 100px;
   z-index: 88;
-  color: aqua;
-  background: radial-gradient(#38a8f3, transparent 70%);
-  /* background-image: url(/src/images/crystal-160.jpg);
-  background-clip: text;
-  -webkit-text-fill-color: transparent; */
+  color: white;
+  filter: drop-shadow(0 0 5px aqua);
 }
 .css-heading-testing {
   width: 100%;

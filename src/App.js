@@ -34,6 +34,7 @@ function useScrollToTop() {
 function App() {
   const style = {
     pageContainer: {
+      width: "100%",
       maxWidth: "1200px",
       minHeight: "100vh",
       margin: "auto",
