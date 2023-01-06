@@ -6,7 +6,7 @@ export function CanvasStarFractal() {
     canvas: {
       width: "100%",
       height: "100%",
-      position: "absolute",
+      position: "fixed",
       top: "60px",
       left: "0",
       right: "0",
