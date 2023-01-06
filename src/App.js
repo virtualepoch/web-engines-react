@@ -49,9 +49,7 @@ function App() {
     <>
       <Header />
       <BtnToTop />
-      <div className="star-canvas-container">
-        <CanvasStarFractal />
-      </div>
+      <CanvasStarFractal />
       <section style={style.pageContainer}>
         <Routes>
           <Route path="/" element={<HomePage />} />

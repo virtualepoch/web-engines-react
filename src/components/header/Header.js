@@ -12,6 +12,8 @@ export function Header() {
       left: "0",
       right: "0",
       zIndex: "88888",
+      background: "darkslategray",
+      boxShadow: "0 2px 5px 1px rgb(100, 100, 100, 0.3)",
     },
     topHeader: {
       maxWidth: "1200px",
@@ -21,8 +23,6 @@ export function Header() {
       alignItems: "center",
       justifyContent: "space-between",
       flexWrap: "wrap",
-      boxShadow: "0 2px 5px 1px rgb(0, 0, 0, 0.3)",
-      // background: "rgb(0,0,0)",
     },
     headerSide: {
       display: "flex",
@@ -87,7 +87,7 @@ export function Header() {
         </div>
         <div style={style.headerSide} className="header-right-side">
           <SearchBar />
-          <button className="button-nav-menu" ref={buttonNavMenu} onClick={openCloseNavMenu}>
+          <button type="button" className="button-nav-menu" ref={buttonNavMenu} onClick={openCloseNavMenu}>
             <div className="open-close-bars"></div>
           </button>
           <div className="close-nav-overlay" ref={closeNavOverlay} onClick={closeNavMenu}></div>

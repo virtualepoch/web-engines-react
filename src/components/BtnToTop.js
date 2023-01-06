@@ -23,6 +23,7 @@ export function BtnToTop() {
       right: "15px",
       bottom: "40px",
       zIndex: 8888,
+      border: "none",
       borderRadius: "50%",
       boxShadow: "-1px 1px 3px 1px rgb(0, 0, 0, 0.3)",
       background: "white",
@@ -48,9 +49,9 @@ export function BtnToTop() {
   };
 
   return (
-    <div className="to-top-btn" style={styles.toTopBtn} ref={toTopBtn} onClick={ScrollToTop}>
+    <button className="to-top-btn" style={styles.toTopBtn} ref={toTopBtn} onClick={ScrollToTop}>
       <div style={styles.arrowLine}></div>
       <div style={{ ...styles.arrowLine, ...styles.arrowLine2 }}></div>
-    </div>
+    </button>
   );
 }

@@ -82,10 +82,5 @@
   font-family: "Cormorant", sans-serif;
 }
 body {
-  background: url(../src/assets/images/body-bg-01-lg.jpg) 0 0 / 100% repeat-y;
-}
-@media (max-width: 800px) {
-  body {
-    background: url(../src/assets/images/body-bg-01-md.jpg) 0 0 / 100% repeat-y;
-  }
+  background: linear-gradient(90deg, lightgray, gray, lightgray);
 }

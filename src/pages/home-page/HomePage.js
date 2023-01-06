@@ -1,11 +1,9 @@
 import { Link } from "react-router-dom";
-import { CanvasStarFractal } from "../../components/canvas-star-fractal/CanvasStarFractal";
 import "./home.css";
 
 export function HomePage() {
   return (
     <div className="home-page">
-      <CanvasStarFractal />
       <div className="text-box">
         <h1>Welcome to Web Engines</h1>
         <p className="fade-phrase">What is Web Engines?<br></br>Simply, a place we share fun and useful things you can do with CSS and JavaScript.</p>

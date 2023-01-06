@@ -4,13 +4,13 @@ import "./canvas-star-fractal.css";
 export function CanvasStarFractal() {
   const style = {
     canvas: {
-      width: "100vw",
-      height: "100vh",
-      position: "fixed",
-      top: "50%",
-      left: "50%",
-      transform: "translate(-50%, -50%)",
-      background: "linear-gradient(90deg, lightgray, gray, lightgray)",
+      width: "100%",
+      height: "calc(100vh - 110px)",
+      position: "absolute",
+      top: "60px",
+      left: "0",
+      right: "0",
+      boxShadow: "inset 0 -5px 5px 1px rgb(0,0,0,0.1)",
     },
   };
 
