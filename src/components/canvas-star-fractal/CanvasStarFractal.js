@@ -29,7 +29,7 @@ export function CanvasStarFractal() {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
     canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.height = window.innerHeight - 110;
 
     ctx.fillStyle = "blue";
     // ctx.lineCap = "round";
@@ -140,8 +140,8 @@ export function CanvasStarFractal() {
     });
 
     window.addEventListener("resize", function () {
-      canvas.width = canvasRef.current.innerWidth;
-      canvas.height = canvasRef.current.innerHeight;
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight - 110;
       size = canvas.width < canvas.height ? canvas.width * sizeAdjuster : canvas.height * sizeAdjuster;
       ctx.lineCap = "round";
       ctx.shadowColor = "rgba(0,0,0,0.5)";
