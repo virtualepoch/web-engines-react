@@ -85,7 +85,11 @@ export function Header() {
             </h1>
           </Link>
         </div>
-        <div style={style.headerSide}>
+        <div style={style.headerSide} className="header-right-side">
+          <SearchBar />
+          <button className="button-nav-menu" ref={buttonNavMenu} onClick={openCloseNavMenu}>
+            <div className="open-close-bars"></div>
+          </button>
           <div className="close-nav-overlay" ref={closeNavOverlay} onClick={closeNavMenu}></div>
           <nav className="nav-menu" ref={navMenu}>
             <CustomLink onClick={closeNavMenu} to={"/"}>
@@ -111,10 +115,6 @@ export function Header() {
                 T
               </CustomLink> */}
           </nav>
-          <SearchBar />
-          <div className="button-nav-menu" ref={buttonNavMenu} onClick={openCloseNavMenu}>
-            <div className="open-close-bars"></div>
-          </div>
         </div>
       </div>
     </header>
