@@ -11,7 +11,6 @@ export function CanvasStarFractal() {
       // left: "0",
       // right: "0",
       boxShadow: "inset 0 -5px 5px 1px rgb(0,0,0,0.1)",
-      border: "1px solid darkslategray",
     },
   };
 
