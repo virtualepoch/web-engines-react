@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: white;
   color: black;
 }
 .javascript-page.theme-dark,
@@ -21,7 +20,6 @@
   top: 50px;
   z-index: 1;
   transition: 0.5s ease-in-out 0.2s;
-  background: url(../../assets/gifs/beta-rain-white.gif) 50% / 100% repeat-y;
 }
 .rain-canvas-container-dark {
   display: none;
@@ -102,7 +100,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(transparent, white 30%);
 }
 
 .javascript-page .page-content .landing-content {
@@ -113,8 +110,7 @@
 
 .javascript-page .heading {
   z-index: 2;
-  border-radius: 50%;
-  background: radial-gradient(ellipse at 50%, rgba(255, 255, 255, 0.7) 50%, transparent);
+  filter: drop-shadow(0 0 5px aqua);
   transform: scale(0);
 }
 .javascript-page .heading.load {
@@ -143,16 +139,20 @@
 
 .javascript-page .sub-heading {
   padding: 0 10px;
+  margin: 10px auto;
   transition: 0.5s ease-in-out 0.3s;
   transform: translateX(0);
   opacity: 1;
-  border-radius: 50%;
-  background: radial-gradient(ellipse at 50%, rgba(255, 255, 255, 0.7) 50%, transparent);
+  border-radius: 10px;
+  background: rgb(255, 255, 255, 0.9);
 }
 
 .javascript-page .content-text {
   font: clamp(0.8rem, 5vw, 1.2rem) sans-serif;
-  padding: 20px 0;
+  padding: 20px;
+  margin: 10px auto;
+  border-radius: 10px;
+  background: rgb(255, 255, 255, 0.9);
 }
 
 .javascript-page .javascript-color-card {

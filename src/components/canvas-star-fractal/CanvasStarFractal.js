@@ -3,13 +3,15 @@ import "./canvas-star-fractal.css";
 
 export function CanvasStarFractal() {
   const style = {
+    canvasContainer: {
+      width: "100%",
+      height: "100vh",
+      position: "fixed",
+      top: "60px",
+    },
     canvas: {
       width: "100%",
-      height: "calc(100% - 100px)",
-      // position: "fixed",
-      // top: "60px",
-      // left: "0",
-      // right: "0",
+      height: "calc(100% - 110px)",
       boxShadow: "inset 0 -5px 5px 1px rgb(0,0,0,0.1)",
     },
   };
@@ -157,7 +159,7 @@ export function CanvasStarFractal() {
   }, []);
 
   return (
-    <div className="canvas-container">
+    <div style={style.canvasContainer}>
       <canvas style={style.canvas} ref={canvasRef}></canvas>
       <div className="tap-message">tap screen</div>
       <div className="tap-message tap-message-2">tap screen</div>
