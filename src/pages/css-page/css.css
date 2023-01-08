@@ -6,7 +6,7 @@
 .heading.css-heading {
   margin-top: 0px;
   position: absolute;
-  top: 100px;
+  top: 50px;
   z-index: 88;
   color: white;
   filter: drop-shadow(0 0 5px aqua);

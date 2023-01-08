@@ -34,11 +34,11 @@ function useScrollToTop() {
 function App() {
   const style = {
     pageContainer: {
-      width: "100%",
+      width: "calc(100% - 20px)",
       maxWidth: "1200px",
       minHeight: "100vh",
-      margin: "auto",
-      padding: "50px 0 0 0",
+      margin: "60px auto",
+      border: "solid red",
       position: "relative",
       background: "inherit",
       overflowX: "hidden",

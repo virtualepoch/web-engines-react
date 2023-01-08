@@ -36,6 +36,8 @@
   border-top-right-radius: 12px;
   background: rgba(0, 0, 0, 0.3);
   transition: all 400ms ease-in-out;
+  /* HID CANVAS CONTROLS TIL FIX /////////// */
+  display: none;
 }
 #canvas-controls.open {
   bottom: 0;
