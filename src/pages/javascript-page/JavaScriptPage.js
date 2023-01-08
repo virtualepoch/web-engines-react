@@ -53,7 +53,7 @@ export function JavaScriptPage() {
   }
 
   return (
-    <div className="javascript-page" ref={javascriptPage}>
+    <div className="page javascript-page" ref={javascriptPage}>
       <div className="rain-canvas-container-light" ref={rainCanvasContainerLight}>
         {/* <CanvasRainLight /> */}
       </div>

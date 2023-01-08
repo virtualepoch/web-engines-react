@@ -7,7 +7,7 @@ import "./cgi.css";
 
 export default function CgiPage() {
   return (
-    <div className="cgi-page">
+    <div className="page cgi-page">
       <h1 className="heading">CGI Tutorials</h1>
       <div className="sub-heading">
         <h2>Learn to add</h2>

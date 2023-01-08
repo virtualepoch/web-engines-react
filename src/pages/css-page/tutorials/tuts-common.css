@@ -67,6 +67,8 @@
 }
 
 .all-code-container {
+  width: fit-content;
+  max-width: 100%;
   display: none;
 }
 

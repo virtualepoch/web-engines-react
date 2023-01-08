@@ -4,7 +4,7 @@ import "./canvas-page.css";
 
 export function CanvasPage() {
   return (
-    <div className="canvas-page">
+    <div className="page canvas-page">
       <h1 className="heading">HTML-Canvas Tutorials</h1>
       <p>This section is currently being updated. Thanks for your patience.</p>
       <p>In the mean time, check out this JavaScript game we are experimenting with.</p>

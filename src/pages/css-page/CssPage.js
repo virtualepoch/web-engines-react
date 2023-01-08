@@ -11,7 +11,7 @@ import { SpriteScene } from "../../components/sprite-scene/SpriteScene";
 
 export function CssPage() {
   return (
-    <div className="css-page">
+    <div className="page css-page">
       <h1 className="heading css-heading">CSS Tutorials</h1>
       {/* <PyramidScene /> */}
       {/* <BalloonFloat /> */}

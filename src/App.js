@@ -42,6 +42,7 @@ function App() {
       position: "relative",
       background: "inherit",
       overflowX: "hidden",
+      pointerEvents: "none",
     },
   };
 
