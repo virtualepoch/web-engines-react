@@ -1,5 +1,5 @@
 import React from "react";
-import mainLogo from "../assets/logos/webengines-512.png";
+import mainLogo from "../assets/logos/webengines-100.png";
 
 export function Footer() {
   var styles = {

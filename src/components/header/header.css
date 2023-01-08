@@ -5,10 +5,9 @@
 .site-title-word {
   font: 400 clamp(2rem, 5vw, 4rem) sans-serif;
 }
-@media (min-width: 900px) {
-  .header-right-side {
-    flex-direction: row-reverse;
-  }
+
+.header-right-side {
+  flex-direction: row-reverse;
 }
 
 .close-nav-overlay {
@@ -34,15 +33,22 @@
   width: fit-content;
   min-height: 40px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 5px 10px;
   padding: 0 20px;
-  font: 20px sans-serif;
-  color: white;
   border-radius: 10px;
   box-shadow: 0 3px 5px 1px rgb(0, 0, 0, 0.3);
+}
+.link-text {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 0 8px;
+  font: 20px sans-serif;
+  color: white;
 }
 .link-underline {
   width: 0;
@@ -52,7 +58,7 @@
 }
 .link.active .link-underline,
 .link:hover .link-underline {
-  width: 100%;
+  width: calc(100% + 16px);
 }
 
 .link.active,
@@ -113,7 +119,11 @@
 }
 
 /* MAIN NAV MENU SMALL SCREENS ///////////////////////// */
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
+  .header-right-side {
+    flex-direction: row;
+  }
+
   .close-nav-overlay {
     display: none;
   }
@@ -142,6 +152,8 @@
 
   .link {
     width: 90%;
+  }
+  .link-text {
     font-size: 17px;
   }
 

@@ -106,7 +106,7 @@
   top: -24.5px;
   transform-origin: initial;
   transform: rotateX(90deg);
-  background: url(../../../assets/logos/webengines-512.png) 50% / 40% no-repeat, rgb(0, 55, 255, 0.4);
+  background: url(../../../assets/logos/webengines-100.png) 50% / 40% no-repeat, rgb(0, 55, 255, 0.4);
 }
 .spinning-top-container .shadow {
   width: 50px;

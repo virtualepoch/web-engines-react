@@ -93,20 +93,28 @@ export function Header() {
           <div className="close-nav-overlay" ref={closeNavOverlay} onClick={closeNavMenu}></div>
           <nav className="nav-menu" ref={navMenu}>
             <CustomLink onClick={closeNavMenu} to={"/"}>
-              Home
-              <div className="link-underline"></div>
+              <p className="link-text">
+                Home
+                <div className="link-underline"></div>
+              </p>
             </CustomLink>
             <CustomLink onClick={closeNavMenu} to={"/css"}>
-              CSS
-              <div className="link-underline"></div>
+            <p className="link-text">
+                CSS
+                <div className="link-underline"></div>
+              </p>
             </CustomLink>
             <CustomLink onClick={closeNavMenu} to={"/javascript"}>
-              JavaScript
-              <div className="link-underline"></div>
+            <p className="link-text">
+                JavaScript
+                <div className="link-underline"></div>
+              </p>
             </CustomLink>
             <CustomLink onClick={closeNavMenu} to={"/html-canvas"}>
-              {canvasText}
-              <div className="link-underline"></div>
+            <p className="link-text">
+                {canvasText}
+                <div className="link-underline"></div>
+              </p>
             </CustomLink>
             {/* <CustomLink onClick={closeNavMenu} to={"/cgi"}>
                 CGI

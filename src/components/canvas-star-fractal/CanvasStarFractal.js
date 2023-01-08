@@ -31,7 +31,7 @@ export function CanvasStarFractal() {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
     canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight - 110;
+    canvas.height = window.innerHeight - 60;
 
     ctx.fillStyle = "blue";
     // ctx.lineCap = "round";

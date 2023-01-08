@@ -1,21 +1,19 @@
 import "./logo.css";
-import logoImage from "../../assets/logos/webengines-512.png";
 export function Logo() {
   const style = {
     mainLogo: {
-    //   width: "50px",
-    //   height: "50px",
-    //   margin: "0 7px",
-      // TODO = FIX IMAGE IMPORT BELOW FOR SITE LOGO CURRENTLY IMPORTED WITH THE STYLESHEET
-      background: logoImage,
+      width: "60px",
+      height: "60px",
+      margin: "0 7px",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
+      filter: "drop-shadow(0 0 5px aqua)",
     },
   };
 
   return (
-    <div style={style.mainLogo} className="main-logo">
+    <div style={style.mainLogo}>
       <div className="gear-container">
         <div className="teeth teeth-1"></div>
         <div className="teeth teeth-2"></div>
