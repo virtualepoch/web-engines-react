@@ -38,7 +38,6 @@ function App() {
       maxWidth: "1200px",
       minHeight: "100vh",
       margin: "60px auto",
-      border: "solid red",
       position: "relative",
       background: "inherit",
       overflowX: "hidden",

@@ -5,7 +5,11 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  animation: logo-rotate 3s linear infinite;
+}
+@media (min-width: 700px) {
+  .gear-container {
+    animation: logo-rotate 3s linear infinite;
+  }
 }
 
 @keyframes logo-rotate {
