@@ -12,7 +12,7 @@ export function Header() {
       left: "0",
       right: "0",
       zIndex: "88888",
-      background: "darkslategray",
+      background: "var(--color-2)",
       boxShadow: "0 2px 5px 1px rgb(100, 100, 100, 0.3)",
     },
     topHeader: {

@@ -1,5 +1,3 @@
-import { Autoplay } from "swiper";
-
 export function SectionDivider() {
   const sectionDivider = {
     width: "100%",

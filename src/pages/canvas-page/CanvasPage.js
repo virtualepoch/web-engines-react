@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import GameTest from "../../components/GameTest";
 import "./canvas-page.css";
 
 export function CanvasPage() {

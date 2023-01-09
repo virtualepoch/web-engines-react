@@ -2,32 +2,14 @@ import { Link } from "react-router-dom";
 import { BorderEffect } from "./components/BorderEffect";
 import { ColorCube } from "./components/ColorCube";
 import { SpinningTop } from "./components/SpinningTop";
-import { Footer } from "../../components/Footer";
-import "./css.css";
-// import Kaleidoscope from "../../components/Kaleidoscope";
-// import LoadingOverlay from "../../components/LoadingOverlay";
 import { SectionDivider } from "../../components/SectionDivider";
-import { SpriteScene } from "../../components/sprite-scene/SpriteScene";
+import "./css.css";
 
 export function CssPage() {
   return (
-    <div className="page css-page">
-      <h1 className="heading css-heading">CSS Tutorials</h1>
-      {/* <PyramidScene /> */}
-      {/* <BalloonFloat /> */}
-
-      <div className="css-heading-testing">
-        {/* <LoadingOverlay /> */}
-        {/* <div className="css-heading-testing-bg bg-1"></div>
-        <div className="css-heading-testing-bg bg-2"></div>
-        <div className="css-heading-testing-bg bg-1 edit"></div>
-        <div className="css-heading-testing-bg bg-2 edit"></div> */}
-        {/* <div className="css-bird-container">
-          <div className="css-bird"></div>
-        </div> */}
-        {/* <SpriteScene /> */}
-      </div>
-      <div className="main-content">
+    <div className="page">
+      <h1 className="page-heading">CSS Tutorials</h1>
+      <div className="page-content">
         <h1>The following tutorials only require basic knowledge of HTML & CSS.</h1>
         <section className="effects-section">
           <h1>Learn to Style Border and Text Effects with CSS</h1>
@@ -61,10 +43,8 @@ export function CssPage() {
               </Link>
             </div>
           </div>
-          {/* <Kaleidoscope /> */}
         </section>
         <SectionDivider />
-        <Footer />
         <div className="credits-section">
           <p>Images used on this page are from:</p>
           <a href="">IMAGES INFO</a>

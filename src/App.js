@@ -14,14 +14,9 @@ import { JavaScriptPage } from "./pages/javascript-page/JavaScriptPage";
 import { NavMenuBtnTut } from "./pages/javascript-page/tutorials/nav-menu-btn/NavMenuBtnTut";
 import { CanvasPage } from "./pages/canvas-page/CanvasPage";
 import CanvasGame from "./pages/canvas-page/CanvasGame";
-import CgiPage from "./pages/cgi-page/CgiPage";
-import HorsemenModel2 from "./pages/cgi-page/cgi-models/HorsemenModel2";
-import AyanamiModel from "./pages/cgi-page/cgi-models/AyanamiModel";
-import DeloreanHighModelPage from "./pages/cgi-page/cgi-models/DeloreanHighModelPage";
-import { TestingPage } from "./pages/testing-page/TestingPage";
-import { AngledHighlights } from "./pages/testing-page/landing-pages/AngledHighlights";
 import "./app.css";
 import "./pages/pages.css";
+import { Footer } from "./components/Footer";
 
 function useScrollToTop() {
   const { pathname } = useLocation();
@@ -37,9 +32,8 @@ function App() {
       width: "calc(100% - 20px)",
       maxWidth: "1200px",
       minHeight: "100vh",
-      margin: "60px auto",
+      margin: "60px auto 0 auto",
       position: "relative",
-      background: "inherit",
       overflowX: "hidden",
       pointerEvents: "none",
     },
@@ -64,13 +58,8 @@ function App() {
           <Route path="/javascript/picture-cube-effect-tut" element={<PictureCubeEffectTut />} />
           <Route path="/html-canvas" element={<CanvasPage />} />
           <Route path="/html-canvas/canvas-game" element={<CanvasGame />} />
-          <Route path="/cgi" element={<CgiPage />} />
-          <Route path="/cgi/cgi-models/horsemen-model-2" element={<HorsemenModel2 />} />
-          <Route path="/cgi/cgi-models/ayanami-model" element={<AyanamiModel />} />
-          <Route path="/cgi/cgi-models/delorean-high-model" element={<DeloreanHighModelPage />} />
-          <Route path="/testing" element={<TestingPage />} />
-          <Route path="/landing-pages/angled-highlights" element={<AngledHighlights />} />
         </Routes>
+        <Footer />
       </section>
     </>
   );

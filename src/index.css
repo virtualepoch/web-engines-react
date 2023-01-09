@@ -81,6 +81,19 @@
   text-rendering: optimizeLegibility;
   font-family: "Cormorant", sans-serif;
 }
+
+/* COLORS ///////////// */
+:root {
+  --color-1: #222220;
+  --color-2: #243b35;
+  --color-2: darkslategray;
+  --color-2-op5: rgb(47, 79, 79, 0.5);
+  --color-3: #017b7e;
+  --color-3-op5: rgb(1, 123, 126, 0.5);
+  --color-4: #c7cac1;
+  --color-5: #e2e6e7;
+}
+
 body {
   background: linear-gradient(90deg, lightgray, gray, lightgray);
 }

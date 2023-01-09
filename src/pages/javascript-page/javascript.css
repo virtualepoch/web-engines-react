@@ -1,10 +1,3 @@
-.javascript-page {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: black;
-}
 .javascript-page.theme-dark,
 .javascript-page.theme-dark .column h1 {
   background: black;
@@ -108,12 +101,12 @@
   align-items: center;
 }
 
-.javascript-page .heading {
+.javascript-heading {
   z-index: 2;
   filter: drop-shadow(0 0 5px aqua);
   transform: scale(0);
 }
-.javascript-page .heading.load {
+.javascript-heading.load {
   transition: 1.5s ease-in;
   transform: scale(1);
 }
@@ -181,7 +174,7 @@
   font: 600 clamp(0.8rem, 5vw, 1.2rem) sans-serif;
 }
 
-.javascript-page .tutorial-heading-image,
+.tutorial-heading-image,
 .tut-page-container .tutorial-heading-image {
   width: 100%;
   max-width: 800px;

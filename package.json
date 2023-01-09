@@ -1,31 +1,18 @@
 {
-  "name": "javascriptive-app",
+  "name": "webengines-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@react-three/drei": "^9.51.1",
-    "@react-three/fiber": "^8.10.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-loader-spinner": "^5.3.4",
-    "react-loading-skeleton": "^3.1.0",
-    "react-router-dom": "^6.6.1",
-    "react-scripts": "5.0.1",
-    "swiper": "^8.4.5",
-    "three": "^0.148.0",
-    "uuid": "^9.0.0"
+    "react-router-dom": "^6.6.2",
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [

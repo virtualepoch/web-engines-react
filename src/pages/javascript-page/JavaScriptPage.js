@@ -53,7 +53,10 @@ export function JavaScriptPage() {
   }
 
   return (
-    <div className="page javascript-page" ref={javascriptPage}>
+    <div className="page" ref={javascriptPage}>
+      <h1 className="page-heading javascript-heading" ref={heading}>
+        JavaScript Tutorials
+      </h1>
       <div className="rain-canvas-container-light" ref={rainCanvasContainerLight}>
         {/* <CanvasRainLight /> */}
       </div>
@@ -68,9 +71,6 @@ export function JavaScriptPage() {
 
       <div className="page-content">
         <div className="landing-content">
-          <h1 className="heading" ref={heading}>
-            JavaScript Tutorials
-          </h1>
           <h2 className="sub-heading">Let's add some functionality to our web apps with JavaScript!</h2>
           <h2 className="sub-heading">Below you will find an introduction to JavaScript as well as tutorials covering some of its most common uses.</h2>
           <h2 className="sub-heading">Let's dive right in.</h2>
@@ -116,7 +116,6 @@ export function JavaScriptPage() {
           <PictureCubeEffect2 />
         </div>
         <SectionDivider />
-        <Footer />
         <div className="credits-section">
           <p>photos used on this page were created by:</p>
           <a href="https://www.pexels.com/photo/electronic-system-with-electric-circuits-6432110/">Nic Wood: https://www.pexels.com/photo/electronic-system-with-electric-circuits-6432110/</a>
