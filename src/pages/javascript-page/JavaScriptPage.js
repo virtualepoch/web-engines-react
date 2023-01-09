@@ -10,18 +10,17 @@ import { SectionDivider } from "../../components/SectionDivider";
 
 export function JavaScriptPage() {
   const heading = useRef(null);
-  const themeBtnNote = useRef(null);
 
-  useEffect(() => {
-    heading.current.classList.add("load");
+  // useEffect(() => {
+  //   heading.current.classList.add("load");
 
-    function hideThemeBtnNote() {
-      themeBtnNote.current.style.opacity = 0;
-    }
-    setTimeout(function () {
-      hideThemeBtnNote();
-    }, 4000);
-  }, []);
+  //   function hideThemeBtnNote() {
+  //     themeBtnNote.current.style.opacity = 0;
+  //   }
+  //   setTimeout(function () {
+  //     hideThemeBtnNote();
+  //   }, 4000);
+  // }, []);
 
   const javascriptPage = useRef(null);
   const rainCanvasContainerDark = useRef(null);
@@ -54,7 +53,7 @@ export function JavaScriptPage() {
 
   return (
     <div className="page" ref={javascriptPage}>
-      <h1 className="page-heading javascript-heading" ref={heading}>
+      <h1 className="page-heading" ref={heading}>
         JavaScript Tutorials
       </h1>
       <div className="rain-canvas-container-light" ref={rainCanvasContainerLight}>

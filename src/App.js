@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { Header } from "./components/header/Header";
 import { BtnToTop } from "./components/BtnToTop";
 import { CanvasStarFractal } from "./components/canvas-star-fractal/CanvasStarFractal";
-import { HomePage } from "./pages/home-page/HomePage";
+import { HomePage } from "./pages/HomePage";
 import { CssPage } from "./pages/css-page/CssPage";
 import { BorderEffectTut } from "./pages/css-page/tutorials/border-effect-tut/BorderEffectTut";
 import { TextWaveEffectTut } from "./pages/css-page/tutorials/text-wave-effect-tut/TextWaveEffectTut";

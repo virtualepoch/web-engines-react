@@ -95,22 +95,6 @@
   align-items: center;
 }
 
-.javascript-page .page-content .landing-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.javascript-heading {
-  z-index: 2;
-  filter: drop-shadow(0 0 5px aqua);
-  transform: scale(0);
-}
-.javascript-heading.load {
-  transition: 1.5s ease-in;
-  transform: scale(1);
-}
-
 .javascript-page h2 {
   max-width: 500px;
   height: 150px;
