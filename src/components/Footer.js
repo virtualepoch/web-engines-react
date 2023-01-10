@@ -5,13 +5,12 @@ export function Footer() {
   var style = {
     footer: {
       width: "100%",
-      minHeight: "calc(100vh - 20px)",
+      minHeight: "calc(100vh - 10px)",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      position: "relative",
-      zIndex: "-1",
     },
+
     textContainer: {
       width: "222px",
       height: "222px",
@@ -22,10 +21,10 @@ export function Footer() {
       color: "white",
       letterSpacing: "1px",
       font: "100 clamp(1rem, 5vw, 1.2rem) sans-serif",
-      borderRadius: "50%",
-      boxShadow: "0 5px 5px 2px rgb(0, 0, 0, 0.2), inset 0 -7px 10px 4px var(--color-2)",
-      background: "url(" + mainLogo + ") 50% 40%/40% no-repeat, radial-gradient(circle at 60% 30%, rgb(255, 255, 255) 5%, var(--color-3), var(--color-2), black 98%)",
+      background: "url(" + mainLogo + ") 50% 40%/40% no-repeat, radial-gradient(rgb(47, 79, 79, 0.7), transparent)",
+      clipPath: "polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%)",
     },
+
     text: {
       position: "absolute",
       bottom: "50px",
@@ -35,7 +34,7 @@ export function Footer() {
   return (
     <footer style={style.footer}>
       <div style={style.textContainer}>
-        <p style={style.text}>webengines.org</p>
+        <p style={style.text}>www.webengines.org</p>
       </div>
     </footer>
   );
