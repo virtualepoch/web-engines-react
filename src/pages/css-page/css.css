@@ -1,20 +1,3 @@
-
-.heading.css-heading {
-
-}
-.css-page p {
-  padding: 20px 0;
-  font: clamp(0.7rem, 5vw, 1rem) sans-serif;
-}
-.main-content {
-  width: 100%;
-  padding: 10px;
-  position: relative;
-  background: white;
-}
-
-/* transform-style: preserve-3d; !!!!!!!THIS STYLING WAS ACTUALLY ABLE TO ACT LIKE A Z-INDEX WHEN THE ELEMENT'S POSITION (IN THIS CASE RELATIVE) WAS NOT DECLARED!!!VERY INTERESTING*/
-
 .effects-section {
   width: 100%;
   margin-top: 88px;
@@ -83,7 +66,8 @@
 
 .column {
   width: fit-content;
-  margin-bottom: 100px;
+  height: fit-content;
+  margin: 100px 20px;
   display: flex;
   flex-direction: column;
   box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.3);
@@ -92,9 +76,8 @@
 .column h1 {
   width: 100%;
   max-width: 300px;
-  padding: 5px;
+  padding: 10px;
   color: black;
-  border-top: 1px solid gray;
 }
 
 .column h1:hover {

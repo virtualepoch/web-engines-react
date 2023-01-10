@@ -103,6 +103,5 @@
 }
 
 body {
-  background: var(--color-2);
+  background: linear-gradient(90deg, lightgray, gray, lightgray);
 }
-

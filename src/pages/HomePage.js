@@ -7,7 +7,6 @@ export function HomePage() {
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      font: "400 clamp(0.8em, 5vw, 1.5em) sans-serif",
       color: "white",
     },
 
@@ -23,7 +22,7 @@ export function HomePage() {
 
     h1: {
       padding: "20px",
-      font: "400 clamp(1.5rem, 5vw, 2rem) PixeloidSans",
+      font: "400 clamp(1.5rem, 4vw, 2rem) PixeloidSans",
       letterSpacing: "3px",
       filter: "drop-shadow(0 0 5px aqua)",
     },
@@ -32,7 +31,7 @@ export function HomePage() {
       width: "100%",
       maxWidth: " 280px",
       padding: "20px",
-      font: "400 clamp(1rem, 5vw, 1.5rem)/clamp(2rem, 5vw, 2.5rem) PixeloidSans",
+      font: "400 clamp(1rem, 3vw, 1.5rem)/clamp(2rem, 5vw, 2.5rem) PixeloidSans",
     },
 
     actionBtn: {
@@ -43,7 +42,7 @@ export function HomePage() {
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      font: "400 clamp(1rem, 5vw, 1.5rem) PixeloidSans",
+      font: "400 20px PixeloidSans",
       borderRadius: "50px",
       background: "rgb(50, 0, 100)",
       filter: "drop-shadow(0 0 2px aqua)",

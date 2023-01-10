@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import { BtnBack } from "../../../../components/BtnBack";
 import { BorderEffect } from "../../components/BorderEffect";
 import { AllCodeContainer } from "./AllCodeContainer";
-import { Footer } from "../../../../components/Footer";
 import "../tuts-common.css";
 import "./border-effect-tut.css";
 
@@ -173,7 +172,6 @@ export function BorderEffectTut() {
       </div>
       <p>There you have it. This is just one example of the many things you can accomplish with just a few lines of CSS.</p>
       <BtnBack />
-      <Footer />
     </div>
   );
 }

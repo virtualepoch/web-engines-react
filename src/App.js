@@ -37,6 +37,13 @@ function App() {
       overflowX: "hidden",
       pointerEvents: "none",
     },
+    footerBar: {
+      width: "100%",
+      height: "50px",
+      position: "fixed",
+      bottom: 0,
+      background: "var(--color-2)",
+    },
   };
 
   useScrollToTop();
@@ -45,6 +52,7 @@ function App() {
       <Header />
       <BtnToTop />
       <CanvasStarFractal />
+      <div style={style.footerBar}></div>
       <section style={style.pageContainer}>
         <Routes>
           <Route path="/" element={<HomePage />} />

@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import { BtnBack } from "../../../../components/BtnBack";
 import { AllCodeContainer } from "./AllCodeContainer";
-import { Footer } from "../../../../components/Footer";
 import "./text-wave-effect-tut.css";
 
 export function TextWaveEffectTut() {
@@ -157,7 +156,6 @@ export function TextWaveEffectTut() {
       </div>
       <p>There you have it. Another example of what can be done with just a few lines of CSS.</p>
       <BtnBack />
-      <Footer />
     </div>
   );
 }

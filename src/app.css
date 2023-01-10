@@ -23,7 +23,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font: 400 clamp(0.8em, 0.2em + 4vw, 1.8em) sans-serif;
+  font: 400 25px sans-serif;
   color: white;
   filter: drop-shadow(0 0 5px aqua);
 }
@@ -32,5 +32,29 @@
   background: var(--color-5);
   padding: 20px;
   border-radius: 10px;
-  border: 1px solid var(--color-2);
+  border: 1px solid var(--color-3);
+}
+
+.page-content h1 {
+  width: fit-content;
+  margin: 30px 0;
+  padding: 10px;
+  font: 400 20px PixeloidSans;
+  border: 1px solid var(--color-3);
+  border-bottom: solid var(--color-3);
+}
+
+.page-content p {
+  padding: 10px;
+  margin: 20px auto;
+  font: 400 16px sans-serif;
+  border: 1px solid var(--color-4);
+}
+
+.page-content .tut-link h1{
+  margin: auto;
+}
+
+.border-radius-test{
+  border-radius: 10px;
 }

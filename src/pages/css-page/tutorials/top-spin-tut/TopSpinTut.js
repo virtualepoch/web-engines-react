@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import { BtnBack } from "../../../../components/BtnBack";
 import { SpinningTop } from "../../components/SpinningTop";
 import { AllCodeContainer } from "./AllCodeContainer";
-import { Footer } from "../../../../components/Footer";
 import "./top-spin-tut.css";
 
 export function TopSpinTut() {
@@ -225,7 +224,6 @@ export function TopSpinTut() {
       </div>
       <p>There you have it. Another example of what can be done with the power of CSS.</p>
       <BtnBack />
-      <Footer />
     </div>
   );
 }

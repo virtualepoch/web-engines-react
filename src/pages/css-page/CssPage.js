@@ -12,7 +12,7 @@ export function CssPage() {
       <div className="page-content">
         <h1>The following tutorials only require basic knowledge of HTML & CSS.</h1>
         <section className="effects-section">
-          <h1>Learn to Style Border and Text Effects with CSS</h1>
+          <h1 className="border-radius-test">Learn to Style Border and Text Effects with CSS</h1>
           <p>Click either box to enter the tutorial.</p>
           <div className="effects-container">
             <div className="border-effect-container">
@@ -32,13 +32,13 @@ export function CssPage() {
           <div className="cube-effects-container">
             <div className="column column-1">
               <ColorCube />
-              <Link to={"/css/cube-tut"}>
+              <Link className="tut-link" to={"/css/cube-tut"}>
                 <h1>How to Style a Rotating 3D Cube with CSS</h1>
               </Link>
             </div>
             <div className="column">
               <SpinningTop />
-              <Link to={"/css/top-spin-tut"}>
+              <Link className="tut-link" to={"/css/top-spin-tut"}>
                 <h1>How to Style a Rotating 3D Top with CSS</h1>
               </Link>
             </div>

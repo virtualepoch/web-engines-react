@@ -13,7 +13,6 @@ export function CanvasStarFractal() {
       width: "100%",
       height: "calc(100% - 110px)",
       boxShadow: "inset 0 -5px 5px 1px rgb(0,0,0,0.1)",
-      background: "linear-gradient(90deg, lightgray, gray, lightgray)",
     },
   };
 

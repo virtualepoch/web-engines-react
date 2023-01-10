@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import { BtnBack } from "../../../../components/BtnBack";
 import { ColorCube } from "../../components/ColorCube";
 import { AllCodeContainer } from "./AllCodeContainer";
-import { Footer } from "../../../../components/Footer";
 import "./cube-tut.css";
 
 export function CubeTut() {
@@ -212,7 +211,6 @@ export function CubeTut() {
       </div>
       <p>There you have it. Another example of what can be done with the power of CSS.</p>
       <BtnBack />
-      <Footer />
     </div>
   );
 }

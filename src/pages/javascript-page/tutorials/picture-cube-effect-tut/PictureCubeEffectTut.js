@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import { BtnBack } from "../../../../components/BtnBack";
 import { PictureCubeEffect } from "../../components/PictureCubeEffect";
 import { AllCodeContainer } from "./AllCodeContainer";
-import { Footer } from "../../../../components/Footer";
 import "./cube-tut.css";
 
 export function PictureCubeEffectTut() {
@@ -198,7 +197,6 @@ export function PictureCubeEffectTut() {
       <p>There you have it. Another example of what can be done with the power of CSS.</p> */}
       <div style={{ padding: "100px 20px" }}>We apologize however this page is being updated momentarily.</div>
       <BtnBack />
-      <Footer />
     </div>
   );
 }

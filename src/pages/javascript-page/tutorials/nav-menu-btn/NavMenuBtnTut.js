@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import { BtnBack } from "../../../../components/BtnBack";
 import { AllCodeContainer } from "./AllCodeContainer";
-import { Footer } from "../../../../components/Footer";
 import "../nav-menu-btn/nav-menu-btn-tut.css";
 
 export function NavMenuBtnTut() {
@@ -236,7 +235,6 @@ export function NavMenuBtnTut() {
 
       <p>There you have it. This is just one example of the many things you can accomplish with the power of JavaScript.</p>
       <BtnBack />
-      <Footer />
     </div>
   );
 }
