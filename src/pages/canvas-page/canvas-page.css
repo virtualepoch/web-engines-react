@@ -1,28 +1,14 @@
-.canvas-page {
-  min-height: calc(100vh - 50px);
-  padding: 0 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background: white;
-  pointer-events: all;
-}
-.canvas-page p,
-.canvas-page h1,
 .canvas-game-link {
   max-width: 500px;
   padding: 10px 0;
   font: 600 clamp(1.3rem, 5vw, 1.7rem) Blackpast;
 }
-.canvas-page p {
-  font: 18px sans-serif;
-}
+
 .franks-link {
+  width: fit-content;
   display: flex;
   align-items: center;
-  margin: 30px 0;
+  margin: 30px auto;
   padding: 0 10px 0 0;
   font: 600 20px sans-serif;
   border: 1px solid red;
@@ -33,10 +19,8 @@
   height: 40px;
   background: url(../../assets/icons/youtube-brands.svg) 50% / 70% no-repeat;
 }
-.canvas-page .bold-text {
-  font: 500 20px/20px sans-serif;
-}
-.canvas-page .mobile-landscape-alert {
+
+.mobile-landscape-alert {
   padding: 50px 0;
   color: red;
   font: 600 20px sans-serif;

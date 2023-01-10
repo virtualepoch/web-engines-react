@@ -12,7 +12,7 @@ export function CssPage() {
       <div className="page-content">
         <h1>The following tutorials only require basic knowledge of HTML & CSS.</h1>
         <section className="effects-section">
-          <h1 className="border-radius-test">Learn to Style Border and Text Effects with CSS</h1>
+          <h1>Learn to Style Border and Text Effects with CSS</h1>
           <p>Click either box to enter the tutorial.</p>
           <div className="effects-container">
             <div className="border-effect-container">

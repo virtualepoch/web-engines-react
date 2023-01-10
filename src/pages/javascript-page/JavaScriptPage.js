@@ -29,9 +29,7 @@ export function JavaScriptPage() {
 
   return (
     <div className="page">
-      <h1 className="page-heading">
-        JavaScript Tutorials
-      </h1>
+      <h1 className="page-heading">JavaScript Tutorials</h1>
 
       <div className="dark-light-theme-btn"></div>
 
@@ -44,14 +42,14 @@ export function JavaScriptPage() {
         <p>For example, tap or click anywhere on the white card below.</p>
         <div className="javascript-color-card" onClick={changeColor} ref={jsColorCard}>
           <p className="color-card-p-1" ref={card1p4}>
-            JavaScript just did that!
-          </p>
-          <p className="color-card-p-2" ref={card1p5}>
-            So what is happening here? This is a simple JavaScript function that tells JavaScript to generate a random number for a color hue and then apply it to the background color and text color every time the user clicks or taps the page.<br></br>
-            <br></br> Pretty cool!
+            JavaScript did that!
           </p>
         </div>
-        <h1 className="border-radius-test">Below you will find some Useful JavaScript Tutorials</h1>
+        <p className="color-card-p-2" ref={card1p5}>
+          So what is happening here? This is a simple JavaScript function that tells JavaScript to generate a random number for a color hue and then apply it to the background color and text color every time the user clicks or taps the page.<br></br>
+          <br></br> Pretty cool!
+        </p>
+        <h1>Below you will find some Useful JavaScript Tutorials</h1>
         <p>
           We'd like to start off with a tutorial on how to set up a navigation menu button that when clicked causes a menu box to slide onto the screen.<br></br>
           <br></br>These are extremely important for websites viewed on mobile devices to ensure easy navigation of a site. For instance, this website uses a menu button and menu box when viewed on a mobile device or tablet. They are also helpful organizational tools for large sites with dozens or even hundreds of links.<br></br>

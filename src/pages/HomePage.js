@@ -71,7 +71,7 @@ export function HomePage() {
           LET'S GO!
         </Link>
       </div>
-      <div style={style.featured}>Featured Tutorials</div>
+      {/* <div style={style.featured}>Featured Tutorials</div> */}
     </div>
   );
 }

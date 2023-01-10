@@ -41,7 +41,6 @@
   margin: 30px 0;
   padding: 10px;
   font: 400 20px PixeloidSans;
-  border: 1px solid var(--color-3);
   border-bottom: solid var(--color-3);
 }
 
@@ -49,13 +48,8 @@
   padding: 10px;
   margin: 20px auto;
   font: 400 16px sans-serif;
-  border: 1px solid var(--color-4);
 }
 
-.page-content .tut-link h1{
+.page-content .tut-link h1 {
   margin: auto;
-}
-
-.border-radius-test{
-  border-radius: 10px;
 }
