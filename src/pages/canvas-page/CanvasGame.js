@@ -411,7 +411,7 @@ export function CanvasGame() {
         this.height = this.spriteHeight;
         this.x = x - this.width * 0.5;
         this.y = y - this.height * 0.5;
-        this.fps = 15;
+        this.fps = 10;
         this.timer = 0;
         this.interval = 1000 / 15;
         this.markedForDeletion = false;
@@ -527,7 +527,7 @@ export function CanvasGame() {
         this.winningScore = 80;
         this.gameTime = 0;
         this.timeLimit = 20000;
-        this.speed = 1;
+        this.speed = 0.4;
         this.debug = false;
       }
 
@@ -675,7 +675,7 @@ export function CanvasGame() {
         <div id="x-pad-left"></div>
         <div id="x-pad-right"></div>
       </div>
-      <button id="fire-btn"></button>
+      <button id="fire-btn">FIRE</button>
       <button id="start-btn">START</button>
 
       <button className="canvas-game-back-btn" onClick={() => navigate(-1)}>

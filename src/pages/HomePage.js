@@ -45,7 +45,6 @@ export function HomePage() {
       font: "400 20px PixeloidSans",
       borderRadius: "50px",
       background: "rgb(50, 0, 100)",
-      filter: "drop-shadow(0 0 2px aqua)",
       pointerEvents: "all",
     },
 
