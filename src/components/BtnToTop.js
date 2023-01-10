@@ -9,6 +9,10 @@ export function BtnToTop() {
     } else {
       toTopBtn.current.style.transform = "scale(0)";
     }
+
+    if (window.innerWidth < 700) {
+      toTopBtn.current.style.transition = "none";
+    }
   };
 
   function ScrollToTop() {
@@ -29,7 +33,7 @@ export function BtnToTop() {
       background: "white",
       cursor: "pointer",
       transform: "scale(0)",
-      transition: "all 100ms linear",
+      transition: "all 200ms linear",
     },
     arrowLine: {
       width: "12px",

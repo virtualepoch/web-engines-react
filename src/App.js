@@ -2,7 +2,7 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { Header } from "./components/header/Header";
 import { BtnToTop } from "./components/BtnToTop";
-import { CanvasStarFractal } from "./components/canvas-star-fractal/CanvasStarFractal";
+import { CanvasStarFractal } from "./components/CanvasStarFractal";
 import { HomePage } from "./pages/HomePage";
 import { CssPage } from "./pages/css-page/CssPage";
 import { BorderEffectTut } from "./pages/css-page/tutorials/border-effect-tut/BorderEffectTut";
@@ -29,7 +29,7 @@ function useScrollToTop() {
 function App() {
   const style = {
     pageContainer: {
-      width: "calc(100% - 20px)",
+      width: "100%",
       maxWidth: "1200px",
       minHeight: "100vh",
       margin: "60px auto 0 auto",

@@ -30,20 +30,15 @@
 
 .page-content {
   width: 100%;
-  /* background: var(--color-5); */
   padding: 20px;
-  border: 1px solid var(--color-2);
-  border-radius: 5px;
-  animation: border-color 15s ease-in-out infinite;
+  border-top: solid var(--color-3);
+  border-bottom: solid var(--color-3);
+  border-radius: 30px;
+  box-shadow: 0 0 5px 1px rgb(0, 0, 0, 0.4);
 }
-@keyframes border-color {
-  0% {
-    border: 1px solid var(--color-2);
-  }
-  50% {
-    /* border: 1px solid var(--color-3); */
-    border: 1px solid aqua;
-  }
+.section-divider-container {
+  position: relative;
+  top: -80px;
 }
 
 .page-content h1 {

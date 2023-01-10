@@ -96,7 +96,7 @@
 
 /* OPEN BUTTON ANIMATION  */
 .button-nav-menu.open .open-close-bars {
-  transform: rotate(180deg);
+  transform: rotate(90deg);
   transition: all 500ms ease-in-out;
 }
 

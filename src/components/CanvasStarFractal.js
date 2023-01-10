@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import "./canvas-star-fractal.css";
 
 export function CanvasStarFractal() {
   const style = {
@@ -17,15 +16,6 @@ export function CanvasStarFractal() {
   };
 
   const canvasRef = useRef(null);
-  const canvasControls = useRef(null);
-  const openCloseBtn = useRef(null);
-  const randomizeBtnRef = useRef(null);
-  const resetBtnRef = useRef(null);
-
-  function openCloseControls() {
-    canvasControls.current.classList.toggle("open");
-    openCloseBtn.current.classList.toggle("open");
-  }
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -49,16 +39,10 @@ export function CanvasStarFractal() {
     let sides = 8;
     let scale = 1;
     let spread = -0.3;
-    // let hue = 180;
-    // let color = "hsl(" + hue + ", 100%, 50%)";
     let color = "darkslategray";
-    // let color2 = "hsl(" + (hue + 180) + ", 100%, 50%)";
-    let lineWidth = 17;
+    let lineWidth = 15;
     let pointX = 0;
     let pointY = size;
-
-    // controls
-    const randomizeBtn = randomizeBtnRef.current;
 
     function drawBranch(level) {
       if (level > maxLevel) return;
@@ -94,50 +78,21 @@ export function CanvasStarFractal() {
         drawBranch(0);
       }
       ctx.restore();
-      randomizeBtn.style.backgroundColor = color;
     }
     drawFractal();
-
-    // Randomize text const
-    // const textBox = document.querySelector(".text-box");
-    // this.cancelIdleCallback;
-    // textBox.style.color = color2;
 
     function randomizeFractal() {
       sides = Math.floor(Math.random() * 7 + 3);
       spread = Math.random() * 0.6 - 0.3;
-      // let hue = Math.random() * 360;
-      // color = "hsl(" + hue + ", 100%, 50%)";
-      // color2 = "hsl(" + (hue + 180) + ", 100%, 50%)";
       drawFractal();
       lineWidth = Math.floor(Math.random() * 20 + 10);
-      //   textBox.style.color = color2;
       console.log(sides);
       console.log(spread);
       console.log(lineWidth);
     }
-    randomizeBtn.addEventListener("click", function () {
-      randomizeFractal();
-      // updateSliders();
-      drawFractal();
-    });
+
     canvas.addEventListener("click", function () {
       randomizeFractal();
-      // updateSliders();
-      drawFractal();
-    });
-
-    function resetFractal() {
-      sides = 8;
-      scale = 1;
-      spread = 0.2;
-      // color = "hsl(" + hue + ", 100%, 50%)";
-      lineWidth = 25;
-    }
-    const resetBtn = resetBtnRef.current;
-    resetBtn.addEventListener("click", function () {
-      resetFractal();
-      // updateSliders();
       drawFractal();
     });
 
@@ -152,37 +107,11 @@ export function CanvasStarFractal() {
       ctx.shadowBlur = 7;
       drawFractal();
     });
-
-    // const slider_spread = document.getElementById("spread");
-    // const label_spread = document.getElementById("forSpread");
-    // slider_spread.addEventListener("change", function (e) {});
   }, []);
 
   return (
     <div style={style.canvasContainer}>
       <canvas style={style.canvas} ref={canvasRef}></canvas>
-      <div className="tap-message">tap screen</div>
-      <div className="tap-message tap-message-2">tap screen</div>
-      <div id="canvas-controls" ref={canvasControls}>
-        <div className="controls-row1">
-          <p>BACKGROUND CONTROLS</p>
-          <div className="open-close-controls-btn" ref={openCloseBtn} onClick={openCloseControls}></div>
-        </div>
-        <button id="randomize-btn" ref={randomizeBtnRef}>
-          Randomize!
-        </button>
-        <div className="slider-container">
-          {/* <label id="forSpread" for="spread">Spread:{" "}</label> */}
-          {/* <input id="spread" type="range" min="-0.1" max="3.1" step="0.02" value="1" /> */}
-        </div>
-        <div className="slider-container">
-          {/* <label for="sides">Sides: </label> */}
-          {/* <input id="sides" type="range" min="2" max="22" step="1" value="5" /> */}
-        </div>
-        <button id="reset-btn" ref={resetBtnRef}>
-          Reset
-        </button>
-      </div>
     </div>
   );
 }

@@ -28,12 +28,24 @@ export function Footer() {
       color: "white",
       letterSpacing: "1px",
     },
+
+    text2: {
+      width: "200px",
+      position: "absolute",
+      bottom: "-333px",
+      font: "100 clamp(1rem, 5vw, 1.2rem) sans-serif",
+      textTransform: "uppercase",
+      textAlign: "center",
+      color: "white",
+      letterSpacing: "1px",
+    },
   };
 
   return (
     <footer style={style.footer}>
       <div style={style.textContainer}>
         <p style={style.text}>www.webengines.org</p>
+        <p style={style.text2}>tap/click background to randomize fractal!</p>
       </div>
     </footer>
   );
