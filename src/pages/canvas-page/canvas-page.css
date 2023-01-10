@@ -52,9 +52,9 @@
   position: fixed;
   top: 0;
   right: 0;
-  border: 2px solid red;
+  border: 2px solid white;
   border-radius: 100px;
-  color: white;
+  color: red;
   background: transparent;
 }
 #canvas-game {
@@ -83,6 +83,7 @@
 #fireExplosion {
   display: none;
 }
+
 #x-pad {
   width: 120px;
   height: 120px;
@@ -94,6 +95,18 @@
   cursor: pointer;
   overflow: hidden;
 }
+
+#x-pad::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid lightgray;
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+}
+
 #x-pad div {
   width: 120px;
   height: 60px;
@@ -105,8 +118,26 @@
 }
 
 #x-pad-up {
+  top: -5%;
   transform: rotate(180deg);
 }
+
+#x-pad-down {
+  top: 53%;
+}
+
+#x-pad-left {
+  top: 25%;
+  left: -30%;
+  transform: rotate(90deg);
+}
+
+#x-pad-right {
+  top: 25%;
+  left: 29%;
+  transform: rotate(270deg);
+}
+
 #x-pad-up::before,
 #x-pad-down::before,
 #x-pad-left::before,
@@ -115,37 +146,18 @@
   width: 25px;
   height: 40px;
   border: 1px solid white;
+  border-top: none;
   border-radius: 5px;
   position: absolute;
 }
-#x-pad-up {
-  top: -5%;
-}
-#x-pad-down {
-  top: 53%;
-}
-#x-pad-left {
-  top: 25%;
-  left: -30%;
-  transform: rotate(90deg);
-}
-#x-pad-right {
-  top: 25%;
-  left: 29%;
-  transform: rotate(270deg);
-}
-#x-pad-up:hover::before,
-#x-pad-down:hover::before,
-#x-pad-left:hover::before,
-#x-pad-right:hover::before {
+
+#x-pad-up.pressing,
+#x-pad-down.pressing,
+#x-pad-left.pressing,
+#x-pad-right.pressing {
   background: white;
 }
-#x-pad-up.pressing::before,
-#x-pad-down.pressing::before,
-#x-pad-left.pressing::before,
-#x-pad-right.pressing::before {
-  background: white;
-}
+
 #fire-btn {
   width: 80px;
   height: 80px;
@@ -158,9 +170,11 @@
   background: transparent;
   box-shadow: 1px 2px 5px 1px rgb(0, 0, 0, 0.5);
 }
+
 #fire-btn.pressing {
   background: red;
 }
+
 #start-btn {
   width: 80px;
   height: 40px;
