@@ -41,9 +41,9 @@ export function JavaScriptPage() {
         <p>Every single button you tapped or clicked on this website used JavaScript to take in that interaction or input and make changes to the visual content displayed.</p>
         <p>For example, tap or click anywhere on the white card below.</p>
         <div className="javascript-color-card" onClick={changeColor} ref={jsColorCard}>
-          <p className="color-card-p-1" ref={card1p4}>
+          <div className="color-card-p-1" ref={card1p4}>
             JavaScript did that!
-          </p>
+          </div>
         </div>
         <p className="color-card-p-2" ref={card1p5}>
           So what is happening here? This is a simple JavaScript function that tells JavaScript to generate a random number for a color hue and then apply it to the background color and text color every time the user clicks or taps the page.<br></br>

@@ -19,6 +19,7 @@
 
 .javascript-color-card {
   max-width: 250px;
+  min-height: 100px;
   margin: 30px auto;
   border: 3px solid;
   border-radius: 10px;
@@ -31,6 +32,7 @@
 }
 
 .javascript-color-card .color-card-p-1 {
+  width: fit-content;
   font-size: 20px;
   opacity: 0;
   transition: all 1s ease-in-out;

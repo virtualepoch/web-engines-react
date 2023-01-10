@@ -30,10 +30,20 @@
 
 .page-content {
   width: 100%;
-  background: var(--color-5);
+  /* background: var(--color-5); */
   padding: 20px;
-  border-radius: 10px;
-  border: 1px solid var(--color-3);
+  border: 1px solid var(--color-2);
+  border-radius: 5px;
+  animation: border-color 15s ease-in-out infinite;
+}
+@keyframes border-color {
+  0% {
+    border: 1px solid var(--color-2);
+  }
+  50% {
+    /* border: 1px solid var(--color-3); */
+    border: 1px solid aqua;
+  }
 }
 
 .page-content h1 {
@@ -41,15 +51,24 @@
   margin: 30px 0;
   padding: 10px;
   font: 400 20px PixeloidSans;
+  color: white;
   border-bottom: solid var(--color-3);
+  border-radius: 5px;
+  background: linear-gradient(5deg, var(--color-3), transparent);
 }
 
 .page-content p {
+  width: fit-content;
   padding: 10px;
-  margin: 20px auto;
+  margin: 20px 0;
   font: 400 16px sans-serif;
+  color: var(--color-2);
+  border-bottom: 1px solid gray;
+  border-radius: 5px;
+  background: white;
 }
 
 .page-content .tut-link h1 {
   margin: auto;
+  color: white;
 }
