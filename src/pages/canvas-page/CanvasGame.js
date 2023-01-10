@@ -16,7 +16,7 @@ import smokeExplosion from "./canvas_game_assets/smokeExplosion.png";
 import fireExplosion from "./canvas_game_assets/fireExplosion.png";
 import "./canvas-page.css";
 
-export default function CanvasGame() {
+export function CanvasGame() {
   const navigate = useNavigate();
   const canvasGame = useRef(null);
 

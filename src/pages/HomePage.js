@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "../app.css";
 
 export function HomePage() {
   const style = {
@@ -6,7 +7,7 @@ export function HomePage() {
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      font: "400 clamp(0.8em, 0.1em + 5vw, 1.5em) sans-serif",
+      font: "400 clamp(0.8em, 5vw, 1.5em) sans-serif",
       color: "white",
     },
 
@@ -22,7 +23,7 @@ export function HomePage() {
 
     h1: {
       padding: "20px",
-      fontSize: "clamp(1em, 0.1em + 5vw, 2em)",
+      font: "400 clamp(1.5rem, 5vw, 2rem) PixeloidSans",
       letterSpacing: "3px",
       filter: "drop-shadow(0 0 5px aqua)",
     },
@@ -31,8 +32,7 @@ export function HomePage() {
       width: "100%",
       maxWidth: " 280px",
       padding: "20px",
-      fontFamily: "Courier New, Courier, monospace",
-      fontWeight: "900",
+      font: "400 clamp(1rem, 5vw, 1.5rem)/clamp(2rem, 5vw, 2.5rem) PixeloidSans",
     },
 
     actionBtn: {
@@ -43,11 +43,9 @@ export function HomePage() {
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      font: "400 20px sans-serif",
-      color: "white",
+      font: "400 clamp(1rem, 5vw, 1.5rem) PixeloidSans",
       borderRadius: "50px",
-      boxShadow: "inset -2px 2px 5px 1px rgb(255, 255, 255, 0.4), inset 2px -2px 5px 1px rgb(0, 0, 0, 0.5)",
-      background: "purple",
+      background: "rgb(50, 0, 100)",
       filter: "drop-shadow(0 0 2px aqua)",
       pointerEvents: "all",
     },
@@ -63,7 +61,7 @@ export function HomePage() {
   };
 
   return (
-    <div style={style.homePage}>
+    <div style={style.homePage} className="home-page">
       <div style={style.landing}>
         <h1 style={style.h1}>Welcome to Web Engines</h1>
         <p style={style.p}>

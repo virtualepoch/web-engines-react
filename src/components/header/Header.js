@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import { Logo } from "../logo/Logo";
-import SearchBar from "../search-bar/SearchBar";
+import { SearchBar } from "../search-bar/SearchBar";
 import "./header.css";
 
 export function Header() {
@@ -15,6 +15,7 @@ export function Header() {
       background: "var(--color-2)",
       boxShadow: "0 2px 5px 1px rgb(100, 100, 100, 0.3)",
     },
+
     topHeader: {
       maxWidth: "1200px",
       height: "fit-content",
@@ -24,21 +25,22 @@ export function Header() {
       justifyContent: "space-between",
       flexWrap: "wrap",
     },
+
     headerSide: {
       display: "flex",
       alignItems: "center",
     },
+
     siteTitle: {
       padding: "0 3px",
-      backgroundImage: "linear-gradient( white, lightblue)",
-      // #38a8f3
-      WebkitBackgroundClip: "text",
-      backgroundClip: "text",
-      WebkitTextFillColor: "transparent",
-      font: "400 clamp(2rem, 5vw, 4rem) RelicIsland1OTF",
-      color: "blue",
+      font: "400 clamp(2rem, 5vw, 3rem) sans-serif",
+      color: "white",
+      filter: "drop-shadow(0 0 4px aqua)",
+    },
+
+    enginesText: {
+      fontFamily: "RelicIsland1OTF",
       letterSpacing: "1px",
-      lineHeight: "10px",
     },
   };
 
@@ -76,12 +78,13 @@ export function Header() {
 
   return (
     <header style={style.header}>
-      <div style={style.topHeader} className="top-header">
+      <div style={style.topHeader}>
         <div style={style.headerSide}>
           <Logo />
           <Link to={"/"}>
-            <h1 style={style.siteTitle} className="site-title">
-              <span className="site-title-word">Web</span>Engines
+            <h1 style={style.siteTitle}>
+              Web
+              <span style={style.enginesText}>Engines</span>
             </h1>
           </Link>
         </div>
@@ -99,19 +102,19 @@ export function Header() {
               </p>
             </CustomLink>
             <CustomLink onClick={closeNavMenu} to={"/css"}>
-            <p className="link-text">
+              <p className="link-text">
                 CSS
                 <div className="link-underline"></div>
               </p>
             </CustomLink>
             <CustomLink onClick={closeNavMenu} to={"/javascript"}>
-            <p className="link-text">
+              <p className="link-text">
                 JavaScript
                 <div className="link-underline"></div>
               </p>
             </CustomLink>
             <CustomLink onClick={closeNavMenu} to={"/html-canvas"}>
-            <p className="link-text">
+              <p className="link-text">
                 {canvasText}
                 <div className="link-underline"></div>
               </p>

@@ -68,6 +68,14 @@
   font-family: RelicIslandFrameTTF;
   src: url(./assets/fonts/Relic-Island/Relic-Island-Frame.ttf);
 }
+@font-face {
+  font-family: PixeloidSans;
+  src: url(./assets/fonts/PixeloidSans-JR6qo.ttf);
+}
+@font-face {
+  font-family: PixeloidSansBold;
+  src: url(./assets/fonts/PixeloidSansBold-GOjpP.ttf);
+}
 
 @import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@400&display=swap");
 * {
@@ -79,7 +87,7 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  font-family: "Cormorant", sans-serif;
+  font-family: sans-serif;
 }
 
 /* COLORS ///////////// */
@@ -97,3 +105,4 @@
 body {
   background: var(--color-2);
 }
+

@@ -13,10 +13,10 @@ import { PictureCubeEffectTut } from "./pages/javascript-page/tutorials/picture-
 import { JavaScriptPage } from "./pages/javascript-page/JavaScriptPage";
 import { NavMenuBtnTut } from "./pages/javascript-page/tutorials/nav-menu-btn/NavMenuBtnTut";
 import { CanvasPage } from "./pages/canvas-page/CanvasPage";
-import CanvasGame from "./pages/canvas-page/CanvasGame";
+import { CanvasGame } from "./pages/canvas-page/CanvasGame";
+import { Footer } from "./components/Footer";
 import "./app.css";
 import "./pages/pages.css";
-import { Footer } from "./components/Footer";
 
 function useScrollToTop() {
   const { pathname } = useLocation();
