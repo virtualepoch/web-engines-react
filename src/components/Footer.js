@@ -29,7 +29,7 @@ export function Footer() {
       letterSpacing: "1px",
     },
 
-    text2: {
+    textTwo: {
       width: "200px",
       position: "absolute",
       bottom: "-333px",
@@ -45,7 +45,7 @@ export function Footer() {
     <footer style={style.footer}>
       <div style={style.textContainer}>
         <p style={style.text}>www.webengines.org</p>
-        <p style={style.text2}>tap/click background to randomize fractal!</p>
+        <p style={style.textTwo}>tap/click background to randomize fractal!</p>
       </div>
     </footer>
   );
