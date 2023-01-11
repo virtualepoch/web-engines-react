@@ -11,7 +11,6 @@ export function CanvasStarFractal() {
     canvas: {
       width: "100%",
       height: "calc(100% - 110px)",
-      boxShadow: "inset 0 -5px 5px 1px rgb(0,0,0,0.1)",
     },
   };
 
