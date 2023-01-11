@@ -13,9 +13,15 @@
 
 /* ///////// */
 .or-text-box {
-  padding: 12px 6px;
-  margin: 0 8px;
-  font: 22px sans-serif;
+  width: 55px;
+  height: 55px;
+  margin: 10px;
+  font: 20px sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 50px;
 }
 /* WAVE TEXT /////////////////////////////// */
 .text-wave-effect-container {

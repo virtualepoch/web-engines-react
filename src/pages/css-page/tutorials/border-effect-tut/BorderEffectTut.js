@@ -93,16 +93,16 @@ export function BorderEffectTut() {
   }
 
   return (
-    <div className="tut-page-container">
+    <div className="page tut-page">
       <BtnBack />
       <h1>CSS Border Effect</h1>
       <BorderEffect />
       <div className="article-info">
         <p className="info author">Written by — Craig Kaufman</p>
         <p className="info update">Updated — Dec. 17 2022</p>
-        <p className="info">Read time — approx. 5 mins</p>
+        <p className="info read-time">Read time — approx. 5 mins</p>
       </div>
-      <p>
+      <p className="tut-intro">
         In this tutorial we provide, and walk you through, all the code needed to create this cool border effect. This is done using CSS pseudo-classes. If you'd prefer to just copy all the code you can do that{" "}
         <div className="open-all-code" onClick={openCloseAllCode}>
           here
@@ -170,7 +170,7 @@ export function BorderEffectTut() {
           <BorderEffect />
         </div>
       </div>
-      <p>There you have it. This is just one example of the many things you can accomplish with just a few lines of CSS.</p>
+      <p className="tut-outro">There you have it. This is just one example of the many things you can accomplish with just a few lines of CSS.</p>
       <BtnBack />
     </div>
   );

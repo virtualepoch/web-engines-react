@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { BtnBack } from "../../../../components/BtnBack";
 import { AllCodeContainer } from "./AllCodeContainer";
 import "../nav-menu-btn/nav-menu-btn-tut.css";
+import "../../../css-page/tutorials/tuts-common.css";
 
 export function NavMenuBtnTut() {
   const codeEx1 = `<body>
@@ -158,11 +159,11 @@ export function NavMenuBtnTut() {
   }
 
   return (
-    <div className="tut-page-container">
+    <div className="page tut-page">
       <BtnBack />
       <h1>JavaScript Navigation Menu Button Tutorial</h1>
       <div className="tutorial-heading-image"></div>
-      <p>
+      <p className="tut-intro">
         In this tutorial we provide, and walk you through, all the code needed to create a button that will open a navigation menu. If you'd prefer to just copy all the code you can do that{" "}
         <div className="open-all-code" onClick={openCloseAllCode}>
           here
@@ -177,63 +178,73 @@ export function NavMenuBtnTut() {
       </div>
 
       {/* TUTORIAL STEP #1 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */}
-      <p>
-        We will be placing our navigation menu button inside a &lt;header&gt; element. We will actually be adding two &lt;div&gt; elements. One will be for the 'menu button' and the other will be for our 'navigation menu'. <br />
-        <br />
-        For our 'menu button' we will give it a class name of 'nav-menu-btn'. It will also contain another &lt;div&gt; for the 'button bars' which we will give a class name of 'nav-menu-btn-bars'. We want to give our 'menu button' a cool open/close animation to make it more interesting. <br />
-        <br />
-        For our 'navigation menu' we will give it a class name of 'main-nav-menu'. We will be giving it a 'fixed' position so that it is not visually contained inside the header. We will also add some link elements inside our 'navigation menu'.
-      </p>
-      <div className="code-example-container">
-        <pre className="code-example">{codeEx1}</pre>
-        <button className="copy-code-btn" ref={copyBtn1Ref} onClick={copyCodeEx1}></button>
+      <div className="tutorial-step-container">
+        <p>
+          We will be placing our navigation menu button inside a &lt;header&gt; element. We will actually be adding two &lt;div&gt; elements. One will be for the 'menu button' and the other will be for our 'navigation menu'. <br />
+          <br />
+          For our 'menu button' we will give it a class name of 'nav-menu-btn'. It will also contain another &lt;div&gt; for the 'button bars' which we will give a class name of 'nav-menu-btn-bars'. We want to give our 'menu button' a cool open/close animation to make it more interesting. <br />
+          <br />
+          For our 'navigation menu' we will give it a class name of 'main-nav-menu'. We will be giving it a 'fixed' position so that it is not visually contained inside the header. We will also add some link elements inside our 'navigation menu'.
+        </p>
+        <div className="code-example-container">
+          <pre className="code-example">{codeEx1}</pre>
+          <button className="copy-code-btn" ref={copyBtn1Ref} onClick={copyCodeEx1}></button>
+        </div>
       </div>
 
       {/* TUTORIAL STEP #2 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */}
-      <p>The next thing to do is style our elements with CSS. </p>
-      <div className="code-example-container">
-        <pre className="code-example">{codeEx2}</pre>
-        <button className="copy-code-btn" ref={copyBtn2Ref} onClick={copyCodeEx2}></button>
-      </div>
-      <p>Output:</p>
-      <div className="nav-menu-btn-tut-ex">
-        <div className="nav-menu-btn"></div>
+      <div className="tutorial-step-container">
+        <p>The next thing to do is style our elements with CSS. </p>
+        <div className="code-example-container">
+          <pre className="code-example">{codeEx2}</pre>
+          <button className="copy-code-btn" ref={copyBtn2Ref} onClick={copyCodeEx2}></button>
+        </div>
+        <p>Output:</p>
+        <div className="nav-menu-btn-tut-ex">
+          <div className="nav-menu-btn"></div>
+        </div>
       </div>
 
       {/* TUTORIAL STEP #3 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */}
-      <p>Now we will style our button bars. The easiest way to do this is with CSS pseudo-classes</p>
-      <div className="code-example-container">
-        <pre className="code-example">{codeEx3}</pre>
-        <button className="copy-code-btn" ref={copyBtn3Ref} onClick={copyCodeEx3}></button>
-      </div>
-      <p>Output:</p>
-      <div className="nav-menu-btn-tut-ex">
-        <div className="nav-menu-btn">
-          <div className="nav-menu-btn-bars"></div>
+      <div className="tutorial-step-container">
+        <p>Now we will style our button bars. The easiest way to do this is with CSS pseudo-classes</p>
+        <div className="code-example-container">
+          <pre className="code-example">{codeEx3}</pre>
+          <button className="copy-code-btn" ref={copyBtn3Ref} onClick={copyCodeEx3}></button>
+        </div>
+        <p>Output:</p>
+        <div className="nav-menu-btn-tut-ex">
+          <div className="nav-menu-btn">
+            <div className="nav-menu-btn-bars"></div>
+          </div>
         </div>
       </div>
 
       {/* TUTORIAL STEP #4 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */}
-      <p>Next style the main navigation menu.</p>
-      <div className="code-example-container">
-        <pre className="code-example">{codeEx4}</pre>
-        <button className="copy-code-btn" ref={copyBtn4Ref} onClick={copyCodeEx4}></button>
-      </div>
-      <div className="border-ex-3">
-        <p>Output:</p>
+      <div className="tutorial-step-container">
+        <p>Next style the main navigation menu.</p>
+        <div className="code-example-container">
+          <pre className="code-example">{codeEx4}</pre>
+          <button className="copy-code-btn" ref={copyBtn4Ref} onClick={copyCodeEx4}></button>
+        </div>
+        <div className="border-ex-3">
+          <p>Output:</p>
+        </div>
       </div>
 
       {/* TUTORIAL STEP #5 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */}
-      <p>Last but definitely not least...? the JavaScript!!!</p>
-      <div className="code-example-container">
-        <pre className="code-example">{codeEx5}</pre>
-        <button className="copy-code-btn" ref={copyBtn5Ref} onClick={copyCodeEx5}></button>
+      <div className="tutorial-step-container">
+        <p>Last but definitely not least...? the JavaScript!!!</p>
+        <div className="code-example-container">
+          <pre className="code-example">{codeEx5}</pre>
+          <button className="copy-code-btn" ref={copyBtn5Ref} onClick={copyCodeEx5}></button>
+        </div>
+
+        <p>Output:</p>
+        <div className="tutorial-heading-image"></div>
       </div>
 
-      <p>Output:</p>
-      <div className="tutorial-heading-image"></div>
-
-      <p>There you have it. This is just one example of the many things you can accomplish with the power of JavaScript.</p>
+      <p className="tut-outro">There you have it. This is just one example of the many things you can accomplish with the power of JavaScript.</p>
       <BtnBack />
     </div>
   );

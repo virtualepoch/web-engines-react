@@ -81,7 +81,7 @@ export function TextWaveEffectTut() {
   }
 
   return (
-    <div className="tut-page-container">
+    <div className="page tut-page">
       <BtnBack />
       <h1>Text Wave Effect</h1>
       <div className="text-wave-effect-container">
@@ -90,9 +90,9 @@ export function TextWaveEffectTut() {
       <div className="article-info">
         <p className="info author">Written by — Craig Kaufman</p>
         <p className="info update">Updated — Dec. 17 2022</p>
-        <p className="info">Read time — approx. 3 mins</p>
+        <p className="info read-time">Read time — approx. 3 mins</p>
       </div>
-      <p>
+      <p className="tut-intro">
         In this tutorial we provide, and walk you through, all the code needed to create this cool text effect. This is done using a single CSS pseudo-classe. If you'd prefer to just copy all the code you can do that{" "}
         <div className="open-all-code" onClick={openCloseAllCode}>
           here
@@ -154,7 +154,7 @@ export function TextWaveEffectTut() {
           </div>
         </div>
       </div>
-      <p>There you have it. Another example of what can be done with just a few lines of CSS.</p>
+      <p className="tut-outro">There you have it. Another example of what can be done with just a few lines of CSS.</p>
       <BtnBack />
     </div>
   );
