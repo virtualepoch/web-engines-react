@@ -27,8 +27,7 @@
   padding: 10px;
   color: white;
 }
-.border-effect-box::before {
-  content: "";
+.animated-border {
   width: 200%;
   height: 400%;
   position: absolute;

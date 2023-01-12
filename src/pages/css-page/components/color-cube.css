@@ -17,17 +17,15 @@
   width: 100px;
   position: relative;
   transform-style: preserve-3d;
+  animation: color-cube-rotateY 12s linear infinite;
   cursor: pointer;
 }
-.color-cube.animated {
-  animation: color-cube-rotateY 12s linear infinite;
-}
-
 @keyframes color-cube-rotateY {
   to {
     transform: rotateY(360deg);
   }
 }
+
 .color-cube.anim {
   animation: color-cube-anim-2 13s ease-in-out;
 }

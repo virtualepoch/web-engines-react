@@ -5,12 +5,14 @@ export function SpinningTop() {
   const spinningTop = useRef(null);
   const shadow = useRef(null);
 
-  window.addEventListener("scroll", function () {
-    spinningTop.current.style.animation = "none";
-    setTimeout(function () {
-      spinningTop.current.style.animation = "spinning-top-rotateY 3s linear infinite";
-    }, 500);
-  });
+  if (window.innerWidth < 700) {
+    window.addEventListener("scroll", function () {
+      spinningTop.current.style.animation = "none";
+      setTimeout(function () {
+        spinningTop.current.style.animation = "spinning-top-rotateY 3s linear infinite";
+      }, 300);
+    });
+  }
 
   function startAnim() {
     spinningTop.current.classList.toggle("anim");
