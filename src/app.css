@@ -31,10 +31,11 @@
 .page-content {
   width: 100%;
   padding: 20px;
-  border-top: solid var(--color-3);
+  /* border-top: solid var(--color-3);
   border-bottom: solid var(--color-3);
   border-radius: 30px;
   box-shadow: 0 0 5px 1px rgb(0, 0, 0, 0.4);
+  background: var(--color-4-op); */
 }
 .section-divider-container {
   position: relative;
