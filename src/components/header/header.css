@@ -135,7 +135,8 @@
     transition: 0.3s ease-in-out;
     box-shadow: -1px 0 3px 1px rgb(0, 0, 0, 0.3);
     background: darkslategray;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     transform: translateX(100%);
   }
   .nav-menu.open {

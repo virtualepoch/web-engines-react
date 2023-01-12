@@ -46,6 +46,7 @@ export function Header() {
 
   const canvasText = "<canvas>";
 
+  // OPEN/CLOSE NAVIGATION MENU FUNCTIONS /////////////////////////////
   const navMenu = useRef(null);
   const buttonNavMenu = useRef(null);
   const closeNavOverlay = useRef(null);
@@ -66,6 +67,67 @@ export function Header() {
     }
   }
 
+  // SWIPE TO CLOSE NAVIGATION MENU FUNCTION //
+  window.addEventListener(
+    "load",
+    function () {
+      var touchSurface = navMenu.current,
+        startX,
+        startY,
+        dist,
+        threshold = 50, //required min distance traveled to be considered swipe
+        allowedTime = 250, // maximum time allowed to travel that distance
+        elapsedTime,
+        startTime;
+
+      function handleSwipe(isRightSwipe) {
+        if (isRightSwipe) {
+          touchSurface.classList.remove("open");
+          buttonNavMenu.current.classList.remove("open");
+          closeNavOverlay.current.classList.remove("open");
+        }
+      }
+
+      touchSurface.addEventListener(
+        "touchstart",
+        function (e) {
+          var touchObject = e.changedTouches[0];
+          dist = 0;
+          startX = touchObject.pageX;
+          startY = touchObject.pageY;
+          startTime = new Date().getTime(); // record time when finger first makes contact with surface
+          // e.preventDefault();
+        },
+        false
+      );
+
+      // touchSurface.addEventListener(
+      //   "touchmove",
+      //   function (e) {
+      //     // prevent scrolling when inside DIV
+      //     // e.preventDefault();
+      //   },
+      //   false
+      // );
+
+      touchSurface.addEventListener(
+        "touchend",
+        function (e) {
+          var touchObject = e.changedTouches[0];
+          dist = touchObject.pageX - startX; // get total dist traveled by finger while in contact with surface
+          elapsedTime = new Date().getTime() - startTime; // get time elapsed
+          // check that elapsed time is within specified, horizontal dist traveled >= threshold, and vertical dist traveled <= 100
+          var swipeRightBol = elapsedTime <= allowedTime && dist >= threshold && Math.abs(startY - touchObject.pageY) <= 50 && Math.abs(touchObject.pageY - startY) <= 50;
+          handleSwipe(swipeRightBol);
+          // e.preventDefault();
+        },
+        false
+      );
+    },
+    false
+  ); // end window.onload
+
+
   function CustomLink({ to, children, ...props }) {
     const resolvedPath = useResolvedPath(to);
     const isActive = useMatch({ path: resolvedPath.pathname, end: true });
@@ -81,7 +143,7 @@ export function Header() {
       <div style={style.topHeader}>
         <div style={style.headerSide}>
           <Logo />
-          <Link to={"/"}>
+          <Link to={"/"} onClick={closeNavMenu}>
             <h1 style={style.siteTitle}>
               Web
               <span style={style.enginesText}>Engines</span>

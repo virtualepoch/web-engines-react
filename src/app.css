@@ -37,6 +37,7 @@
   box-shadow: 0 0 5px 1px rgb(0, 0, 0, 0.4);
   background: var(--color-4-op); */
 }
+
 .section-divider-container {
   position: relative;
   top: -80px;
