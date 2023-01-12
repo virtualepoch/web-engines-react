@@ -4,6 +4,13 @@ import "./color-cube.css";
 export function ColorCube() {
   const colorCube = useRef(null);
 
+  window.addEventListener("scroll", function () {
+    colorCube.current.style.animation = "none";
+    setTimeout(function () {
+      colorCube.current.style.animation = "color-cube-rotateY 12s linear infinite";
+    }, 500);
+  });
+
   function startAnim() {
     colorCube.current.classList.toggle("anim");
   }

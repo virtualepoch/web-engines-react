@@ -17,7 +17,7 @@
   position: relative;
   top: 50px;
   transform-style: preserve-3d;
-  animation: spinning-top-rotateY 2s linear infinite;
+  animation: spinning-top-rotateY 3s linear infinite;
   cursor: pointer;
 }
 @keyframes spinning-top-rotateY {

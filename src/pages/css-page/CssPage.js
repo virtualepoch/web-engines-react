@@ -20,7 +20,7 @@ export function CssPage() {
                 <BorderEffect />
               </Link>
             </div>
-            <div className="or-text-box">-OR-</div>
+            <div className="or-text-box">OR</div>
             <Link className="text-wave-effect-container" to={"/css/text-wave-effect-tut"}>
               <h2>text effects</h2>
             </Link>

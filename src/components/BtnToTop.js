@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 export function BtnToTop() {
   const toTopBtn = useRef(null);
 
-  window.onscroll = function () {
+  window.addEventListener("scroll", function () {
     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
       toTopBtn.current.style.transform = "scale(1)";
     } else {
@@ -13,7 +13,7 @@ export function BtnToTop() {
     if (window.innerWidth < 700) {
       toTopBtn.current.style.transition = "none";
     }
-  };
+  });
 
   function ScrollToTop() {
     document.documentElement.scrollTo({ top: 0, behavior: "smooth" });

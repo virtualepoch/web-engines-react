@@ -4,6 +4,14 @@ import "./spinning-top.css";
 export function SpinningTop() {
   const spinningTop = useRef(null);
   const shadow = useRef(null);
+
+  window.addEventListener("scroll", function () {
+    spinningTop.current.style.animation = "none";
+    setTimeout(function () {
+      spinningTop.current.style.animation = "spinning-top-rotateY 3s linear infinite";
+    }, 500);
+  });
+
   function startAnim() {
     spinningTop.current.classList.toggle("anim");
     shadow.current.classList.toggle("anim");
