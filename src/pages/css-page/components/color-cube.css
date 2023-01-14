@@ -7,9 +7,7 @@
   perspective: 600px;
   perspective-origin: 50%;
   overflow: hidden;
-  border-left: 1px solid rgb(0, 0, 255, 0.3);
-  border-right: 1px solid rgb(0, 0, 255, 0.3);
-  background: linear-gradient(white, skyblue 30% 50%, purple 52%, magenta, white);
+  border: 1px solid var(--color-3);
 }
 
 .color-cube {
