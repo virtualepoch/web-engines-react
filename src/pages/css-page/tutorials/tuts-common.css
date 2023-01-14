@@ -123,3 +123,8 @@
 .copy-code-btn.clicked.copy-code-btn::after {
   display: block;
 }
+
+.border-ex-1{
+  width: 100%;
+  max-width: 300px;
+}
