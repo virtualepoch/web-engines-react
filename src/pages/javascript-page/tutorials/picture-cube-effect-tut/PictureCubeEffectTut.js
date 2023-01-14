@@ -126,7 +126,7 @@ export function PictureCubeEffectTut() {
   }
 
   return (
-    <div className="tut-page-container">
+    <div className="page tut-page">
       <BtnBack />
       <h1>Welcome to the Picture Cube Effect</h1>
       <PictureCubeEffect />

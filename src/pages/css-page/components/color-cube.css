@@ -9,7 +9,7 @@
   perspective-origin: 50%;
   overflow: hidden;
   border: 1px solid var(--color-3);
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .color-cube {
