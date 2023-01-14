@@ -21,7 +21,7 @@
   padding: 5px;
   gap: 5px;
   border-radius: 7px;
-  box-shadow: 1px 1px 5px 1px rgb(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 7px 1px rgb(225, 225, 225);
 }
 
 .info {
@@ -62,7 +62,7 @@
   align-items: center;
   gap: 20px;
   border-radius: 7px;
-  box-shadow: 1px 1px 5px 1px rgb(0, 0, 0, 0.3);
+  box-shadow: 0 1px 7px 1px rgb(225, 225, 225);
 }
 
 .code-example-container {
@@ -124,7 +124,7 @@
   display: block;
 }
 
-.border-ex-1{
+.border-ex-1 {
   width: 100%;
   max-width: 300px;
 }

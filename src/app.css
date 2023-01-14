@@ -31,12 +31,6 @@
 .page-content {
   width: 100%;
   padding: 20px;
-  box-sizing: border-box;
-  /* border-top: solid var(--color-3);
-  border-bottom: solid var(--color-3);
-  border-radius: 30px;
-  box-shadow: 0 0 5px 1px rgb(0, 0, 0, 0.4);
-  background: var(--color-4-op); */
 }
 
 .section-divider-container {
@@ -46,7 +40,7 @@
 
 .page-content h1 {
   width: fit-content;
-  margin: 30px 0;
+  margin: 30px auto;
   padding: 10px;
   font: 400 20px PixeloidSans;
   color: white;
@@ -58,7 +52,7 @@
 .page-content p {
   width: fit-content;
   padding: 10px;
-  margin: 20px 0;
+  margin: 20px auto;
   font: 400 16px sans-serif;
   color: var(--color-2);
   border-bottom: 1px solid gray;
