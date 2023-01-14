@@ -16,7 +16,6 @@ import { CanvasPage } from "./pages/canvas-page/CanvasPage";
 import { CanvasGame } from "./pages/canvas-page/CanvasGame";
 import { Footer } from "./components/Footer";
 import "./app.css";
-import "./pages/pages.css";
 
 function useScrollToTop() {
   const { pathname } = useLocation();

@@ -31,7 +31,7 @@ export function JavaScriptPage() {
     <div className="page">
       <h1 className="page-heading">JavaScript Tutorials</h1>
 
-      <div className="dark-light-theme-btn"></div>
+      {/* <div className="dark-light-theme-btn"></div> */}
 
       <div className="page-content">
         <h1>Let's add some functionality to our web apps with JavaScript!</h1>
@@ -56,19 +56,19 @@ export function JavaScriptPage() {
           <br></br> It's fairly simple to set up a button for a nav menu. You simply have to know how to position the menu off screen and then when the user clicks the button you use JavaScript to change the position of the menu box.
         </p>
         <div className="cube-effects-container">
-          <div className="column column-1">
+          <div className="tut-link-container">
             <div className="tutorial-heading-image"></div>
             <Link className="tut-link" to={"/javascript/nav-menu-btn-tut"}>
               <h1>How to Style and Code a Navigation Menu & Button with CSS & JavaScript</h1>{" "}
             </Link>
           </div>
-          <div className="column column-1">
+          <div className="tut-link-container">
             <PictureCubeEffect />
             <Link className="tut-link" to={"/javascript/picture-cube-effect-tut"}>
               <h1>How to Style and Code a Picture Cube Effect with CSS & JavaScript</h1>{" "}
             </Link>
           </div>
-          <div className="column column-1">
+          <div className="tut-link-container">
             <PictureCubeEffect2 />
             <Link className="tut-link" to={"/javascript/picture-cube-effect-tut"}>
               <h1>How to Style and Code a Picture Cube Effect with CSS & JavaScript</h1>{" "}

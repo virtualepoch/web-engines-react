@@ -42,11 +42,36 @@
   transition: all 1s ease-in-out 1s;
 }
 
-.tutorial-heading-image,
-.tut-page-container .tutorial-heading-image {
+.tutorial-heading-image {
   width: 100%;
-  max-width: 800px;
+  max-width: 300px;
   aspect-ratio: 3/2;
   border: 1px solid;
-  background: url(../../assets/gifs/nav-menu-btn-gif.gif) 0 0/100%;
+  background: url(../../assets/gifs/w300-frames/spritesheet.png);
+  animation: nav-menu 5s steps(15) infinite;
 }
+@keyframes nav-menu {
+  90% {
+    background-position: -4500px, 0;
+  }
+  100% {
+    background-position: -4500px, 0;
+  }
+}
+
+/* .monster {
+  height: 100px;
+  width: 154px;
+  background: url(../sprite-scene/assets/monster-100.png);
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 140px;
+  left: calc(50% - 77px);
+  animation: crawl-monster-100 2000ms steps(21) infinite;
+}
+
+@keyframes crawl-monster-100 {
+  100% {
+    background-position: -3240px, 0;
+  }
+} */

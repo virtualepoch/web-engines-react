@@ -5,10 +5,12 @@
   margin: 30px auto;
   padding: 0 10px 0 0;
   font: 600 20px sans-serif;
-  border: 1px solid red;
+  border: 1px solid blue;
   border-radius: 10px;
   background: white;
+  box-shadow: 0 1px 7px 1px rgb(0, 0, 0, 0.5);
 }
+
 .franks-link i {
   width: 50px;
   height: 40px;
@@ -16,10 +18,19 @@
 }
 
 .mobile-landscape-alert {
-  padding: 50px 0;
+  width: fit-content;
+  margin: auto;
+}
+
+.mobile-landscape-alert p {
+  max-width: 300px;
+  padding: 10px;
+  margin: auto;
   color: red;
   font: 600 20px sans-serif;
   text-transform: uppercase;
+  text-align: center;
+  border: 1px solid blue;
 }
 
 .canvas-game-link {
@@ -35,7 +46,7 @@
   text-transform: uppercase;
   border: 5px solid rgb(255, 0, 255, 0.5);
   border-radius: 50px;
-  box-shadow: 1px 2px 4px 2px rgb(0, 0, 0, 0.2);
+  box-shadow: 0 1px 7px 1px rgb(0, 0, 0, 0.5);
   background: linear-gradient(30deg, blue, purple);
 }
 .canvas-game-container {
