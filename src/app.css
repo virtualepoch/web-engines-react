@@ -64,14 +64,3 @@
   border-radius: 5px;
   background: white;
 }
-
-.effect-link-container {
-  border: 1px solid var(--color-3);
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.page-content .tut-link h1 {
-  margin: auto;
-  color: white;
-}

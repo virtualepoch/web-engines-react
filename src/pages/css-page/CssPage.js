@@ -30,13 +30,13 @@ export function CssPage() {
           <h1>Learn to Style 3D Animations</h1>
           <p>Tap or click on the 3D cube or top below to toggle their animations. PLEASE NOTE: Multiple complex animations running at the same time can slow the page down and make scrolling choppy on some devices.</p>
           <div className="cube-effects-container">
-            <div className="effect-link-container column column-1">
+            <div className="effect-link-container">
               <ColorCube />
               <Link className="tut-link" to={"/css/cube-tut"}>
                 <h1>How to Style a Rotating 3D Cube with CSS</h1>
               </Link>
             </div>
-            <div className="effect-link-container column">
+            <div className="effect-link-container">
               <SpinningTop />
               <Link className="tut-link" to={"/css/top-spin-tut"}>
                 <h1>How to Style a Rotating 3D Top with CSS</h1>
