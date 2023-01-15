@@ -21,7 +21,7 @@
   max-width: 250px;
   min-height: 100px;
   margin: 30px auto;
-  border: 3px solid;
+  border: 1px solid;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -60,24 +60,7 @@
   }
 }
 
-.tutorial-heading-image.gif{
+.tutorial-heading-image.gif {
   background: url(../../assets/gifs/nav-menu-btn-gif-w300.gif);
   background-position: 0 0;
 }
-
-/* .monster {
-  height: 100px;
-  width: 154px;
-  background: url(../sprite-scene/assets/monster-100.png);
-  transform: rotateY(180deg);
-  position: absolute;
-  top: 140px;
-  left: calc(50% - 77px);
-  animation: crawl-monster-100 2000ms steps(21) infinite;
-}
-
-@keyframes crawl-monster-100 {
-  100% {
-    background-position: -3240px, 0;
-  }
-} */

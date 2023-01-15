@@ -5,9 +5,6 @@ import { CanvasRainLight } from "../../components/CanvasRainLight";
 import { CanvasRainDark } from "../../components/CanvasRainDark";
 import { PictureCubeEffect } from "../javascript-page/components/PictureCubeEffect";
 import { PictureCubeEffect2 } from "./components/PictureCubeEffect2";
-import { ImageEffectCanvas } from "../../components/ImageEffectCanvas";
-import { ImageEffectCanvas50 } from "../../components/ImageEffectCanvas50";
-import { ImageEffectCanvas25 } from "../../components/ImageEffectCanvas25";
 import { SectionDivider } from "../../components/SectionDivider";
 
 export function JavaScriptPage() {
@@ -77,12 +74,6 @@ export function JavaScriptPage() {
               <h1>How to Style and Code a Picture Cube Effect with CSS & JavaScript</h1>{" "}
             </Link>
           </div>
-        </div>
-        <div className="test-area">
-          <ImageEffectCanvas50 />
-        </div>
-        <div className="test-area">
-          <ImageEffectCanvas25 />
         </div>
         <SectionDivider />
         <div className="credits-section">
