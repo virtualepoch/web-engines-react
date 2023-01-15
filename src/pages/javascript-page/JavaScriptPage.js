@@ -5,6 +5,9 @@ import { CanvasRainLight } from "../../components/CanvasRainLight";
 import { CanvasRainDark } from "../../components/CanvasRainDark";
 import { PictureCubeEffect } from "../javascript-page/components/PictureCubeEffect";
 import { PictureCubeEffect2 } from "./components/PictureCubeEffect2";
+import { ImageEffectCanvas } from "../../components/ImageEffectCanvas";
+import { ImageEffectCanvas50 } from "../../components/ImageEffectCanvas50";
+import { ImageEffectCanvas25 } from "../../components/ImageEffectCanvas25";
 import { SectionDivider } from "../../components/SectionDivider";
 
 export function JavaScriptPage() {
@@ -55,7 +58,7 @@ export function JavaScriptPage() {
           <br></br>These are extremely important for websites viewed on mobile devices to ensure easy navigation of a site. For instance, this website uses a menu button and menu box when viewed on a mobile device or tablet. They are also helpful organizational tools for large sites with dozens or even hundreds of links.<br></br>
           <br></br> It's fairly simple to set up a button for a nav menu. You simply have to know how to position the menu off screen and then when the user clicks the button you use JavaScript to change the position of the menu box.
         </p>
-        <div className="cube-effects-container">
+        <div className="effects-container">
           <div className="tut-link-container">
             <div className="tutorial-heading-image"></div>
             <Link className="tut-link" to={"/javascript/nav-menu-btn-tut"}>
@@ -74,6 +77,12 @@ export function JavaScriptPage() {
               <h1>How to Style and Code a Picture Cube Effect with CSS & JavaScript</h1>{" "}
             </Link>
           </div>
+        </div>
+        <div className="test-area">
+          <ImageEffectCanvas50 />
+        </div>
+        <div className="test-area">
+          <ImageEffectCanvas25 />
         </div>
         <SectionDivider />
         <div className="credits-section">

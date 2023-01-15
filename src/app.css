@@ -60,6 +60,21 @@
   background: white;
 }
 
+.effects-section {
+  width: 100%;
+  margin-top: 88px;
+  font: 25px sans-serif;
+}
+
+.effects-container {
+  padding: 23px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+}
+
 .tut-link-container {
   width: 100%;
   max-width: 300px;
@@ -83,6 +98,15 @@
 
 .tut-link-container h1:hover {
   text-decoration: underline;
+}
+
+.test-area {
+  border: 1px solid aqua;
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .credits-section {

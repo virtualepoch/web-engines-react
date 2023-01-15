@@ -29,7 +29,7 @@ export function CssPage() {
         <section className="effects-section">
           <h1>Learn to Style 3D Animations</h1>
           <p>Tap or click on the 3D cube or top below to toggle their animations. PLEASE NOTE: Multiple complex animations running at the same time can slow the page down and make scrolling choppy on some devices.</p>
-          <div className="cube-effects-container">
+          <div className="effects-container">
             <div className="tut-link-container">
               <ColorCube />
               <Link className="tut-link" to={"/css/cube-tut"}>
