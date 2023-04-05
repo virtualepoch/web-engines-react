@@ -10,6 +10,7 @@
   overflow: hidden;
   border: 1px solid var(--color-3);
   border-radius: 5px;
+  background: linear-gradient(white, skyblue 30% 50%, purple 52%, magenta, white);
 }
 
 .color-cube {

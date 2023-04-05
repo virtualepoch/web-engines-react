@@ -1,3 +1,9 @@
+.canvas-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .franks-link {
   width: fit-content;
   display: flex;
@@ -17,20 +23,19 @@
   background: url(../../assets/icons/youtube-brands.svg) 50% / 70% no-repeat;
 }
 
-.mobile-landscape-alert {
-  width: fit-content;
-  margin: auto;
+.controls-info p{
+  line-height: 30px;
 }
 
-.mobile-landscape-alert p {
-  max-width: 300px;
+p.mobile-landscape-alert {
+  max-width: 500px;
   padding: 10px;
   margin: auto;
   color: red;
   font: 600 20px sans-serif;
   text-transform: uppercase;
   text-align: center;
-  border: 1px solid blue;
+  border: 1px solid;
 }
 
 .canvas-game-link {
@@ -68,6 +73,7 @@
   border-radius: 100px;
   color: red;
   background: transparent;
+  cursor: pointer;
 }
 #canvas-game {
   max-width: 100%;
@@ -200,4 +206,5 @@
   color: lightgray;
   font: 600 10px sans-serif;
   background: transparent;
+  cursor: pointer;
 }

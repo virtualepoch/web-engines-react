@@ -26,6 +26,8 @@ function useScrollToTop() {
 }
 
 function App() {
+  useScrollToTop();
+
   const style = {
     pageContainer: {
       width: "100%",
@@ -45,7 +47,6 @@ function App() {
     },
   };
 
-  useScrollToTop();
   return (
     <>
       <Header />

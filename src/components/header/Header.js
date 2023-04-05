@@ -127,7 +127,6 @@ export function Header() {
     false
   ); // end window.onload
 
-
   function CustomLink({ to, children, ...props }) {
     const resolvedPath = useResolvedPath(to);
     const isActive = useMatch({ path: resolvedPath.pathname, end: true });
@@ -163,24 +162,28 @@ export function Header() {
                 <div className="link-underline"></div>
               </p>
             </CustomLink>
+
             <CustomLink onClick={closeNavMenu} to={"/css"}>
               <p className="link-text">
                 CSS
                 <div className="link-underline"></div>
               </p>
             </CustomLink>
+
             <CustomLink onClick={closeNavMenu} to={"/javascript"}>
               <p className="link-text">
                 JavaScript
                 <div className="link-underline"></div>
               </p>
             </CustomLink>
+
             <CustomLink onClick={closeNavMenu} to={"/html-canvas"}>
               <p className="link-text">
                 {canvasText}
                 <div className="link-underline"></div>
               </p>
             </CustomLink>
+
             {/* <CustomLink onClick={closeNavMenu} to={"/cgi"}>
                 CGI
               </CustomLink> */}

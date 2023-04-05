@@ -3,7 +3,7 @@ import { BorderEffect } from "./components/BorderEffect";
 import { ColorCube } from "./components/ColorCube";
 import { SpinningTop } from "./components/SpinningTop";
 import { SectionDivider } from "../../components/SectionDivider";
-import "./css.css";
+import "./css-page.css";
 
 export function CssPage() {
   return (
@@ -45,10 +45,6 @@ export function CssPage() {
           </div>
         </section>
         <SectionDivider />
-        <div className="credits-section">
-          <p>Images used on this page are from:</p>
-          <a href="">IMAGES INFO</a>
-        </div>
       </div>
     </div>
   );

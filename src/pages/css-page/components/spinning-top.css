@@ -10,7 +10,9 @@
   overflow: hidden;
   border: 1px solid var(--color-3);
   border-radius: 5px;
+  background: linear-gradient(white, skyblue 30% 50%, navy 52%, turquoise, white);
 }
+
 .spinning-top {
   height: 100px;
   width: 50px;
@@ -20,14 +22,17 @@
   animation: spinning-top-rotateY 3s linear infinite;
   cursor: pointer;
 }
+
 @keyframes spinning-top-rotateY {
   to {
     transform: rotateY(-360deg);
   }
 }
+
 .spinning-top.anim {
   animation: spinning-top-anim-2 8s ease-in infinite;
 }
+
 @keyframes spinning-top-anim-2 {
   20% {
     top: 50px;
@@ -72,6 +77,7 @@
     animation-timing-function: ease-out;
   }
 }
+
 .spinning-top .side {
   height: 100%;
   width: 100%;
@@ -79,26 +85,33 @@
   transform-origin: 50% 100%;
   clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
 }
+
 .spinning-top .front,
 .spinning-top .back {
   background: rgb(255, 0, 255, 0.4);
 }
+
 .spinning-top .front {
   transform: rotateX(-7deg);
 }
+
 .spinning-top .back {
   transform: rotateX(7deg);
 }
+
 .spinning-top .left,
 .spinning-top .right {
   background: rgb(0, 155, 255, 0.4);
 }
+
 .spinning-top .left {
   transform: rotateY(90deg) rotateX(7deg);
 }
+
 .spinning-top .right {
   transform: rotateY(90deg) rotateX(-7deg);
 }
+
 .spinning-top .top {
   width: 50px;
   height: 50px;
@@ -108,6 +121,7 @@
   transform: rotateX(90deg);
   background: url(../../../assets/logos/webengines-100.png) 50% / 40% no-repeat, rgb(0, 55, 255, 0.4);
 }
+
 .spinning-top-container .shadow {
   width: 50px;
   height: 50px;
@@ -117,9 +131,11 @@
   border-radius: 50%;
   background: radial-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.05));
 }
+
 .shadow.anim {
   animation: shadow-anim 8s ease-in infinite;
 }
+
 @keyframes shadow-anim {
   0% {
     bottom: 10px;

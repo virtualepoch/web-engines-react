@@ -32,6 +32,7 @@ export function HomePage() {
       maxWidth: " 280px",
       padding: "20px",
       font: "400 clamp(1rem, 3vw, 1.5rem)/clamp(2rem, 5vw, 2.5rem) PixeloidSans",
+      filter: "drop-shadow(0 0 5px aqua)",
     },
 
     actionBtn: {
@@ -63,7 +64,7 @@ export function HomePage() {
       <div style={style.landing}>
         <h1 style={style.h1}>Welcome to Web Engines</h1>
         <p style={style.p}>
-          What is Web Engines?<br></br>Simply, a place we share fun and useful things you can do with CSS and JavaScript.
+          What is Web Engines?<br></br>Simply, a place we share fun and creative things you can do with CSS and JavaScript.
         </p>
         {/* STYLE FOR 'ACTION-BTN' BELOW IS IN 'APP.CSS'. */}
         <Link style={style.actionBtn} className="action-btn" to="/css">
