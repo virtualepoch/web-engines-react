@@ -90,8 +90,8 @@
   font-family: sans-serif;
 }
 
-/* COLORS ///////////// */
 :root {
+  /* COLORS */
   --color-1: #222220;
   --color-2: #243b35;
   --color-2: darkslategray;
@@ -101,6 +101,9 @@
   --color-4: #c7cac1;
   --color-4-op: rgb(199, 202, 193, 0.5);
   --color-5: #e2e6e7;
+
+  /* SHADOWS */
+  --card-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.5);
 }
 
 body {

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { BorderEffect } from "./components/BorderEffect";
+import { MixBlendMode } from "./components/MixBlendMode";
 import { ColorCube } from "./components/ColorCube";
 import { SpinningTop } from "./components/SpinningTop";
 import { SectionDivider } from "../../components/SectionDivider";
@@ -24,6 +25,9 @@ export function CssPage() {
             <Link className="text-wave-effect-container" to={"/css/text-wave-effect-tut"}>
               <h2>text effects</h2>
             </Link>
+          </div>
+          <div className="effects-container">
+            <MixBlendMode />
           </div>
         </section>
         <section className="effects-section">

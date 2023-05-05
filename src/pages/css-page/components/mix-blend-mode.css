@@ -1,0 +1,37 @@
+.mix-blend-cont {
+  border: 1px solid darkgray;
+  border-radius: 10px;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+.mix-blend-cont h2 {
+  font: 800 50px sans-serif;
+  color: white;
+  position: relative;
+  z-index: 2;
+  mix-blend-mode: difference;
+  filter: drop-shadow(0 0 5px white);
+}
+
+.mix-blend-bg {
+  content: "";
+  width: 300%;
+  height: 300%;
+  position: absolute;
+  top: -150%;
+  z-index: 1;
+  background: conic-gradient(rgb(73, 73, 73), white, rgb(73, 73, 73), white, rgb(73, 73, 73), white, rgb(73, 73, 73));
+  animation: mix-blend-bg-rotate 8s linear infinite;
+}
+
+@keyframes mix-blend-bg-rotate {
+  to {
+    transform: rotate(-360deg);
+  }
+}
