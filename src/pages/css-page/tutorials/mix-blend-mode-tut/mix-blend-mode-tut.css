@@ -1,0 +1,6 @@
+.wavy-text-effect-container.example-1 h2::after {
+  display: none;
+}
+.wavy-text-effect-container.example-2 h2::after {
+  animation: none;
+}

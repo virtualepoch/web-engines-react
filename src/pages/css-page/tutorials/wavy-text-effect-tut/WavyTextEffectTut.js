@@ -1,14 +1,14 @@
 import React, { useRef } from "react";
 import { BtnBack } from "../../../../components/BtnBack";
 import { AllCodeContainer } from "./AllCodeContainer";
-import "./text-wave-effect-tut.css";
+import "./wavy-text-effect-tut.css";
 
-export function TextWaveEffectTut() {
-  const codeEx1 = `<div class="text-wave-effect-container">
+export function WavyTextEffectTut() {
+  const codeEx1 = `<div class="wavy-text-effect-container">
   <h1>text effects</h1>
 </div>`;
 
-  const codeEx2 = `.text-wave-effect-container {
+  const codeEx2 = `.wavy-text-effect-container {
   width: fit-content;
   height: fit-content;
   margin: 12px 4px;
@@ -24,12 +24,12 @@ export function TextWaveEffectTut() {
   background: linear-gradient(45deg, purple, magenta);
 }
 
-.text-wave-effect-container h2 {
+.wavy-text-effect-container h2 {
   position: relative;
   font: 3rem Poppins, sans-serif;
   color: blue;
 }`;
-  const codeEx3 = `.text-wave-effect-container h2::after {
+  const codeEx3 = `.wavy-text-effect-container h2::after {
   content: "text effects";
   position: absolute;
   left: 0;
@@ -83,17 +83,19 @@ export function TextWaveEffectTut() {
   return (
     <div className="page tut-page">
       <BtnBack />
-      <h1>Text Wave Effect</h1>
-      <div className="text-wave-effect-container">
-        <h2>text effects</h2>
+      <h1>Wavy Text Effect</h1>
+      <div className="wavy-text-effect-container">
+        <h2>wavy text</h2>
       </div>
       <div className="article-info">
         <p className="info author">Written by — Craig Kaufman</p>
+        <hr></hr>
         <p className="info update">Updated — Dec. 17 2022</p>
+        <hr></hr>
         <p className="info read-time">Read time — approx. 3 mins</p>
       </div>
       <p className="tut-intro">
-        In this tutorial we provide, and walk you through, all the code needed to create this cool text effect. This is done using a single CSS pseudo-classe. If you'd prefer to just copy all the code you can do that{" "}
+        In this tutorial we provide, and walk you through, all the code needed to create this cool text effect. This is done using a single CSS pseudo-class. If you'd prefer to just copy all the code you can do that{" "}
         <div className="open-all-code" onClick={openCloseAllCode}>
           here
         </div>
@@ -107,7 +109,7 @@ export function TextWaveEffectTut() {
       </div>
       <div className="tutorial-step-container">
         <p>
-          Step #1: This text effect is made up of only two elements. The first one is the container &lt;div&gt;. It's simply used here to give our text effect box a border and background. We will assign it a class name of 'text-wave-effect-container'. It contains the second element which will be an &lt;h1&gt;.<br></br>
+          Step #1: This text effect is made up of only two elements. The first one is the container &lt;div&gt;. It's simply used here to give our text effect box a border and background. We will assign it a class name of 'wavy-text-effect-container'. It contains the second element which will be an &lt;h1&gt;.<br></br>
           <br></br>The &lt;h1&gt; is the actual text of our text effect.
         </p>
         <div className="code-example-container">
@@ -123,8 +125,8 @@ export function TextWaveEffectTut() {
         </div>
         <div className="border-ex-1">
           <p>Output:</p>
-          <div className="text-wave-effect-container example-1">
-            <h2>text effects</h2>
+          <div className="wavy-text-effect-container example-1">
+            <h2>wavy text</h2>
           </div>
         </div>
       </div>
@@ -136,8 +138,8 @@ export function TextWaveEffectTut() {
         </div>
         <div className="border-ex-1">
           <p>Output:</p>
-          <div className="text-wave-effect-container example-2">
-            <h2>text effects</h2>
+          <div className="wavy-text-effect-container example-2">
+            <h2>wavy text</h2>
           </div>
         </div>
       </div>
@@ -149,8 +151,8 @@ export function TextWaveEffectTut() {
         </div>
         <div className="border-ex-1">
           <p>Output:</p>
-          <div className="text-wave-effect-container">
-            <h2>text effects</h2>
+          <div className="wavy-text-effect-container">
+            <h2>wavy text</h2>
           </div>
         </div>
       </div>

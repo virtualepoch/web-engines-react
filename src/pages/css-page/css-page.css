@@ -1,17 +1,5 @@
-.or-text-box {
-  width: 45px;
-  height: 45px;
-  margin: 10px;
-  font: 700 15px sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: white;
-  border-radius: 50px;
-}
-
 /* TEXT WAVE EFFECT */
-.text-wave-effect-container {
+.wavy-text-effect-container {
   width: fit-content;
   height: fit-content;
   margin: 12px 4px;
@@ -25,14 +13,14 @@
   box-shadow: var(--card-shadow);
   background: linear-gradient(45deg, purple, magenta);
 }
-.text-wave-effect-container h2 {
+.wavy-text-effect-container h2 {
   position: relative;
   font: 700 clamp(2rem, 5vw, 3rem) Poppins, sans-serif;
   color: blue;
   /* -webkit-text-stroke: 1px gray; */
 }
-.text-wave-effect-container h2::after {
-  content: "text effects";
+.wavy-text-effect-container h2::after {
+  content: "wavy text";
   position: absolute;
   left: 0;
   color: aqua;

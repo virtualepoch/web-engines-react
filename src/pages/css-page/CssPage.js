@@ -14,20 +14,21 @@ export function CssPage() {
         <h1>The following tutorials only require basic knowledge of HTML & CSS.</h1>
         <section className="effects-section">
           <h1>Learn to Style Border and Text Effects with CSS</h1>
-          <p>Click either box to enter the tutorial.</p>
+          <p>Tap/Click boxes below to enter the tutorials.</p>
           <div className="effects-container">
             <div className="border-effect-container">
-              <Link className="border-effect-link" to={"/css/border-effect-tut"}>
+              <Link to={"/css/border-effect-tut"}>
                 <BorderEffect />
               </Link>
             </div>
-            <div className="or-text-box">OR</div>
-            <Link className="text-wave-effect-container" to={"/css/text-wave-effect-tut"}>
-              <h2>text effects</h2>
+            <Link className="wavy-text-effect-container" to={"/css/wavy-text-effect-tut"}>
+              <h2>wavy text</h2>
             </Link>
           </div>
           <div className="effects-container">
-            <MixBlendMode />
+            <Link to={"/css/mix-blend-mode-tut"}>
+              <MixBlendMode />
+            </Link>
           </div>
         </section>
         <section className="effects-section">

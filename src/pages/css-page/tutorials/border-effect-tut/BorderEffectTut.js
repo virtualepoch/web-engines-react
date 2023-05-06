@@ -6,10 +6,11 @@ import "../tuts-common.css";
 import "./border-effect-tut.css";
 
 export function BorderEffectTut() {
-  const codeEx1 = `<div class="border-effect-wrapper">
+  const codeExs = [
+    `<div class="border-effect-wrapper">
   <div class="border-effect-box"></div>
-</div>`;
-  const codeEx2 = `.border-effect-wrapper {
+</div>`,
+    `.border-effect-wrapper {
   width: fit-content;
   border: 1px solid;
   border-radius: 6px;
@@ -22,23 +23,23 @@ export function BorderEffectTut() {
   border-radius: 5px;
   overflow: hidden;
   box-shadow: 1px 2px 3px 3px rgba(0, 0, 0, 0.4);
-}`;
-  const codeEx3 = `.border-effect-box::before {
+}`,
+    `.border-effect-box::before {
   content: "";
   width: 200%;
   height: 400%;
   position: absolute;
   left: -50%;
   top: -150%;
-  background: conic-gradient( blue, aqua);
+  background: conic-gradient(blue, aqua);
   animation: rotate 4s infinite linear;       
-}`;
-  const codeEx4 = `@keyframes rotate {
+}`,
+    `@keyframes rotate {
   to {
     transform: rotate(360deg);
   }
-}`;
-  const codeEx5 = `.border-effect-box::after {
+}`,
+    `.border-effect-box::after {
   content: "Learn to Style Border Effects";
   width: 208px;
   height: 84px;
@@ -53,7 +54,8 @@ export function BorderEffectTut() {
   letter-spacing: 2px;
   text-align: center;
   background: radial-gradient(blue, black);       
-}`;
+}`,
+  ];
 
   var allCodeContainerRef = useRef(null);
   function openCloseAllCode() {
@@ -64,31 +66,31 @@ export function BorderEffectTut() {
   const copyBtn1Ref = useRef(null);
   function copyCodeEx1() {
     const copyBtn1 = copyBtn1Ref.current;
-    navigator.clipboard.writeText(codeEx1);
+    navigator.clipboard.writeText(codeExs[0]);
     copyBtn1.classList.add("clicked");
   }
   const copyBtn2Ref = useRef(null);
   function copyCodeEx2() {
     const copyBtn2 = copyBtn2Ref.current;
-    navigator.clipboard.writeText(codeEx2);
+    navigator.clipboard.writeText(codeExs[1]);
     copyBtn2.classList.add("clicked");
   }
   const copyBtn3Ref = useRef(null);
   function copyCodeEx3() {
     const copyBtn3 = copyBtn3Ref.current;
-    navigator.clipboard.writeText(codeEx3);
+    navigator.clipboard.writeText(codeExs[2]);
     copyBtn3.classList.add("clicked");
   }
   const copyBtn4Ref = useRef(null);
   function copyCodeEx4() {
     const copyBtn4 = copyBtn4Ref.current;
-    navigator.clipboard.writeText(codeEx4);
+    navigator.clipboard.writeText(codeExs[3]);
     copyBtn4.classList.add("clicked");
   }
   const copyBtn5Ref = useRef(null);
   function copyCodeEx5() {
     const copyBtn5 = copyBtn5Ref.current;
-    navigator.clipboard.writeText(codeEx5);
+    navigator.clipboard.writeText(codeExs[4]);
     copyBtn5.classList.add("clicked");
   }
 
@@ -98,9 +100,11 @@ export function BorderEffectTut() {
       <h1>CSS Border Effect</h1>
       <BorderEffect />
       <div className="article-info">
-        <p className="info author">Written by — Craig Kaufman</p>
-        <p className="info update">Updated — Dec. 17 2022</p>
-        <p className="info read-time">Read time — approx. 5 mins</p>
+        <p>Written by — Craig Kaufman</p>
+        <hr></hr>
+        <p>Updated — Dec. 17 2022</p>
+        <hr></hr>
+        <p>Read time — approx. 5 mins</p>
       </div>
       <p className="tut-intro">
         In this tutorial we provide, and walk you through, all the code needed to create this cool border effect. This is done using CSS pseudo-classes. If you'd prefer to just copy all the code you can do that{" "}
@@ -121,14 +125,14 @@ export function BorderEffectTut() {
           <br></br>The second &lt;div&gt; is for the inner box and we will assign it a class name of 'border-effect-box'.
         </p>
         <div className="code-example-container">
-          <pre className="code-example">{codeEx1}</pre>
+          <pre className="code-example">{codeExs[0]}</pre>
           <button className="copy-code-btn" ref={copyBtn1Ref} onClick={copyCodeEx1}></button>
         </div>
       </div>
       <div className="tutorial-step-container">
         <p>Step #2: Everything else is done with CSS. So, we'll start by styling the wrapper and box.</p>
         <div className="code-example-container">
-          <pre className="code-example">{codeEx2}</pre>
+          <pre className="code-example">{codeExs[1]}</pre>
           <button className="copy-code-btn" ref={copyBtn2Ref} onClick={copyCodeEx2}></button>
         </div>
         <div className="border-ex-1">
@@ -139,7 +143,7 @@ export function BorderEffectTut() {
       <div className="tutorial-step-container">
         <p>Step #3: Now the fun part —using CSS pseudo-classes. Just a reminder —a pseudo-class duplicates your element. This allows you to make changes to that duplicates' individual styling. It's very useful if you need to layer elements on your page.</p>
         <div className="code-example-container">
-          <pre className="code-example">{codeEx3}</pre>
+          <pre className="code-example">{codeExs[2]}</pre>
           <button className="copy-code-btn" ref={copyBtn3Ref} onClick={copyCodeEx3}></button>
         </div>
         <p>The styling above is for the element that will be spinning behind everything. The element containing this spinning element, the 'border-effect-box', is given a style of 'overflow: hidden'. Therefore, we will only see the spinning element inside the borders of the 'border-effect-box'.</p>
@@ -151,7 +155,7 @@ export function BorderEffectTut() {
       <div className="tutorial-step-container">
         <p>Step #4: We then have a simple animation we add using the CSS at-rule statement '@keyframes'.</p>
         <div className="code-example-container">
-          <pre className="code-example">{codeEx4}</pre>
+          <pre className="code-example">{codeExs[3]}</pre>
           <button className="copy-code-btn" ref={copyBtn4Ref} onClick={copyCodeEx4}></button>
         </div>
         <div className="border-ex-3">
@@ -162,7 +166,7 @@ export function BorderEffectTut() {
       <div className="tutorial-step-container">
         <p>Step #5: All that's left is to add the other pseudo-class for the box that will be on top of everything.</p>
         <div className="code-example-container">
-          <pre className="code-example">{codeEx5}</pre>
+          <pre className="code-example">{codeExs[4]}</pre>
           <button className="copy-code-btn" ref={copyBtn5Ref} onClick={copyCodeEx5}></button>
         </div>
         <div className="border-ex-complete">

@@ -42,7 +42,7 @@
   }
 }
 .border-effect-box::after {
-  content: "Learn to Style Border Effects";
+  content: "How to Style this Border Effect";
   width: 208px;
   height: 84px;
   position: relative;

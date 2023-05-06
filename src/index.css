@@ -104,6 +104,7 @@
 
   /* SHADOWS */
   --card-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.5);
+  --tut-card-shadow: 0 0 7px 1px rgb(171, 171, 171);
 }
 
 body {

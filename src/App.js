@@ -1,20 +1,30 @@
 import { Route, Routes, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+
+// COMPONENTS
 import { Header } from "./components/header/Header";
 import { BtnToTop } from "./components/BtnToTop";
 import { CanvasStarFractal } from "./components/CanvasStarFractal";
+import { Footer } from "./components/Footer";
+
+// PAGES
 import { HomePage } from "./pages/HomePage";
 import { CssPage } from "./pages/css-page/CssPage";
+import { JavaScriptPage } from "./pages/javascript-page/JavaScriptPage";
+import { CanvasPage } from "./pages/canvas-page/CanvasPage";
+
+// CSS TUTORIAL PAGES
 import { BorderEffectTut } from "./pages/css-page/tutorials/border-effect-tut/BorderEffectTut";
-import { TextWaveEffectTut } from "./pages/css-page/tutorials/text-wave-effect-tut/TextWaveEffectTut";
+import { WavyTextEffectTut } from "./pages/css-page/tutorials/wavy-text-effect-tut/WavyTextEffectTut";
+import { MixBlendModeTut } from "./pages/css-page/tutorials/mix-blend-mode-tut/MixBlendModeTut";
 import { CubeTut } from "./pages/css-page/tutorials/cube-tut/CubeTut";
 import { TopSpinTut } from "./pages/css-page/tutorials/top-spin-tut/TopSpinTut";
+
+// JAVASCRIPT TUTORIAL PAGES
 import { PictureCubeEffectTut } from "./pages/javascript-page/tutorials/picture-cube-effect-tut/PictureCubeEffectTut";
-import { JavaScriptPage } from "./pages/javascript-page/JavaScriptPage";
 import { NavMenuBtnTut } from "./pages/javascript-page/tutorials/nav-menu-btn/NavMenuBtnTut";
-import { CanvasPage } from "./pages/canvas-page/CanvasPage";
 import { CanvasGame } from "./pages/canvas-page/CanvasGame";
-import { Footer } from "./components/Footer";
+
 import "./app.css";
 
 function useScrollToTop() {
@@ -58,7 +68,8 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/css" element={<CssPage />} />
           <Route path="/css/border-effect-tut" element={<BorderEffectTut />} />
-          <Route path="/css/text-wave-effect-tut" element={<TextWaveEffectTut />} />
+          <Route path="/css/wavy-text-effect-tut" element={<WavyTextEffectTut />} />
+          <Route path="/css/mix-blend-mode-tut" element={<MixBlendModeTut />} />
           <Route path="/css/cube-tut" element={<CubeTut />} />
           <Route path="/css/top-spin-tut" element={<TopSpinTut />} />
           <Route path="/javascript" element={<JavaScriptPage />} />

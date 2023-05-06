@@ -1,6 +1,0 @@
-.text-wave-effect-container.example-1 h2::after {
-  display: none;
-}
-.text-wave-effect-container.example-2 h2::after {
-  animation: none;
-}
