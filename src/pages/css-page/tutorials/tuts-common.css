@@ -7,8 +7,15 @@
   background: white;
 }
 
+.tut-page header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 11px;
+}
+
 .tut-page h1 {
-  padding: 22px;
+  padding: 11px;
 }
 
 .article-info {

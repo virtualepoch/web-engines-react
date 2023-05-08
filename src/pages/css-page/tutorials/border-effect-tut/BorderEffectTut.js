@@ -108,9 +108,9 @@ export function BorderEffectTut() {
       </div>
       <p className="tut-intro">
         In this tutorial we provide, and walk you through, all the code needed to create this cool border effect. This is done using CSS pseudo-classes. If you'd prefer to just copy all the code you can do that{" "}
-        <div className="open-all-code" onClick={openCloseAllCode}>
+        <span className="open-all-code" onClick={openCloseAllCode}>
           here
-        </div>
+        </span>
         .
       </p>
       <div className="code-example-container all-code-container" ref={allCodeContainerRef}>

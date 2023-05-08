@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { BorderEffect } from "./components/BorderEffect";
 import { MixBlendMode } from "./components/MixBlendMode";
+import { Ripples } from "./components/Ripples";
 import { ColorCube } from "./components/ColorCube";
 import { SpinningTop } from "./components/SpinningTop";
 import { SectionDivider } from "../../components/SectionDivider";
@@ -28,6 +29,9 @@ export function CssPage() {
           <div className="effects-container">
             <Link to={"/css/mix-blend-mode-tut"}>
               <MixBlendMode />
+            </Link>
+            <Link to={"/css/mix-blend-mode-tut"}>
+              <Ripples />
             </Link>
           </div>
         </section>

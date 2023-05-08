@@ -6,11 +6,13 @@
   align-items: center;
   justify-content: center;
 }
+
 .border-effect-wrapper {
   width: fit-content;
   border: 1px solid;
   border-radius: 6px;
 }
+
 .border-effect-box {
   width: 212px;
   height: 88px;
@@ -19,15 +21,9 @@
   overflow: hidden;
   box-shadow: var(--card-shadow);
 }
-.border-effect-box h1 {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-  padding: 10px;
-  color: white;
-}
-.animated-border {
+
+.border-effect-box::before {
+  content: "";
   width: 200%;
   height: 400%;
   position: absolute;
@@ -36,11 +32,13 @@
   background: conic-gradient(blue, aqua);
   animation: rotate 4s infinite linear;
 }
+
 @keyframes rotate {
   to {
     transform: rotate(360deg);
   }
 }
+
 .border-effect-box::after {
   content: "How to Style this Border Effect";
   width: 208px;
